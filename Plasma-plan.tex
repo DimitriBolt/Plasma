@@ -1,0 +1,608 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue
+}
+
+% ---------- Multilayer numbering: 1., 1.1., 1.1.1. ----------
+\setlist[enumerate,1]{label=\arabic*., leftmargin=*, itemsep=0.35em}
+\setlist[enumerate,2]{label=\arabic{enumi}.\arabic*., leftmargin=*, itemsep=0.25em}
+\setlist[enumerate,3]{label=\arabic{enumi}.\arabic{enumii}.\arabic*., leftmargin=*, itemsep=0.2em}
+\setlist[enumerate,4]{label=\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic*., leftmargin=*, itemsep=0.15em}
+
+% ---------- Header / Footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Plasmonic-Enhanced Laser-Induced Sonofusion (Plan)}
+\rhead{\today}
+\cfoot{\thepage}
+
+% ---------- Convenience ----------
+\newcommand{\ProjectTitle}{Plasmonic-Enhanced Laser-Induced Sonofusion: Overcoming the Temperature Barrier via Resonant Nanoparticle Heating}
+\newcommand{\PIName}{Dimitri Bolt}
+\newcommand{\AdvisorName}{Prof.\ Dr.\ Gabitov}
+
+\begin{document}
+	
+	% ===================== Title Page =====================
+	\begin{center}
+		{\LARGE \textbf{\ProjectTitle}}\\[0.75em]
+		{\large Research Plan (Mini-Research Series)}\\[1.25em]
+	\end{center}
+	
+	\begin{enumerate}
+		\item \textbf{Primary goal (scientific \& educational).}
+		\begin{enumerate}
+			\item Build a mathematically transparent, numerically implementable model of a laser-driven cavitating bubble in a liquid seeded with gold nanoparticles (AuNP), with the explicit purpose of estimating the peak in-bubble temperature during collapse.
+			\item Demonstrate strong command of mathematical modeling (ODE/PDE, asymptotics where appropriate, numerical methods, validation).
+		\end{enumerate}
+		
+		\item \textbf{People and roles.}
+		\begin{enumerate}
+			\item \textbf{Principal Investigator:} \href{https://www.math.arizona.edu/people/dimitribolt}{\PIName}.
+			\item \textbf{Academic advisor (approval requested):} \href{https://math.arizona.edu/~gabitov/}{\AdvisorName}.
+			\item \textbf{Requested informal feedback (domain expertise):}
+			\begin{enumerate}
+				\item \href{https://www.optics.arizona.edu/person/pavel-polynkin}{Pavel Polynkin}.
+				\item \href{https://www.linkedin.com/in/dmitriy-borodin-5600b4136/}{Dmitriy Borodin}.
+			\end{enumerate}
+		\end{enumerate}
+		
+		\item \textbf{High-level logic of the mini-research series.}
+		\begin{enumerate}
+			\item The plan is structured as Parts A--H. Each part is self-contained and produces a small deliverable (mini-report + code/notebook module).
+			\item The modeling stack is built incrementally:
+			\begin{enumerate}
+				\item Bubble mechanics \(\rightarrow\) in-bubble thermodynamics \(\rightarrow\) barrier mechanisms (vapor, chemistry, heat loss) \(\rightarrow\) laser/AuNP energy channel \(\rightarrow\) integrated prediction of \(T_{\max}\).
+				\item At each step, we identify at least one validation path:
+				\begin{enumerate}
+					\item Comparison to published parameter sets and reported trends (benchmarking).
+					\item Comparison to experimentally reported \(R(t)\), \(R_{\min}\), and collapse timing (often available as curves to digitize).
+				\end{enumerate}
+			\end{enumerate}
+		\end{enumerate}
+		
+		\item \textbf{Mathematical endpoint (final integrated model).}
+		\begin{enumerate}
+			\item A coupled system that outputs \(R(t)\), \(p_B(t)\), \(T_B(t)\), and an estimate of peak conditions near collapse:
+			\begin{enumerate}
+				\item A compressible bubble-dynamics equation (e.g., Keller--Miksis-type).
+				\item An in-bubble energy model with heat-loss terms and optional hydro-chemical pathways.
+				\item A laser\(\rightarrow\)AuNP absorption module providing a physically parameterized heat source term.
+			\end{enumerate}
+			\item The final deliverable is a reproducible computational pipeline (documented code + parameter table + plots) that can be discussed and defended mathematically.
+		\end{enumerate}
+		
+	\end{enumerate}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	% ======================================================
+	% Part A
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part A: Baseline Bubble Model and Benchmarks}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Construct a baseline model for a laser-driven cavitation/sonoluminescence-type bubble \emph{without} AuNP, producing physically plausible \(R(t)\), \(T_B(t)\), and \(p_B(t)\).
+			\item Benchmark the baseline against reported regimes and parameter sets in the literature (e.g., AIP Advances 6, 035218 (2016): \href{https://doi.org/10.1063/1.4945343}{10.1063/1.4945343}).
+		\end{enumerate}
+		
+		\item \textbf{Core equations (baseline).}
+		\begin{enumerate}
+			\item Bubble volume: \(V(t)=\dfrac{4}{3}\pi R(t)^3\).
+			\item Ideal-gas closure inside the bubble: \(p_B(t)V(t)=nRT_B(t)\).
+			\item Polytropic/adiabatic skeleton (first-pass, later refined):
+			\[
+			p_B(t) V(t)^{\gamma} = \text{const}
+			\quad\Rightarrow\quad
+			T_B(t)\,V(t)^{\gamma-1}=\text{const}
+			\quad\Rightarrow\quad
+			T_B(t)\propto R(t)^{-3(\gamma-1)}.
+			\]
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item ODE integration with event detection at \(R_{\min}\) and stiffness-aware stepping near collapse.
+			\item Parameter sweeps (grid or Bayesian/optimization) to study sensitivity of peak temperature.
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Compare qualitative/quantitative trends to reported collapse temperatures and timing in the literature (benchmarking).
+			\item Compare predicted \(R(t)\) to published radius--time curves (digitization of plots where raw data are not available).
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE extension (not required, but welcome).}
+		\begin{enumerate}
+			\item Model uncertain acoustic forcing as
+			\[
+			p_{\infty}(t) = p_0 + P_a \sin(\omega t) + \sigma_p\,\dot W_t,
+			\]
+			where \(W_t\) is standard Brownian motion and \(\sigma_p\) quantifies pressure noise.
+			\item Quantify how forcing uncertainty propagates to uncertainty in \(T_{\max}\).
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report (2--5 pages) with equations, assumptions, and baseline plots.
+			\item Code module: \texttt{bubble\_dynamics.py} + \texttt{baseline\_thermo.py}.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part B
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part B: Bubble Radius Dynamics (Rayleigh--Plesset $\to$ Keller--Miksis)}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Build a robust, numerically stable engine for the bubble radius $R(t)$ under acoustic driving $p_{\infty}(t)$, starting from Rayleigh--Plesset and upgrading to a compressible model (Keller--Miksis-type).
+			\item Produce trustworthy collapse metrics: $R_{\min}$, collapse time, and peak wall velocity $\dot R$.
+		\end{enumerate}
+		
+		\item \textbf{Representative governing equations.}
+		\begin{enumerate}
+			\item Acoustic forcing (example form):
+			\[
+			p_{\infty}(t)=p_0 + P_a\sin(\omega t+\phi).
+			\]
+			
+			\item Rayleigh--Plesset (incompressible skeleton):
+			\[
+			\rho\left(R\ddot R + \dfrac{3}{2}\dot R^2\right)
+			=
+			p_B(t)-p_{\infty}(t) - \dfrac{2\sigma}{R} - 4\mu\dfrac{\dot R}{R}.
+			\]
+			
+			\item Keller--Miksis-type compressible correction (schematic, to be fixed to a consistent convention):
+			\[
+			\left(1-\dfrac{\dot R}{c}\right)R\ddot R
+			+ \dfrac{3}{2}\left(1-\dfrac{\dot R}{3c}\right)\dot R^2
+			=
+			\dfrac{1}{\rho}\left(1+\dfrac{\dot R}{c}\right)\left[p_B(t)-p_{\infty}(t)-\dfrac{2\sigma}{R}-4\mu\dfrac{\dot R}{R}\right]
+			+ \dfrac{R}{\rho c}\dfrac{d}{dt}\left[p_B(t)-p_{\infty}(t)\right].
+			\]
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item Use adaptive, stiffness-aware ODE integration near collapse (event detection for $R_{\min}$).
+			\item Implement regression tests:
+			\begin{enumerate}
+				\item Limit $c\to\infty$ should reproduce Rayleigh--Plesset dynamics.
+				\item Energy-like diagnostics to detect numerical instability.
+			\end{enumerate}
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Compare $R(t)$ to published radius--time curves (digitized if necessary).
+			\item Compare collapse timing and $R_{\min}$ trends versus benchmark parameter sets (including AIP Advances 2016 regimes when mapped consistently).
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE extension.}
+		\begin{enumerate}
+			\item Stochastic acoustic amplitude (slow noise model):
+			\[
+			dP_a = -\kappa(P_a-\bar P_a)\,dt + \sigma_a\,dW_t.
+			\]
+			\item Propagate uncertainty to $R_{\min}$ and $T_{\max}$ statistics (Monte Carlo).
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report: chosen equation convention, nondimensionalization, numerical stability notes.
+			\item Code module: \texttt{radius\_dynamics.py} with unit tests for limiting cases.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part C
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part C: In-Bubble Thermodynamics (Compression Heating + Heat Loss)}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Map $R(t)$ into thermodynamic state variables $T_B(t)$ and $p_B(t)$ in a way that is ready to accept additional heat sources (laser/AuNP) and losses.
+		\end{enumerate}
+		
+		\item \textbf{Baseline closures (layered).}
+		\begin{enumerate}
+			\item Fast polytropic closure:
+			\[
+			T_B(t)=T_0\left(\dfrac{R_0}{R(t)}\right)^{3(\gamma-1)},
+			\qquad
+			p_B(t)=p_0\left(\dfrac{R_0}{R(t)}\right)^{3\gamma}.
+			\]
+			
+			\item Energy-balance ODE (preferred for later coupling):
+			\[
+			\frac{d}{dt}\left(\dfrac{p_B V}{\gamma-1}\right)
+			=
+			-p_B\frac{dV}{dt}
+			-\dot Q_{\mathrm{loss}}(t)
+			+\dot Q_{\mathrm{src}}(t),
+			\qquad
+			V(t)=\dfrac{4}{3}\pi R(t)^3.
+			\]
+			
+			\item Example conductive loss ansatz (kept modular):
+			\[
+			\dot Q_{\mathrm{loss}}(t)=4\pi R(t)^2\,\Phi(t),
+			\]
+			where $\Phi(t)$ is a modeled heat flux (boundary-layer / effective thermal resistance).
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item Coupled integration of (Part B) radius equation with the energy ODE above.
+			\item Sensitivity analysis in $\gamma$, initial composition, and loss parameters.
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Benchmark peak $T_B$ and its dependence on $P_a$ and $R_0$ against reported modeling results.
+			\item Cross-check limiting identity transform:
+			\begin{enumerate}
+				\item If $\dot Q_{\mathrm{loss}}\equiv0$ and $\dot Q_{\mathrm{src}}\equiv0$, the energy ODE reduces to the polytropic law.
+			\end{enumerate}
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE extension.}
+		\begin{enumerate}
+			\item Randomize the effective heat flux:
+			\[
+			\Phi(t)=\bar\Phi(t)+\sigma_{\Phi}\,\dot W_t,
+			\]
+			and quantify its effect on the distribution of $T_{\max}$.
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report: derivation, closures, and numerical coupling strategy.
+			\item Code module: \texttt{bubble\_thermo.py}.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part D
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part D: Temperature-Barrier Physics (Vapor, Chemistry, Ionization)}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Capture the mechanisms that reduce $T_{\max}$ relative to ideal adiabatic compression (``temperature barrier'').
+			\item Provide a controlled pathway from simple models to more realistic hydro-chemical descriptions.
+		\end{enumerate}
+		
+		\item \textbf{Barrier mechanisms to include (choose depth).}
+		\begin{enumerate}
+			\item Vapor effects (latent heat, changing mixture composition, effective softening of compression).
+			\item Temperature-dependent degrees of freedom (use an effective $\gamma_{\mathrm{eff}}(T)$).
+			\item Optional equilibrium ionization estimate (compact Saha-type closure):
+			\[
+			\frac{n_e n_i}{n_0}
+			=
+			\left(\dfrac{2\pi m_e k_B T}{h^2}\right)^{\!\frac{3}{2}}
+			\exp\!\left(-\dfrac{E_i}{k_B T}\right),
+			\]
+			with consistent species definitions and applicability limits stated.
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item Operator splitting:
+			\begin{enumerate}
+				\item Step 1: integrate radius/pressure update.
+				\item Step 2: integrate thermo-chemistry update (possibly stiff).
+			\end{enumerate}
+			\item Use tabulated equilibrium closures to accelerate parameter sweeps.
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Benchmark the reduction of $T_{\max}$ as vapor fraction increases.
+			\item Compare to published modeling outcomes in the same driving regime (including the AIP Advances 2016 scenario as a benchmark).
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE extension.}
+		\begin{enumerate}
+			\item Model vapor fraction variability via an SDE for an effective parameter $f_v(t)$:
+			\[
+			df_v=a(f_v,t)\,dt + b(f_v,t)\,dW_t,
+			\]
+			and propagate it to $T_{\max}$ uncertainty.
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report: barrier taxonomy + chosen closures + numerical implementation notes.
+			\item Code module: \texttt{barrier\_physics.py}.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part E
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part E: Plasmonic Absorption and AuNP Photothermal Heating}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Translate laser parameters and AuNP optical response into an explicit heat deposition term suitable for coupling to the bubble model.
+			\item Emphasize resonance dependence on size $a$, wavelength $\lambda$, and medium permittivity $\varepsilon_m$.
+		\end{enumerate}
+		
+		\item \textbf{Absorption model (dipole limit as a transparent baseline).}
+		\begin{enumerate}
+			\item Polarizability (quasi-static, spherical particle of radius $a$):
+			\[
+			\alpha(\lambda)=4\pi a^3\,\frac{\varepsilon(\lambda)-\varepsilon_m}{\varepsilon(\lambda)+2\varepsilon_m}.
+			\]
+			\item With wavenumber $k_m=\dfrac{2\pi n_m}{\lambda}$ in the medium, one common dipole-level closure is:
+			\[
+			\sigma_{\mathrm{ext}}=k_m\,\Im\{\alpha\},
+			\qquad
+			\sigma_{\mathrm{sca}}=\dfrac{k_m^4}{6\pi}\,\abs{\alpha}^2,
+			\qquad
+			\sigma_{\mathrm{abs}}=\sigma_{\mathrm{ext}}-\sigma_{\mathrm{sca}}.
+			\]
+			\item Absorbed power per particle and volumetric heating:
+			\[
+			P_{\mathrm{np}}(t)=I(t)\,\sigma_{\mathrm{abs}},
+			\qquad
+			q(t)=C_{\mathrm{np}}\,I(t)\,\sigma_{\mathrm{abs}}.
+			\]
+		\end{enumerate}
+		
+		\item \textbf{Thermal diffusion around an AuNP (optional PDE block).}
+		\begin{enumerate}
+			\item Spherically symmetric heat equation in the liquid:
+			\[
+			\rho_{\ell}c_{p,\ell}\,\frac{\partial T}{\partial t}
+			=
+			k_{\ell}\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial T}{\partial r}\right)\right)
+			+ q(r,t),
+			\]
+			with interface conditions at $r=a$ and $T\to T_{\infty}$ as $r\to\infty$.
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item Tabulate $\sigma_{\mathrm{abs}}(a,\lambda)$ from Mie theory and compare to the dipole-limit formula as a cross-check.
+			\item Solve the radial heat PDE numerically (finite differences) or use steady-state asymptotics for verification.
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Compare predicted heating rates and scaling with AuNP size/wavelength to photothermal literature values.
+			\item Energy sanity-check: absorbed energy per pulse vs local heat capacity of the heated volume.
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE extension.}
+		\begin{enumerate}
+			\item Treat nanoparticle concentration as fluctuating (e.g., local clustering):
+			\[
+			dC_{\mathrm{np}}=-\kappa\bigl(C_{\mathrm{np}}-\bar C_{\mathrm{np}}\bigr)\,dt + \sigma_C\,dW_t,
+			\]
+			and propagate to $q(t)$.
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report: absorption model, resonance discussion, and heating-scale estimates.
+			\item Code module: \texttt{plasmonics.py}.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part F
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part F: Coupling Mechanisms (How AuNP Heating Enters Bubble Collapse)}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Define explicit, testable ways AuNP photothermal heating modifies the bubble collapse and in-bubble thermodynamics.
+			\item Keep each coupling scenario modular so it can be accepted/rejected by comparison to benchmarks.
+		\end{enumerate}
+		
+		\item \textbf{Coupling scenarios (evaluate in parallel).}
+		\begin{enumerate}
+			\item \textbf{F1: Liquid pre-conditioning.}
+			\begin{enumerate}
+				\item AuNP heating modifies effective initial conditions $(R_0,T_0)$ and/or vapor pressure.
+				\item Implement as parameter transformations and quantify $\Delta T_{\max}$.
+			\end{enumerate}
+			
+			\item \textbf{F2: Boundary heat flux into the bubble.}
+			\begin{enumerate}
+				\item Add a heat-source term in the energy balance:
+				\[
+				\frac{d}{dt}\left(\dfrac{p_B V}{\gamma-1}\right)
+				=
+				-p_B\frac{dV}{dt}
+				-\dot Q_{\mathrm{loss}}(t)
+				+\dot Q_{\mathrm{src}}(t),
+				\qquad
+				\dot Q_{\mathrm{src}}(t)=4\pi R(t)^2\,\Phi_{\mathrm{laser}}(t).
+				\]
+				\item Relate $\Phi_{\mathrm{laser}}(t)$ to Part E heating under a chosen geometry.
+			\end{enumerate}
+			
+			\item \textbf{F3: Late-time hotspot model.}
+			\begin{enumerate}
+				\item Concentrate heating near collapse time $t_{\ast}$:
+				\[
+				\dot Q_{\mathrm{src}}(t)=Q_0\exp\!\left(-\dfrac{(t-t_{\ast})^2}{2\tau^2}\right),
+				\]
+				with $\tau$ much smaller than the acoustic period.
+			\end{enumerate}
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item Compare scenarios via parameter sweeps and sensitivity maps $\partial T_{\max}/\partial\theta$.
+			\item Use constrained optimization to match a benchmark $R(t)$ curve first, then test the heating increment.
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Energy accounting: ensure the modeled laser/AuNP channel is consistent with plausible absorbed power.
+			\item Trend checks: with/without laser and with/without AuNP should change $T_{\max}$ in a physically consistent direction.
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE extension.}
+		\begin{enumerate}
+			\item If coupling depends on random near-wall AuNP capture, model a capture fraction $f_c(t)$ via
+			\[
+			df_c=a(f_c,t)\,dt+b(f_c,t)\,dW_t,
+			\]
+			and set $\Phi_{\mathrm{laser}}(t)\propto f_c(t)$.
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report: explicit coupling assumptions + comparative results across scenarios.
+			\item Code module: \texttt{coupling.py}.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part G
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part G: Integrated Model, Calibration, and Data Comparison}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Assemble Parts B--F into one reproducible pipeline and produce final estimates of $T_{\max}$ under laser/AuNP conditions.
+		\end{enumerate}
+		
+		\item \textbf{Integrated state and outputs.}
+		\begin{enumerate}
+			\item Conceptual state vector (one possible choice):
+			\[
+			X(t)=\bigl(R(t),\dot R(t),T_B(t),\text{(composition variables)}\bigr).
+			\]
+			\item Primary outputs: $R(t)$, $T_B(t)$, $p_B(t)$, $T_{\max}=\max_t T_B(t)$.
+		\end{enumerate}
+		
+		\item \textbf{Numerical methods (explicitly encouraged).}
+		\begin{enumerate}
+			\item Calibration against digitized $R(t)$ data via least squares:
+			\[
+			\min_{\theta}\sum_{i=1}^{N}\left(R_{\mathrm{model}}(t_i;\theta)-R_{\mathrm{data}}(t_i)\right)^2,
+			\]
+			where $\theta$ collects uncertain parameters (e.g., $P_a$, $R_0$, loss coefficients).
+			\item Uncertainty quantification:
+			\begin{enumerate}
+				\item Monte Carlo sampling for uncertain parameters.
+				\item If SDE blocks are enabled, sample paths for $W_t$ and compute the distribution of $T_{\max}$.
+			\end{enumerate}
+		\end{enumerate}
+		
+		\item \textbf{Validation opportunities.}
+		\begin{enumerate}
+			\item Benchmark against published regimes (including AIP Advances 2016) after consistent parameter mapping.
+			\item Compare trends, not only absolute values: how $T_{\max}$ shifts when the laser/AuNP channel is toggled.
+		\end{enumerate}
+		
+		\item \textbf{Deliverables.}
+		\begin{enumerate}
+			\item Mini-report: integrated pipeline, calibration results, and final plots.
+			\item Reproducible scripts: one-click figure regeneration.
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Part H
+	% ======================================================
+	\section{Plasmonic-Enhanced Laser-Induced Sonofusion --- Part H: Physical Feasibility, Constraints, and Final Temperature Estimates}
+	\begin{enumerate}
+		\item \textbf{Objective.}
+		\begin{enumerate}
+			\item Add a strict feasibility layer: energy accounting, timescales, and identifiability, so the final $T_{\max}$ estimates are defensible.
+		\end{enumerate}
+		
+		\item \textbf{Energy accounting (transparent checks).}
+		\begin{enumerate}
+			\item Ideal-gas internal energy change (reference check):
+			\[
+			U(T)=\dfrac{nR}{\gamma-1}T
+			\quad\Rightarrow\quad
+			\Delta U=\dfrac{nR}{\gamma-1}(T_2-T_1).
+			\]
+			\item Compare $\Delta U$ near collapse to the integrated heat source:
+			\[
+			Q_{\mathrm{src}}=\int_{t_1}^{t_2}\dot Q_{\mathrm{src}}(t)\,dt.
+			\]
+		\end{enumerate}
+		
+		\item \textbf{Timescale checks.}
+		\begin{enumerate}
+			\item Compare laser pulse duration $\tau$ to the collapse timescale around $R_{\min}$.
+			\item Verify that the chosen numerical timestep resolves both acoustic forcing and late-time collapse dynamics.
+		\end{enumerate}
+		
+		\item \textbf{Identifiability and sensitivity.}
+		\begin{enumerate}
+			\item Report which parameters dominate uncertainty in $T_{\max}$ (e.g., vapor fraction, loss coefficients, $\sigma_{\mathrm{abs}}$, coupling geometry).
+			\item Provide local sensitivities or variance-based indices when feasible.
+		\end{enumerate}
+		
+		\item \textbf{Optional SDE-focused final analysis.}
+		\begin{enumerate}
+			\item If SDE components are used, report distributions of $T_{\max}$ (mean, variance, and tail probabilities).
+		\end{enumerate}
+		
+		\item \textbf{Final deliverables (series endpoint).}
+		\begin{enumerate}
+			\item Consolidated final report summarizing Parts A--H and the integrated temperature-estimation pipeline.
+			\item Reproducible codebase with:
+			\begin{enumerate}
+				\item parameter table,
+				\item unit tests,
+				\item figure scripts reproducing all key plots.
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+	
+	\newpage
+	
+	% ======================================================
+	% Series Summary
+	% ======================================================
+	\section*{Series Summary}
+	\begin{enumerate}
+		\item Parts A--H build a transparent mathematical and computational pipeline that starts from bubble mechanics and ends with a defensible estimate of peak in-bubble temperature during collapse under laser/AuNP conditions, emphasizing numerical verification, benchmark comparisons, and optional SDE-based uncertainty quantification.
+	\end{enumerate}
+	
+\end{document}
