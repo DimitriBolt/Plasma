@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\setlist[enumerate,1]{label=\arabic*., leftmargin=*, itemsep=0.35em, topsep=0.35em}
+\setlist[enumerate,2]{label=\arabic{enumi}.\arabic*., leftmargin=*, itemsep=0.25em, topsep=0.25em}
+
+\title{Plasmonic-Enhanced Laser-Induced Sonofusion\\Slide Outline (8 slides / 5 minutes)}
+\author{}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\section*{Slide Structure and Bullet Thesis List}
+	
+	\begin{enumerate}
+		
+		\item \textbf{Cold Fusion and ``Bubble Fusion'': promises, scandals, lessons learned}
+		\begin{enumerate}
+			\item The 1989 ``cold fusion'' episode became a scientific cautionary tale: bold claims $\rightarrow$ hard verification $\rightarrow$ lasting reputational damage.
+			\item In the early 2000s, ``fusion in a bottle / bubble fusion'' claims triggered a similar wave of controversy before robust replication.
+			\item Key lesson: in this topic you cannot start with ``we have fusion''; you must start with \emph{verifiable quantities} and transparent diagnostics.
+		\end{enumerate}
+		
+		\item \textbf{Why the topic is ``toxic'' --- and my honest focus}
+		\begin{enumerate}
+			\item The community's demands are justified: independent replication, background controls, correct statistics for neutron/spectral measurements.
+			\item I am not selling ``a reactor in a jar''.
+			\item \textbf{Focus: not to ``prove a reaction'', but to build a testable model of temperature/energy} (and to show where the physical limitation comes from).
+		\end{enumerate}
+		
+		\item \textbf{Sonoluminescence: a single bubble as a micro-lab of extreme conditions}
+		\begin{enumerate}
+			\item Cavitation dynamics: a bubble grows and collapses under acoustic driving $\rightarrow$ a short light flash (SBSL).\\
+			\hspace*{1.2em}[\textbf{SBSL} = \textbf{S}ingle-\textbf{B}ubble \textbf{S}ono\textbf{l}uminescence: light emission from one acoustically trapped bubble, typically with a stable periodic collapse.]
+			\item The flash is real and reproducible; the controversy is not ``does light exist?'' but \emph{what conditions exist inside the bubble}.
+			\item Core question for this talk: what is an upper bound for $T_{\max}$ at collapse, and can we shift it via an addressable energy-injection channel?
+		\end{enumerate}
+		
+		\item \textbf{What careful measurements indicate: $T$ up to $\sim 2\times 10^{4}\,\mathrm{K}$, but this is often an ``effective temperature''}
+		\begin{enumerate}
+			\item Spectroscopic/SL-based estimates indicate conditions from thousands to tens of thousands of kelvin; values ``up to $2\times 10^{4}\,\mathrm{K}$'' appear in respected discussions.\\
+			\hspace*{1.2em}[\textbf{SL} = \textbf{s}ono\textbf{l}uminescence in general (single-bubble or multi-bubble). ``Spectroscopic/SL-based'' here means temperature is inferred from emitted-light spectra and a chosen spectral model.]
+			\item This $T$ is frequently an \emph{effective} temperature (model-dependent, radiation-weighted), which motivates a physics-based model plus cross-validation against multiple observables.
+			\item Therefore the practical target is not a slogan-level number, but a constrained estimate of $T_{\max}$ with explicit assumptions and error bars.
+		\end{enumerate}
+		
+		\item \textbf{Where the ``barrier'' arises: why $T_{\max}$ does not grow like an ideal adiabatic myth}
+		\begin{enumerate}
+			\item The ideal adiabatic picture systematically overestimates heating; real physics ``eats'' energy near collapse.
+			\item Barrier mechanisms: vapor effects/phase change, heat losses, chemistry/dissociation, (in extreme regimes) ionization $\rightarrow$ softening of compression and changes in effective $\gamma$.
+			\item Practical implication: ``just compress harder'' may not raise $T$; an \emph{addressable, fast} energy injection near collapse is the rational route to explore.
+		\end{enumerate}
+		
+		\item \textbf{Prof.\ Dr.\ Gabitov's idea: laser + AuNP as an addressable energy channel near $R_{\min}$}
+		\begin{enumerate}
+			\item Attribution: Prof.\ Dr.\ Gabitov recommended extending the model with laser pumping and Au nanoparticles (AuNP) synchronized with the final collapse stage.
+			\item Physics of the channel: plasmonic absorption of AuNP $\rightarrow$ measurable absorption cross section $\sigma_{\mathrm{abs}}(\lambda,a)$ $\rightarrow$ a controlled heat/source term in the model.
+			\item Carefully stated goal: estimate achievable maxima (and limits of applicability), not to claim ``fusion is already done''.
+		\end{enumerate}
+		
+		\item \textbf{My plan: modular pipeline + validation at every step}
+		\begin{enumerate}
+			\item Principle: not ``one huge model'', but a chain of modules where each adds \emph{one} mechanism and has a \emph{validation criterion}.
+			\item Mechanics block: Rayleigh--Plesset $\rightarrow$ Keller--Miksis $\rightarrow$ produces $R(t)$, $R_{\min}$, wall velocity; validation via digitized/benchmark $R(t)$ from literature.\\
+			\hspace*{1.2em}[Typical Rayleigh--Plesset form (one common version):\\
+			\[
+			\rho\!\left(R\ddot R+\frac{3}{2}\dot R^{2}\right)
+			= p_{B}(t)-p_{\infty}(t)-\frac{2\sigma}{R}-\frac{4\mu \dot R}{R}.
+			\]
+			Keller--Miksis (compressibility correction, schematic form):\\
+			\[
+			\left(1-\frac{\dot R}{c}\right)R\ddot R
+			+\frac{3}{2}\left(1-\frac{\dot R}{3c}\right)\dot R^2
+			=\left(1+\frac{\dot R}{c}\right)\frac{p_B-p_\infty}{\rho}
+			+\frac{R}{\rho c}\frac{d}{dt}(p_B-p_\infty)
+			\;+\;\text{(surface tension/viscosity terms)}.
+			\]
+			Here $\rho$ is liquid density, $\mu$ viscosity, $\sigma$ surface tension, $c$ sound speed.]
+			\item Thermodynamics + barrier block: gas energy equation with losses plus vapor/chemistry/(optional) ionization closures $\rightarrow$ produces $T(t)$ and explains why a ceiling appears.\\
+			\hspace*{1.2em}[Energy balance prototype used in the project:\\
+			\[
+			\frac{d}{dt}\!\left(\frac{p_B V}{\gamma-1}\right)
+			=-\,p_B\frac{dV}{dt}-\dot{Q}_{\mathrm{loss}}(t)+\dot{Q}_{\mathrm{src}}(t),
+			\qquad
+			V=\frac{4}{3}\pi R^{3}.
+			\]
+			Closure examples (depending on model stage): ideal gas $p_B V = n R_g T$; effective $\gamma=\gamma(T,\text{composition})$; optional ionization via Saha-type relations if needed.]
+			\item Optics + coupling block: laser$\rightarrow$AuNP absorption handled explicitly, then a coupling model AuNP$\leftrightarrow$bubble (where and when the heat is deposited).\\
+			\hspace*{1.2em}[Dipole-limit plasmonic relations (one common starting point):\\
+			\[
+			\alpha(\lambda)=4\pi a^{3}\frac{\varepsilon_p(\lambda)-\varepsilon_m(\lambda)}{\varepsilon_p(\lambda)+2\varepsilon_m(\lambda)},
+			\qquad
+			\sigma_{\mathrm{abs}}(\lambda,a)=k\,\Im\!\bigl(\alpha(\lambda)\bigr),
+			\quad
+			k=\frac{2\pi n_m}{\lambda}.
+			\]
+			Heat/source term example:\\
+			\[
+			\dot Q_{\mathrm{src}}(t)=N_{\mathrm{np}}\;\sigma_{\mathrm{abs}}(\lambda,a)\;I(t),
+			\]
+			with laser intensity $I(t)$ and number of nanoparticles $N_{\mathrm{np}}$.\\
+			Coupling example (schematic boundary heat transfer to gas region):\\
+			\[
+			\dot Q_{\mathrm{couple}}(t)=4\pi R^{2}\,h(t)\,\bigl(T_{\mathrm{np}}(t)-T_g(t)\bigr),
+			\]
+			where $h(t)$ is an effective heat-transfer coefficient.]
+			\item Reality-control block: energy-balance checks, timescale comparisons (laser pulse duration vs collapse time), and sensitivity to uncertain parameters.
+		\end{enumerate}
+		
+		\item \textbf{What you get, and what I am asking for}
+		\begin{enumerate}
+			\item You get a reproducible pipeline (code + reports) to estimate $T_{\max}$ and the limits of validity --- defensible in front of skeptics.
+			\item I am asking for: academic supervision, a place in a group (internship), and/or a modest budget to bring the module chain to a publishable state.
+			\item Funding framing: exploratory physics of extreme states (no ``fusion promises''), with a clean path to measurable outputs and negative-results value.
+		\end{enumerate}
+		
+	\end{enumerate}
+	
+\end{document}
