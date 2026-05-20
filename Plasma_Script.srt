@@ -1,0 +1,63 @@
+Cold Fusion and Bubble Fusion: promises, scandals, lessons learned.
+The nineteen eighty nine cold fusion episode became a scientific cautionary tale: bold claims, then hard verification, then lasting reputational damage.
+In the early two thousands, fusion in a bottle, also known as bubble fusion, triggered a similar wave of controversy before robust replication.
+The key lesson is: in this topic you cannot start with “we have fusion”. You must start with verifiable quantities and transparent diagnostics.
+
+
+Slide two. Why the topic is toxic — and my honest focus.
+The community’s demands are justified: independent replication, background controls, and correct statistics for neutron and spectral measurements.
+I am not selling a reactor in a jar.
+My focus is not to prove a reaction, but to build a testable model of temperature and energy, and to show where the physical limitation comes from.
+
+
+Slide three. Sonoluminescence: a single bubble as a micro lab of extreme conditions.
+See figure.
+Point one. Cavitation dynamics: a bubble grows and collapses under acoustic driving, producing a short flash of light. This is called single bubble sonoluminescence.
+See details.
+Point two. The flash is real and reproducible. The controversy is not “does light exist”, but what conditions exist inside the bubble during collapse.
+The core question for this talk is: what is an upper bound for the maximum temperature at collapse, and can we shift it via an addressable energy injection channel?
+
+
+Slide four. What careful measurements indicate: temperature up to about twenty thousand Kelvin, but this is often an effective temperature.
+Point one. Spectroscopic sonoluminescence based estimates indicate conditions from thousands to tens of thousands of Kelvin, and values up to about twenty thousand Kelvin appear in respected discussions.
+Here is an important oral note. A highly trusted source of careful spectroscopy in this area is Professor Kenneth Suslick and collaborators, with results published in top journals such as Nature and Physical Review Letters. So when I cite these temperature scales, I am leaning on respected experimental spectroscopy tradition, not on internet folklore.
+See details.
+Point two. This temperature is frequently an effective temperature: it depends on the spectral model, and it is radiation weighted. That is why we need a physics based model and cross validation against multiple observables.
+Therefore the practical target is not a slogan level number, but a constrained estimate of the maximum temperature, with explicit assumptions and error bars.
+
+
+Slide five. Where the barrier arises: why the maximum temperature does not grow like an ideal adiabatic myth.
+Point one. The ideal adiabatic picture systematically overestimates heating. Real physics eats energy near collapse.
+Point two. Barrier mechanisms include vapor effects and phase change, heat losses, chemistry and dissociation, and in extreme regimes ionization. All of these soften compression and change the effective heat capacity ratio.
+Point three. The practical implication is: just compress harder may not raise temperature. An addressable and fast energy injection near collapse is the rational route to explore.
+See figure.
+
+
+Slide six. Professor Doctor Gabitov’s idea: laser plus gold nanoparticles as an addressable energy channel near R min.
+See figure.
+Point one. Attribution. Professor Doctor Gabitov recommended extending the model with laser pumping and gold nanoparticles synchronized with the final collapse stage.
+Point two. Physics of the channel. Plasmonic absorption of gold nanoparticles gives a measurable absorption cross section, and that becomes a controlled heat source term in the model.
+See figure.
+Point three. Carefully stated goal. The goal is to estimate achievable maxima and limits of applicability, not to claim “fusion is already done”.
+
+
+Slide seven. My plan: modular pipeline plus validation at every step.
+Point one. Principle. Not one huge model, but a chain of modules where each adds one mechanism and has a validation criterion.
+Point two. Mechanics block. Rayleigh Plesset, then Keller Miksis, produces bubble radius as a function of time, the minimum radius, and wall velocity. Validation is done using digitized or benchmark radius curves from literature.
+See equation.
+Point three. Thermodynamics plus barrier block. A gas energy balance with losses plus vapor, chemistry, and optional ionization closures produces temperature as a function of time and explains why a ceiling appears.
+See equation.
+Point four. Optics plus coupling block. Laser to gold nanoparticle absorption is handled explicitly, then a coupling model tells where and when the heat is deposited into the bubble system.
+See equation.
+Point five. Reality control block. Energy balance checks, time scale comparisons between laser pulse duration and collapse time, and sensitivity to uncertain parameters.
+See figure.
+Here is my second important oral note. My very rough preliminary back of the envelope suggests that, in a very short window on the order of picoseconds, the temperature could in principle reach about two million Kelvin. But this is a crude estimate and needs careful verification, so I am not presenting it as a result — only as motivation for doing the disciplined modeling and validation.
+
+
+Slide eight. What you get, and what I am asking for.
+Point one. You get a reproducible pipeline — code and reports — to estimate the maximum temperature and the limits of validity, defensible in front of skeptics.
+Point two. I am asking for academic supervision, a place in a group such as an internship, and or a modest budget to bring the module chain to a publishable state.
+Point three. Funding framing. This is exploratory physics of extreme states, with no fusion promises, and with a clean path to measurable outputs and even negative results value.
+Final note. At the moment the research is paused due to lack of funding. I will be happy to continue this work in your project, and I will also be happy to join your project and work on your topic.
+Comments and collaborations: DimitriBolt at Arizona dot edu.
+Dimitri Bolt, Ph D student at Applied Mathematics program.
