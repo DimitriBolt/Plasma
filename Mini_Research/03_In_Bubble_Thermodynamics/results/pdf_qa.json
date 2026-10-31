@@ -8,5 +8,7 @@
   "overfull_boxes": 0,
   "undefined_references": 0,
   "main_result_values_found": true,
-  "review_note": "Equations, tables, legends, units, page numbers and appendix references checked; latest changed pages 5, 7, 8 re-rendered and inspected after cross-reference repair."
+  "review_note": "Equations, tables, legends, units, page numbers and appendix references checked; latest changed pages 5, 7, 8 re-rendered and inspected after cross-reference repair.",
+  "pdf_path": "report/03_In_Bubble_Thermodynamics.pdf",
+  "source_path": "report/03_In_Bubble_Thermodynamics.tex"
 }

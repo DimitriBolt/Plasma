@@ -9,8 +9,8 @@ figures/04_amplitude_heat_sensitivity.jpg
 figures/05_gamma_initial_temperature.jpg
 figures/06_event_comparison_pressure.jpg
 figures/07_numerical_checks.jpg
-report/main.pdf
-report/main.tex
+report/03_In_Bubble_Thermodynamics.pdf
+report/03_In_Bubble_Thermodynamics.tex
 requirements-lock.txt
 requirements.txt
 results/A_KM_1.000bar.npz

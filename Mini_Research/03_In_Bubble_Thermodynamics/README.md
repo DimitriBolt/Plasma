@@ -3,8 +3,8 @@
 Автор: **Dimitri Bolt**. Academic supervisor: **Prof. Dr. Ildar R. Gabitov**.
 Подготовлено для независимой проверки; этап **не объявлен окончательно принятым**.
 
-Англоязычный научный отчёт: [report/main.pdf](report/main.pdf),
-исходник: [report/main.tex](report/main.tex). Основные значения температур:
+Англоязычный научный отчёт: [report/03_In_Bubble_Thermodynamics.pdf](report/03_In_Bubble_Thermodynamics.pdf),
+исходник: [report/03_In_Bubble_Thermodynamics.tex](report/03_In_Bubble_Thermodynamics.tex). Основные значения температур:
 [results/main_temperature_comparison.csv](results/main_temperature_comparison.csv).
 
 Здесь впервые в серии рассчитаны временные зависимости температуры и её максимумы.
@@ -61,7 +61,7 @@ python -m src.run_experiments --force
 python -m src.validate
 python -m src.plot_results
 python -m unittest discover -s tests -v > results/tests.txt 2>&1
-latexmk -pdf -interaction=nonstopmode -halt-on-error -cd report/main.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -cd report/03_In_Bubble_Thermodynamics.tex
 python -m src.package
 ```
 
