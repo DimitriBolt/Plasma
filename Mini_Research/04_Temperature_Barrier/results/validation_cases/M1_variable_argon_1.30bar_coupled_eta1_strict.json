@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_argon_1.30bar_coupled_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.00016666666666666666,
+    "production_Tmax_K": 26421.62848708912,
+    "check_Tmax_K": 26421.628482729364,
+    "peak_relative_difference": -1.6500711907951882e-10,
+    "peak_time_difference_s": -3.492486248118931e-17,
+    "end_time_difference_s": 6.665132855354639e-17,
+    "energy_residual_scaled": 2.4815276851929455e-15,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_argon_1.30bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 1.4906774711717528e-08,
+      "quadrature_work_J": -1.4823522125515889e-08,
+      "quadrature_heat_J": -8.325258621485001e-11,
+      "residual_J": -1.3211004960660974e-20,
+      "scaled_residual": 8.862416730747539e-13
+    },
+    {
+      "run_id": "M1_variable_argon_1.30bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 1.4906774711717528e-08,
+      "quadrature_work_J": -1.4823522125516223e-08,
+      "quadrature_heat_J": -8.325258621485001e-11,
+      "residual_J": -1.3545185928132397e-20,
+      "scaled_residual": 9.086597329122544e-13
+    },
+    {
+      "run_id": "M1_variable_argon_1.30bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 2.14836013844004e-11,
+      "quadrature_work_J": -9.078346491863057e-09,
+      "quadrature_heat_J": 9.05686288932339e-09,
+      "residual_J": -1.1552669132711601e-18,
+      "scaled_residual": 1.2725521264325267e-10
+    },
+    {
+      "run_id": "M1_variable_argon_1.30bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 2.14836013844004e-11,
+      "quadrature_work_J": -9.078346491863243e-09,
+      "quadrature_heat_J": 9.056862889323389e-09,
+      "residual_J": -1.1554538560895971e-18,
+      "scaled_residual": 1.2727580480930194e-10
+    }
+  ]
+}

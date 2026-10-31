@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_argon_1.15bar_coupled_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.00016666666666666666,
+    "production_Tmax_K": 7893.015351968674,
+    "check_Tmax_K": 7893.01535097766,
+    "peak_relative_difference": -1.2555578798867373e-10,
+    "peak_time_difference_s": -2.2971533529536625e-17,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 2.504317177190982e-15,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_argon_1.15bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 4.335862139898239e-09,
+      "quadrature_work_J": -5.879916527833989e-09,
+      "quadrature_heat_J": 1.5440543876744224e-09,
+      "residual_J": -2.6132744861112154e-19,
+      "scaled_residual": 4.444407456705646e-11
+    },
+    {
+      "run_id": "M1_variable_argon_1.15bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 4.335862139898239e-09,
+      "quadrature_work_J": -5.8799165278339595e-09,
+      "quadrature_heat_J": 1.5440543876744224e-09,
+      "residual_J": -2.6129767010906964e-19,
+      "scaled_residual": 4.443901012406486e-11
+    },
+    {
+      "run_id": "M1_variable_argon_1.15bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": -1.1554846812936238e-11,
+      "quadrature_work_J": -7.8175646738605e-09,
+      "quadrature_heat_J": 7.829119519576364e-09,
+      "residual_J": -1.0970714484556044e-18,
+      "scaled_residual": 1.4012705333114742e-10
+    },
+    {
+      "run_id": "M1_variable_argon_1.15bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": -1.1554846812936238e-11,
+      "quadrature_work_J": -7.81756467386039e-09,
+      "quadrature_heat_J": 7.829119519576364e-09,
+      "residual_J": -1.0969622606147474e-18,
+      "scaled_residual": 1.4011310695562154e-10
+    }
+  ]
+}

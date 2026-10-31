@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M2_sat_argon_1.00bar_coupled_eta1",
+    "check": "Radau",
+    "method": "Radau",
+    "rtol": 2e-10,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.00016666666666666666,
+    "production_Tmax_K": 661.4496425302873,
+    "check_Tmax_K": 661.4496423787299,
+    "peak_relative_difference": -2.2912916008976936e-10,
+    "peak_time_difference_s": 5.671054988456992e-17,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 1.5797810680782785e-13,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": []
+}

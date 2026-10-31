@@ -1,0 +1,57 @@
+[
+  {
+    "file": "toegel.pdf",
+    "bytes": 118680,
+    "sha256": "360552a06e46bde49d259bae8fd60745fc0dd8b382fb9f46e62c300557e1c332"
+  },
+  {
+    "file": "hammer.pdf",
+    "bytes": 173007,
+    "sha256": "ede117f4fe4901d7f9ed4cd1785dcc5b60e23fe4d9e25c323490896fffc5ad19"
+  },
+  {
+    "file": "nist-OH.html",
+    "bytes": 24613,
+    "sha256": "f4b0121b123882410dac1a289e1640435218acd21db6c2e3449bc3e15dea6a4f"
+  },
+  {
+    "file": "nist-H.html",
+    "bytes": 25973,
+    "sha256": "1df828bf89cf44f59ba1bbca05f0465acbe86edf923c21784868c3f513e5f70e"
+  },
+  {
+    "file": "nist-O.html",
+    "bytes": 21951,
+    "sha256": "fbf05462013271eb95323ccf59c249b4f07c774c7e304435493e3724c1e5284f"
+  },
+  {
+    "file": "nist-N.html",
+    "bytes": 25548,
+    "sha256": "2d86647b6110bb6678ba7e1153ca5f522077bf8bfe424a292753f0300ee9ddaa"
+  },
+  {
+    "file": "nist-argon.html",
+    "bytes": 44054,
+    "sha256": "d755ef230866610f09e598eb8edfbb8c13a87ccdbb5e89e261b3539c041b8f00"
+  },
+  {
+    "file": "nist-water.html",
+    "bytes": 31071,
+    "sha256": "6e8cfa3fb23e10817777d13c0c29a8c11d8df2b301962e0d0a74b6a27532c8c9"
+  },
+  {
+    "file": "yuan.pdf",
+    "bytes": 225433,
+    "sha256": "689beca7ad9299c764d2bb761c8b34857126c1c930961ac1f7c9f9b55a51c020"
+  },
+  {
+    "file": "thermo.inp",
+    "bytes": 1234323,
+    "sha256": "fa7746572952d74e249e818a82a35c113829742fb421a308e167185528884363"
+  },
+  {
+    "file": "nasa.pdf",
+    "bytes": 1619440,
+    "sha256": "0ab4154b0fdeac29581f8d047a4cb6836c138c0b41da8f28990ef7d3e2756765"
+  }
+]

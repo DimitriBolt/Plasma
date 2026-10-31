@@ -1,0 +1,27 @@
+[
+  {
+    "species": "N2",
+    "boundary_K": 1000.0,
+    "relative_cp_jump": 2.152852952929658e-09
+  },
+  {
+    "species": "N2",
+    "boundary_K": 6000.0,
+    "relative_cp_jump": 6.398684191445593e-08
+  },
+  {
+    "species": "O2",
+    "boundary_K": 1000.0,
+    "relative_cp_jump": -3.777962801898795e-10
+  },
+  {
+    "species": "O2",
+    "boundary_K": 6000.0,
+    "relative_cp_jump": 3.206330342453538e-08
+  },
+  {
+    "species": "H2O",
+    "boundary_K": 1000.0,
+    "relative_cp_jump": 2.1545884633544864e-10
+  }
+]

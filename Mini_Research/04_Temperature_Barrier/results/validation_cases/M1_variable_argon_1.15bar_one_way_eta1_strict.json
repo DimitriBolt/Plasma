@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_argon_1.15bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 22142.11450270297,
+    "check_Tmax_K": 22142.143050109,
+    "peak_relative_difference": 1.2892809322373466e-06,
+    "peak_time_difference_s": -6.437450399132683e-20,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 2.914103834857743e-15,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_argon_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 1.2465250025604808e-08,
+      "quadrature_work_J": -1.2488869412079495e-08,
+      "quadrature_heat_J": 2.3619558855576568e-11,
+      "residual_J": 1.7238088929346431e-16,
+      "scaled_residual": 1.3802761771752847e-08
+    },
+    {
+      "run_id": "M1_variable_argon_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 1.2465250025604808e-08,
+      "quadrature_work_J": -1.248886943665941e-08,
+      "quadrature_heat_J": 2.36195588592995e-11,
+      "residual_J": 1.4780469713349295e-16,
+      "scaled_residual": 1.1834914111571379e-08
+    },
+    {
+      "run_id": "M1_variable_argon_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 4.111961077819746e-11,
+      "quadrature_work_J": -9.110066169463603e-09,
+      "quadrature_heat_J": 9.068935940208897e-09,
+      "residual_J": -1.0618476510074085e-14,
+      "scaled_residual": 1.1655762222305895e-06
+    },
+    {
+      "run_id": "M1_variable_argon_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 4.111961077819746e-11,
+      "quadrature_work_J": -9.11006680217401e-09,
+      "quadrature_heat_J": 9.068935940188474e-09,
+      "residual_J": -1.1251207339037466e-14,
+      "scaled_residual": 1.2350301686429456e-06
+    }
+  ]
+}

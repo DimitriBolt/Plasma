@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "pandas": "2.3.3",
+  "base": "1a12fac295dc904569ab2a57ce4f68a8ea75f0c4",
+  "settings": {
+    "method": "DOP853",
+    "rtol": 2e-09,
+    "steps_per_period": 600
+  },
+  "cases": 92,
+  "chemistry": "energy assessment only",
+  "coefficient_stopping": "Terminal boundaries; trial stages use analytic continuations only for event bracketing",
+  "one_way_mechanics": "MR3 SavedMechanics: MR2 export with C1 Hermite radius and exact derivative velocity",
+  "heat_transport": "Fixed MR3 conductivities, even for mixtures; uncalibrated controlled comparison"
+}

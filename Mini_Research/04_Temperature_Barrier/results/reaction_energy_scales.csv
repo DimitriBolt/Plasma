@@ -1,0 +1,9 @@
+process,parent,type,delta_H_298_J_mol,delta_U_298_J_mol,energy_eV,equivalent_E_over_k_K,energy_scale_reference_K
+N2 -> 2N,N2,dissociation_298K_energy_scale,945360.0,942881.0429703976,9.797965962244009,113700.67356319149,298.15
+O2 -> 2O,O2,dissociation_298K_energy_scale,498360.0,495881.0429703976,5.165137425894817,59938.93085909295,298.15
+H2O -> OH + H,H2O,dissociation_298K_energy_scale,498814.0,496335.0429703976,5.16984280431876,59993.53450828235,298.15
+H2O -> 2H + O,H2O,dissociation_298K_energy_scale,927002.0,922044.0859407953,9.607698699894348,111492.71366931713,298.15
+Ar -> Ar+ + e-,Ar,ground_state_first_ionization,,1520571.2049838377,15.75961,182882.67983356188,0.0
+H -> H+ + e-,H,ground_state_first_ionization,,1312049.324361579,13.598433,157803.26217318466,0.0
+O -> O+ + e-,O,ground_state_first_ionization,,1313942.077121842,13.61805,158030.9080051751,0.0
+N -> N+ + e-,N,ground_state_first_ionization,,1402327.4656134,14.5341,168661.22683042107,0.0

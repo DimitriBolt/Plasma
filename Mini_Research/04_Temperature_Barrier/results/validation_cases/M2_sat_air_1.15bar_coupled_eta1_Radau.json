@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M2_sat_air_1.15bar_coupled_eta1",
+    "check": "Radau",
+    "method": "Radau",
+    "rtol": 2e-10,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.00016666666666666666,
+    "production_Tmax_K": 2798.39017488681,
+    "check_Tmax_K": 2798.390335005446,
+    "peak_relative_difference": 5.7218124016600314e-08,
+    "peak_time_difference_s": 1.6462932362834581e-16,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 5.035211319640522e-11,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": []
+}

@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M2_sat_air_1.30bar_one_way_eta1",
+    "check": "input_stride2",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.8340899070637777e-05,
+    "production_Tmax_K": 5999.999999990719,
+    "check_Tmax_K": 5999.999999995123,
+    "peak_relative_difference": 7.340794638821535e-13,
+    "peak_time_difference_s": -1.1418647874027882e-15,
+    "end_time_difference_s": -1.1418647874027882e-15,
+    "energy_residual_scaled": 7.128647040466964e-10,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": []
+}

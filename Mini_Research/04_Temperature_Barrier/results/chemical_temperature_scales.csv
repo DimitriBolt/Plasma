@@ -1,0 +1,49 @@
+process,T_K,energy_scale_exp_factor,interpretation
+N2 -> 2N,1000.0,4.172774183803556e-50,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N2 -> 2N,3000.0,3.468499431137342e-17,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N2 -> 2N,6000.0,5.88939676973571e-09,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N2 -> 2N,10000.0,1.1535661090017232e-05,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N2 -> 2N,20000.0,0.003396418862569402,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N2 -> 2N,30000.0,0.02259509453796046,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O2 -> 2O,1000.0,9.307929318166911e-27,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O2 -> 2O,3000.0,2.1035412147006397e-09,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O2 -> 2O,6000.0,4.586437849465138e-05,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O2 -> 2O,10000.0,0.002493936019283294,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O2 -> 2O,20000.0,0.04993932337630631,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O2 -> 2O,30000.0,0.13561105747903965,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> OH + H,1000.0,8.81330932797456e-27,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> OH + H,3000.0,2.0656005365232543e-09,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> OH + H,6000.0,4.544887827574245e-05,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> OH + H,10000.0,0.002480355330036087,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> OH + H,20000.0,0.0498031658635883,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> OH + H,30000.0,0.13536445335158115,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> 2H + O,1000.0,3.796030393340137e-49,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> 2H + O,3000.0,7.240633417143064e-17,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> 2H + O,6000.0,8.509191158472739e-09,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> 2H + O,10000.0,1.4385765216460186e-05,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> 2H + O,20000.0,0.003792857131037259,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H2O -> 2H + O,30000.0,0.024320788781087777,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+Ar -> Ar+ + e-,1000.0,3.758904678155091e-80,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+Ar -> Ar+ + e-,3000.0,3.349812027220661e-27,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+Ar -> Ar+ + e-,6000.0,5.787756065368219e-14,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+Ar -> Ar+ + e-,10000.0,1.1415794210368332e-08,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+Ar -> Ar+ + e-,20000.0,0.00010684472008652712,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+Ar -> Ar+ + e-,30000.0,0.002251656012824508,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H -> H+ + e-,1000.0,2.93031300041745e-69,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H -> H+ + e-,3000.0,1.4309946297921747e-23,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H -> H+ + e-,6000.0,3.782848965782502e-12,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H -> H+ + e-,10000.0,1.4018172542396608e-07,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H -> H+ + e-,20000.0,0.0003744085007367836,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+H -> H+ + e-,30000.0,0.005194739816627942,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O -> O+ + e-,1000.0,2.333719651039428e-69,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O -> O+ + e-,3000.0,1.3264255976524274e-23,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O -> O+ + e-,6000.0,3.6420126271780385e-12,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O -> O+ + e-,10000.0,1.370265957334796e-07,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O -> O+ + e-,20000.0,0.0003701710357841083,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+O -> O+ + e-,30000.0,0.00515547030183005,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N -> N+ + e-,1000.0,5.641049056495698e-74,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N -> N+ + e-,3000.0,3.835187714644766e-25,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N -> N+ + e-,6000.0,6.192889240608753e-13,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N -> N+ + e-,10000.0,4.7329943676677866e-08,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N -> N+ + e-,20000.0,0.00021755446140375487,Energy-scale diagnostic only; neither equilibrium fraction nor rate
+N -> N+ + e-,30000.0,0.0036172511430501474,Energy-scale diagnostic only; neither equilibrium fraction nor rate

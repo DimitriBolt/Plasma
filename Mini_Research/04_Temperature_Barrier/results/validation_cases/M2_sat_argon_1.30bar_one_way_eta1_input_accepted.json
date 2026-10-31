@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+    "check": "input_accepted",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.8335978830523538e-05,
+    "production_Tmax_K": 5999.999999998786,
+    "check_Tmax_K": 5999.999999997916,
+    "peak_relative_difference": -1.4488410471358293e-13,
+    "peak_time_difference_s": -1.338979179811052e-14,
+    "end_time_difference_s": -1.338979179811052e-14,
+    "energy_residual_scaled": 1.1464181171131355e-09,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": []
+}

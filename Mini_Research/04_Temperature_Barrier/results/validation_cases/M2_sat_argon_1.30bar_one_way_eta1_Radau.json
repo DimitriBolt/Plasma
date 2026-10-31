@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+    "check": "Radau",
+    "method": "Radau",
+    "rtol": 2e-10,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.833597882760069e-05,
+    "production_Tmax_K": 5999.999999998786,
+    "check_Tmax_K": 5999.99999999931,
+    "peak_relative_difference": 8.72635297355373e-14,
+    "peak_time_difference_s": -1.6312641612937356e-14,
+    "end_time_difference_s": -1.6312641612937356e-14,
+    "energy_residual_scaled": 4.0064620978158585e-12,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": []
+}

@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.833597882854813e-05,
+    "production_Tmax_K": 5999.999999998786,
+    "check_Tmax_K": 5999.999999997497,
+    "peak_relative_difference": -2.148281552649678e-13,
+    "peak_time_difference_s": -1.536520138011553e-14,
+    "end_time_difference_s": -1.536520138011553e-14,
+    "energy_residual_scaled": 1.389536838728514e-10,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": [
+    {
+      "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 3.482129888054401e-09,
+      "quadrature_work_J": -3.365092828489657e-09,
+      "quadrature_heat_J": -1.1703717835377466e-10,
+      "residual_J": -1.1878903091694892e-16,
+      "scaled_residual": 3.411390003700318e-08
+    },
+    {
+      "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 3.482129888054401e-09,
+      "quadrature_work_J": -3.365092820449265e-09,
+      "quadrature_heat_J": -1.1703717835491436e-10,
+      "residual_J": -1.1074977860732574e-16,
+      "scaled_residual": 3.180518308270398e-08
+    },
+    {
+      "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 3.482129888054401e-09,
+      "quadrature_work_J": -3.365092828489657e-09,
+      "quadrature_heat_J": -1.1703717835377466e-10,
+      "residual_J": -1.1878903091694892e-16,
+      "scaled_residual": 3.411390003700318e-08
+    },
+    {
+      "run_id": "M2_sat_argon_1.30bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 3.482129888054401e-09,
+      "quadrature_work_J": -3.365092820449265e-09,
+      "quadrature_heat_J": -1.1703717835491436e-10,
+      "residual_J": -1.1074977860732574e-16,
+      "scaled_residual": 3.180518308270398e-08
+    }
+  ]
+}

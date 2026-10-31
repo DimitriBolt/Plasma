@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M2_sat_argon_1.15bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.565623654256266e-05,
+    "production_Tmax_K": 6000.000000001007,
+    "check_Tmax_K": 5999.999999998909,
+    "peak_relative_difference": -3.497202527569243e-13,
+    "peak_time_difference_s": -1.635838139208909e-14,
+    "end_time_difference_s": -1.635838139208909e-14,
+    "energy_residual_scaled": 1.0067555812495169e-08,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": [
+    {
+      "run_id": "M2_sat_argon_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 3.482129888055273e-09,
+      "quadrature_work_J": -3.459308653984298e-09,
+      "quadrature_heat_J": -2.2821718110293628e-11,
+      "residual_J": -4.840393184228083e-16,
+      "scaled_residual": 1.3900668096362663e-07
+    },
+    {
+      "run_id": "M2_sat_argon_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 3.482129888055273e-09,
+      "quadrature_work_J": -3.459308660847088e-09,
+      "quadrature_heat_J": -2.2821718113581205e-11,
+      "residual_J": -4.90905395979284e-16,
+      "scaled_residual": 1.409784849391269e-07
+    },
+    {
+      "run_id": "M2_sat_argon_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 3.482129888055273e-09,
+      "quadrature_work_J": -3.459308653984298e-09,
+      "quadrature_heat_J": -2.2821718110293628e-11,
+      "residual_J": -4.840393184228083e-16,
+      "scaled_residual": 1.3900668096362663e-07
+    },
+    {
+      "run_id": "M2_sat_argon_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 3.482129888055273e-09,
+      "quadrature_work_J": -3.459308660847088e-09,
+      "quadrature_heat_J": -2.2821718113581205e-11,
+      "residual_J": -4.90905395979284e-16,
+      "scaled_residual": 1.409784849391269e-07
+    }
+  ]
+}

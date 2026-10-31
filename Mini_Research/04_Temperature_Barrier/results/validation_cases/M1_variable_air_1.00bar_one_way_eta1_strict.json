@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_air_1.00bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 439.84067840544344,
+    "check_Tmax_K": 439.840648667944,
+    "peak_relative_difference": -6.760970716612746e-08,
+    "peak_time_difference_s": 6.851507208804897e-15,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 1.0102431065398829e-10,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_air_1.00bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 1.4110047142765977e-10,
+      "quadrature_work_J": -1.7718198357452694e-10,
+      "quadrature_heat_J": 3.608150202563678e-11,
+      "residual_J": -1.0121230394351596e-17,
+      "scaled_residual": 5.7123360909290005e-08
+    },
+    {
+      "run_id": "M1_variable_air_1.00bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 1.4110047142765977e-10,
+      "quadrature_work_J": -1.7718198205767377e-10,
+      "quadrature_heat_J": 3.608150202535158e-11,
+      "residual_J": -8.604662414949485e-18,
+      "scaled_residual": 4.85639810268553e-08
+    },
+    {
+      "run_id": "M1_variable_air_1.00bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": -2.5499253994353834e-12,
+      "quadrature_work_J": -9.530039845245426e-10,
+      "quadrature_heat_J": 9.55553489531216e-10,
+      "residual_J": -4.2039276190825927e-16,
+      "scaled_residual": 4.3994686484217577e-07
+    },
+    {
+      "run_id": "M1_variable_air_1.00bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": -2.5499253994353834e-12,
+      "quadrature_work_J": -9.53004000356524e-10,
+      "quadrature_heat_J": 9.555534895342577e-10,
+      "residual_J": -4.362217016906026e-16,
+      "scaled_residual": 4.5651207019632106e-07
+    }
+  ]
+}

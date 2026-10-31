@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M0_argon_1.30bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 213180.8019656088,
+    "check_Tmax_K": 213181.5434864303,
+    "peak_relative_difference": 3.478365850240195e-06,
+    "peak_time_difference_s": -3.3881317890172014e-21,
+    "end_time_difference_s": 6.667843360785852e-17,
+    "energy_residual_scaled": 2.3830762763005665e-15,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M0_argon_1.30bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 1.2145672096977728e-07,
+      "quadrature_work_J": -1.2139266283915014e-07,
+      "quadrature_heat_J": -6.406174361706129e-11,
+      "residual_J": -3.612989924770439e-15,
+      "scaled_residual": 2.9747138700290437e-08
+    },
+    {
+      "run_id": "M0_argon_1.30bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 1.2145672096977728e-07,
+      "quadrature_work_J": -1.2139266271379075e-07,
+      "quadrature_heat_J": -6.406174361760723e-11,
+      "residual_J": -3.4876310768236642e-15,
+      "scaled_residual": 2.871501098478947e-08
+    },
+    {
+      "run_id": "M0_argon_1.30bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 3.854408774948507e-11,
+      "quadrature_work_J": -9.355247127884432e-09,
+      "quadrature_heat_J": 9.316693333681957e-09,
+      "residual_J": -9.706452989597479e-15,
+      "scaled_residual": 1.0375410565762861e-06
+    },
+    {
+      "run_id": "M0_argon_1.30bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 3.854408774948507e-11,
+      "quadrature_work_J": -9.355247672865159e-09,
+      "quadrature_heat_J": 9.316693333615914e-09,
+      "residual_J": -1.0251499760300122e-14,
+      "scaled_residual": 1.0958020694668017e-06
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "formation_enthalpy_J_mol": {
+    "H": 217998.0,
+    "O": 249180.0,
+    "N": 472680.0,
+    "OH": 38990.0,
+    "H2O": -241826.0,
+    "N2": 0.0,
+    "O2": 0.0
+  },
+  "temperature_K": 298.15,
+  "formation_sources": {
+    "H": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C12385136&Units=SI&Mask=1",
+    "O": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C17778802&Units=SI&Mask=1",
+    "N": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C17778880&Units=SI&Mask=1",
+    "OH": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C3352576&Units=SI&Mask=1",
+    "H2O": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Units=SI&Mask=1"
+  },
+  "first_ionization_eV": {
+    "Ar": 15.75961,
+    "H": 13.598433,
+    "O": 13.61805,
+    "N": 14.5341
+  },
+  "ionization_sources": {
+    "Ar": "https://physics.nist.gov/PhysRefData/Handbook/Tables/argontable1.htm",
+    "H": "https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable1.htm",
+    "O": "https://physics.nist.gov/PhysRefData/Handbook/Tables/oxygentable1.htm",
+    "N": "https://physics.nist.gov/PhysRefData/Handbook/Tables/nitrogentable1.htm"
+  },
+  "description": "Dissociation costs are standard reaction enthalpy/internal energy at 298.15 K, not D0 or activation barriers. Ionization costs are isolated-atom ground-state thresholds. Not simultaneous additive channels."
+}

@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M1_variable_air_1.30bar_one_way_eta1",
+    "check": "input_stride2",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 6777.469223855524,
+    "check_Tmax_K": 6777.473990875819,
+    "peak_relative_difference": 7.033628832697758e-07,
+    "peak_time_difference_s": -1.6940658945086007e-20,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 1.6007198885190097e-08,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": []
+}

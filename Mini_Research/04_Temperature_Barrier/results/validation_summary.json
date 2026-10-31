@@ -1,0 +1,27 @@
+{
+  "production_runs": 92,
+  "complete_runs": 76,
+  "censored_runs": 16,
+  "mathematical_and_artifact_tests": 16,
+  "tests_passed": true,
+  "convergence_cases": 56,
+  "max_MR3_regression_relative_peak_difference": 3.708497731569338e-06,
+  "max_strict_peak_difference": 3.478365850240195e-06,
+  "max_Radau_peak_difference": 1.8205184204589386e-06,
+  "max_input_peak_difference": 4.906907042245834e-06,
+  "max_production_energy_residual_scaled": 4.376246103923962e-07,
+  "max_independent_16point_quadrature_residual": 1.2350301686429456e-06,
+  "valid_global_sensitivity_contrasts": 45,
+  "all_boundary_stop_reasons": [
+    "coefficient_upper_boundary"
+  ],
+  "source_energy_zero": true,
+  "physical_validation": false,
+  "scientific_acceptance": "awaiting independent web review",
+  "clean_reproduction_cases": 4,
+  "clean_reproduction_max_relative_difference": 0.0,
+  "clean_environment_tests_passed": 16,
+  "pdf_pages": 10,
+  "pdf_main_text_pages": 7,
+  "pdf_visual_review": "all pages inspected"
+}

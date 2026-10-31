@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_argon_1.00bar_coupled_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.00016666666666666666,
+    "production_Tmax_K": 886.8215913841485,
+    "check_Tmax_K": 886.8215912391964,
+    "peak_relative_difference": -1.6345125253280912e-10,
+    "peak_time_difference_s": -3.3333333333522474e-05,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 6.515530645065686e-15,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_argon_1.00bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 3.3870049758921605e-10,
+      "quadrature_work_J": -1.0923201333362466e-09,
+      "quadrature_heat_J": 7.536196358237586e-10,
+      "residual_J": 7.672803284950002e-20,
+      "scaled_residual": 7.024317368860671e-11
+    },
+    {
+      "run_id": "M1_variable_argon_1.00bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 3.3870049758921605e-10,
+      "quadrature_work_J": -1.0923201333362466e-09,
+      "quadrature_heat_J": 7.536196358237584e-10,
+      "residual_J": 7.672782605434688e-20,
+      "scaled_residual": 7.024298437125658e-11
+    },
+    {
+      "run_id": "M1_variable_argon_1.00bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": -6.812561288414979e-12,
+      "quadrature_work_J": -1.8402118657857123e-09,
+      "quadrature_heat_J": 1.8470244270814282e-09,
+      "residual_J": 7.30090288154616e-21,
+      "scaled_residual": 3.952791730579691e-12
+    },
+    {
+      "run_id": "M1_variable_argon_1.00bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": -6.812561288414979e-12,
+      "quadrature_work_J": -1.84021186578571e-09,
+      "quadrature_heat_J": 1.8470244270814278e-09,
+      "residual_J": 7.302764037924405e-21,
+      "scaled_residual": 3.953799381778537e-12
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "water": {
+    "R0": 6e-06,
+    "f": 30000.0,
+    "p0": 101325.0,
+    "rho": 998.2,
+    "mu": 0.001002,
+    "sigma": 0.07274,
+    "pv": 2339.0,
+    "kappa": 1.4,
+    "c": 1482.0,
+    "floor_fraction": 0.001
+  },
+  "T0_K": 293.15,
+  "pressure_convention": "p_infty = p0 - Pa*sin(2*pi*f*t)",
+  "gas_composition": "79/21 N2/O2 or ground-state Ar; optional fixed H2O",
+  "models": {
+    "M0": {
+      "cv_mode": "mr3",
+      "vapor_factor": 0,
+      "convention": "legacy"
+    },
+    "M1_const": {
+      "cv_mode": "frozen",
+      "vapor_factor": 0,
+      "convention": "legacy"
+    },
+    "M1_variable": {
+      "cv_mode": "variable",
+      "vapor_factor": 0,
+      "convention": "legacy"
+    },
+    "M2_dry": {
+      "cv_mode": "variable",
+      "vapor_factor": 0,
+      "convention": "mixture"
+    },
+    "M2_sat": {
+      "cv_mode": "variable",
+      "vapor_factor": 1,
+      "convention": "mixture"
+    },
+    "M2_sat_const": {
+      "cv_mode": "frozen",
+      "vapor_factor": 1,
+      "convention": "mixture"
+    },
+    "M2_v5": {
+      "cv_mode": "variable",
+      "vapor_factor": 5,
+      "convention": "mixture"
+    },
+    "M2_v10": {
+      "cv_mode": "variable",
+      "vapor_factor": 10,
+      "convention": "mixture"
+    }
+  }
+}

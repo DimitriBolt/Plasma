@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "run_id": "M1_variable_argon_1.30bar_one_way_eta1",
+    "check": "input_stride2",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 213180.8019656088,
+    "check_Tmax_K": 213181.55868756,
+    "peak_relative_difference": 3.549672129121717e-06,
+    "peak_time_difference_s": -3.3881317890172014e-21,
+    "end_time_difference_s": 6.667843360785852e-17,
+    "energy_residual_scaled": 1.7689500575800982e-15,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": []
+}

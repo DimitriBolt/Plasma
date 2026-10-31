@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_air_1.15bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 2667.1725158847726,
+    "check_Tmax_K": 2667.1775938651826,
+    "peak_relative_difference": 1.903881500009419e-06,
+    "peak_time_difference_s": -1.1722935989999517e-18,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 2.206946345851711e-08,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_air_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 2.8261546605962648e-09,
+      "quadrature_work_J": -2.7297557387529577e-09,
+      "quadrature_heat_J": -9.639865093327178e-11,
+      "residual_J": 2.7091003522399813e-16,
+      "scaled_residual": 9.585817754462216e-08
+    },
+    {
+      "run_id": "M1_variable_air_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 2.8261546605962648e-09,
+      "quadrature_work_J": -2.729755738903437e-09,
+      "quadrature_heat_J": -9.639865093201827e-11,
+      "residual_J": 2.7076080928240354e-16,
+      "scaled_residual": 9.580537578409746e-08
+    },
+    {
+      "run_id": "M1_variable_air_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 3.8703496572379375e-11,
+      "quadrature_work_J": -4.0187621630432095e-09,
+      "quadrature_heat_J": 3.980062548027653e-09,
+      "residual_J": 3.88155682330934e-15,
+      "scaled_residual": 9.65858805729879e-07
+    },
+    {
+      "run_id": "M1_variable_air_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 3.8703496572379375e-11,
+      "quadrature_work_J": -4.018761942230351e-09,
+      "quadrature_heat_J": 3.980062548043827e-09,
+      "residual_J": 4.102385855718542e-15,
+      "scaled_residual": 1.0208083769803446e-06
+    }
+  ]
+}

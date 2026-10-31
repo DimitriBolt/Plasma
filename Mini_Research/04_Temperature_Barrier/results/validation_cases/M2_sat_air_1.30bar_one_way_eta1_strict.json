@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M2_sat_air_1.30bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.8340899070687366e-05,
+    "production_Tmax_K": 5999.999999990719,
+    "check_Tmax_K": 6000.000000003688,
+    "peak_relative_difference": 2.1616042289451798e-12,
+    "peak_time_difference_s": -1.0922760905387324e-15,
+    "end_time_difference_s": -1.0922760905387324e-15,
+    "energy_residual_scaled": 3.2578360900848583e-10,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": [
+    {
+      "run_id": "M2_sat_air_1.30bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 7.664121603840911e-09,
+      "quadrature_work_J": -7.461882223836468e-09,
+      "quadrature_heat_J": -2.0223966892207499e-10,
+      "residual_J": -2.8891763173801716e-16,
+      "scaled_residual": 3.769742270180378e-08
+    },
+    {
+      "run_id": "M2_sat_air_1.30bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 7.664121603840911e-09,
+      "quadrature_work_J": -7.461882243266506e-09,
+      "quadrature_heat_J": -2.022396689215067e-10,
+      "residual_J": -3.0834710095680476e-16,
+      "scaled_residual": 4.023254286600504e-08
+    },
+    {
+      "run_id": "M2_sat_air_1.30bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 7.664121603840911e-09,
+      "quadrature_work_J": -7.461882223836468e-09,
+      "quadrature_heat_J": -2.0223966892207499e-10,
+      "residual_J": -2.8891763173801716e-16,
+      "scaled_residual": 3.769742270180378e-08
+    },
+    {
+      "run_id": "M2_sat_air_1.30bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 7.664121603840911e-09,
+      "quadrature_work_J": -7.461882243266506e-09,
+      "quadrature_heat_J": -2.022396689215067e-10,
+      "residual_J": -3.0834710095680476e-16,
+      "scaled_residual": 4.023254286600504e-08
+    }
+  ]
+}

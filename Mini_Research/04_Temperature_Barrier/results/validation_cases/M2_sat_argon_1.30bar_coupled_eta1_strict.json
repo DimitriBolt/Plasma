@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M2_sat_argon_1.30bar_coupled_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": false,
+    "solver_message": "coefficient_upper_boundary",
+    "end_s": 1.852014994315811e-05,
+    "production_Tmax_K": 6000.000000000458,
+    "check_Tmax_K": 5999.9999999992415,
+    "peak_relative_difference": -2.028377465990161e-13,
+    "peak_time_difference_s": -8.30227813580775e-17,
+    "end_time_difference_s": -8.30227813580775e-17,
+    "energy_residual_scaled": 2.420919517527962e-09,
+    "extrema_scope": "observed_interval_censored"
+  },
+  "quadrature": [
+    {
+      "run_id": "M2_sat_argon_1.30bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 3.4821298880554795e-09,
+      "quadrature_work_J": -3.359789376474213e-09,
+      "quadrature_heat_J": -1.2234051641378519e-10,
+      "residual_J": -4.832518799095805e-18,
+      "scaled_residual": 1.387805439329669e-09
+    },
+    {
+      "run_id": "M2_sat_argon_1.30bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 3.4821298880554795e-09,
+      "quadrature_work_J": -3.359789376474222e-09,
+      "quadrature_heat_J": -1.2234051641378508e-10,
+      "residual_J": -4.8325273810946606e-18,
+      "scaled_residual": 1.3878079039128784e-09
+    },
+    {
+      "run_id": "M2_sat_argon_1.30bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 3.4821298880554795e-09,
+      "quadrature_work_J": -3.359789376474213e-09,
+      "quadrature_heat_J": -1.2234051641378519e-10,
+      "residual_J": -4.832518799095805e-18,
+      "scaled_residual": 1.387805439329669e-09
+    },
+    {
+      "run_id": "M2_sat_argon_1.30bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 3.4821298880554795e-09,
+      "quadrature_work_J": -3.359789376474222e-09,
+      "quadrature_heat_J": -1.2234051641378508e-10,
+      "residual_J": -4.8325273810946606e-18,
+      "scaled_residual": 1.3878079039128784e-09
+    }
+  ]
+}

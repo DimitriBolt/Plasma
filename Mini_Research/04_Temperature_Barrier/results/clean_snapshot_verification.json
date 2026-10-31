@@ -1,0 +1,15 @@
+{
+  "isolated_checkout": "/tmp/mr4-clean-checkout",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "bounded_reproduction_cases": 4,
+  "max_relative_peak_difference": 0.0,
+  "all_statuses_match": true,
+  "unchanged_upstream_files": 611,
+  "scientific_artifact_hashes": {
+    "results/summary.csv": "19315b88e32a752de6a7abda563513037c2df39d37ac0bdf9d27516fb2986614",
+    "results/species_coefficients.json": "c44d836802a5adaf023bf05b3807b5fb5c238cad4e6b92ac4f001fe4aa54b3c5",
+    "report/04_Temperature_Barrier.pdf": "0543e11fee01f8bb0fb86a93ec422570c47a7ccb8719d02a318bfc5de8e9664e"
+  },
+  "scope": "Clean source/data/PDF copy, before adding this verification journal; no old results regenerated"
+}

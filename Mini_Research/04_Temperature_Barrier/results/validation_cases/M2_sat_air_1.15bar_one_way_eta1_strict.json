@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M2_sat_air_1.15bar_one_way_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.0001666666666666667,
+    "production_Tmax_K": 2647.0523245051495,
+    "check_Tmax_K": 2647.0569842745494,
+    "peak_relative_difference": 1.7603616508932163e-06,
+    "peak_time_difference_s": -1.0706496453294356e-18,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 9.330147784796667e-09,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M2_sat_air_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 2.8762637308216435e-09,
+      "quadrature_work_J": -2.775498449909258e-09,
+      "quadrature_heat_J": -1.0076546964494282e-10,
+      "residual_J": -1.8873255730776105e-16,
+      "scaled_residual": 6.561726426034202e-08
+    },
+    {
+      "run_id": "M2_sat_air_1.15bar_one_way_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 2.8762637308216435e-09,
+      "quadrature_work_J": -2.7754984281986116e-09,
+      "quadrature_heat_J": -1.0076546964254932e-10,
+      "residual_J": -1.6701951740356943e-16,
+      "scaled_residual": 5.806822080110785e-08
+    },
+    {
+      "run_id": "M2_sat_air_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": 3.942447940988203e-11,
+      "quadrature_work_J": -4.027218970140214e-09,
+      "quadrature_heat_J": 3.987789654003939e-09,
+      "residual_J": -4.83672639307508e-15,
+      "scaled_residual": 1.201009040962747e-06
+    },
+    {
+      "run_id": "M2_sat_air_1.15bar_one_way_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": 3.942447940988203e-11,
+      "quadrature_work_J": -4.027217553899881e-09,
+      "quadrature_heat_J": 3.987789654120184e-09,
+      "residual_J": -3.4203698150132245e-15,
+      "scaled_residual": 8.493133954735083e-07
+    }
+  ]
+}

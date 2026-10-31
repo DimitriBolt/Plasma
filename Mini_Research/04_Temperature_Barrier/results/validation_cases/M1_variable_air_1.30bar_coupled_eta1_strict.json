@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "run_id": "M1_variable_air_1.30bar_coupled_eta1",
+    "check": "strict",
+    "method": "DOP853",
+    "rtol": 2e-11,
+    "completed": true,
+    "solver_message": "Reached five-cycle end",
+    "end_s": 0.00016666666666666666,
+    "production_Tmax_K": 6741.210106380983,
+    "check_Tmax_K": 6741.210447687137,
+    "peak_relative_difference": 5.062980523717897e-08,
+    "peak_time_difference_s": -8.228078049628273e-17,
+    "end_time_difference_s": 0.0,
+    "energy_residual_scaled": 1.631310358254944e-08,
+    "extrema_scope": "five_cycle_global"
+  },
+  "quadrature": [
+    {
+      "run_id": "M1_variable_air_1.30bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 8,
+      "delta_U_J": 8.506843224502699e-09,
+      "quadrature_work_J": -8.292278077080394e-09,
+      "quadrature_heat_J": -2.145651493287385e-10,
+      "residual_J": -1.906433349843321e-18,
+      "scaled_residual": 2.2410585213938384e-10
+    },
+    {
+      "run_id": "M1_variable_air_1.30bar_coupled_eta1",
+      "endpoint": "Tmax",
+      "order": 16,
+      "delta_U_J": 8.506843224502699e-09,
+      "quadrature_work_J": -8.292278077080222e-09,
+      "quadrature_heat_J": -2.145651493287384e-10,
+      "residual_J": -1.9062611928783335e-18,
+      "scaled_residual": 2.2408561467168352e-10
+    },
+    {
+      "run_id": "M1_variable_air_1.30bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 8,
+      "delta_U_J": -2.1124400901125167e-11,
+      "quadrature_work_J": -3.89160221086576e-09,
+      "quadrature_heat_J": 3.912726725208784e-09,
+      "residual_J": 1.1344189839846187e-16,
+      "scaled_residual": 2.8993054298318927e-08
+    },
+    {
+      "run_id": "M1_variable_air_1.30bar_coupled_eta1",
+      "endpoint": "end",
+      "order": 16,
+      "delta_U_J": -2.1124400901125167e-11,
+      "quadrature_work_J": -3.891602210871289e-09,
+      "quadrature_heat_J": 3.912726725208783e-09,
+      "residual_J": 1.1343636869606695e-16,
+      "scaled_residual": 2.8991641037750724e-08
+    }
+  ]
+}

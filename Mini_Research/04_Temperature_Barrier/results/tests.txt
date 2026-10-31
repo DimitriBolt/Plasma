@@ -1,0 +1,21 @@
+test_design_complete_and_consistent (test_physics.SavedResultsTests.test_design_complete_and_consistent) ... ok
+test_energy_ledgers (test_physics.SavedResultsTests.test_energy_ledgers) ... ok
+test_extrema_stationary_or_boundary (test_physics.SavedResultsTests.test_extrema_stationary_or_boundary) ... ok
+test_regression_and_convergence (test_physics.SavedResultsTests.test_regression_and_convergence) ... ok
+test_report_tables_use_saved_data (test_physics.SavedResultsTests.test_report_tables_use_saved_data) ... ok
+test_upstream_unchanged (test_physics.SavedResultsTests.test_upstream_unchanged) ... ok
+test_argon_no_artificial_variable_heat_capacity (test_physics.ThermodynamicsTests.test_argon_no_artificial_variable_heat_capacity) ... ok
+test_cp_cv_identity_and_positivity (test_physics.ThermodynamicsTests.test_cp_cv_identity_and_positivity) ... ok
+test_domain_stops_and_preserves_observed_interval (test_physics.ThermodynamicsTests.test_domain_stops_and_preserves_observed_interval) ... ok
+test_energy_derivative_integral_and_joins (test_physics.ThermodynamicsTests.test_energy_derivative_integral_and_joins) ... ok
+test_eos_and_no_vapor_double_count (test_physics.ThermodynamicsTests.test_eos_and_no_vapor_double_count) ... ok
+test_heat_flux_signs (test_physics.ThermodynamicsTests.test_heat_flux_signs) ... ok
+test_initial_mechanical_equilibrium (test_physics.ThermodynamicsTests.test_initial_mechanical_equilibrium) ... ok
+test_mr3_exact_equation_limit (test_physics.ThermodynamicsTests.test_mr3_exact_equation_limit) ... ok
+test_partial_pressures_and_saturated_inventory (test_physics.ThermodynamicsTests.test_partial_pressures_and_saturated_inventory) ... ok
+test_pressure_derivative (test_physics.ThermodynamicsTests.test_pressure_derivative) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.622s
+
+OK

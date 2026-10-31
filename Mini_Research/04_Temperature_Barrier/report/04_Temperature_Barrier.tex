@@ -1,0 +1,206 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=19mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,array,float,microtype,caption}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\hypersetup{pdftitle={Temperature-Barrier Physics: Vapor, Heat Capacity, and Ionization},pdfauthor={Dimitri Bolt},pdfsubject={Mini-Research 4}}
+\usepackage{fancyhdr}
+\pagestyle{plain}
+\setlength{\headheight}{13pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\captionsetup{font=small,labelfont=bf}
+\graphicspath{{../figures/}}
+\input{../results/report_values.tex}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{#1.jpg}\caption{#3}\end{figure}}
+\newcommand{\sci}[1]{\ensuremath{\texttt{#1}}}
+\title{\vspace{-12mm}\Large\bfseries Temperature-Barrier Physics:\\Vapor, Heat Capacity, and Ionization}
+\author{Dimitri Bolt\\[2pt]\small Academic supervisor: Prof. Dr. Ildar R. Gabitov}
+\date{Mini-Research 4 \quad | \quad 31 October 2026}
+\begin{document}
+\maketitle\vspace{-7mm}
+\begin{center}\small\emph{Plasmonic-Enhanced Laser-Induced Sonofusion: Overcoming the Temperature Barrier via Resonant Nanoparticle Heating}\end{center}
+\begin{abstract}
+I examine how temperature-dependent ideal-gas heat capacities and a fixed water-vapor inventory change the peak temperature of an acoustically driven bubble. Identical heat-transfer parameters separate caloric effects from transport changes; one-way post-processing separates those effects from mechanical feedback. The preceding constant-capacity model is recovered as an exact equation limit. Molecular excitation changes the air-like caloric response, whereas ground-state ideal argon retains constant heat capacity. Water vapor enters both energy and pressure, replacing the preceding separate constant vapor-pressure term. Chemical dissociation and ionization are assessed quantitatively as energy demands, without computing chemical populations or a chemically corrected peak. Coefficient boundaries censor a trajectory rather than impose a physical temperature ceiling. All extreme 1.3 bar cases remain available, subject to their numerical scope and strong physical limitations.
+\end{abstract}
+
+\section{Objective and physical motivation}
+The question is how water vapor, variable heat capacity and endothermic processes modify compression heating, without assuming that every added mechanism lowers the resulting maximum. Increasing heat capacity reduces temperature gain for a specified energy input, but changing pressure changes the bubble trajectory, compression work and thermal history. Heat can enter the gas during expansion, so a comparison over an entire driven cycle is not an isolated adiabatic compression.
+
+Vapor trapping and molecular excitation are established mechanisms in sonoluminescence models. Toegel et al.~\cite{toegel} couple vapor exchange, heat transfer and vibrational energy. Yuan~\cite{yuan} resolves a reacting multicomponent gas, while Hammer and Frommhold~\cite{hammer} include chemistry, ionization and radiation. Their closures, operating conditions and observables differ from this study. Their temperatures are not calibration targets. The local studies~\cite{sadighi,flannigan,xu} likewise motivate the problem without validating a uniform gas temperature in water under the present conditions.
+
+\section{Reference state and controlled model hierarchy}
+The inherited conditions are $R_0=6\,\mu\mathrm m$, $f=30\,\mathrm{kHz}$, $T_0=T_\ell=293.15$ K and a five-cycle requested interval $0\le t\le5/f=166.667\,\mu$s. Acoustic amplitude is the peak sinusoidal amplitude, with
+\[
+p_\infty(t)=p_0-P_a\sin(2\pi ft),\qquad
+p_{d0}=p_0+2\sigma/R_0-p_v=123232.667\ \mathrm{Pa}.
+\]
+The water constants and forcing phase are unchanged (Appendix A). The air-like gas is a frozen 79/21 mole-percent N$_2$/O$_2$ idealization; the argon-like gas is ground-state Ar. No constituent reacts in the ODE.
+
+\begin{itemize}\setlength\itemsep{0pt}
+\item \textbf{Model 0:} the Mini-Research 3 limit, $c_V=R_u/(\gamma-1)$, $\gamma=1.4$ or $5/3$, dry inventory $n_d=p_{d0}V_0/(R_uT_0)$, plus separate mechanical $p_v$.
+\item \textbf{Model 1:} the same legacy pressure convention and dry inventory, with NASA heat capacities; a same-component control freezes each heat capacity at $T_0$.
+\item \textbf{Model 2:} a closed ideal mixture with consistent vapor pressure and energy, including dry, initially saturated and enhanced trapped-vapor inventories. A same-mixture frozen-capacity control is retained.
+\item \textbf{Model 3 assessment:} chemical energy scales and hypothetical complete-conversion demands; this level supplies no new dynamical temperature prediction.
+\end{itemize}
+
+\newpage
+\section{Thermodynamically consistent formulation}
+For fixed composition, define sensible energy relative to the initial state,
+\begin{align}
+\Delta U(T)&=\sum_i n_i\int_{T_0}^T[c_{P,i}(\theta)-R_u],d\theta,
+& C_V^{\rm tot}(T)&=\frac{dU}{dT}>0,\\
+p_g&=\frac{n_{\rm tot}R_uT}{V},\qquad V=\frac{4\pi R^3}{3},
+&\dot V&=4\pi R^2u,\quad u=\dot R.
+\end{align}
+NASA9 data~\cite{nasa} give $c_P/R_u=a_1/T^2+a_2/T+a_3+a_4T+a_5T^2+a_6T^3+a_7T^4$. I integrate $c_V$ analytically on each interval and add matching offsets, so energy is continuous at every join. The source enthalpy integration constants cancel for unchanged composition; no formation energy is counted twice. The model is
+\begin{equation}\label{eq:energy}
+\boxed{\dot T=\frac{-p_g\dot V-\dot Q_{\rm loss}}{C_V^{\rm tot}(T)}},\qquad
+\dot Q_{\rm loss}=4\pi\eta k_gR(T-T_\ell),\qquad \dot Q_{\rm source}=0.
+\end{equation}
+The signed flux is negative when the liquid heats the gas. The retained $k_g$ is 0.0264 W/(m K) for air and 0.0177 W/(m K) for argon~\cite{huber}, including their wet-mixture controls. These are fixed 300 K reference parameters, not a high-temperature mixture transport law.
+
+The energy-consistent pressure derivative is
+\begin{equation}\label{eq:pressure}
+\dot p_g=p_g\left(\frac{\dot T}{T}-\frac{3u}{R}\right).
+\end{equation}
+Let $p_c=p_v$ for legacy Models 0/1, and $p_c=0$ for Model 2. The inherited Keller--Miksis (KM) convention is preserved:
+\begin{align}
+\Delta p&=p_g+p_c-p_\infty-2\sigma/R-4\mu u/R,\\
+D\dot u&=(1+u/c)\Delta p/\rho+RB/(\rho c)-\tfrac32(1-u/(3c))u^2,\\
+D&=R(1-u/c)+4\mu/(\rho c),\\
+B&=\dot p_g+2\sigma u/R^2+P_a\omega\cos\omega t+4\mu u^2/R^2.
+\end{align}
+The viscous acceleration derivative is included in $D$. A varying diagnostic $\gamma(T)=1+R_u/c_V(T)$ does not justify $pV^{\gamma(T)}=\mathrm{constant}$. For this fixed mixture, the adiabatic invariant would instead involve $\int c_V(T)dT/T+R_u\ln V$.
+
+\fig{01_heat_capacity}{.98}{Per-mole heat capacity and a diagnostic capacity ratio. Molecular internal excitation is included in NASA species data. Ground-state argon remains calorically perfect. The ratio is not imposed as a variable-exponent pressure law.}
+
+NASA fits cover 200--20000 K for N$_2$/O$_2$ and 200--6000 K for H$_2$O. An event stops the accepted variable-capacity trajectory at its first domain boundary. Ground-state monatomic Ar has an analytic constant capacity; retaining that mathematical model above atomic excitation/ionization scales does not establish its physical validity.
+
+\newpage
+\section{Vapor inventory and numerical methodology}
+The saturated-inventory Model 2 uses
+\[
+n_{v0}=\frac{p_vV_0}{R_uT_0},\qquad n_{d0}=\frac{p_{d0}V_0}{R_uT_0},\qquad
+p_{g0}^{\rm mixture}=p_0+2\sigma/R_0.
+\]
+Its water mole fraction is \SaturatedFraction\%. Both pressure and energy contain this same inventory, with no additional constant $p_v$. Evaporation, condensation and latent heat are absent. For sensitivity, $x_v=b\,p_v/(p_0+2\sigma/R_0)$ with $b=0,1,5,10$, holding total initial pressure and total moles fixed by displacing dry gas. The enhanced cases are mechanically equilibrated hypothetical trapped inventories, supersaturated at $T_0$, rather than thermodynamic initial equilibria or a calculation of vapor capture. The dry Model 2 control isolates replacing the legacy vapor-pressure convention before adding water heat capacity.
+
+The vapor-free Model 2 control replaces the initial vapor pressure by additional dry-gas moles to preserve static balance. Its contrast with Model 1 therefore includes this inventory normalization, as well as removal of constant $p_v$. The saturated case restores exactly the preceding dry inventory and adds the prescribed H$_2$O inventory.
+
+One-way calculations reuse the same published mechanical trajectories and the same C1 Hermite radius reconstruction used by Mini-Research 3. These histories originate in Mini-Research 2; I do not substitute the newly coupled history into that comparison. The reconstructed velocity is exactly $dR/dt$. Thermodynamic pressure can differ from the pressure that generated the history; the maximum relative mismatch and its value at the thermal peak are saved. Coupled runs evolve radius, velocity, temperature and energy ledgers together.
+
+Production uses adaptive DOP853, relative tolerance $2\times10^{-9}$ and maximum step $(1/f)/600$. Refinement uses $2\times10^{-11}$ and $(1/f)/1200$; independent Radau uses $2\times10^{-10}$. Temperature extrema are roots of Eq.~\eqref{eq:energy} on dense polynomials, with endpoints included and a subdivided accepted-step search grid. One-way searches additionally include the mechanical knots. Radius minima are found independently. The saved thermal peak time, cycle, radius and pressure are not replaced by the radius-minimum event.
+
+\begin{table}[H]\centering\small
+\caption{Principal comparison at $\eta=1$. OW: one-way; CO: coupled. M1 uses variable dry heat capacity and legacy $p_v$; M2 uses the fixed saturated inventory. A dagger denotes the maximum on an observed, censored interval, not a five-cycle global maximum. The relative change uses M2 versus the same-mode MR3 peak only when M2 completes five cycles.}
+\input{../results/table_main.tex}
+\end{table}
+The complete design contains \RunCount\ runs: \CompletedCount\ complete their requested interval and \CensoredCount\ retain a censored interval. Every saved boundary event includes time, temperature and reason. The search is finite and does not establish an absolute maximum over all physical conditions.
+
+\newpage
+\section{Results and separation of mechanisms}
+At 1.3 bar the variable-capacity dry-air peaks are \AirDryOW\ K (one-way) and \AirDryCO\ K (coupled); the saturated-inventory observed peaks are \AirWetOW\ and \AirWetCO\ K. Corresponding argon values are \ArgonDryOW, \ArgonDryCO, \ArgonWetOW\ and \ArgonWetCO\ K. The scope markers in the principal table determine which of these are global over five cycles. A value at a coefficient boundary is not a prediction that the bubble cannot get hotter.
+
+\fig{02_temperature_histories}{.98}{Coupled temperature histories at 1.3 bar. Crosses mark coefficient-domain termination where present. Right panels align each curve to its own refined thermal maximum, exposing narrow heating intervals; this alignment does not assert simultaneous collapses.}
+The variable-capacity effect is the ratio of Model 1 to its same-component frozen-$c_V(T_0)$ control, not to an arbitrarily chosen constant $\gamma$. This removes the small initial-capacity difference between the NASA N$_2$/O$_2$ mixture and idealized $\gamma=1.4$. The ground-state Ar controls coincide within numerical precision. Its large dry temperatures therefore remain in the dataset.
+
+In the wet argon comparison, variable versus frozen mixture capacity isolates H$_2$O excitation because Ar capacity is unchanged. For wet air the same contrast changes both molecular dry-gas and water capacities, and is labeled accordingly.
+
+\fig{05_model_comparison}{.98}{Saved peak comparisons. Hatched bars are censored observed peaks. The change from M1 to M2 includes both the vapor-pressure convention and the fixed water inventory, so it is not attributed solely to molecular heat capacity.}
+
+\newpage
+\section{Sensitivity and energy budgets}
+The paired sensitivity table records the exact reference run for every change: variable versus frozen capacity, replacement of the vapor-pressure convention, water inventory at unchanged total initial pressure, and $\eta=0.5,1,2$ at 1.3 bar and for air at 1.15 bar. The definition is $\delta_T=(T_{\max}^{\rm new}-T_{\max}^{\rm reference})/T_{\max}^{\rm reference}$. Global changes are left undefined when either run is censored; separately labeled observed-maximum ratios are only interval diagnostics. One-way and coupled effects remain separate.
+\fig{03_vapor_sensitivity}{.98}{Discrete trapped-vapor scenarios at 1.3 bar. Open triangles denote coefficient-limited observed intervals; their continuation is uncomputed. Only complete points are connected. Fractions above saturation are conditional fixed-inventory states.}
+
+For the closed gas subsystem the checked identity is
+\begin{equation}\label{eq:balance}
+\boxed{\Delta U(t)+W_{\rm by}(t)+Q_{\rm loss}(t)=0},\quad
+W_{\rm by}=\int_0^t p_g\dot V,dt,\quad Q_{\rm loss}=\int_0^t\dot Q_{\rm loss}\,dt.
+\end{equation}
+Gross compression $\int_0^t\max(-p_g\dot V,0)dt$ is also retained, including the last expansion maximum to the thermal peak. It differs from signed net work. Chemical energy change is zero in the frozen calculations. Neither this identity nor a small residual proves conservation of energy in the entire gas--liquid system: the liquid is a fixed reservoir, and legacy $p_v$ has no vapor energy ledger.
+
+\begin{table}[H]\centering\small
+\caption{Saturated-inventory energy at the refined observed thermal peak. $W_{\rm by}$ is work done by the gas; heat loss is signed. $\epsilon_E$ is the maximum residual over the observed interval, normalized by the largest sensible-energy, work, heat or initial $nR_uT_0$ scale.}
+\input{../results/table_energy.tex}
+\end{table}
+The time-resolved energy decomposition is shown in Appendix A.
+
+\newpage
+\section{Dissociation and ionization: quantitative assessment}
+NIST formation enthalpies~\cite{nist} give standard reaction energy costs. For dissociation I use $\Delta_rH^\circ(298.15\,\mathrm K)$ and $\Delta_rU^\circ=\Delta_rH^\circ-\Delta\nu R_uT$. These are reference energy scales, not zero-temperature bond energies, kinetic barriers or a high-temperature equilibrium calculation. Ionization uses NIST isolated-atom ground-state thresholds~\cite{atomic} and exact SI conversion $1\,\mathrm{eV/particle}=96485.3321\,\mathrm{J/mol}$.
+\begin{table}[H]\centering\small
+\caption{Energy scales. Dissociation ``Energy'' denotes $\Delta_rH^\circ_{298}$ in eV per parent molecule; ``Cost'' is $\Delta_rU^\circ_{298}$. Ionization entries use the ground-state threshold in both columns. The $E/R_u$ scale is not an onset temperature.}
+\input{../results/table_chemistry.tex}
+\end{table}
+
+For each selected 1.3 bar inventory I calculate $E_{\rm complete}=n_{\rm parent}\,\Delta_rU^\circ_{298}$ or $n_{\rm atom}N_AE_i$, and compare it to gross compression, work during the selected collapse and the frozen sensible-energy increase. Atomic H/O/N ionization inventories are hypothetical inventories after complete dissociation, not actual neutral populations. First-step and full water dissociation are alternative channels; their demands must not be added. Reverse reactions would release chemical energy.
+
+For the saturated inventory at the 1.3 bar coupled observation boundary, first-step water dissociation demands \ChemWaterFirstNJ\ nJ and full atomization \ChemWaterFullNJ\ nJ. Complete N$_2$ dissociation in air would require \ChemAirNtwoNJ\ nJ (\ChemAirNtwoToU\ times its frozen sensible-energy increase). Complete first ionization of Ar would require \ChemArgonIonNJ\ nJ, or \ChemArgonIonToU\ times its sensible-energy increase and \ChemArgonIonToWork\ times its selected-collapse compression work. These demands quantify possible competition for energy, not realized conversion.
+
+The saved inventory budgets show whether substantial chemical conversion would demand a small or large fraction of the frozen model's energy input. At a prescribed available energy $E_{\rm av}$ and fixed reference cost $E_{\rm complete}$, energy accounting alone would permit at most a fraction $\min(1,E_{\rm av}/E_{\rm complete})$ if all other final energy demands were nonnegative and no further work or heat entered. This is a conditional bookkeeping restriction: reference costs, product sensible energy and the trajectory all change in a reacting bubble. It does not determine a realized reaction fraction or a temperature bound. Comparing $\exp[-E/(R_uT)]$ at 1000--30000 K supplies an energy-scale diagnostic, not a fraction or rate; density, translational entropy, partition sums, collision partners and kinetics are missing.
+
+Vibrational and rotational contributions already present in the molecular heat capacities redistribute sensible energy internally. Dissociation adds chemical storage and changes the number of particles. Ionization additionally adds electrons and charged species, changing both pressure and energy. Subtracting a fixed conversion energy from the frozen curve would ignore those feedbacks, the temperature dependence of product energy and recombination. I therefore report no chemically corrected $T_{\max}$.
+
+If an equilibrium closure were used, it would require a single $U(T,V)$ and $p(T,V)$ with
+\[
+\dot T=\frac{-(p+U_V)\dot V-\dot Q_{\rm loss}}{U_T},\qquad
+\dot p=p_T\dot T+p_V\dot V.
+\]
+The present frozen mixture has $U_V=0$ and $U_T=C_V^{\rm tot}$. A Saha calculation would additionally need nuclei conservation, charge neutrality, electron pressure/energy, statistical weights and partition sums, and evidence for local thermodynamic equilibrium (LTE). None of these is replaced by an energy subtraction.
+
+\newpage
+\section{Numerical evidence and physical applicability}
+The exact Model 0 equation limit is tested against the preceding implementation, including the pressure derivative and full viscous KM term. The largest observed regression peak difference is \sci{\MaximumRegression}. For the checked principal calculations the largest production-to-strict peak difference is \sci{\MaximumStrictDifference}, and the independent-Radau difference is \sci{\MaximumRadauDifference}. Mechanical-input grid changes produce at most \sci{\MaximumInputDifference}. These observed differences are convergence evidence, not rigorous error bounds. In weak 1.0 bar cases successive cycle peaks nearly tie: refinement can shift the selected argmax by one period despite a stable peak value. I retain the actual argmax and all candidate times, and report the span within a declared $10^{-8}$ relative near-peak band; this band is a conditioning diagnostic, not an error bound. Boundary-time convergence is checked separately from the uncomputed tail.
+
+The maximum production energy residual is \sci{\MaximumResidual}. Independently integrating work and heat on the refined dense histories with Gauss--Legendre quadrature gives a maximum 16-point scaled endpoint residual of \sci{\MaximumQuadratureResidual}. This independent quadrature checks the ledgers without equating a small ODE residual with full-system conservation. Numerical error, physical coefficient uncertainty and model inadequacy are separate: better tolerances do not correct fixed transport coefficients or an inappropriate EOS.
+
+High pressures and densities challenge the ideal mixture, dilute thermodynamic data, continuum transport and a homogeneous gas temperature. Wall Mach number $|u|/c$ and $\chi=\max|p_L-p_0|/(\rho c^2)$ are saved for every run. The latter is a pressure-scale proxy, not a liquid density prediction. Strong liquid compressibility, shocks, finite molecular volume, interfacial transfer, radiation and shape instability are unresolved. Prescribed negative far-field liquid pressure during part of the strongest forcing represents modeled tension; it is not silently discarded or established as experimentally sustainable.
+
+Thermal peak widths, the time from the preceding radius maximum to the thermal peak, and the ideal-gas acoustic crossing time $R/\sqrt{\gamma R_uT/M}$ are saved. These times can expose the weakness of assuming a single temperature, but do not provide vibrational or chemical relaxation rates. When relaxation is comparable to a narrow collapse pulse, equilibrium heat capacities and LTE chemistry need separate justification. Published finite-rate and spatial models~\cite{yuan,hammer} demonstrate why an energy-only assessment cannot settle those issues.
+
+\begin{description}\setlength\itemsep{2pt}
+\item[Numerically reproducible.] The specified equations, saved maxima, domain events, ledgers and paired comparisons are reproducible within the documented numerical differences.
+\item[Conditional model-based estimate.] Every computed peak remains conditional on a spherical, uniform, ideal, frozen gas, prescribed heat transfer and the adopted KM liquid description. Incomplete runs have only observed-interval maxima.
+\item[Physically supported.] Molecular internal degrees of freedom, signed thermal exchange, energy-consuming dissociation and nonzero atomic ionization energy are established mechanisms. That support does not validate the extreme numerical temperatures.
+\item[Requires a more complete physical model.] Quantitative high-density peaks, actual vapor capture, reacting composition, shock structure and nonequilibrium plasma states require additional EOS, spatial transport and rate information.
+\end{description}
+
+\section{Conclusions}
+Variable molecular heat capacity, vapor pressure/energy accounting and mechanical feedback are distinguishable contributions. Ground-state argon supplies a useful null control for variable heat capacity. A fixed vapor mixture supplies a quantitative closed-system comparison, while coefficient-boundary events preserve the limit of what its data justify. Chemical energy costs indicate mechanisms that can compete with compression energy; they do not supply a new temperature cap or a chemically equilibrated trajectory.
+
+No extreme scenario is declared physically impossible on the basis of this reduced model, and no finite parameter set establishes a universal maximum. The study provides material for independent scientific assessment. It does not infer fusion, implement optical heating, or extend the model to subsequent research stages.
+
+\newpage
+\begin{thebibliography}{12}\small
+\bibitem{toegel} R. Toegel, B. Gompf, R. Pecha and D. Lohse, ``Does Water Vapor Prevent Upscaling Sonoluminescence?'' Phys. Rev. Lett. \textbf{85}, 3165 (2000). \href{https://doi.org/10.1103/PhysRevLett.85.3165}{doi:10.1103/PhysRevLett.85.3165}.
+\bibitem{yuan} L. Yuan, ``Sonochemical effects on single-bubble sonoluminescence,'' Phys. Rev. E \textbf{72}, 046309 (2005). \href{https://doi.org/10.1103/PhysRevE.72.046309}{doi:10.1103/PhysRevE.72.046309}.
+\bibitem{hammer} D. Hammer and L. Frommhold, ``Light emission of sonoluminescent bubbles containing a rare gas and water vapor,'' Phys. Rev. E \textbf{65}, 046309 (2002). \href{https://doi.org/10.1103/PhysRevE.65.046309}{doi:10.1103/PhysRevE.65.046309}.
+\bibitem{nasa} B. J. McBride, M. J. Zehe and S. Gordon, \emph{NASA Glenn Coefficients for Calculating Thermodynamic Properties of Individual Species}, NASA/TP-2002-211556 (2002), pp. 2--3 and Appendix D. \href{https://ntrs.nasa.gov/citations/20020085330}{NASA publication}; \href{https://github.com/nasa/cea/blob/main/data/thermo.inp}{NASA CEA coefficient distribution}.
+\bibitem{nist} NIST Chemistry WebBook, SRD 69, gas-phase thermochemistry for \href{https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185\&Units=SI\&Mask=1}{H$_2$O}, \href{https://webbook.nist.gov/cgi/cbook.cgi?ID=C3352576\&Units=SI\&Mask=1}{OH}, \href{https://webbook.nist.gov/cgi/cbook.cgi?ID=C12385136\&Units=SI\&Mask=1}{H}, \href{https://webbook.nist.gov/cgi/cbook.cgi?ID=C17778802\&Units=SI\&Mask=1}{O}, \href{https://webbook.nist.gov/cgi/cbook.cgi?ID=C17778880\&Units=SI\&Mask=1}{N}. Retrieved 31 October 2026; CODATA review entries and Chase (1998), as specified with the data.
+\bibitem{atomic} NIST Atomic Spectra Handbook, ground states and ionization energies for \href{https://physics.nist.gov/PhysRefData/Handbook/Tables/argontable1.htm}{Ar}, \href{https://physics.nist.gov/PhysRefData/Handbook/Tables/hydrogentable1.htm}{H}, \href{https://physics.nist.gov/PhysRefData/Handbook/Tables/oxygentable1.htm}{O}, \href{https://physics.nist.gov/PhysRefData/Handbook/Tables/nitrogentable1.htm}{N}. Retrieved 31 October 2026.
+\bibitem{huber} M. L. Huber, \emph{Thermal Conductivity of Gases}, 300 K air/argon entries, \href{https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=926438}{NIST-hosted table}.
+\bibitem{iapws} IAPWS, \emph{Revised Release on the IAPWS Formulation 1995 for the Thermodynamic Properties of Ordinary Water Substance} (2018). \href{https://iapws.org/technical-guidance/release/IAPWS-95}{Official release}.
+\bibitem{sadighi} R. Sadighi-Bonabi and M. Gheshlaghi, ``Laser induced sonofusion: A new road toward thermonuclear reactions,'' AIP Adv. \textbf{6}, 035218 (2016). \href{https://doi.org/10.1063/1.4945343}{doi:10.1063/1.4945343}.
+\bibitem{flannigan} D. J. Flannigan and K. S. Suslick, ``Plasma formation and temperature measurement during single-bubble cavitation,'' Nature \textbf{434}, 52--55 (2005). \href{https://doi.org/10.1038/nature03361}{doi:10.1038/nature03361}.
+\bibitem{xu} H. Xu and K. S. Suslick, ``Molecular Emission and Temperature Measurements from Single-Bubble Sonoluminescence,'' Phys. Rev. Lett. \textbf{104}, 244301 (2010). \href{https://doi.org/10.1103/PhysRevLett.104.244301}{doi:10.1103/PhysRevLett.104.244301}.
+\end{thebibliography}
+
+\newpage\appendix
+\section{Parameters, model scope and stored quantities}
+The fixed liquid parameters are $p_0=101325$ Pa, $p_v=2339$ Pa, $\sigma=0.07274$ N/m, $\rho=998.2$ kg/m$^3$, $\mu=0.001002$ Pa s and $c=1482$ m/s. They retain the preceding near-ambient water approximation referenced to IAPWS~\cite{iapws}; no claim is made that they remain locally constant at extreme collapse pressure. The universal gas constant is $R_u=8.31446261815324$ J/(mol K). Molar masses are 0.0280134 (N$_2$), 0.0319988 (O$_2$), 0.01801528 (H$_2$O) and 0.039948 kg/mol (Ar). Mixture density is $\rho_g=\sum_i n_iM_i/V$.
+
+Each trajectory includes temperature, radius, wall velocity, pressure, density, sensible energy, signed work and heat, gross compression, and the energy residual. The summary includes exact model/transport parameters, peak time/cycle, thermal and radius events, observed interval, integration completion and applicability diagnostics. Coefficients and their units/ranges are stored separately. The data retain every 1.3 bar scenario without a Mach-based exclusion or temperature clipping.
+
+\fig{04_energy_budgets}{.96}{Energy decomposition from the saved trajectories. Sensible energy equals net compression input minus signed heat loss within the numerical residual. The 1.3 bar argon curve ends at the coefficient boundary. No chemical energy sink is imposed.}
+
+\newpage
+\section{Convergence details and reproducibility}
+\begin{table}[H]\centering\small
+\caption{Selected saturated-mixture convergence comparisons against production, including censored cases. Time differences refer to the refined thermal peak; a one-period change in the weak 1.0 bar case selects a nearly tied cycle (Section 8). Full input-grid and Model 0/1 comparisons are retained in CSV.}
+\input{../results/table_convergence.tex}
+\end{table}
+Absolute tolerances are $10^{-16}$ m in radius, $10^{-8}$ m/s in velocity, $2\times10^{-10}$ in $T/T_0$ and $10^{-8}$ in each energy ledger scaled by $nR_uT_0$. The same absolute tolerances accompany stricter relative tolerances. Technical radius/denominator guards are numerical domain protection, not physical collapse limits. Internal trial stages can evaluate the nearest heat-capacity polynomial outside its documented interval solely to locate the first boundary; no accepted output past that boundary is used.
+
+Tables and figures are generated from saved numerical data, not independent hand-entered temperatures. The reproducibility instructions specify locked Python dependencies and separate calculation, validation, plotting and document-building steps. The package preserves source inventories, reaction inputs, all sensitivities, boundary records and independent quadrature. The read-only sibling studies supply the accepted mechanical paths and reference data. An independent assessment should examine the thermodynamic closure, censoring, reference contrasts and physical interpretation as well as rerun the numerical tests.
+\end{document}
