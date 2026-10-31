@@ -102,9 +102,14 @@ The strongest saved KM case has $R_{max}=\ExtremeRmaxUm\ \mu$m, $R_{min}=\Extrem
 \resizebox{\linewidth}{!}{\input{../results/table_timing.tex}}
 \end{table}
 
-At 1.3 bar, the deepest RP event lies in cycle 2, whereas the deepest KM event lies in cycle 1. Their global time difference is not a delay of the same event. The first-cycle comparison and the separately saved per-cycle minimum pairs avoid this ambiguity. Small rebound extrema are not matched by ordinal index because damping changes their count.
+The \emph{first strong collapse} is the first local minimum with $R<R_0/2$. The \emph{cycle-deepest minimum} is the lowest local minimum within one acoustic cycle, selected independently for each model; the \emph{global deepest minimum} is the lowest over all five cycles. At 1.3 bar the global RP and KM minima lie in cycles 2 and 1, respectively, so their time difference is not a delay of the same event.
 
-\fig{03_strong_collapse}{1.0}{First-cycle strong collapse at 1.3 bar. Each column is centered on its own minimum, with the absolute event time shown. These are corresponding primary events, not a superposition of the deepest minima from different cycles. The full-time and multiscale figures are in Appendix B.}
+% Event times and differences below were generated from the unchanged saved
+% amplitude_summary.csv (first_strong_time_s) and cycle_comparison.csv (cycle 1).
+For the first strong collapses, the RP and KM times are $18.351813\ \mu$s and $18.341064\ \mu$s, giving $\Delta t_{\mathrm{first\ strong}}=t_{\mathrm{KM}}-t_{\mathrm{RP}}=-10.749\ \mathrm{ns}$. This compares first strong events under the same operational rule. The independently selected deepest minima in cycle 1 instead occur at $22.466795\ \mu$s (RP) and $18.341064\ \mu$s (KM), giving $\Delta t_{\mathrm{cycle\ deepest}}=-4.125731\ \mu\mathrm{s}$.
+The latter is a difference between two independently selected minimum times, not the delay of one physically corresponding event. Rebounds can produce several collapses within a cycle; membership in the same acoustic cycle does not establish physical event correspondence.
+
+\fig{03_strong_collapse}{.77}{First-cycle strong collapse at 1.3 bar. Each column is centered on its own minimum, with the absolute event time shown. These are corresponding primary events, not a superposition of the deepest minima from different cycles. The full-time and multiscale figures are in Appendix B.}
 
 The numerical result is retained despite $M=O(1)$. Tightening tolerances and changing integrator tests the ODE solution only. The sphere, gas closure and constant liquid properties remain modeling assumptions. No experimental radius trace under this exact parameter set has been used to validate them.
 
@@ -161,7 +166,7 @@ Detailed test outcomes, baseline reproduction, actual numerical precision limita
 \fig{02_velocity}{.94}{Wall velocities on the same intervals. A symmetric-logarithmic axis at 1.3 bar retains the formal large RP excursion while showing smaller KM motion.}
 \newpage
 \fig{11_multiscale_collapse}{1.0}{Successive zooms of each model's deepest 1.3 bar minimum. RP and KM minima belong to different cycles. Stored dense samples resolve the formal sub-picosecond RP core; this is numerical resolution, not a physical timescale claim.}
-\fig{06_collapse_timing}{1.0}{Corresponding deepest local minimum in cycle 1, paired with its immediately preceding local maximum. Missing complete cycles produce gaps.}
+\fig{06_collapse_timing}{1.0}{Deepest local minimum selected independently within acoustic cycle 1 for each model, paired with its own immediately preceding local maximum. These selections need not represent the same physical event. Missing complete cycles produce gaps.}
 \newpage
 \fig{07_applicability}{1.0}{Continuous KM applicability and regularity indicators. The pressure/bulk-modulus ratio is a warning proxy, not a finite-compression liquid EOS.}
 \fig{12_diagnostic_map}{1.0}{Quantified compressibility diagnostics and explicitly unresolved mechanisms. Colors show magnitude, not a binary physical acceptance test.}
