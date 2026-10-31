@@ -21,9 +21,7 @@ The accepted five-cycle bubble mechanics are mapped into fixed-inventory ideal-g
 \section{Objective and reference mechanics}
 This study is Part C of the project \emph{Plasmonic-Enhanced Laser-Induced Sonofusion: Overcoming the Temperature Barrier via Resonant Nanoparticle Heating}. It asks what compression alone predicts, how thermal exchange changes those predictions, and where interpretation fails. No optical source, reaction, ionization, mass transfer or new liquid equation of state is implemented.
 
-The mechanical input is the published Mini-Research 2 (MR2) snapshot\\
-\texttt{f1f3e812d77fd7fa058ce111ff484b1c8658f937}, built on Mini-Research 1 (MR1),\\
-\texttt{d59bc0d0119b514152f763e2537a0477c7c63663}. The upstream equations and artifacts are unchanged. All \AmplitudeCount\ saved amplitudes are audited; \PartialCount\ RP trajectories are incomplete and remain censored. The input schema, admission decisions, metadata, extrema and cycle comparisons were read before calculation. Every upstream tracked input is hashed and compared with the accepted snapshot.
+The gas-temperature calculations use the numerically verified radius histories from the preceding Rayleigh–Plesset (RP) and Keller–Miksis (KM) studies. Trajectories are available for 56 acoustic amplitudes; seven incomplete RP trajectories are retained only for observed-interval diagnostics. This study introduces thermodynamic modeling without modifying the previously established mechanical equations.
 
 \begin{table}[H]\centering\small
 \caption{Five-cycle KM peak temperatures for the air-like gas, $\gamma=1.4$. Model B uses $\eta=1$. The inherited categories are conditional baseline (1.0 bar), conditional sensitivity (1.15 bar), and formal extreme scenario (1.3 bar).}
