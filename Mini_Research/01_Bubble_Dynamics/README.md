@@ -1,62 +1,79 @@
-# Mini-Research 1: Single-bubble dynamics under acoustic excitation
+# Mini-Research 1: динамика одиночного пузырька при акустическом возбуждении
 
-Author: Dimitri Bolt. Status: **prepared for independent review; stage not closed**.
+Инструкция для Dimitri Bolt. Научный отчёт и все иллюстрации предназначены для Prof. Dr. Hahn и оформлены на английском языке. Этап не закрыт; окончательное решение принимается после независимой проверки.
 
-This study integrates the spherical, incompressible Rayleigh-Plesset equation in water at 20 °C with a constant polytropic gas exponent. It contains original five-cycle simulations at 0, 0.2, 0.5, 0.8, 1.0, and 1.3 bar. The last regime is a **formal numerical stress test outside the physical applicability of the model**. No bubble-temperature, laser, nanoparticle, chemical, or nuclear-reaction model is implemented.
+## Содержание исследования
 
-## Files
+Рассчитываются радиус и скорость стенки сферического пузырька в воде при 20 °C по несжимаемому уравнению Рэлея—Плессета с постоянным политропным показателем. Для амплитуд 0, 0.2, 0.5, 0.8, 1.0 и 1.3 bar выполнено интегрирование на пяти акустических периодах. При 1.3 bar решение является только формальным численным испытанием: оно выходит за физическую область применимости модели.
 
-- `src/bubble_dynamics.py`: dimensional SI model, positivity-aware DOP853, event localization, and independent analytic linear response.
-- `src/run_experiments.py`: amplitude sweep, convergence including Radau, equilibrium and linear checks, IAPWS reference-property audit, source hashes and metadata.
-- `src/plot_results.py`: nine reproducible illustrations (vector PDF and 300 dpi PNG) and LaTeX tables, using saved results only.
-- `tests/test_bubble_dynamics.py`: analytic checks, invalid inputs, floor termination, linear limit, and second-method agreement.
-- `results/trajectories.csv`: time, radius, velocity, far-field pressure and wall Mach number, all in SI units.
-- `results/amplitude_summary.csv`: extrema, local-event counts, deepest-collapse time and duration, completion status and physical warnings.
-- `results/convergence.csv`: four DOP853 accuracy settings and an independent Radau calculation at 1.3 bar.
-- `results/extrema.csv`: refined radius and velocity extrema; excludes the initial state.
-- `results/linear_comparison.csv`: independent linear-response comparison at 100 and 500 Pa.
-- `results/run_metadata.json`: solver settings, installed versions, equilibrium and linear errors, IAPWS audit, and SHA256 provenance.
-- `results/report_*.tex`: tables and numeric macros generated from saved results.
-- `report/mini_research_01.tex` and `.pdf`: English scientific report and supplementary figures.
-- `requirements.txt`: checked direct dependencies; `requirements-lock.txt`: complete tested environment.
+Математическая модель сохранена. Температура пузырька, лазерное воздействие, наночастицы, химические и ядерные реакции не рассчитываются.
 
-## Reproduce
+## Структура полного комплекта
 
-From the repository root, with Python 3.12 (tested: 3.12.14), a network connection for installation, and a local LaTeX installation with `latexmk`, `pdflatex`, `amsmath`, `booktabs`, `graphicx`, `geometry`, `hyperref`, `caption`, and `float`:
+- `src/bubble_dynamics.py` — модель в единицах SI, интегратор, события и аналитическое линейное приближение.
+- `src/run_experiments.py` — шесть акустических режимов, равновесие, сравнение с линейным решением, проверка свойств воды, сходимость при **1.0 и 1.3 bar**.
+- `src/plot_results.py` — девять рисунков и LaTeX-таблицы из сохранённых данных без повторного интегрирования.
+- `tests/test_bubble_dynamics.py` — проверки уравнения, входных данных, остановки на пороге, линейного предела, независимого метода, согласованности сохранённых данных и полноты зависимостей отчёта.
+- `requirements.txt` — закреплённые прямые зависимости; `requirements-lock.txt` — полный проверенный состав окружения.
+- `results/trajectories.csv` — время, радиус, скорость, внешнее давление и число Маха стенки в SI.
+- `results/amplitude_summary.csv` — экстремумы, времена схлопывания, число локальных максимумов/минимумов, статус и предупреждения.
+- `results/convergence.csv` — по пять расчётов для 1.0 и 1.3 bar: четыре набора точности DOP853 и независимый Radau. Ошибки считаются относительно отдельного эталона **при той же амплитуде**.
+- `results/extrema.csv` — уточнённые события экстремумов без начального состояния.
+- `results/linear_comparison.csv` — сравнение с аналитическим линейным решением при 100 и 500 Pa.
+- `results/run_metadata.json` — параметры, версии, статистика интегратора, результаты проверок и контрольные суммы исходных файлов.
+- `results/report_values.tex`, `results/report_amplitude_table.tex`, `results/report_convergence_table.tex`, `results/report_convergence_1bar_table.tex` — автоматически создаваемые числовые вставки и таблицы отчёта.
+- `results/validation.md` — журнал итоговой проверки на русском языке.
+- `figures/01_bubble_schematic` … `figures/09_validity_diagnostics` — все девять рисунков в векторном PDF и PNG с разрешением 300 dpi.
+- `report/mini_research_01.tex`, `report/mini_research_01.pdf` — научный отчёт на английском языке.
+- `FILE_LIST.txt` — полный список публикуемых файлов; `SHA256SUMS` — контрольные суммы комплекта, кроме самого файла контрольных сумм.
+
+## Воспроизведение
+
+Нужны Python 3.12 (проверено 3.12.14), доступ к сети для первоначальной установки и LaTeX с `latexmk`, `pdflatex`, пакетами `lmodern`, `amsmath`, `amssymb`, `booktabs`, `graphicx`, `geometry`, `hyperref`, `caption`, `float`, `microtype`. В командах ниже `python3.12` можно заменить путём к установленному интерпретатору Python 3.12.
+
+Из корня репозитория:
 
 ```bash
 cd Mini_Research/01_Bubble_Dynamics
 python3.12 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements-lock.txt
+python -m pip check
 python -m src.run_experiments
 python -m src.plot_results
 python -m pytest -q
 latexmk -pdf -interaction=nonstopmode -halt-on-error -cd report/mini_research_01.tex
 ```
 
-`requirements.txt` can be used instead of the full lock for the direct dependency versions. Scripts resolve paths relative to their own location, independently of the current working directory. By default, the simulation checks the existing repository inputs `Library/035218_1_online.pdf`, `Library/nature03361.pdf`, and `Plasma-plan.tex`. For another arrangement pass `--source-root PATH_TO_REPOSITORY` to `src.run_experiments`. The source PDFs and plan are read and hashed, never modified. To remove only build intermediates use `latexmk -c -cd report/mini_research_01.tex`.
+Команды `python -m src...` запускаются из папки исследования. Внутренние пути к данным и рисункам определяются относительно расположения исходников. Для обновления результатов достаточно повторить последние четыре команды; окружение заново создавать не нужно.
 
-## Interpretation and safeguards
+В чистом клоне должны быть доступны исходные документы в корне репозитория: `Library/035218_1_online.pdf`, `Library/nature03361.pdf`, `Plasma-plan.tex`. Эти файлы читаются и хешируются, но не изменяются. Для другой структуры передайте `--source-root ПУТЬ_К_КОРНЮ` в `src.run_experiments`. Проверка `sha256sum -c SHA256SUMS` проверяет опубликованный снимок; повторный расчёт обновляет время запуска в JSON и дату создания PDF, поэтому их контрольные суммы могут измениться.
 
-The equation uses dynamic viscosity in Pa s, not kinematic viscosity. Gas partial pressure excludes the separately added constant vapor pressure. The acoustic sign is `p_infty = p0 - Pa*sin(2*pi*f*t)`, so the first quarter-cycle lowers pressure. All sweep parameters other than amplitude remain fixed.
+Для удаления только промежуточных файлов LaTeX:
 
-Production settings: five periods; DOP853 with `rtol=1e-10`, componentwise `atol=(1e-16 m, 1e-8 m/s)` and maximum step `T/1000`. Invalid internal trial radii are rejected and retried at one quarter of the step by a small DOP853 subclass; no radius clipping or change to the ODE is used. A terminal floor at `0.001 R0 = 6 nm` is technical, not a physical radius prediction. Reaching it censors the result. A failed or incomplete sweep raises an error.
+```bash
+latexmk -c -cd report/mini_research_01.tex
+```
 
-Events detect zeros of velocity and acceleration. Dense-output roots are refined with `brentq`, absolute time tolerance `1e-24 s`, because SciPy's default absolute event-time tolerance is insufficient for the unphysical, sub-picosecond final rebound of the 1.3 bar stress test. This tolerance is a root-search setting, not a claim of absolute physical timing accuracy. A common time origin remains in seconds; floating-point and ODE errors are assessed by convergence. Exports combine a uniform grid, adaptive-step subdivisions, and refined event times; plots do not re-integrate or infer extrema from a coarse plotting grid.
+## Численные настройки и интерпретация
 
-Global extrema include initial and final states. Local counts omit `t=0`. The characteristic collapse is the deepest post-initial local minimum within five cycles; its duration is measured from the preceding local maximum. This definition is not the empty-cavity Rayleigh collapse time. Rebounds produce several local extrema per acoustic cycle. Five cycles do not establish asymptotic periodicity or stability.
+Основной расчёт использует DOP853, `rtol=1e-10`, абсолютные допуски `(1e-16 m, 1e-8 m/s)` и максимальный шаг `T/1000`. Отрицательный пробный радиус внутри шага приводит к повтору с четвертью шага; состояние не обрезается, уравнение не меняется. Технический порог `R_floor=0.001 R0=6 nm` останавливает интегрирование и не является физическим прогнозом минимального радиуса.
 
-Wall Mach numbers of order 0.1 already warrant caution; values near or above one invalidate incompressible collapse predictions. Negative far-field absolute pressure is flagged where `Pa > p0`, rather than clipped. In particular, the 1.3 bar extrema are numerical properties of this idealized ODE, not credible physical collapse predictions. Agreement between integrators verifies the calculation only. Heat/mass transfer, varying vapor pressure, gas chemistry, shape modes, finite gas volume, shocks and liquid compressibility remain outside the scope. These calculations do not replicate the 2016 thermodynamic simulations or quantitatively validate against the 2005 sulfuric-acid experiment.
+Радиусные экстремумы определяются по нулям скорости, скоростные — по нулям ускорения. Корни на плотном выводе уточняются с абсолютным временным допуском `1e-24 s`. Этот допуск не является оценкой физической точности времени. Экспорт объединяет равномерную сетку, деления адаптивных шагов и времена событий; экстремумы не извлекаются из грубой сетки графика.
 
-## Sources
+Глобальные границы включают начальное и конечное состояния. В счёт локальных экстремумов начальный момент не входит. Характерное схлопывание — самый глубокий последующий локальный минимум на пяти периодах; длительность считается от предшествующего локального максимума. Это определение отличается от времени Рэлея для пустой полости. Пять периодов не доказывают установившуюся периодичность.
 
-- Sadighi-Bonabi and Gheshlaghi (2016), Section II, equations (1)-(4), Tables I-IV: https://doi.org/10.1063/1.4945343
-- Flannigan and Suslick (2005), experimental motivation in concentrated aqueous sulfuric acid: https://doi.org/10.1038/nature03361
-- IAPWS-95: https://iapws.org/technical-guidance/release/IAPWS-95
-- IAPWS surface tension: https://iapws.org/technical-guidance/release/Surf-H2O
-- IAPWS viscosity: https://iapws.org/technical-guidance/release/viscosity
-- Open-source reference implementation (independent of the bubble model): https://github.com/jjgomera/iapws
-- SciPy integration documentation: https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html
+Вязкость — динамическая, в Pa·s. Газовое давление не включает отдельно добавляемое давление пара. При `p_infty=p0-Pa*sin(2*pi*f*t)` первая четверть периода снижает внешнее давление.
 
-The rounded model properties and the independently evaluated IAPWS values are both recorded. `Plasma-plan.tex` supplies broader context; this deliverable covers only the prescribed radius-dynamics subset. Stage closure requires separate mathematical, reproducibility, and PDF review.
+Свойства воды независимо проверены по IAPWS. Постоянный показатель `kappa=1.4` остаётся приближением. Число Маха стенки около 0.1 уже требует осторожности, около единицы нарушает несжимаемое приближение. При 1.3 bar формальная скорость многократно превышает скорость звука, а внешнее абсолютное давление часть периода отрицательно. Сходимость интеграторов подтверждает вычисление заданного уравнения, но не делает этот режим физически достоверным. Теплообмен, массообмен, изменяющееся давление пара, конечный исключённый объём, несферичность и ударные волны отсутствуют.
+
+## Публикация в Git
+
+Предыдущий коммит `799ceaa` включал только README, исходник отчёта и PDF. Код, тесты, зависимости, данные и рисунки оставались локальными неотслеживаемыми файлами; правила исключения их не блокировали. Новый комплект добавляется целиком в пределах этой папки. `.venv`, кэши и промежуточные файлы LaTeX исключены локальным `.gitignore`.
+
+## Источники
+
+- [Sadighi-Bonabi и Gheshlaghi (2016)](https://doi.org/10.1063/1.4945343): раздел II, уравнения (1)–(4), таблицы I–IV.
+- [Flannigan и Suslick (2005)](https://doi.org/10.1038/nature03361): экспериментальная мотивация; не количественная валидация модели пузырька в воде.
+- [IAPWS-95](https://iapws.org/technical-guidance/release/IAPWS-95), [поверхностное натяжение](https://iapws.org/technical-guidance/release/Surf-H2O), [вязкость](https://iapws.org/technical-guidance/release/viscosity).
+- [Реализация IAPWS](https://github.com/jjgomera/iapws), [документация SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html).

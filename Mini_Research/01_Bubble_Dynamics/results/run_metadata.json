@@ -1,0 +1,166 @@
+{
+  "created_utc": "2026-10-31T06:10:31.228543+00:00",
+  "scope": "Mini-Research 1 only; radius dynamics; no temperature model",
+  "python": "3.12.14",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7",
+    "pytest": "8.4.2",
+    "iapws": "1.5.4"
+  },
+  "parameters_SI": {
+    "R0": 6e-06,
+    "f": 30000.0,
+    "p0": 101325.0,
+    "rho": 998.2,
+    "mu": 0.001002,
+    "sigma": 0.07274,
+    "pv": 2339.0,
+    "kappa": 1.4,
+    "c": 1482.0,
+    "floor_fraction": 0.001
+  },
+  "derived": {
+    "pg0_Pa": 123232.66666666666,
+    "period_s": 3.3333333333333335e-05,
+    "natural_frequency_Hz": 589697.2416910263,
+    "R_floor_m": 6e-09
+  },
+  "production_solver": {
+    "method": "DOP853",
+    "rtol": 1e-10,
+    "atol": [
+      1e-16,
+      1e-08
+    ],
+    "max_step_s": 3.3333333333333334e-08,
+    "cycles": 5
+  },
+  "sampling": "5001 uniform times plus four subdivisions per accepted adaptive interval plus event roots",
+  "metric_definition": "Global extrema over [0,5T] include endpoints; local counts exclude t=0. Collapse time is deepest post-initial local minimum; duration from preceding local maximum.",
+  "convergence_reference": "Per amplitude: DOP853 rtol=1e-11, atol=[1e-17,1e-9], max_step=T/2000",
+  "convergence_amplitudes_Pa": [
+    100000.0,
+    130000.0
+  ],
+  "equilibrium": {
+    "relative_radius_error": 0.0,
+    "max_abs_U_m_s": 1.089215202499494e-14,
+    "pressure_residual_Pa": -7.275957614183426e-12
+  },
+  "pressure_test": {
+    "Pa_Pa": 100000.0,
+    "t_s": [
+      0,
+      8.333333333333334e-06,
+      2.5e-05
+    ],
+    "values_Pa": [
+      101325.0,
+      1325.0,
+      201325.0
+    ]
+  },
+  "linear_checks": [
+    {
+      "Pa_Pa": 100.0,
+      "max_radius_error_over_R0": 1.986864577474527e-07,
+      "max_linear_displacement_over_R0": 0.0002095602550513268,
+      "error_over_linear_displacement": 0.0009481113567970662
+    },
+    {
+      "Pa_Pa": 500.0,
+      "max_radius_error_over_R0": 4.973378120453463e-06,
+      "max_linear_displacement_over_R0": 0.0010478012752573398,
+      "error_over_linear_displacement": 0.004746489852507578
+    }
+  ],
+  "reference_properties": {
+    "implementation": "iapws 1.5.4; IAPWS95 and IAPWS transport correlations",
+    "temperature_K": 293.15,
+    "pressure_MPa": 0.101325,
+    "rho_kg_m3": 998.2071504679393,
+    "mu_Pa_s": 0.001001596143120586,
+    "c_m_s": 1482.346174920139,
+    "sigma_N_m": 0.07273614042160757,
+    "saturation_pressure_Pa": 2339.318183336836
+  },
+  "source_urls": {
+    "IAPWS95": "https://iapws.org/technical-guidance/release/IAPWS-95",
+    "surface_tension": "https://iapws.org/technical-guidance/release/Surf-H2O",
+    "viscosity": "https://iapws.org/technical-guidance/release/viscosity",
+    "AIP2016": "https://doi.org/10.1063/1.4945343",
+    "Nature2005": "https://doi.org/10.1038/nature03361",
+    "solve_ivp": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html"
+  },
+  "source_sha256": {
+    "Library/035218_1_online.pdf": "e099ff7dc7eab87c154c442cad8aef907966033c987174082e17c9f3278c40cb",
+    "Library/nature03361.pdf": "78871f772e8825bb9bb8694fe091310d827f8caa19e4005dffae7d372c46614f",
+    "Plasma-plan.tex": "6fd07a40ba7467a934b6f52e2bd025ebd19cdf1af7715251d03dc0ebd002928d"
+  },
+  "source_repository_commit": null,
+  "code_sha256": {
+    "src/__init__.py": "ee1a1d89e787987db02cd4a8ba234007da4c7d7b44a11b8d919f468a15e5c263",
+    "src/bubble_dynamics.py": "f8c1baaf5a4fc891383b7203b67c026908f4bf005d5418e273b640784e161188",
+    "src/plot_results.py": "d1cc8b3b55f5652e8680b3787f051c5837cd51073767ad21992a0752fe7b5baf",
+    "src/run_experiments.py": "6863aa88cbe67acca95564fb337f15911a4ab5456e884d912d518ac9e28658e3"
+  },
+  "solver_runs": [
+    {
+      "Pa_Pa": 0.0,
+      "nfev": 75017,
+      "accepted_steps": 5001,
+      "min_step_s": 3.1712913545201005e-18,
+      "max_step_s": 3.333333333333866e-08,
+      "export_rows": 24985,
+      "status": 0
+    },
+    {
+      "Pa_Pa": 20000.0,
+      "nfev": 75017,
+      "accepted_steps": 5001,
+      "min_step_s": 3.1712913545201005e-18,
+      "max_step_s": 3.333333333333866e-08,
+      "export_rows": 25093,
+      "status": 0
+    },
+    {
+      "Pa_Pa": 50000.0,
+      "nfev": 75017,
+      "accepted_steps": 5001,
+      "min_step_s": 3.1712913545201005e-18,
+      "max_step_s": 3.333333333333866e-08,
+      "export_rows": 25081,
+      "status": 0
+    },
+    {
+      "Pa_Pa": 80000.0,
+      "nfev": 75017,
+      "accepted_steps": 5001,
+      "min_step_s": 3.1712913545201005e-18,
+      "max_step_s": 3.333333333333866e-08,
+      "export_rows": 25259,
+      "status": 0
+    },
+    {
+      "Pa_Pa": 100000.0,
+      "nfev": 76202,
+      "accepted_steps": 5044,
+      "min_step_s": 2.2838301487032022e-08,
+      "max_step_s": 3.333333333333866e-08,
+      "export_rows": 25519,
+      "status": 0
+    },
+    {
+      "Pa_Pa": 130000.0,
+      "nfev": 143108,
+      "accepted_steps": 8382,
+      "min_step_s": 1.7958995835593017e-15,
+      "max_step_s": 3.333333333333866e-08,
+      "export_rows": 38632,
+      "status": 0
+    }
+  ]
+}

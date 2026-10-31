@@ -16,7 +16,7 @@
 \input{../results/report_values.tex}
 \title{\vspace{-14mm}\Large\bfseries Mini-Research 1: Mathematical Modeling of\par Single-Bubble Dynamics under Acoustic Excitation}
 \author{Dimitri Bolt}
-\date{30 October 2026\\\small Preliminary manuscript for academic review; stage not closed}
+\date{30 October 2026}
 \begin{document}
 \maketitle
 \vspace{-7mm}
@@ -184,7 +184,7 @@ The nonlinear radius differs from the independent analytic solution of Eq.~\eqre
 \caption{Stress-test convergence at 1.3 bar. Maximum relative difference is over $R_{\max},R_{\min},t_c,|U|_{\max}$ against the fourth row. All runs finish five cycles. Full component tolerances and step caps are in \texttt{convergence.csv}.}
 \resizebox{\linewidth}{!}{\input{../results/report_convergence_table.tex}}
 \end{table}
-The step caps are $T/100,T/300,T/1000,T/2000$ for the four DOP853 rows, with absolute tolerance pairs $(10^{-13},10^{-5})$, $(10^{-15},10^{-7})$, $(10^{-16},10^{-8})$, $(10^{-17},10^{-9})$ in m and m/s. Radau uses the third pair and $T/1000$. Production differs from the tighter reference by at most $\convergedDiff$ in these metrics; Radau differs by at most $\radauDiff$. This supplies a measured convergence check, not merely a successful solver status.
+The four DOP853 step caps are $T/100,T/300,T/1000,T/2000$, with absolute tolerances $(10^{-13},10^{-5})$, $(10^{-15},10^{-7})$, $(10^{-16},10^{-8})$, $(10^{-17},10^{-9})$ in m and m/s. Radau uses the third pair and $T/1000$. At 1.3 bar, production and Radau differ from the tighter reference by at most $\convergedDiff$ and $\radauDiff$. At 1.0 bar, the corresponding differences are $\convergedOnebarDiff$ and $\radauOnebarDiff$ (Appendix C).
 
 \newpage
 \section{Physical applicability and relation to the publications}
@@ -194,7 +194,7 @@ The forcing itself has an additional limitation. Its minimum is $p_0-\Pa$. At 1.
 
 The assumed water properties remain at their ambient values throughout motion. Constant $\kappa=1.4$ approximates adiabatic compression of a diatomic gas; it is neither a complete thermal model nor a measured effective exponent over the entire cycle. In particular, gas identity is not calibrated to the noble-gas contents of the experimental motivation. Thermal exchange during slow expansion could change the effective pressure law substantially. Fixed vapor pressure omits evaporation and condensation kinetics, while no mass transfer or gas diffusion changes the gas inventory. Spatially uniform gas pressure, spherical shape, an unbounded liquid, and the absence of shock waves, radiation damping and finite molecular excluded volume impose further restrictions. The present equations cannot evaluate shape-mode growth or shock formation, even when the radial ODE integrates smoothly.
 
-\subsection{Why the classical equation is adequate for this stage}
+\subsection{Rationale for the classical equation}
 Section II, Eqs.~(1)--(4) of Ref.~\cite{sadighi} includes finite-sound-speed terms multiplying acceleration and inertia, a pressure time derivative, and a van der Waals excluded-volume gas law. Its gas-pressure normalization also does not make the same explicit noncondensable-gas/vapor split as Eq.~\eqref{eq:pg0}. The quasi-adiabatic and hydro-chemical closures add physics absent here. Its Eq.~(4) writes the driving pressure with a positive sine, giving an external-pressure phase opposite to Eq.~\eqref{eq:drive}. Matching initial phase is therefore essential before comparing trajectories.
 
 Table II of that paper gives the water case $R_0=6$ \textmu m, $f=30$ kHz and $\Pa=1.3$ bar. Table III uses the same water radius and frequency in a hydro-chemical calculation; Table IV instead gives a laser-assisted water case with $R_0=1.5$ \textmu m and $\Pa=1.4$ bar. Other rows concern deuterated acetone at different temperatures and frequencies. Their radius ratios cannot serve as quantitative targets for the present constant-exponent incompressible model with different reference properties. Flannigan and Suslick's sulfuric-acid spectra likewise provide motivation, not radius-trajectory validation in water.
@@ -204,7 +204,7 @@ The classical equation is sufficient to establish a transparent derivation, an e
 \section{Conclusions}
 I obtained reproducible radius, wall-velocity and phase trajectories over five acoustic cycles, including expansion, collapse and rebounds. The equilibrium and forcing checks, independent linear limit, tolerance study and Radau comparison support numerical consistency. Greater drive increases radial excursions and can create extreme formal collapses whose apparent numerical convergence does not rescue physical validity.
 
-The 1.0 bar solution has a maximum speed near 7.74 m/s, whereas the 1.3 bar stress test violates incompressibility by a very large margin and imposes negative far-field pressure during rarefaction. No reliable extreme-collapse temperature or fusion claim follows. The verified radius-model implementation provides a basis for later review of compressibility and gas-pressure closures; those extensions remain outside this study. This manuscript is prepared for independent review, and Mini-Research 1 remains open.
+The 1.0 bar solution has a maximum speed near 7.74 m/s, whereas the 1.3 bar stress test violates incompressibility by a very large margin and imposes negative far-field pressure during rarefaction. No reliable extreme-collapse temperature or fusion claim follows. The verified radius-model implementation provides a basis for later review of compressibility and gas-pressure closures; those extensions remain outside this study.
 
 \newpage
 \begin{thebibliography}{9}\small
@@ -219,9 +219,9 @@ The 1.0 bar solution has a maximum speed near 7.74 m/s, whereas the 1.3 bar stre
 \end{thebibliography}
 
 \section*{Reproducibility record}
-The accompanying code uses Python 3.12.14, NumPy 2.3.5, SciPy 1.16.3, Matplotlib 3.10.7, pytest 8.4.2 and iapws 1.5.4. The README supplies environment creation, installation, simulation, plotting, test and LaTeX commands. Numeric report tables are generated from saved results; figures are regenerated without reintegrating. All physical and numerical inputs, source hashes and solver statistics are preserved in \texttt{results/run\_metadata.json}. Original source documents and the general project plan are unchanged.
+The accompanying code uses Python 3.12.14, NumPy 2.3.5, SciPy 1.16.3, Matplotlib 3.10.7, pytest 8.4.2 and iapws 1.5.4. The accompanying Russian-language README documents the reproduction commands. Numeric report tables are generated from saved results; figures are regenerated without reintegrating. All physical and numerical inputs, source hashes and solver statistics are preserved in \texttt{results/run\_metadata.json}.
 
-The supplementary figures retain all six prescribed amplitudes and the validity warnings. The CSV files contain unrounded extrema; rounded printed values do not replace the numerical records. Tests include equilibrium, forcing phase, acceleration balance, invalid states and amplitudes, floor termination, the linear limit, and independent-method agreement.
+The supplementary figures show all six acoustic amplitudes and the validity diagnostics. The CSV files contain unrounded extrema; rounded printed values do not replace the numerical records. Tests include equilibrium, forcing phase, acceleration balance, invalid states and amplitudes, floor termination, the linear limit, and independent-method agreement.
 
 \newpage
 \appendix
@@ -248,9 +248,14 @@ The supplementary figures retain all six prescribed amplitudes and the validity 
 
 \newpage
 \section{Convergence and validity diagnostics}
+\begin{table}[H]
+\centering\scriptsize
+\caption{Additional convergence check at 1.0 bar, with the same tolerance and step-cap sequence as Table 3. Differences are relative to the fourth row at this amplitude.}
+\resizebox{\linewidth}{!}{\input{../results/report_convergence_1bar_table.tex}}
+\end{table}
 \begin{figure}[H]
 \centering\includegraphics[width=.96\linewidth]{08_numerical_convergence.pdf}
-\caption{Relative metric differences at 1.3 bar against the tighter DOP853 reference. Several tolerances and step caps, and a second method, measure numerical consistency of the formal ODE.}
+\caption{Relative metric differences at 1.0 and 1.3 bar against the tighter DOP853 reference at each amplitude. Tolerance refinement and an independent Radau calculation check numerical consistency.}
 \end{figure}
 \begin{figure}[H]
 \centering\includegraphics[width=.96\linewidth]{09_validity_diagnostics.pdf}
