@@ -1,0 +1,172 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,array,caption,float,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\graphicspath{{../figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\input{../results/report_values.tex}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{#1.pdf}\caption{#3}\end{figure}}
+\title{\vspace{-13mm}\Large\bfseries Compressible Bubble Dynamics\par and Extreme Collapse Conditions}
+\author{Dimitri Bolt\\[2pt]\small Academic advisor: Prof. Dr. Ildar R. Gabitov}
+\date{Mini-Research 2 \quad|\quad 31 October 2026}
+\begin{document}
+\maketitle\vspace{-7mm}
+\begin{abstract}
+Five-cycle Keller--Miksis (KM) trajectories are compared with the accepted, unchanged Rayleigh--Plesset (RP) model for a spherical bubble in water. The same polytropic gas law and physical parameters isolate the change in liquid compressibility. A refined amplitude scan retains extreme and incomplete solutions with explicit numerical status. At the strongest KM regime found, $P_a=\ExtremeBar$ bar, the minimum radius is $\ExtremeRminUm\ \mu$m and the peak inward speed is $\ExtremeSpeed$ m/s ($M=\ExtremeMach$). These are converged equation outputs, not validated physical extrema. No temperature, optical heating, chemistry or nuclear process is evaluated.
+\end{abstract}
+
+\section{Objective and reference assumptions}
+Compressibility provides acoustic radiation and changes inertial collapse and rebound. The purpose is to determine which large RP extrema survive this correction and which trajectories merit a later, separate model comparison. The reference is Mini-Research 1 at commit \texttt{d59bc0d0119b514152f763e2537a0477c7c63663}. Its Python model, equations and numerical results are unchanged; the new adapter imports its parameter class, right-hand side and positive-stage solver.
+
+The liquid is unbounded and Newtonian. Spherical symmetry and spatially uniform gas pressure are imposed. Density $\rho$, sound speed $c$, dynamic viscosity $\mu$, surface tension $\sigma$, vapor partial pressure $p_v$ and gas exponent $\kappa$ are constant. The noncondensable-gas pressure excludes the separately added vapor pressure:
+\begin{align}
+ p_g(R)&=p_{g0}(R_0/R)^{3\kappa},&p_{g0}&=p_0+2\sigma/R_0-p_v,\label{eq:gas}\\
+ p_\infty(t)&=p_0-P_a\sin(\omega t),&\omega&=2\pi f,\quad T=1/f.\label{eq:drive}
+\end{align}
+Initial conditions are $(R,U)(0)=(R_0,0)$. The first quarter-cycle is rarefaction. The prescribed amplitudes are experimental scenarios, not measured acoustic fields. Five cycles do not establish a periodic attractor or a bifurcation.
+
+\begin{table}[H]\centering\small
+\caption{Fixed reference values and provenance. No property was measured in this study. L: literature setting; P: literature liquid property; A: assumption; D: derived. Full units and provenance are in the data schema.}
+\input{../results/table_parameters.tex}
+\end{table}
+The water state is the same rounded IAPWS-based set checked in Mini-Research 1~\cite{iapws}. Sadighi-Bonabi and Gheshlaghi~\cite{sadighi} motivate radius, frequency and ambient state, but their different liquid constants and excluded-volume closure are not adopted. The experiments of Flannigan and Suslick~\cite{flannigan} and Xu and Suslick~\cite{xu} concern acid hosts and emission diagnostics; they supply context, not quantitative validation of these water trajectories.
+
+\newpage
+\section{Keller--Miksis convention and explicit acceleration}
+The adopted first-order compressibility convention is
+\begin{equation}\label{eq:km}
+ (1-U/c)R\dot U+\tfrac32(1-U/(3c))U^2
+ =\frac{1+U/c}{\rho}\Delta p+\frac{R}{\rho c}\frac{d\Delta p}{dt},
+\end{equation}
+where $\Delta p=p_g+p_v-p_\infty-2\sigma/R-4\mu U/R$. This is the isolated-bubble form of Eqs.~(7)--(9) of Nagy and Heged\H us~\cite{nagy}. Keller and Miksis~\cite{keller}, Section III, derive the acoustic-radiation correction with an incident field evaluated at a retarded/advanced radial argument. The present prescribed local-in-time far-field convention is explicitly fixed by Eq.~\eqref{eq:km}; it is not a claim to reproduce every forcing convention in the original article.
+
+Equation (1) of Ref.~\cite{sadighi} instead prints $1-U/C$ multiplying the pressure difference. This sign differs from the adopted $1+U/c$ and cannot be changed by the sign of the sinusoidal forcing alone. Their Eq.~(4) also chooses the opposite acoustic phase. No hybrid of these equations is used. Moreover, the schematic equation in Part B of the project plan differentiates only an internal--external pressure difference; here the \emph{full} wall-pressure jump is differentiated as specified.
+
+Using $\dot R=U$ and $\dot p_g=-3\kappa p_gU/R$ gives
+\begin{align}
+ \dot{\Delta p}={}&-\frac{3\kappa p_gU}{R}+\frac{2\sigma U}{R^2}
+ +P_a\omega\cos(\omega t)-\frac{4\mu}{R}\dot U+\frac{4\mu U^2}{R^2}.\label{eq:derivative}
+\end{align}
+The acceleration term in the viscous derivative moves to the left. Define
+\begin{align}
+ B&=-3\kappa p_gU/R+2\sigma U/R^2+P_a\omega\cos(\omega t)+4\mu U^2/R^2,\\
+ D&=R(1-U/c)+4\mu/(\rho c),\label{eq:denom}\\
+ N&=(1+U/c)\Delta p/\rho+RB/(\rho c)-\tfrac32(1-U/(3c))U^2.
+\end{align}
+The integrated system is $\boxed{\dot R=U,\quad\dot U=N/D}$. Every term of $\Delta p$ is a pressure and every term of $B$ is Pa/s. Both terms of $D$ have units m, while $N$ has units m$^2$/s$^2$, so $N/D$ is m/s$^2$. A base-unit rescaling test checks this numerically, independently of printed units.
+
+At $t=0$, $\Delta p=U=0$, but the acoustic derivative is nonzero:
+\begin{equation}
+ \dot U(0)=\frac{R_0P_a\omega}{\rho cR_0+4\mu}.
+\end{equation}
+This differs from RP's zero initial acceleration. As $c\to\infty$, $D\to R$ and $N\to\Delta p/\rho-3U^2/2$, giving exactly the imported RP acceleration.
+
+\subsection{Denominator diagnostics}
+For $R>0$, $D=0$ requires $U=c+4\mu/(\rho R)$, an \emph{outward} speed greater than $c$. An inward wall speed $U=-c$ gives $D=2R+4\mu/(\rho c)>0$. Thus a high inward Mach number does not by itself imply a denominator singularity. No denominator, speed or pressure is clipped. A relative numerical guard $D/R=10^{-6}$ stops integration before cancellation; it is not a physical validity boundary. No production KM trajectory approaches it: at the strongest case $\min(D/R)=\ExtremeD$.
+
+\newpage
+\section{Numerical method and verification}
+DOP853 integrates in SI units with relative tolerance $10^{-10}$, absolute tolerances $(10^{-16}\ \mathrm{m},10^{-8}\ \mathrm{m/s})$ and maximum step $T/1000$. A rejected nonpositive internal trial radius causes a step reduction, without altering the equation. The low-level driver preserves every accepted point and dense polynomial and saves the last valid state if a step fails. RP retains its accepted 6 nm technical stopping radius; KM uses a 1 pm numerical guard, well below its observed minima. Neither is a physical hard core.
+
+Radius extrema are zeros of $U$, and speed extrema are zeros of $\dot U$. An independent search over accepted-step halves brackets roots and refines them on the dense solution with absolute time tolerance $10^{-24}$ s. This requested root tolerance is below floating-point time spacing near the sharpest RP rebound and does not imply corresponding timing accuracy. Tests compare event counts, trajectories, independent methods and exported extrema. Each saved CSV combines a uniform grid, four subdivisions per accepted step, exact event samples, 65 samples across each minimum bracket and logarithmic offsets around the deepest collapse. Adaptive nodes are saved separately. Dense evaluation is numerical interpolation of the solved ODE, not a new gas or liquid model.
+
+Convergence is tested separately at 1.0, 1.10, 1.15 and 1.30 bar for both models. Four configurations use DOP853 tolerances $10^{-8},10^{-10},10^{-11}$ with decreasing maximum step and an independent Radau calculation. Tight DOP853 is the reference at the same amplitude, not at a different regime. The largest reported KM differences among the production/tight/Radau configurations are $\KMConvergenceR$ in relative minimum radius and $\KMConvergenceU$ in relative peak speed. Full RP and KM diagnostics are tabulated in Appendix A; sensitivity of an extreme RP trajectory remains part of the numerical assessment.
+
+The six accepted RP cases are reproduced against full CSV precision. The mandatory algebraic checks cover equilibrium gas balance, forcing phase, dimensions, the full viscous derivative, the original implicit residual and the analytic initial acceleration. Tests also exercise numerical termination and verify that an incomplete interval is explicitly censored.
+
+Numerical $c\to\infty$ comparisons use the union of both event-aware time grids, so the narrow RP core cannot disappear between uniform samples. At a sound-speed multiplier $10^7$, the 1.3 bar relative minimum-radius error is $\RPLimitError$. Extending to $10^{15}$ reduces the maximum radius-trajectory difference divided by $R_0$ to $\RPLimitTrajectory$; the common-time velocity error divided by the reference peak is $\RPLimitSpeedTrajectory$. The latter remains sensitive to tiny phase shifts in the sharp RP core and finite numerical resolution. This is a mathematical limit study, not a change to the physical water properties.
+
+\begin{table}[H]\centering\small
+\caption{Five-cycle complete solutions at the six requested amplitudes. Endpoints are included in global extrema; $N_{min}$ excludes the initial state. Very small zero-drive velocities are roundoff.}
+\input{../results/table_main.tex}
+\end{table}
+
+\newpage
+\section{RP versus KM and the finite-time transition}
+At 1.0 bar, KM increases the five-cycle minimum radius by $\OneRadiusDifference\%$ relative to RP, while peak speed falls. Even a small wall Mach number does not make every finite-time extremum identical: acoustic radiation changes rebound amplitudes and event phase. At 1.3 bar, the global KM minimum is $\RadiusFactor$ times the RP minimum and the peak speed is reduced by $\SpeedReduction\%$. The dramatic incompressible velocity does not survive this first compressibility correction.
+
+\fig{04_minimum_radius}{.87}{Minimum radius versus amplitude. All KM runs complete. RP line gaps are numerical censoring at the unchanged stopping boundary or a solver failure; no interpolation is drawn across them. Complete extreme RP runs remain visible.}
+\fig{05_wall_mach}{.87}{The wall-speed transition remains steep in KM, but its magnitude is much smaller. Continuous Mach diagnostics are displayed without removing points or claiming a universal cutoff.}
+
+The coarse grid has 0.05 bar spacing from 1.0 to 1.3 bar. Intervals with $|\Delta\log R_{min}|/\Delta P_a>4$ per bar in either model receive 0.005 bar spacing. This is a mesh-selection rule, not a physical threshold. The final grid contains \AmplitudeCount\ amplitudes including the low-amplitude controls. A rapid increase in collapse strength persists over the upper part of this range, with modulation by transient rebounds. The finite scan and fixed initial conditions do not establish a bifurcation, a unique critical pressure, or monotonicity of all five-cycle global extrema. In particular, the RP response includes extreme complete runs and \IncompleteRP\ incomplete runs, rather than one simple cutoff.
+
+\newpage
+\section{Extreme-collapse analysis and event correspondence}
+The strongest saved KM case has $R_{max}=\ExtremeRmaxUm\ \mu$m, $R_{min}=\ExtremeRminUm\ \mu$m, peak inward speed $\ExtremeSpeed$ m/s, $M_{max}=\ExtremeMach$ and global volume ratio $\ExtremeVolume$. Its characteristic minimum occurs at $t_c=\ExtremeTimeUs\ \mu$s, with paired collapse duration $\ExtremeDurationUs\ \mu$s. The exponentiated pressure closure itself gives a maximum gas pressure of $\ExtremeGasGPa$ GPa; this is a diagnostic of the assumed gas law, not an independent pressure prediction.
+
+\begin{table}[H]\centering\scriptsize
+\caption{Global characteristic minimum, its preceding maximum, and the first strong event. ``Strong'' means the first local minimum below $R_0/2$, an operational event-selection rule. The global volume ratio can combine different cycles; paired ratios are also saved.}
+\resizebox{\linewidth}{!}{\input{../results/table_timing.tex}}
+\end{table}
+
+At 1.3 bar, the deepest RP event lies in cycle 2, whereas the deepest KM event lies in cycle 1. Their global time difference is not a delay of the same event. The first-cycle comparison and the separately saved per-cycle minimum pairs avoid this ambiguity. Small rebound extrema are not matched by ordinal index because damping changes their count.
+
+\fig{03_strong_collapse}{1.0}{First-cycle strong collapse at 1.3 bar. Each column is centered on its own minimum, with the absolute event time shown. These are corresponding primary events, not a superposition of the deepest minima from different cycles. The full-time and multiscale figures are in Appendix B.}
+
+The numerical result is retained despite $M=O(1)$. Tightening tolerances and changing integrator tests the ODE solution only. The sphere, gas closure and constant liquid properties remain modeling assumptions. No experimental radius trace under this exact parameter set has been used to validate them.
+
+\newpage
+\section{Physical applicability and unresolved mechanisms}
+KM retains only the first-order weak-compressibility correction. The strongest case is not within a demonstrably small-Mach asymptotic regime. Moreover, the proxy
+\[
+ \chi=\max_t\frac{|p_L(t)-p_0|}{\rho c^2},\qquad
+ p_L=p_g+p_v-2\sigma/R-4\mu U/R,
+\]
+has value $\ExtremeChi$. This is a pressure-excursion scale relative to the reference bulk modulus, not a computed density change. Its order-one size makes a linear density correction unjustified and motivates a variable-density, variable-sound-speed liquid closure. KM does not evolve shock profiles or resolve their steepening and propagation; no shock strength is claimed here.
+
+Spherical symmetry suppresses shape modes and jets by construction. No perturbation spectrum, wall distance or neighboring-bubble geometry is provided, so shape stability cannot be inferred from a radius trajectory. Uniform gas pressure would require a gas acoustic equilibration time short relative to collapse; gas composition and a state-dependent gas sound speed are absent, so that test is unresolved. Constant $\kappa$ does not resolve heat transfer or changes in gas degrees of freedom. Constant $p_v$ and fixed gas inventory omit evaporation, condensation and diffusion, particularly during long expansion and rebound.
+
+The divergent point-volume gas law has no excluded molecular volume and cannot establish its own high-compression validity. A large compression ratio and multi-GPa closure pressure require a suitable gas equation of state before quantitative interpretation. The submicrometre KM minimum alone does not demonstrate continuum failure: molecular lengths, mean free paths, composition and local states are needed for a Knudsen/packing assessment. None is replaced by an arbitrary radius cutoff. These limitations are qualitative unless explicitly represented by $M$, $\chi$, radius ratios or numerical diagnostics.
+
+\subsection{Negative absolute far-field pressure}
+For amplitudes above the adopted static pressure, part of the prescribed cycle places the surrounding water in tension. A negative \emph{liquid} pressure can represent a metastable stretched liquid. It is distinct from the positive interior gas pressure produced by Eq.~\eqref{eq:gas}. Whether additional cavitation nuclei grow depends on impurities, nuclei statistics, geometry, exposure time and the liquid equation of state. These inputs are absent. Negative $p_\infty$ neither proves impossibility nor establishes experimental attainability. The gas law is evaluated only at positive radius and does not assign a negative gas pressure.
+
+\subsection{Minimum necessary follow-up: Gilmore}
+Nagy and Heged\H us~\cite{nagy}, Section 3.2, compare idealized spherical models with DNS and find Gilmore generally closer near order-one Mach number in water. Their tested accuracy ranges are not universal bounds and their conditions differ from this study. An additional task should compare 1.0 bar (moderate), 1.15 bar (transition) and 1.3 bar (strongest KM), retaining the same gas law to isolate the liquid model. It must specify and validate a liquid EOS, enthalpy and local sound speed, the viscous acceleration contribution, the acoustic convention, equilibrium and RP limits, and convergence of corresponding events. Gas nonuniformity may still require a separate treatment even after Gilmore. No partially validated Gilmore or CFD implementation is included here.
+
+\newpage
+\section{Conclusions and trajectory admission}
+Compressibility substantially weakens the extreme RP collapse while retaining a steep finite-time increase in KM wall speed and compression. The strongest KM trajectory is mathematically regular and numerically tested, with a denominator well away from cancellation. Its order-one compressibility diagnostics prevent treating its minimum radius, speed or gas pressure as validated physical extrema.
+
+The complete 1.0 bar KM trajectory is a baseline candidate under the stated mechanical assumptions. The 1.10 and 1.15 bar trajectories are sensitivity candidates requiring closure checks and event-specific comparison. The 1.30 bar trajectory is admitted only as a formal extreme scenario pending Gilmore/EOS and gas-closure assessment. Incomplete RP trajectories are never admitted as full-cycle mechanical inputs. Their resolved earlier intervals are preserved for diagnosis, with censoring metadata. Every amplitude has an explicit admission record; no later-stage computation is performed.
+
+All time series, local extrema, same-cycle pairs, absolute/relative model differences, incomplete-run states, numerical settings and code/source hashes are saved. Report tables and displayed result macros are generated directly from these saved files. Reproduction requires the unchanged sibling RP module. The repository manifest lists every deliverable and its SHA256. The purpose of independent review is to check equation convention, event resolution, numerical sensitivity and the separation of mathematical existence from physical attainability.
+
+\begin{thebibliography}{9}\small
+\bibitem{keller} J. B. Keller and M. Miksis, ``Bubble oscillations of large amplitude,'' J. Acoust. Soc. Am. \textbf{68}, 628--633 (1980). \href{https://doi.org/10.1121/1.384720}{doi:10.1121/1.384720}. Readable journal reprint: \href{https://archive.org/download/DTIC_ADA095754/DTIC_ADA095754.pdf}{DTIC ADA095754}, pp. 628--633.
+\bibitem{nagy} D. Nagy and F. Heged\H us, ``Assessing the accuracy of the coupled-spherical-bubble approach for bubble pairs in an acoustic field,'' Ultrason. Sonochem. \textbf{123}, 107651 (2025). \href{https://doi.org/10.1016/j.ultsonch.2025.107651}{doi:10.1016/j.ultsonch.2025.107651}. \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC12641221/}{Open full text}.
+\bibitem{sadighi} R. Sadighi-Bonabi and M. Gheshlaghi, ``Laser induced sonofusion: A new road toward thermonuclear reactions,'' AIP Adv. \textbf{6}, 035218 (2016). \href{https://doi.org/10.1063/1.4945343}{doi:10.1063/1.4945343}.
+\bibitem{flannigan} D. J. Flannigan and K. S. Suslick, ``Plasma formation and temperature measurement during single-bubble cavitation,'' Nature \textbf{434}, 52--55 (2005). \href{https://doi.org/10.1038/nature03361}{doi:10.1038/nature03361}.
+\bibitem{xu} H. Xu and K. S. Suslick, ``Molecular Emission and Temperature Measurements from Single-Bubble Sonoluminescence,'' Phys. Rev. Lett. \textbf{104}, 244301 (2010). \href{https://doi.org/10.1103/PhysRevLett.104.244301}{doi:10.1103/PhysRevLett.104.244301}.
+\bibitem{iapws} IAPWS, \href{https://iapws.org/technical-guidance/release/IAPWS-95}{IAPWS-95 thermodynamic formulation}, viscosity (2008) and surface tension (2014) releases. Rounded values retained from the independently checked Mini-Research 1.
+\bibitem{scipy} SciPy, \href{https://docs.scipy.org/doc/scipy/reference/integrate.html}{integration documentation}, DOP853 and Radau implementations, version recorded in the run metadata.
+\end{thebibliography}
+
+\newpage\appendix
+\section{Numerical verification and mathematical limit}
+\begin{table}[H]\centering\scriptsize
+\caption{Production DOP853 and independent Radau errors against tighter DOP853 at the same amplitude and model. Complete tables include the coarser configuration and collapse duration.}
+\input{../results/table_convergence.tex}
+\end{table}
+\fig{13_validation}{1.0}{Metric and event-aware trajectory convergence as sound speed increases (left, middle), and KM tolerance convergence (right). Common-time trajectory errors include phase shift.}
+Detailed test outcomes, baseline reproduction, actual numerical precision limitations and source integrity checks are recorded in \texttt{results/validation.md}. Censored trajectory metrics apply only to the observed interval. Absolute/relative differences of five-cycle global metrics are suppressed when either run is incomplete.
+
+\newpage
+\section{Full trajectories and additional diagnostics}
+\fig{01_radius}{.94}{Five-cycle radius histories at the six original amplitudes; the reference RP equation is imported unchanged.}
+\newpage
+\fig{02_velocity}{.94}{Wall velocities on the same intervals. A symmetric-logarithmic axis at 1.3 bar retains the formal large RP excursion while showing smaller KM motion.}
+\newpage
+\fig{11_multiscale_collapse}{1.0}{Successive zooms of each model's deepest 1.3 bar minimum. RP and KM minima belong to different cycles. Stored dense samples resolve the formal sub-picosecond RP core; this is numerical resolution, not a physical timescale claim.}
+\fig{06_collapse_timing}{1.0}{Corresponding deepest local minimum in cycle 1, paired with its immediately preceding local maximum. Missing complete cycles produce gaps.}
+\newpage
+\fig{07_applicability}{1.0}{Continuous KM applicability and regularity indicators. The pressure/bulk-modulus ratio is a warning proxy, not a finite-compression liquid EOS.}
+\fig{12_diagnostic_map}{1.0}{Quantified compressibility diagnostics and explicitly unresolved mechanisms. Colors show magnitude, not a binary physical acceptance test.}
+\newpage
+\fig{08_phase_portraits}{1.0}{Phase portraits retain all mathematically computed excursions; logarithmic speed scaling displays the extreme RP paths.}
+\fig{09_volume_ratio}{.86}{Global volume ratio may combine extrema from different cycles. Event-paired ratios are saved separately. Incomplete RP trajectories are omitted with line gaps.}
+\fig{10_relative_differences}{1.0}{Signed model differences in complete five-cycle global metrics. NaN values break the line wherever RP is incomplete.}
+\end{document}

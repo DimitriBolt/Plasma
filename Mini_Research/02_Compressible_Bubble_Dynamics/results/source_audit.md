@@ -1,0 +1,13 @@
+# Primary-source and convention audit
+
+All five named papers were available and read; no missing named source was replaced by an abstract or a similarly titled work.
+
+- `Library/035218_1_online.pdf`, Sadighi-Bonabi & Gheshlaghi (2016), DOI 10.1063/1.4945343: equation (1) was inspected both as extracted text and as a rendered page. It prints `(1-U/C)` multiplying the pressure difference, while the adopted convention has `(1+U/c)`. Equation (4) also uses the opposite acoustic phase. Changing forcing phase alone does not reconcile the pressure prefactor. The study uses neither their printed minus prefactor nor their excluded-volume gas law. Tables I/II and the hydrochemical assumptions were inspected; water parameters remain those of accepted MR1.
+- `Library/nature03361.pdf`, Flannigan & Suslick (2005), DOI 10.1038/nature03361: the file contains adjacent Nature material as well as the named article, pp. 52-55. The named article was identified by title/authors, not by the first PDF page. Acid-host emission evidence is contextual and does not validate the present water mechanics.
+- `Library/PhysRevLett.104.244301.pdf`, Xu & Suslick (2010), DOI 10.1103/PhysRevLett.104.244301: phosphoric-acid, moving-bubble emission measurements; no quantitative radius/velocity benchmark for the present parameter set.
+- Keller & Miksis (1980), DOI 10.1121/1.384720: full six-page journal reprint read in the public DTIC archive, including visual inspection of p. 629 (Section III, equations 3.4 and 3.9). Download: https://archive.org/download/DTIC_ADA095754/DTIC_ADA095754.pdf . The original incident-field argument includes radial propagation; the main experiment fixes the modern local-in-time pressure-jump convention explicitly, rather than claiming all conventions are identical.
+- Nagy & Hegedus (2025), DOI 10.1016/j.ultsonch.2025.107651: full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC12641221/ . Equations (7)-(9) give the adopted KM pressure prefactor and the differentiated full wall jump. Section 3.2 and Table 2 compare spherical models to DNS in water; Gilmore is generally closer near order-one wall Mach. Their accuracy ranges are specific to their benchmark, not universal acceptance thresholds. Gas-pressure nonuniformity remains a limitation even for Gilmore.
+
+The general project plan's Part B was read and preserved. Its schematic derivative is less complete than the explicit equation required for this study. Advisor identification follows the plan: Prof. Dr. Ildar R. Gabitov. The adopted forcing phase and all reference constants follow accepted MR1.
+
+Water-property provenance is inherited from the independently checked IAPWS evaluation in MR1, not newly fitted. No experimental validation under this exact driving/gas setup is claimed.

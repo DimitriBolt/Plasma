@@ -1,0 +1,50 @@
+{
+  "client_date": "2026-10-31",
+  "report_pages": 13,
+  "main_text_pages": 7,
+  "appendix_pages": 6,
+  "figures": 13,
+  "formats_per_figure": [
+    "pdf",
+    "png"
+  ],
+  "all_report_pages_visually_inspected": true,
+  "all_figure_pairs_visually_inspected": true,
+  "visual_fixes": [
+    "Linear speed axis for moderate phase portrait",
+    "Unsampled amplitude band explicitly blank in diagnostic map"
+  ],
+  "system_latexmk_compilation": "success; no final LaTeX warnings or overfull boxes",
+  "app_live_preview_compiler": "unavailable: pdflatex.fmt absent in isolated preview and offline Tectonic bundle; system build verified independently",
+  "report_pdf_sha256": "a88182f310735ccd1cce9371265e6ddca4b5e53706adcd5b796b2eedd843ef50",
+  "tex_source_sha256": "cddb629e9b35e345611559ac2b95566c8a314cfc74b05434edc17e6750341d38",
+  "test_summary": "21 passed in 33.90s",
+  "figure_files": [
+    "01_radius.pdf",
+    "01_radius.png",
+    "02_velocity.pdf",
+    "02_velocity.png",
+    "03_strong_collapse.pdf",
+    "03_strong_collapse.png",
+    "04_minimum_radius.pdf",
+    "04_minimum_radius.png",
+    "05_wall_mach.pdf",
+    "05_wall_mach.png",
+    "06_collapse_timing.pdf",
+    "06_collapse_timing.png",
+    "07_applicability.pdf",
+    "07_applicability.png",
+    "08_phase_portraits.pdf",
+    "08_phase_portraits.png",
+    "09_volume_ratio.pdf",
+    "09_volume_ratio.png",
+    "10_relative_differences.pdf",
+    "10_relative_differences.png",
+    "11_multiscale_collapse.pdf",
+    "11_multiscale_collapse.png",
+    "12_diagnostic_map.pdf",
+    "12_diagnostic_map.png",
+    "13_validation.pdf",
+    "13_validation.png"
+  ]
+}

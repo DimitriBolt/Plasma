@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-31T07:01:31.911774+00:00",
+  "study_started_client_date": "2026-10-30",
+  "source_repository_commit": "d59bc0d0119b514152f763e2537a0477c7c63663",
+  "accepted_RP_commit": "d59bc0d0119b514152f763e2537a0477c7c63663",
+  "parameters": {
+    "R0": 6e-06,
+    "f": 30000.0,
+    "p0": 101325.0,
+    "rho": 998.2,
+    "mu": 0.001002,
+    "sigma": 0.07274,
+    "pv": 2339.0,
+    "kappa": 1.4,
+    "c": 1482.0,
+    "floor_fraction": 0.001
+  },
+  "initial_liquid_temperature_K": 293.15,
+  "initial_state": [
+    6e-06,
+    0.0
+  ],
+  "settings": {
+    "method": "DOP853",
+    "rtol": 1e-10,
+    "atol_R": 1e-16,
+    "atol_U": 1e-08,
+    "steps_per_period": 1000,
+    "cycles": 5.0,
+    "denominator_guard": 1e-06,
+    "km_radius_guard_m": 1e-12
+  },
+  "python": "3.14.4",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "libraries": {
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7+dfsg1",
+    "pytest": "8.4.2"
+  },
+  "source_sha256": {
+    "Mini_Research/01_Bubble_Dynamics/src/bubble_dynamics.py": "f8c1baaf5a4fc891383b7203b67c026908f4bf005d5418e273b640784e161188",
+    "Plasma-plan.tex": "6fd07a40ba7467a934b6f52e2bd025ebd19cdf1af7715251d03dc0ebd002928d",
+    "Library/035218_1_online.pdf": "e099ff7dc7eab87c154c442cad8aef907966033c987174082e17c9f3278c40cb",
+    "Library/nature03361.pdf": "78871f772e8825bb9bb8694fe091310d827f8caa19e4005dffae7d372c46614f",
+    "Library/PhysRevLett.104.244301.pdf": "ad7a4e4523764a611ff1ca263ff04bef699603173903487f799827072885e578"
+  },
+  "code_sha256": {
+    "src/__init__.py": "fa3b2651f3bdd58566196be7074ad45616627fcd4e6d5741bab541cce241d48a",
+    "src/audit.py": "83b3dbd5a1d9825b8d6e12836f326b2a3a61463935301ead3844ec729cc1f818",
+    "src/experiments.py": "8f8ee62f366df50c76754aada8e54665ce25c162211210f7e57adc7238de4c3e",
+    "src/extended_validation.py": "0660baa47f77493db4a628a78ea92ccc31fd4581508990194452bf542c5d955e",
+    "src/manifest.py": "e307edeccebd4f5be829225ddf7c7a10da9c6d4d3607bb76163e2646004a2309",
+    "src/model.py": "1dfdb8c8f86e1741e20a9f1cd8b65f42e7cb74a77be9e05452ce12a9efc7b7c1",
+    "src/presentation.py": "5f0ec0b71ef39dd7546d68cab06cf13002b3c9c042f300a76da8b9918bf8c003"
+  },
+  "scope": "Mechanical radius dynamics only; temperature and reactions are not evaluated"
+}

@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+.venv/
+report/*.aux
+report/*.log
+report/*.out
+report/*.fdb_latexmk
+report/*.fls
+report/*.synctex.gz

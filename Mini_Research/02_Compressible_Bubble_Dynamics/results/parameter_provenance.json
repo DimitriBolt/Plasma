@@ -1,0 +1,163 @@
+[
+  {
+    "parameter": "R0",
+    "value": 6e-06,
+    "unit": "m",
+    "status": "L",
+    "source": "Sadighi-Bonabi 2016, Table II, water",
+    "meaning": "Equilibrium bubble radius"
+  },
+  {
+    "parameter": "f",
+    "value": 30000.0,
+    "unit": "Hz",
+    "status": "L",
+    "source": "Sadighi-Bonabi 2016, Table II, water",
+    "meaning": "Acoustic driving frequency"
+  },
+  {
+    "parameter": "T_liquid",
+    "value": 293.15,
+    "unit": "K",
+    "status": "L",
+    "source": "Ambient state; not a computed bubble temperature",
+    "meaning": "Initial ambient liquid temperature"
+  },
+  {
+    "parameter": "p0",
+    "value": 101325.0,
+    "unit": "Pa",
+    "status": "A",
+    "source": "Standard atmosphere adopted in Mini-Research 1",
+    "meaning": "Static far-field absolute pressure"
+  },
+  {
+    "parameter": "rho",
+    "value": 998.2,
+    "unit": "kg/m^3",
+    "status": "P",
+    "source": "IAPWS-95; accepted rounded reference",
+    "meaning": "Reference liquid density"
+  },
+  {
+    "parameter": "mu",
+    "value": 0.001002,
+    "unit": "Pa s",
+    "status": "P",
+    "source": "IAPWS viscosity; accepted rounded reference",
+    "meaning": "Dynamic liquid viscosity"
+  },
+  {
+    "parameter": "sigma",
+    "value": 0.07274,
+    "unit": "N/m",
+    "status": "P",
+    "source": "IAPWS surface tension; accepted rounded reference",
+    "meaning": "Surface tension at the gas-liquid interface"
+  },
+  {
+    "parameter": "pv",
+    "value": 2339.0,
+    "unit": "Pa",
+    "status": "P",
+    "source": "IAPWS saturation; fixed partial pressure",
+    "meaning": "Fixed vapor partial pressure"
+  },
+  {
+    "parameter": "kappa",
+    "value": 1.4,
+    "unit": "1",
+    "status": "A",
+    "source": "Constant diatomic-gas polytropic approximation",
+    "meaning": "Constant gas polytropic exponent"
+  },
+  {
+    "parameter": "c",
+    "value": 1482.0,
+    "unit": "m/s",
+    "status": "P",
+    "source": "IAPWS-95; accepted rounded reference",
+    "meaning": "Reference liquid sound speed"
+  },
+  {
+    "parameter": "pg0",
+    "value": 123232.66666666666,
+    "unit": "Pa",
+    "status": "D",
+    "source": "Static gas, vapor and capillary balance",
+    "meaning": "Initial noncondensable gas partial pressure"
+  },
+  {
+    "parameter": "T",
+    "value": 3.3333333333333335e-05,
+    "unit": "s",
+    "status": "D",
+    "source": "Reciprocal driving frequency",
+    "meaning": "Acoustic period"
+  },
+  {
+    "parameter": "Pa",
+    "value": [
+      0.0,
+      20000.0,
+      50000.0,
+      80000.0,
+      100000.0,
+      100499.99999999999,
+      101000.0,
+      101499.99999999999,
+      102000.0,
+      102499.99999999999,
+      103000.0,
+      103499.99999999999,
+      104000.0,
+      104500.0,
+      105000.0,
+      105500.0,
+      106000.0,
+      106500.0,
+      107000.0,
+      107500.0,
+      108000.0,
+      108500.0,
+      109000.00000000001,
+      109500.0,
+      110000.00000000001,
+      110500.0,
+      111000.00000000001,
+      111500.0,
+      112000.00000000001,
+      112500.0,
+      112999.99999999999,
+      113500.0,
+      113999.99999999999,
+      114500.0,
+      114999.99999999999,
+      115500.0,
+      115999.99999999999,
+      116500.0,
+      117000.0,
+      117500.0,
+      118000.0,
+      118500.0,
+      119000.0,
+      119500.0,
+      120000.0,
+      125000.0,
+      125499.99999999999,
+      126000.0,
+      126499.99999999999,
+      127000.0,
+      127499.99999999999,
+      128000.0,
+      128499.99999999999,
+      129000.0,
+      129500.0,
+      130000.0
+    ],
+    "unit": "Pa",
+    "status": "A",
+    "source": "Prescribed six reference cases and behavior-guided finite mesh",
+    "meaning": "Acoustic pressure amplitude; values are scenarios, not measurements"
+  }
+]
