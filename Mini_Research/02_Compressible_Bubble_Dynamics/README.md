@@ -2,7 +2,7 @@
 
 Five-cycle Keller-Miksis (KM) mechanics with the exact gas law and fixed water constants of accepted Mini-Research 1 (RP). Author: Dimitri Bolt. Academic advisor: Prof. Dr. Ildar R. Gabitov. No temperature, reactions, optical heating or nanoparticles are calculated. The general project plan is unchanged.
 
-The scientific report is [report/main.pdf](report/main.pdf); its English LaTeX source is [report/main.tex](report/main.tex). Numerical results and figures are generated from saved data, including formal extreme trajectories and explicitly censored incomplete RP solutions. See [results/validation.md](results/validation.md), [results/source_audit.md](results/source_audit.md), and [results/data_schema.md](results/data_schema.md).
+The scientific report is [report/main.pdf](report/main.pdf); its English LaTeX source is [report/main.tex](report/main.tex). Numerical results and figures are generated from saved data, including formal extreme trajectories and explicitly censored incomplete RP solutions. The independent clean-snapshot checks are recorded in [results/clean_snapshot_verification.json](results/clean_snapshot_verification.json). See [results/validation.md](results/validation.md), [results/source_audit.md](results/source_audit.md), and [results/data_schema.md](results/data_schema.md).
 
 ## Reproduce from a clone
 
@@ -38,6 +38,6 @@ Numerical convergence does not establish physical validity. Mach and pressure/bu
 
 ## Package and source integrity
 
-`src/`: model/driver, experiments, saved-data presentation, extended numerical checks, audit and manifest tools. `tests/`: equation, domain, events, numerical and saved-data tests. `results/`: all input parameters, trajectories, extrema, summaries, convergence, source audit and admission records. `figures/`: 13 English figures, each in PDF and PNG. `report/`: English source and compiled PDF. `FILE_LIST.txt` and `SHA256SUMS` list this package, excluding caches and LaTeX auxiliaries.
+`src/`: model/driver, experiments, saved-data presentation, extended numerical checks, audit and manifest tools. `tests/`: equation, domain, events, numerical and saved-data tests. `results/`: all input parameters, trajectories, extrema, summaries, convergence, source audit and admission records. `figures/`: 13 English figures, each in PDF and PNG. `report/`: English source and compiled PDF. `FILE_LIST.txt` and `SHA256SUMS` list this package, excluding caches and LaTeX auxiliaries. Check `sha256sum -c SHA256SUMS` before rerunning; rebuilds can change metadata timestamps and PDF/font metadata while retaining the same numeric tables and report text.
 
 The only changes in Mini-Research 1 are its README status/advisor and the advisor name in validation.md. Its original SHA256SUMS remains a historical manifest of commit d59bc0d; those two authorized documentation edits naturally change their hashes. The accepted model and numerical artifacts are byte-for-byte preserved. User files outside this scope are not added or changed.

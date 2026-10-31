@@ -1,0 +1,44 @@
+{
+  "staged_tree": "0549a8e8d1865788d9ffd0d7ec708e36dbba1ca6",
+  "environment": "clean locked Python 3.12.14",
+  "steps": [
+    {
+      "name": "integrity",
+      "exit_code": 0,
+      "elapsed_s": 1.77
+    },
+    {
+      "name": "reproduce",
+      "exit_code": 0,
+      "elapsed_s": 63.71
+    },
+    {
+      "name": "tests",
+      "exit_code": 0,
+      "elapsed_s": 31.72
+    },
+    {
+      "name": "presentation",
+      "exit_code": 0,
+      "elapsed_s": 19.35
+    },
+    {
+      "name": "latex",
+      "exit_code": 0,
+      "elapsed_s": 1.92
+    }
+  ],
+  "validated_core_commit": "b49ea8cb265298320431b0331d96702f3b313995",
+  "scope": "Validated core commit; this receipt and explanatory README/manifest updates are the only subsequent changes",
+  "tests_output": ".....................                                                    [100%]\n21 passed in 31.45s",
+  "rebuilt_report_raw_text_matches_ignoring_whitespace": true,
+  "generated_table_and_value_files_identical": {
+    "report_values.tex": true,
+    "table_main.tex": true,
+    "table_timing.tex": true,
+    "table_convergence.tex": true,
+    "table_parameters.tex": true
+  },
+  "rebuild_graphics_note": "Minor font-metric/text-extraction layout differences between system Matplotlib 3.10.7+dfsg1 and locked PyPI 3.10.7; numeric tables and normalized raw PDF text are identical; representative rebuilt pages visually checked",
+  "rebuilt_report_pages": 13
+}

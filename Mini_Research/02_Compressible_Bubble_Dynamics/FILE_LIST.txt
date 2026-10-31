@@ -39,6 +39,7 @@ results/c_limit.csv
 results/c_limit_extended.csv
 results/clean_environment.json
 results/clean_reproduction.csv
+results/clean_snapshot_verification.json
 results/comparison.csv
 results/convergence.csv
 results/cycle_comparison.csv
