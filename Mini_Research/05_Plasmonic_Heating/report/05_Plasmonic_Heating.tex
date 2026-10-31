@@ -1,0 +1,195 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=19mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,microtype,caption,fancyhdr,float}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Mini-Research 5: Plasmonic Absorption and Photothermal Heating of Gold Nanoparticles},pdfauthor={Dimitri Bolt}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\pagestyle{fancy}\fancyhf{}\lhead{\small Mini-Research 5}\rhead{\small Plasmonic absorption and liquid heating}\cfoot{\thepage}
+\setlength{\headheight}{13pt}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{../figures/#1.jpg}\caption{#3}\end{figure}}
+\newcommand{\m}{\mathrm{m}}\newcommand{\Au}{\mathrm{Au}}\newcommand{\abs}{\mathrm{abs}}\newcommand{\sca}{\mathrm{sca}}\newcommand{\ext}{\mathrm{ext}}
+\input{../results/report_values.tex}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Plasmonic Absorption and Photothermal\\[3pt] Heating of Gold Nanoparticles}\par
+\vspace{6pt}{\large Dimitri Bolt}\par
+Academic supervisor: Prof. Dr. Ildar R. Gabitov\par
+Mini-Research 5 \quad | \quad 31 October 2026
+\end{center}
+\begin{abstract}
+I quantify the optical-energy channel from laser irradiation to isolated gold spheres and surrounding water. Experimental room-temperature optical constants, a passive dipole approximation and a converged Mie calculation are linked to depth-integrated attenuation and an energy-conservative transient conduction model. The objectives of maximizing one-particle absorption, absorption per gold volume and the absorbed fraction of a finite beam differ. In the declared moderate-heating design, a 100 nm radius sphere absorbs \SinglePJ\ pJ in 100 ns; a finite 0.785 mJ pulse deposits \EnsembleMicroJ\ $\mu$J in a dilute 10 mm layer. These are conditional model estimates. More extreme linear continuations are retained with explicit failures of thermal equilibrium, constant optical response and phase stability. No universal maximum, bubble temperature or laser-to-bubble efficiency is inferred.
+\end{abstract}
+
+\section{Question, scope and finite design}
+The physical sequence is laser absorption, thermalization of the metal, interfacial heat flow and diffusion in the liquid. Johnson--Christy data constrain the optical input \cite{JC}; the thermoplasmonic literature supplies the physical framework \cite{BQ,BR,Jain}. Previous bubble mechanics and gas thermodynamics provide context only: their equations and results are unchanged and are not reintegrated.
+
+Optical spectra cover $a=5,6,\ldots,100$ nm and vacuum wavelengths $\lambda_0=400,401,\ldots,1000$ nm, with real host indices $n_m=1,1.33,1.5$: 173088 points. Only $n_m=1.33$ is combined with water thermophysics. Other indices are optical sensitivity scenarios, not alternative liquids with water's coefficients. A real, homogeneous, nondispersive host is assumed. The moderate thermal design uses $20\leq a\leq100$ nm, top-hat durations 1, 10 and 100 ns, $F\leq1000$ J/m$^2$, $I_{\rm peak}\leq10^{10}$ W/m$^2$ and a selected gold-rise screen of 30 K. This screen is a conservative design choice, not a material threshold or a proven accuracy bound.
+
+\fig{01_energy_path}{1}{Energy channels and model boundaries. Scattering and heat storage are explicitly separated from absorption and transfer to water.}
+
+\section{Dipole model and passive optical convention}
+I use $e^{-i\omega t}$, $\tilde n_\Au=n+i\kappa$ and $\varepsilon_\Au=\tilde n_\Au^2$, where permittivities are relative. The electrostatic potentials $\Phi_{\rm in}=-AE_0r\cos\theta$ and $\Phi_{\rm out}=-E_0r\cos\theta+B\cos\theta/r^2$, with continuity of potential and normal displacement, give $A=3\varepsilon_m/(\varepsilon_\Au+2\varepsilon_m)$ and
+\begin{equation}
+ \mathbf p=\varepsilon_0\varepsilon_m\alpha_0\mathbf E_0,\quad
+ \alpha_0=4\pi a^3\frac{\varepsilon_\Au-\varepsilon_m}{\varepsilon_\Au+2\varepsilon_m},\quad \varepsilon_m=n_m^2.
+\end{equation}
+Thus $\alpha_0$ is a normalized volume in m$^3$; the SI polarizability is $\varepsilon_0\varepsilon_m\alpha_0$. The host wavenumber is $k_m=2\pi n_m/\lambda_0$. The next page specifies the radiation correction needed for a consistent finite scattering channel.
+\newpage
+
+\section{Optical theorem, Mie theory and spectral results}
+Let $\gamma_r=k_m^3/(6\pi)$ and $\alpha=\alpha_0/(1-i\gamma_r\alpha_0)$. Then
+\begin{align}
+ \sigma_\ext&=k_m\operatorname{Im}\alpha,&
+ \sigma_\sca&=\frac{k_m^4}{6\pi}|\alpha|^2,&
+ \sigma_\abs&=\frac{k_m\operatorname{Im}\alpha_0}{|1-i\gamma_r\alpha_0|^2}\geq0.\label{eq:dip}
+\end{align}
+The last expression equals extinction minus scattering algebraically. Since $\operatorname{Im}\alpha_0=12\pi a^3\varepsilon_m\operatorname{Im}\varepsilon_\Au/|\varepsilon_\Au+2\varepsilon_m|^2$, passivity follows for positive metal loss; a lossless dipole has zero absorption. All cross sections have dimensions m$^2$. Combining uncorrected $\alpha_0$ with finite scattering can violate passivity and is not used. Radiative correction does not supply dynamic depolarization or higher multipoles. Quantitative dipole use needs $x=k_ma\ll1$ and $|mx|\ll1$, $m=\tilde n_\Au/n_m$. The familiar condition $\operatorname{Re}\varepsilon_\Au\simeq-2\varepsilon_m$ is an approximate low-loss dipole resonance condition; finite damping and dispersion shift absorption maxima.
+
+For Mie theory, write $\psi_\ell(z)=zj_\ell(z)$ and $\xi_\ell(z)=z[j_\ell(z)+iy_\ell(z)]$. With primes denoting argument derivatives,
+\begin{align}
+ a_\ell&=\frac{m\psi_\ell(mx)\psi'_\ell(x)-\psi_\ell(x)\psi'_\ell(mx)}{m\psi_\ell(mx)\xi'_\ell(x)-\xi_\ell(x)\psi'_\ell(mx)},\quad
+ b_\ell=\frac{\psi_\ell(mx)\psi'_\ell(x)-m\psi_\ell(x)\psi'_\ell(mx)}{\psi_\ell(mx)\xi'_\ell(x)-m\xi_\ell(x)\psi'_\ell(mx)},\\
+ \sigma_\ext&=\frac{2\pi}{k_m^2}\sum_{\ell\geq1}(2\ell+1)\operatorname{Re}(a_\ell+b_\ell),\quad
+ \sigma_\sca=\frac{2\pi}{k_m^2}\sum_{\ell\geq1}(2\ell+1)(|a_\ell|^2+|b_\ell|^2).
+\end{align}
+Absorption is summed channel by channel as the difference of these terms. No negative result is clipped. The independent implementation is \texttt{miepython 3.0.2} \cite{mie}; its opposite index sign convention is handled explicitly by conjugation. The direct implementation is audited over $x\leq2.36$, not asserted to be robust for arbitrary very large or strongly absorbing spheres.
+
+\fig{02_optical_spectra}{.98}{Mie absorption spectra and scattering albedo. Increasing size does not simply amplify the same dipole spectrum.}
+\begin{center}\small\input{../results/table_resonances.tex}\end{center}
+\vspace{-4pt}{\small Table 1. Water host. Scattering fraction and dipole error are evaluated at the Mie absorption maximum. Wavelengths are discrete-grid maxima, not fitted experimental resonances.}
+\newpage
+
+\section{Optical data, objective dependence and uncertainty}
+The archived source table contains 49 $(\lambda_0,n,\kappa)$ rows from 187.9 to 1937 nm. Its database version and SHA-256 are recorded separately with the original public-domain header. Shape-preserving cubic Hermite interpolation (PCHIP) is applied to $n$ and $\kappa$ separately against vacuum wavelength, followed by squaring the complex index. Every knot is recovered exactly and both interpolants stay positive. No request outside the measurement interval is extrapolated.
+
+Changing to piecewise-linear interpolation changes absorption by at most 6.46\% across the finite optical grid and maximum cross-section values by at most 4.37\%. The largest peak-location change is 58 nm for $a=88$ nm, $n_m=1.5$, where competing broad peaks exchange dominance; it is not evidence for a sharply known resonance shift. The maximum Mie absorption difference from the independent library is $8.46\times10^{-11}$ relative; adding eight orders changes absorption by at most $8.13\times10^{-13}$. Interpolation and material uncertainty therefore dominate series roundoff.
+
+\fig{03_dipole_mie}{.96}{The passive dipole remains inaccurate at larger sizes. Absorption and extinction maxima differ; multipolar competition makes the absorption maximum nonmonotone with radius.}
+
+The mathematical dipole limit is recovered with a relative absorption difference $7.12\times10^{-6}$ at $a=0.1$ nm. That test is a numerical limit, not a claim that bulk optics applies to an atom-sized object. At actual 5 and 10 nm radii the peak errors are already 1.3\% and 5.0\%; at 20 nm it is 18.0\%. Scattering accounts for 6.3\%, 39.7\% and 54.6\% of extinction at the absorption peaks of 20, 40 and 80 nm spheres.
+
+The largest single cross section over all three hosts is $5.309\times10^{-14}$ m$^2$ at $a=100$ nm, $\lambda_0=499$ nm, $n_m=1$. In water it is $5.240\times10^{-14}$ m$^2$ at 100 nm and 506 nm. The maximum $\sigma_\abs/V_\Au$ over the full grid is $1.594\times10^8$ m$^{-1}$ at 15 nm, 537 nm, $n_m=1.5$; in water the optimum is 21 nm, 526 nm, $1.062\times10^8$ m$^{-1}$. At fixed number density, volumetric absorption instead follows $\sigma_\abs$; $\sigma_\abs/V_\Au$ is the relevant objective at fixed gold volume fraction. Local sub-grid refinement is supplied, without relabeling discrete maxima as continuous global optima.
+
+\fig{04_radius_wavelength_map}{.96}{Water-host absorption and scattering maps. The white curve selects the largest absorption value at each radius within the wavelength interval.}
+\newpage
+
+\section{Continuous and pulsed heat transfer}
+Local power is $P_\abs(t)=I(t)\sigma_\abs$ and a pulse gives $E_\abs=F\sigma_\abs$, $F=\int I\,dt$ (J/m$^2$). For a top-hat pulse, $F=I_{\rm peak}t_p$ and beam energy is $E_L=FA_b$. Average power of a pulse train additionally requires its repetition rate; it is not peak power. A CW exposure needs a specified exposure time to define energy.
+
+For an isolated sphere in infinite stationary water with constant $k_w$, a fixed far-field bath and steady conduction,
+\begin{equation}
+ \theta_w(r)=\frac{P_\abs}{4\pi k_wr},\quad r\geq a,\qquad
+ \theta_\Au\simeq\frac{P_\abs}{4\pi k_wa}+\frac{P_\abs}{4\pi a^2G}.\label{eq:steady}
+\end{equation}
+The first term at $r=a$ is the required liquid-surface control. It excludes convection, collective heating, finite boundaries, changing material coefficients and phase change. A finite $G$ raises the metal temperature; it does not change the steady outside solution. Uniform Au neglects a small internal conduction gradient, with conductivity ratio $k_w/k_\Au\simeq0.0019$.
+
+For pulses I solve $C_\Au\dot\theta_\Au=P_\abs-4\pi a^2G(\theta_\Au-\theta_w(a))$ and $\rho_wc_w\partial_t\theta_w=k_wr^{-2}\partial_r(r^2\partial_r\theta_w)$ with flux continuity and $\theta_w(R_b)=0$. A 180-cell geometric finite-volume grid extends to $R_b=3$ $\mu$m; exact spherical thermal resistances connect nodes. The symmetric capacity-weighted heat operator is propagated through its eigensystem, exactly in time for a top-hat pulse within the spatial discretization. Water energy and integrated bath flux are recorded separately. The balance is $E_\abs(t)=E_\Au+E_w+E_{\rm bath}$; the net heat transferred into liquid is $E_{\ell,\rm net}=E_\abs(t)-E_\Au$, not heat inside an arbitrary target volume.
+
+\fig{05_steady_profile_and_scales}{.93}{Analytic CW profile, interface jump and distinct diffusion/interface time scales. Material constants are near-room-temperature values.}
+
+At $a=20$ nm, $C_\Au=8.352\times10^{-17}$ J/K, $a^2/D_\Au=3.145$ ps, $a^2/D_w=2.791$ ns and $C_\Au/(4\pi a^2G)=0.166$ ns for $G=100$ MW/m$^2$K. The 10 ns, 532 nm, $F=1$ J/m$^2$ reference pulse absorbs 3.434 fJ and yields 2.319 K gold rise and 1.641 K peak liquid-surface rise, both near pulse end. The liquid receives 94.36\% by pulse end, 99.57\% after another 10 ns and 99.98\% after another 100 ns. Water peak times are refined independently; shorter pulses can produce delayed water maxima.
+
+\fig{06_pulse_heating}{.93}{Transient reference and its energy partition. The first water cell is plotted; the interface-surface maximum is evaluated separately.}
+\newpage
+
+\section{A finite ensemble and the available beam energy}
+For independent spheres of number density $N$ (m$^{-3}$), $\mu_i=N\sigma_i$ (m$^{-1}$), $I(z,t)=I(0,t)e^{-\mu_\ext z}$ and $q(z,t)=\mu_\abs I(z,t)$ (W/m$^3$). Integration through a homogeneous layer gives
+\begin{equation}
+ \eta_\abs=\frac{\sigma_\abs}{\sigma_\ext}(1-e^{-\tau_\ext}),\quad
+ \eta_\sca=\frac{\sigma_\sca}{\sigma_\ext}(1-e^{-\tau_\ext}),\quad
+ \eta_T=e^{-\tau_\ext},\quad \tau_i=N\sigma_iL.\label{eq:layer}
+\end{equation}
+Therefore $E_\abs=FA_b\eta_\abs\leq FA_b$, and $\eta_\abs+\eta_\sca+\eta_T=1$. The dilute limit is $\eta_\abs\simeq N\sigma_\abs L$. At large optical thickness the first-pass absorption saturates at $\sigma_\abs/\sigma_\ext$, not generally at unity. The scattering channel describes a photon's first interaction; it is not an assertion that every scattered photon escapes a real sample. Diffuse reabsorption and backreflection require radiative transfer. The present geometry takes the input fluence just inside the host, excluding entry-window/Fresnel losses and solvent absorption.
+
+The finite design spans $N=10^{14}\ldots10^{19}$ m$^{-3}$ (61 logarithmic values), $L=0.1,1,10$ mm and equivalent flat-beam radii $b=25,100,500$ $\mu$m. Each wavelength and radius is searched. Moderate candidates obey $\phi=N4\pi a^3/3\leq10^{-3}$, spacing $d=N^{-1/3}\geq10a$, $\tau_\sca\leq0.1$, and $L\leq z_R=\pi n_mb^2/\lambda_0$ as a diffraction screen. The last criterion is an approximate collimation check, not an exact top-hat propagation solution. For pulse plus 100 ns cooling, $d\geq2a+4\sqrt{D_w(200\ {\rm ns})}$ screens thermal overlap. These are sufficient working screens, not a rigorous statistical guarantee against aggregation or long-time collective heating. Dispersion and particle spacing must be checked experimentally.
+
+\fig{07_ensemble_attenuation}{.97}{Depth-integrated energy fractions for a 1 mm layer. Shading marks $\tau_\sca>0.1$, where the conservative single-pass screening condition fails; formal curves are retained.}
+
+For the maximum-energy layer in the declared design, $a=20$ nm, $\lambda_0=613$ nm, $N=1.468\times10^{17}$ m$^{-3}$, $L=10$ mm and $b=500$ $\mu$m. A 100 ns pulse has $F=1000$ J/m$^2$, $I_{\rm peak}=10^{10}$ W/m$^2$ and $E_L=0.785398$ mJ. Here $\tau_\ext=0.4752$, $\tau_\sca=0.09921$, $\phi=4.919\times10^{-6}$ and $d=1.896$ $\mu$m. Absorption, first-event scattering and transmission are 29.928\%, 7.897\% and 62.176\%, respectively: 235.051, 62.020 and 488.328 $\mu$J. The mean water sensible-energy rise over the whole layer is only 0.00715 K. Entrance particles have a 25.59 K gold peak and 15.40 K water-surface peak for the limiting $G=50$ MW/m$^2$K; deeper particles see attenuated pulses.
+
+This is a volumetric energy-deposition result in a macroscopic illuminated volume. It supplies no mechanism to focus that heat into a microscopic bubble. In the same design the largest fraction, 90.201\%, occurs at 497 nm, $a=20$ nm, $N=1.212\times10^{17}$ m$^{-3}$ and $L=10$ mm. The fraction is area-independent for admitted beams; the tabulated $b=100$ $\mu$m representative absorbs 3.892 $\mu$J with $F=137.36$ J/m$^2$. Its entrance gold peak is 30 K. The fraction optimum is not the maximum-energy optimum. For this linear passive model, the allowed fluence is nondecreasing with pulse duration under the same peak-temperature and intensity constraints, so 100 ns bounds the shorter-duration ensemble energy cases. The concentration lattice and geometric screens remain fixed.
+\newpage
+
+\section{Extreme regimes, admissible candidates and formal continuation}
+The strongest one-particle moderate candidate in the declared $20$--$100$ nm, 400--1000 nm, 1--100 ns design is $a=100$ nm, $\lambda_0=506$ nm, $t_p=100$ ns and $F=60.728$ J/m$^2$ ($I_{\rm peak}=6.073\times10^8$ W/m$^2$). It absorbs \SinglePJ\ pJ; 98.593\% (\SingleLiquidPJ\ pJ) is transferred to liquid by $t_p+100$ ns for $G=50$ MW/m$^2$K. Its gold peak is 30 K above 293.15 K. The radius is the upper design boundary, so this is not a size-independent optimum. A 10/30/50 K design screen would scale the thermal energy allowance linearly while the same laser limits remain inactive. The 30 K allowance was chosen to stay in the moderate-rise regime used by the thermal literature, not to optimize near an unknown nucleation threshold.
+
+\fig{08_formal_regime_map}{.96}{Formal linear continuation at 40 nm radius. Hatched short times fail the selected $t_p\geq10\max(t_{e\text{-}ph},a^2/D_\Au)$ one-temperature screen. Lines are applicability diagnostics, not measured damage or nanobubble thresholds.}
+
+The expanded formal thermal scan uses $a=20,40,80,100$ nm, $t_p=0.1,1,100$ ps and 1,10,100 ns, and 37 logarithmic fluences from $10^{-3}$ to $10^3$ J/m$^2$. At 20 nm, 526 nm, 0.1 ps and $F=1000$ J/m$^2$, fixed room-temperature optics gives 3.555 pJ and the adiabatic sensible-equivalent gold rise is $4.257\times10^4$ K. The one-temperature continuation gives $4.256\times10^4$ K. Neither is a physical temperature prediction: $t_p\ll1.7$ ps electron--phonon relaxation, equilibrium heat capacity and optics fail, and melting/evaporation invalidate the sphere. At the same fluence, a 100 nm sphere has formal absorbed energy 52.398 pJ; larger energy and larger temperature are different objectives. Even the full optical-grid bound of 53.094 pJ per particle is conditional on the chosen fluence and cold cross section.
+
+The bulk gold freezing point, 1337.33 K \cite{NISTAu}, supplies only a diagnostic: nanoscale melting can shift with size, coating and environment. At 20 nm, sensible heating to that bulk point costs $C_\Au(1337.33-293.15)=87.21$ fJ before latent heat. Structural reshaping, surface diffusion, fragmentation and altered resonance can precede a bulk-temperature diagnostic. NIST's Au vapor-pressure fit yields one-bar vapor pressure near 3233 K within its 2142--3239 K range \cite{NISTvap}; this is not a nanoparticle destruction threshold. No latent heat or mass loss is modeled.
+
+The 373.15 K water-surface line is an atmospheric equilibrium diagnostic, not an imposed boiling cap: curvature, superheating, pressure and nucleation kinetics alter vapor-cavity onset. Once vapor appears, thermal contact, refractive index, absorption and heat transport all change. Strong electron heating needs a two-temperature metal model; intense excitation may also change the dielectric function before the lattice equilibrates. The formal extremes require temperature-dependent optics, electron/lattice energy exchange, phase-change enthalpy, nonideal water thermodynamics and moving-interface hydrodynamics. They are retained rather than censored, but are not evidence of attainable extreme liquid or gas temperatures.
+\newpage
+
+\section{Energy interface, timing and scientific implications}
+The reusable module \texttt{src/plasmonics.py} provides cross sections, local power, per-particle pulse energy, finite-layer energy partition, thermal time scales, an analytic CW control, the transient liquid-transfer model and an \emph{ideal energy-transfer upper-bound scenario}. All callable interfaces state units and assumptions. MR6 can import it directly without any gas or bubble dependency; local intensity must include whatever attenuation and geometry that future model supplies.
+
+For a chosen liquid volume $V_*$ and a specified admissible absorbed energy, the ideal scenario assigns all of that energy to the volume:
+\begin{equation}
+ E_{*,\rm ideal}=E_{\abs,\rm selected},\qquad
+ \Delta T_{*,\rm sensible\ equivalent}=\frac{E_{\abs,\rm selected}}{\rho_wc_wV_*}.\label{eq:upper}
+\end{equation}
+This is an energy-concentration assumption, not the transient diffusion solution, an efficiency estimate, a phase-consistent temperature or a gas temperature. For a selected radius 6 $\mu$m, the \SinglePJ\ pJ single-particle case corresponds to \SingleUpperK\ K of water sensible energy. Assigning the entire 235.051 $\mu$J macroscopic-layer absorption to the same volume corresponds formally to $6.205\times10^4$ K. The latter indicates the enormous unprovided concentration requirement; the actual layer-average rise is 0.00715 K. At 1 or 10 $\mu$m selected radius the equivalent changes as $V_*^{-1}$, without modifying the available laser energy. Phase changes and transport preclude interpreting large sensible-equivalents as achieved temperatures.
+
+Timing is likewise unresolved by an energy integral. The inherited acoustic frequency is 30 kHz, a 33.33 $\mu$s period. A saved, complete MR4 saturated-air 1.15 bar coupled case has a temperature half-height width of 17.85 ns. This is read from its accepted table, not recomputed or promoted to the width of every collapse. The present 1--100 ns pulse and diffusion/interface time scales can overlap that interval, but energy transfer must be placed before, during or after the relevant event. For example, most energy transferred 100 ns after a pulse is not necessarily available during a 17.85 ns gas-temperature peak. Nanoparticle location relative to the interface, spatial capture and acoustic phase are not prescribed here.
+
+\subsection*{What is physically supported, conditional, and formal}
+Resonant absorption, scattering competition and heat diffusion are supported physical mechanisms. The moderate numerical candidates are conditional estimates for monodisperse dispersed gold spheres with bulk optical response, known interface conductance and a stationary water bath. Their numerical convergence is established, while their exact optical response and damage-free operation are not experimentally validated. Small particles especially require surface/electron-boundary damping, ligand and morphology assessment; Johnson--Christy films alone cannot certify them. Finite-size corrections were not fitted without nanoparticle-specific data.
+
+The quantitative literature controls are explicitly theoretical: at 40 nm diameter and 528 nm this calculation gives $3.542\times10^{-15}$ m$^2$ versus Jain et al.'s calculated $2.93\times10^{-15}$ m$^2$ (20.9\% higher); the 80 nm diameter scattering comparison at 560 nm is 20.7\% higher. Jain uses size-corrected optical constants and cubic interpolation, so these are trend/scale comparisons, not exact reproductions. The 20 nm diameter, 530 nm CW estimate is 5.28 K at $10^9$ W/m$^2$, compared with the review's approximate 5 K. No independently calibrated experimental spectrum or thermal trace is asserted as a validation dataset.
+
+The bounded maxima are properties of the stated design, constraints and cold-material model. Increasing laser energy, exposure time, area or layer geometry can change them; even CW total deposited energy has no finite maximum without a duration. Multiple scattering may redirect some presently scattered energy back into absorption, and optical aggregation can change the cross sections entirely. Neither the optical maximum nor the macroscopic energy budget determines a laser-heated gas temperature. Such a prediction requires the separate coupled physics of subsequent studies.
+
+\subsection*{Conclusions}
+A passive dipole model explains the limit, whereas Mie theory is required for quantitative AuNP absorption at common radii. A finite-beam balance prevents counting the incident energy repeatedly across depth. Under a moderate-rise screen, a single particle transfers picojoules and a macroscopic layer can absorb hundreds of microjoules from a sub-millijoule pulse. The spatial and temporal delivery of that energy to a collapsing bubble remains an independent scientific question.
+\newpage
+
+\appendix
+\section{Parameters, verification and reproducibility}
+\begin{center}\small
+\begin{tabular}{lrrl}\toprule
+Quantity & Gold & Water & Unit\\\midrule
+Density &19320&1000&kg/m$^3$\\
+Specific heat &129&4187&J/(kg K)\\
+Conductivity &317&0.60&W/(m K)\\\bottomrule
+\end{tabular}
+\end{center}
+These are the room-temperature reference coefficients in Baffou--Rigneault, Table I. The initial bath is 293.15 K; the small difference from their approximate 25 $^\circ$C reference is part of the constant-property approximation. Interface sensitivity uses $G=50,100,200$ MW/(m$^2$ K), spanning representative values discussed in the review; the limiting moderate calculations use the smallest value. At $a=100$ nm, $a^2/D_\Au=78.62$ ps, so a 1 ns pulse satisfies the selected ten-times internal-diffusion screen. This factor is a working criterion, not a universal equilibration theorem.
+
+\begin{center}\small
+\begin{tabular}{lr}\toprule
+Verification & Maximum discrepancy\\\midrule
+Extinction minus absorption minus scattering, relative & $7.90\times10^{-16}$\\
+Independent Mie absorption, relative & $8.46\times10^{-11}$\\
+Eight additional Mie orders, relative & $8.13\times10^{-13}$\\
+Gold peak, 180 vs 720 water cells, moderate pulse set & \HeatGoldPercent\ \%\\
+Water-surface peak, 180 vs 720 cells, moderate pulse set & \HeatWaterPercent\ \%\\
+Liquid energy at pulse end + 100 ns, same refinement & \HeatLiquidRelative\\
+Transient heat balance, scaled by absorbed energy & \HeatBalanceRelative\\
+Independent BDF vs modal gold temperature & $2.55\times10^{-10}$\\
+Independent interface-flux quadrature & $1.55\times10^{-15}$\\
+Finite-beam energy partition & $4.44\times10^{-16}$\\
+Depth quadrature vs integrated attenuation, absolute fraction & $1.11\times10^{-16}$\\\bottomrule
+\end{tabular}
+\end{center}
+Spatial checks cover radii 20, 80 and 100 nm, durations 0.1,1,10,100 ns, three conductances and 90/180/360 cells against 720. Reported moderate discrepancies exclude 0.1 ns cases that fail some internal-equilibration screens; those calculations remain tabulated. The finite-bath steady solution matches analytic spherical resistances. Expanding the bath from 3 to 6 $\mu$m while retaining fine radial resolution changes the bounded short-time gold response by less than $3\times10^{-6}$ in the tested control. At the longest saved reference time of 1 $\mu$s, escaped bath energy is counted rather than silently identified as energy remaining locally.
+
+All 18 automatic tests pass. The tests include material data bounds, lossless/index-matched Mie controls, passivity, balances, dipole limit, independent library, short-pulse mathematical limit, thermal refinement and saved maximum selection. An extremely opaque test resolves individual absorption lengths in the independent quadrature; a generic integral over an unresolved thick layer can miss the boundary absorption zone. No opaque-layer numerical test is interpreted as independent-particle validity at its deliberately excessive density.
+
+The package contains the raw optical table, parameter CSV/JSON, optical NPZ cube and CSV samples, every design/candidate table, convergence and source records, all figure data, the importable code, tests and locked Python dependencies. The results notebook reads saved outputs. Reproduction uses Python 3.12, NumPy 2.3.5 and SciPy 1.16.3; the README specifies the complete commands and manifest checks. Numerical reproducibility and immutable published-file integrity are checked separately. No proprietary article PDF is redistributed.
+
+\newpage
+\begin{thebibliography}{9}\small
+\bibitem{JC} P. B. Johnson and R. W. Christy, Optical constants of the noble metals, \emph{Phys. Rev. B} \textbf{6}, 4370--4379 (1972). \href{https://doi.org/10.1103/PhysRevB.6.4370}{doi:10.1103/PhysRevB.6.4370}.
+\bibitem{BQ} G. Baffou and R. Quidant, Thermo-plasmonics: using metallic nanostructures as nano-sources of heat, \emph{Laser Photon. Rev.} \textbf{7}, 171--187 (2013). \href{https://doi.org/10.1002/lpor.201200003}{doi:10.1002/lpor.201200003}.
+\bibitem{Jain} P. K. Jain et al., Calculated absorption and scattering properties of gold nanoparticles of different size, shape, and composition, \emph{J. Phys. Chem. B} \textbf{110}, 7238--7248 (2006). \href{https://doi.org/10.1021/jp057170o}{doi:10.1021/jp057170o}.
+\bibitem{BR} G. Baffou and H. Rigneault, Femtosecond-pulsed optical heating of gold nanoparticles, \emph{Phys. Rev. B} \textbf{84}, 035415 (2011). \href{https://doi.org/10.1103/PhysRevB.84.035415}{doi:10.1103/PhysRevB.84.035415}.
+\bibitem{mie} S. Prahl, \emph{miepython 3.0.2 documentation}, Mie basics, sign conventions and efficiencies. \url{https://miepython.readthedocs.io/en/3.0.2/01_basics.html}.
+\bibitem{NISTAu} NIST, Kelvin: ITS-90, gold freezing-point reference. \url{https://www.nist.gov/si-redefinition/kelvin/kelvin-its-90}.
+\bibitem{NISTvap} NIST Chemistry WebBook, Au phase-change data, Antoine coefficients from D. R. Stull (1947), 2142--3239 K. \url{https://webbook.nist.gov/cgi/cbook.cgi?ID=C7440575\&Mask=4}.
+\end{thebibliography}
+\end{document}

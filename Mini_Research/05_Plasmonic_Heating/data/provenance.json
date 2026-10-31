@@ -1,0 +1,38 @@
+{
+  "table_sha256": "9f4bdab6bd49f7c6a1c48b5fb5482c7448caf4b6de39594a34ecd66dcf592774",
+  "database_commit": "c5c2f188e848453def5970e347399d653df2ffc2",
+  "table_url": "https://raw.githubusercontent.com/polyanskiy/refractiveindex.info-database/c5c2f188e848453def5970e347399d653df2ffc2/database/data/main/Au/nk/Johnson.yml",
+  "retrieved_date": "2026-10-31",
+  "license": "CC0 1.0; original database header retained",
+  "unit_conversion": "source micrometre -> SI metre by 1e-6",
+  "source_papers": [
+    {
+      "name": "johnson1972",
+      "doi": "10.1103/PhysRevB.6.4370",
+      "full_text_url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.6.4370",
+      "pdf_sha256": "002b0551d0958e1e8fd228dc9fc293e6ef1e44e57f556a6bf85a5cd5c66b0b6b",
+      "access": "full text read; third-party PDF not redistributed"
+    },
+    {
+      "name": "baffou2013",
+      "doi": "10.1002/lpor.201200003",
+      "full_text_url": "https://guillaume.baffou.com/publications/020-Baffou-LPR.pdf",
+      "pdf_sha256": "0bb2e410c81d03c98a3ce56732d2bb52cf8d7aaeb99a70566fd40fbf4b3ec03b",
+      "access": "full text read; third-party PDF not redistributed"
+    },
+    {
+      "name": "jain2006",
+      "doi": "10.1021/jp057170o",
+      "full_text_url": "https://pubs.acs.org/doi/pdf/10.1021/jp057170o",
+      "pdf_sha256": "5e1a984b5601e18eb8730522d1dbb3fb792bdc5e002f984ebe8fa8be1a5a9801",
+      "access": "full text read; third-party PDF not redistributed"
+    },
+    {
+      "name": "baffou2011",
+      "doi": "10.1103/PhysRevB.84.035415",
+      "full_text_url": "https://guillaume.baffou.com/publications/015-Baffou-PRB84_035415.pdf",
+      "pdf_sha256": "319af6bfff1558ca3119cab1b982a6da203de32a9d92cb1c9355d074cb4f8489",
+      "access": "full text read; third-party PDF not redistributed"
+    }
+  ]
+}

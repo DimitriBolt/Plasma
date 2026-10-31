@@ -1,0 +1,183 @@
+{
+  "status": "passed",
+  "fresh_virtual_environment": true,
+  "python": "3.12.14",
+  "locked_dependencies_installed": true,
+  "pip_check": "No broken requirements found",
+  "separate_export_without_git_or_development_environment": true,
+  "initial_manifest_checks_passed": 59,
+  "automatic_tests_passed": 18,
+  "all_numerical_tables_rebuilt": true,
+  "csv_comparisons": [
+    {
+      "file": "results/analytic_thermal_controls.csv",
+      "rows": 6,
+      "columns": 4,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/beam_energy_checks.csv",
+      "rows": 4,
+      "columns": 4,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/bounded_ensemble.csv",
+      "rows": 1296,
+      "columns": 19,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/bounded_single_particle.csv",
+      "rows": 288,
+      "columns": 12,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/concentration.csv",
+      "rows": 423,
+      "columns": 14,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/cross_sections.csv",
+      "rows": 168,
+      "columns": 6,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/cw_heating.csv",
+      "rows": 20,
+      "columns": 6,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/dipole_limit.csv",
+      "rows": 5,
+      "columns": 3,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/formal_regimes.csv",
+      "rows": 888,
+      "columns": 14,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/ideal_upper_bound.csv",
+      "rows": 6,
+      "columns": 5,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/independent_mie.csv",
+      "rows": 1436,
+      "columns": 6,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/interpolation_sensitivity.csv",
+      "rows": 288,
+      "columns": 5,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/literature_comparison.csv",
+      "rows": 3,
+      "columns": 6,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/mie_convergence.csv",
+      "rows": 288,
+      "columns": 3,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/optical_refinement.csv",
+      "rows": 3,
+      "columns": 5,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/parameters.csv",
+      "rows": 27,
+      "columns": 4,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/resonances.csv",
+      "rows": 288,
+      "columns": 11,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/thermal_convergence.csv",
+      "rows": 108,
+      "columns": 10,
+      "numeric_and_text_values_identical": true
+    },
+    {
+      "file": "results/thermal_response.csv",
+      "rows": 1152,
+      "columns": 15,
+      "numeric_and_text_values_identical": true
+    }
+  ],
+  "npz_comparisons": [
+    {
+      "file": "optical_grid.npz",
+      "arrays": 7,
+      "all_values_identical": true
+    },
+    {
+      "file": "pulse_reference.npz",
+      "arrays": 10,
+      "all_values_identical": true
+    }
+  ],
+  "json_summaries_identical": true,
+  "figures": [
+    {
+      "file": "01_energy_path.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "02_optical_spectra.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "03_dipole_mie.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "04_radius_wavelength_map.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "05_steady_profile_and_scales.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "06_pulse_heating.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "07_ensemble_attenuation.jpg",
+      "byte_identical": true
+    },
+    {
+      "file": "08_formal_regime_map.jpg",
+      "byte_identical": true
+    }
+  ],
+  "pdf_recompiled": true,
+  "pdf_pages": 9,
+  "pdf_text_identical": true,
+  "unchanged_upstream_files": 1008,
+  "comparison_tolerance": "exact values including CSV text, NPZ arrays, JSON results; PDF binary timestamps excluded",
+  "limitations": [
+    "Same machine and Python implementation; not a cross-platform reproduction",
+    "Dependencies independently installed from the lock; this is not an independent scientific model review"
+  ]
+}

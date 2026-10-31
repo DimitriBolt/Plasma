@@ -1,0 +1,84 @@
+{
+  "optical_grid_maxima": {
+    "single_cross_section": {
+      "radius_m": 1.0000000000000001e-07,
+      "wavelength_m": 4.99e-07,
+      "n_medium": 1.0,
+      "objective_value": 5.309377629841115e-14,
+      "sigma_abs_m2": 5.309377629841115e-14
+    },
+    "per_gold_volume": {
+      "radius_m": 1.5000000000000002e-08,
+      "wavelength_m": 5.37e-07,
+      "n_medium": 1.5,
+      "objective_value": 159416992.85965902,
+      "sigma_abs_m2": 2.2537046413137665e-15
+    }
+  },
+  "bounded_single_particle": {
+    "radius_m": 1.0000000000000001e-07,
+    "wavelength_m": 5.06e-07,
+    "duration_s": 1e-07,
+    "fluence_J_m2": 60.72790766672862,
+    "peak_intensity_W_m2": 607279076.6672863,
+    "sigma_abs_m2": 5.239790517522149e-14,
+    "sigma_sca_m2": 5.6640466617290257e-14,
+    "energy_absorbed_J": 3.1820151474108522e-12,
+    "gold_peak_rise_K": 30.0,
+    "liquid_fraction_100ns_after": 0.9859271203244815,
+    "energy_liquid_100ns_after_J": 3.137235031115662e-12,
+    "conservative_geometry": true
+  },
+  "bounded_ensemble_energy": {
+    "optimized_objective": "energy",
+    "radius_m": 2e-08,
+    "wavelength_m": 6.13e-07,
+    "number_density_m3": 1.4677992676220736e+17,
+    "thickness_m": 0.01,
+    "beam_radius_m": 0.0005,
+    "duration_s": 1e-07,
+    "fluence_J_m2": 1000.0,
+    "incident_J": 0.0007853981633974483,
+    "absorbed_J": 0.00023505058759156353,
+    "absorption_fraction": 0.29927570313481483,
+    "tau_ext": 0.47520362122429893,
+    "tau_sca": 0.09920871995174561,
+    "volume_fraction": 4.918642555846385e-06,
+    "spacing_m": 1.8957356524063753e-06,
+    "liquid_energy_100ns_after_J": 0.00023501503143515644,
+    "layer_mean_sensible_rise_K": 0.007147735923926793,
+    "sigma_abs_m2": 2.561623442432209e-16,
+    "sigma_sca_m2": 6.759011408451643e-17
+  },
+  "bounded_ensemble_fraction": {
+    "optimized_objective": "fraction",
+    "radius_m": 2e-08,
+    "wavelength_m": 4.970000000000001e-07,
+    "number_density_m3": 1.2115276586285851e+17,
+    "thickness_m": 0.01,
+    "beam_radius_m": 0.0001,
+    "duration_s": 1e-07,
+    "fluence_J_m2": 137.35817980517277,
+    "incident_J": 4.315234485863966e-06,
+    "absorbed_J": 3.892370192006701e-06,
+    "absorption_fraction": 0.9020066475547267,
+    "tau_ext": 2.749043827214135,
+    "tau_sca": 0.09986999236317048,
+    "volume_fraction": 4.059868151432967e-06,
+    "spacing_m": 2.020949938191081e-06,
+    "liquid_energy_100ns_after_J": 3.891781392273166e-06,
+    "layer_mean_sensible_rise_K": 0.0029591113274488475,
+    "sigma_abs_m2": 2.186639170788518e-15,
+    "sigma_sca_m2": 8.243310967924618e-17
+  },
+  "pulse_reference": {
+    "radius_m": 2e-08,
+    "wavelength_m": 5.32e-07,
+    "fluence_J_m2": 1.0,
+    "duration_s": 1e-08,
+    "sigma_abs_m2": 3.4337324474063743e-15,
+    "gold_peak_rise_K": 2.3189127630861814,
+    "water_surface_peak_rise_K": 1.640600448759918,
+    "water_peak_time_s": 9.999999989678618e-09
+  }
+}

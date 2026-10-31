@@ -1,0 +1,23 @@
+test_adiabatic_short_pulse_limit (test_plasmonics.EnergyTests.test_adiabatic_short_pulse_limit) ... ok
+test_beam_partition_and_thin_limit (test_plasmonics.EnergyTests.test_beam_partition_and_thin_limit) ... ok
+test_bounded_maxima_and_gates (test_plasmonics.EnergyTests.test_bounded_maxima_and_gates) ... ok
+test_heat_balance_and_positive_states (test_plasmonics.EnergyTests.test_heat_balance_and_positive_states) ... ok
+test_heat_refinement_and_independent_balances (test_plasmonics.EnergyTests.test_heat_refinement_and_independent_balances) ... ok
+test_opaque_limit (test_plasmonics.EnergyTests.test_opaque_limit) ... ok
+test_pulse_and_dimensions (test_plasmonics.EnergyTests.test_pulse_and_dimensions) ... ok
+test_source_hash_and_upstream_unchanged (test_plasmonics.EnergyTests.test_source_hash_and_upstream_unchanged) ... ok
+test_steady_resistances (test_plasmonics.EnergyTests.test_steady_resistances) ... ok
+test_zero_cross_section (test_plasmonics.EnergyTests.test_zero_cross_section) ... ok
+test_data_knots_and_bounds (test_plasmonics.OpticalTests.test_data_knots_and_bounds) ... ok
+test_host_index_matching (test_plasmonics.OpticalTests.test_host_index_matching) ... ok
+test_independent_library_and_series (test_plasmonics.OpticalTests.test_independent_library_and_series) ... ok
+test_invalid_inputs (test_plasmonics.OpticalTests.test_invalid_inputs) ... ok
+test_mie_lossless (test_plasmonics.OpticalTests.test_mie_lossless) ... ok
+test_passivity_and_balance_grid (test_plasmonics.OpticalTests.test_passivity_and_balance_grid) ... ok
+test_radiative_dipole_passivity (test_plasmonics.OpticalTests.test_radiative_dipole_passivity) ... ok
+test_small_dipole_limit (test_plasmonics.OpticalTests.test_small_dipole_limit) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.874s
+
+OK

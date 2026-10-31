@@ -1,0 +1,4 @@
+reference,radius_m,wavelength_m,reported_value,computed_value,relative_difference
+Jain2006_calculated_absorption_m2,2e-08,5.28e-07,2.93e-15,3.54152824023802e-15,0.2087127099788464
+Jain2006_calculated_scattering_m2,4e-08,5.6e-07,1.23e-14,1.484346854041667e-14,0.2067860601964773
+Baffou2013_estimated_CW_K,1e-08,5.3e-07,5,5.276529131858856,0.05530582637177117
