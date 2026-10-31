@@ -1,0 +1,29 @@
+test_01_static_pressure_balance (test_thermodynamics.EquationTests.test_01_static_pressure_balance) ... ok
+test_02_ideal_gas_and_adiabatic (test_thermodynamics.EquationTests.test_02_ideal_gas_and_adiabatic) ... ok
+test_03_pressure_derivative_chain_rule (test_thermodynamics.EquationTests.test_03_pressure_derivative_chain_rule) ... ok
+test_04_zero_heat_polytropic_derivative (test_thermodynamics.EquationTests.test_04_zero_heat_polytropic_derivative) ... ok
+test_05_heat_flow_sign (test_thermodynamics.EquationTests.test_05_heat_flow_sign) ... ok
+test_06_source_is_zero (test_thermodynamics.EquationTests.test_06_source_is_zero) ... ok
+test_07_km_implicit_viscous_derivative (test_thermodynamics.EquationTests.test_07_km_implicit_viscous_derivative) ... ok
+test_08_km_rhs_matches_accepted_equation (test_thermodynamics.EquationTests.test_08_km_rhs_matches_accepted_equation) ... ok
+test_09_unforced_equilibrium (test_thermodynamics.EquationTests.test_09_unforced_equilibrium) ... ok
+test_10_one_way_zero_heat_limit (test_thermodynamics.EquationTests.test_10_one_way_zero_heat_limit) ... ok
+test_11_signed_heat_relaxation_analytic (test_thermodynamics.EquationTests.test_11_signed_heat_relaxation_analytic) ... ok
+test_12_no_state_clipping (test_thermodynamics.EquationTests.test_12_no_state_clipping) ... ok
+test_13_peak_and_threshold_off_plot_grid (test_thermodynamics.EquationTests.test_13_peak_and_threshold_off_plot_grid) ... ok
+test_14_dimensions (test_thermodynamics.EquationTests.test_14_dimensions) ... ok
+test_15_all_accepted_inputs_unchanged (test_thermodynamics.SavedResultTests.test_15_all_accepted_inputs_unchanged) ... ok
+test_16_admission_and_censoring (test_thermodynamics.SavedResultTests.test_16_admission_and_censoring) ... ok
+test_17_extrema_and_temperature_agreement (test_thermodynamics.SavedResultTests.test_17_extrema_and_temperature_agreement) ... ok
+test_18_saved_gas_identity (test_thermodynamics.SavedResultTests.test_18_saved_gas_identity) ... ok
+test_19_coupled_adiabatic_recovery (test_thermodynamics.SavedResultTests.test_19_coupled_adiabatic_recovery) ... ok
+test_20_solver_convergence (test_thermodynamics.SavedResultTests.test_20_solver_convergence) ... ok
+test_21_input_grid_convergence (test_thermodynamics.SavedResultTests.test_21_input_grid_convergence) ... ok
+test_22_energy_residual (test_thermodynamics.SavedResultTests.test_22_energy_residual) ... ok
+test_23_series_summary_and_hot_intervals (test_thermodynamics.SavedResultTests.test_23_series_summary_and_hot_intervals) ... ok
+test_24_clean_environment_and_source (test_thermodynamics.SavedResultTests.test_24_clean_environment_and_source) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.341s
+
+OK

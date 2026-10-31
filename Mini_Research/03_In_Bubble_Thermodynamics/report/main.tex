@@ -1,0 +1,309 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=18mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,graphicx,array,caption,float,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\hypersetup{pdftitle={In-Bubble Thermodynamics - Mini-Research 3},pdfauthor={Dimitri Bolt}}
+\graphicspath{{../figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\input{../results/report_values.tex}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{#1.jpg}\caption{#3}\end{figure}}
+\title{\vspace{-12mm}\Large\bfseries In-Bubble Thermodynamics:\\Compression Heating, Energy Balance,\\and Extreme Temperature Estimates}
+\author{Dimitri Bolt\\[2pt]\small Academic supervisor: Prof. Dr. Ildar R. Gabitov}
+\date{Mini-Research 3 \quad | \quad 31 October 2026 \quad | \quad For independent review}
+\begin{document}
+\maketitle\vspace{-7mm}
+\begin{abstract}
+The accepted five-cycle bubble mechanics are mapped into fixed-inventory ideal-gas temperatures, followed by a signed heat-transfer model and a fully coupled Keller--Miksis (KM) energy system. At 1.3 bar, the air-like adiabatic peak is $\AirA$ K; a constant-conductivity model with efficiency $\eta=1$ gives $\AirOW$ K in one-way post-processing and $\AirCO$ K with mechanical feedback. Heat exchange can increase the peak because the liquid supplies heat during expansion. The argon-like one-way and coupled peaks are $\ArgOW$ and $\ArgCO$ K, demonstrating strong closure sensitivity. Extreme calculations are retained as conditional model-based estimates, not experimentally confirmed temperatures, evidence of plasma or evidence of fusion.
+\end{abstract}
+
+\section{Objective and reference mechanics}
+This study is Part C of the project \emph{Plasmonic-Enhanced Laser-Induced Sonofusion: Overcoming the Temperature Barrier via Resonant Nanoparticle Heating}. It asks what compression alone predicts, how thermal exchange changes those predictions, and where interpretation fails. No optical source, reaction, ionization, mass transfer or new liquid equation of state is implemented.
+
+The mechanical input is the published Mini-Research 2 (MR2) snapshot\\
+\texttt{f1f3e812d77fd7fa058ce111ff484b1c8658f937}, built on Mini-Research 1 (MR1),\\
+\texttt{d59bc0d0119b514152f763e2537a0477c7c63663}. The upstream equations and artifacts are unchanged. All \AmplitudeCount\ saved amplitudes are audited; \PartialCount\ RP trajectories are incomplete and remain censored. The input schema, admission decisions, metadata, extrema and cycle comparisons were read before calculation. Every upstream tracked input is hashed and compared with the accepted snapshot.
+
+\begin{table}[H]\centering\small
+\caption{Five-cycle KM peak temperatures for the air-like gas, $\gamma=1.4$. Model B uses $\eta=1$. The inherited categories are conditional baseline (1.0 bar), conditional sensitivity (1.15 bar), and formal extreme scenario (1.3 bar).}
+\input{../results/table_main.tex}
+\end{table}
+\fig{01_energy_balance}{.92}{The energy balance describes only the fixed amount of noncondensable gas. The liquid is a prescribed thermal reservoir; its energy is not evolved.}
+
+\newpage
+\section{Thermodynamic reference and adiabatic closure}
+The inherited water parameters are unchanged (listed in Appendix~\ref{app:adiabatic}).
+The reference state is $R_0=6\ \mu$m, $T_0=T_\ell=293.15$ K and $f=30$ kHz,
+with $p_\infty=p_0-P_a\sin(2\pi ft)$ and $\gamma=\kappa=1.4$. Static balance fixes
+\[
+p_{g0}=p_0+2\sigma/R_0-p_v=123232.666\ldots\ {\rm Pa}.
+\]
+For constant gas amount and heat capacity, $dU_g=-p_g\,dV$ and $p_gV=nR_uT$ give
+\begin{equation}\label{eq:adiabatic}
+\boxed{T_A=T_0(R_0/R)^{3(\gamma-1)}},\qquad
+\boxed{p_{g,A}=p_{g0}(R_0/R)^{3\gamma}}.
+\end{equation}
+Appendix~\ref{app:adiabatic} derives both invariants without omitted algebra and proves
+that the Model A maximum is at the minimum radius on the same observed interval.
+The amount $n=p_{g0}V_0/(R_uT_0)=\Nmol\ {\rm mol}$ is fixed for each initial state.
+Neither $p_0$ nor $R_{\max}/R_{\min}$ replaces the initial normalization.
+
+\section{Gas energy, signed heat transfer and vapor accounting}
+With a modular source power $\dot Q_{\rm source}=0$ W in this study,
+\begin{align}
+\frac{dU_g}{dt}&=-p_g\dot V-\dot Q_{\rm loss}+\dot Q_{\rm source},\\
+nC_V\dot T&=-\frac{nR_uT}{V}\dot V+\dot Q_{\rm source}-\dot Q_{\rm loss},\\
+\dot V/V&=3U/R,\qquad C_V=R_u/(\gamma-1).
+\end{align}
+\begin{equation}\label{eq:energy}
+\boxed{\dot T=-3(\gamma-1)\frac{U}{R}T+
+\frac{\dot Q_{\rm source}-\dot Q_{\rm loss}}{nC_V}.}
+\end{equation}
+The first approximation to thermal resistance is
+\begin{equation}\label{eq:heat}
+h_{\rm eff}=\eta k_g/R,\qquad
+\dot Q_{\rm loss}=4\pi R^2h_{\rm eff}(T-T_\ell)=4\pi\eta k_gR(T-T_\ell),\quad\eta\ge0.
+\end{equation}
+A conductive length of order $R$ gives this geometric scaling. It is a phenomenological lumped model, not a solution for an unsteady thermal boundary layer. The nominal $\eta=1$ and sensitivity values $0,0.1,1,10$ are uncalibrated; they are not confidence limits. For $\eta=0$ exchange vanishes. For $T<T_\ell$, $\dot Q_{\rm loss}<0$: the gas receives heat. No negative flux, temperature or pressure is clipped.
+
+The NIST table of Huber~\cite{huber} gives $k_g=0.0264$ W/(m K) for air at 300 K and 100 kPa, and $0.0177$ W/(m K) for dilute argon at 300 K. These are deliberately fixed near-ambient reference values, not high-temperature transport data or exact values at 293.15 K. An air-like gas has $\gamma=1.4$ and $M_g=0.02897$ kg/mol; an argon-like idealization uses $\gamma=5/3$ and $M_g=0.039948$ kg/mol. Changing composition changes $C_V,k_g$ and mass density; at the same $p_{g0},V_0,T_0$ it leaves $n$ unchanged. The heat capacities and molar masses are idealized assumptions.
+
+The fixed-radius thermal relaxation time is
+\begin{equation}
+\tau_{\rm th}(R)=\frac{nC_V}{4\pi\eta k_gR}.
+\end{equation}
+For the baseline air-like gas at $R_0$ and $\eta=1$, it is approximately $\TauInitialUs\ \mu$s. At the smaller radius of the 1.3 bar temperature peak it is of order microseconds, while the hottest peak is much shorter. This supports nearly adiabatic heating locally during rapid compression, but does not make the entire expansion--compression cycle adiabatic. Uniform-temperature and uniform-pressure assumptions require separate assessments of internal equilibration. Constant conductivity and heat capacity become unreliable in extreme states.
+
+\subsection{Why constant vapor pressure is not a mixture energy model}
+The work $-p_g\,dV$ is the partial-pressure contribution assigned to the selected ideal noncondensable-gas subsystem. This is internally consistent with fixed $n$ and $U_g=nC_VT$. Mechanics retains $p_B=p_g+p_v$ with $p_v$ constant as in MR2. Adding that separate pressure term does not supply vapor internal energy, vapor mass, interface enthalpy flux or latent heat. Evaporation, condensation, vapor dissociation, mixing and vapor heat capacity are absent. Thus the checked gas-energy identity is not a conservation statement for the total gas--vapor--liquid system. The fixed liquid temperature also represents an external reservoir.
+
+\newpage
+\section{One-way and fully coupled formulations}
+\subsection{One-way post-processing}
+The first energy calculation prescribes the saved $R(t),U(t)$ and integrates Eq.~\eqref{eq:energy}. It is explicitly \emph{one-way post-processing}. A new $C^1$ cubic Hermite interpolant uses saved radii and saved wall velocities as nodal slopes; between nodes, $U=dR/dt$. This preserves the kinematic identity needed by the energy equation. It is not identical to MR2's original dense integrator polynomials. No missing tail is extrapolated. CSV numbers are parsed with round-trip precision, which is essential for the narrow formal RP extrema.
+
+Numerically, $\theta=T/T_A(R)$ satisfies
+\begin{equation}
+\dot\theta=\frac{\dot Q_{\rm source}-\dot Q_{\rm loss}}{nC_VT_A(R)},\qquad\theta(0)=1.
+\end{equation}
+This follows by differentiating $T=\theta T_A$ and cancelling the reversible compression terms; it does not change the energy model. The pressure is recomputed as $p_g=nR_uT/V$. Its mismatch with the accepted pressure,
+$p_g/p_{g,\mathrm{MR2}}-1$, quantifies the lack of mechanical feedback. Large mismatch precludes calling the result self-consistent. Even at fixed $R(t)$, Model B's maximum is found from the temperature function, not assigned to $R_{\min}$.
+
+\subsection{Fully coupled KM plus energy}
+The physical state is $(R,U,T)$ with $\dot R=U$ and Eq.~\eqref{eq:energy}. Differentiation of the ideal-gas pressure is necessary:
+\begin{align}
+\dot p_g&=\frac{nR_u}{V}\dot T-\frac{nR_uT}{V}\frac{\dot V}{V}
+=p_g\left(\frac{\dot T}{T}-3\frac{U}{R}\right)\\
+&=-3\gamma p_g\frac{U}{R}+
+\frac{p_g}{nC_VT}(\dot Q_{\rm source}-\dot Q_{\rm loss})\\
+&=\boxed{-3\gamma p_g\frac{U}{R}+\frac{\gamma-1}{V}
+(\dot Q_{\rm source}-\dot Q_{\rm loss})}.\label{eq:dpg}
+\end{align}
+The zero-heat limit equals the old polytropic derivative at $\gamma=\kappa$. Define
+\[
+\Delta p=p_g+p_v-p_\infty-2\sigma/R-4\mu U/R.
+\]
+The adopted implicit KM convention remains
+\begin{equation}
+(1-U/c)R\dot U+\tfrac32(1-U/(3c))U^2
+=(1+U/c)\Delta p/\rho+R\dot{\Delta p}/(\rho c).
+\end{equation}
+In particular, the pressure prefactor is $1+U/c$; the different printed convention in Sadighi-Bonabi and Gheshlaghi~\cite{sadighi} is not substituted. Because
+\[
+\frac{d}{dt}(-4\mu U/R)=-4\mu\dot U/R+4\mu U^2/R^2,
+\]
+we have $\dot{\Delta p}=B-4\mu\dot U/R$, where
+\[
+B=\dot p_g+2\sigma U/R^2+P_a\omega\cos(\omega t)+4\mu U^2/R^2.
+\]
+Moving the acceleration term to the left gives the explicit system
+\begin{equation}
+\boxed{\dot U=\frac{(1+U/c)\Delta p/\rho+RB/(\rho c)
+-\tfrac32(1-U/(3c))U^2}{D}},\qquad
+D=R(1-U/c)+4\mu/(\rho c).
+\end{equation}
+The denominator and all pressure/velocity terms are evaluated without clipping. Inward $U=-c$ does not make $D$ vanish. The inherited numerical radius and denominator guards are technical stops, not physical acceptance criteria.
+
+\newpage
+\section{Numerical methods and verification}
+Production calculations use DOP853 with relative tolerance $2\times10^{-9}$ and maximum step $1/(600f)$. Absolute tolerances are $10^{-16}$ m, $10^{-8}$ m/s, $10^{-6}$ K for coupled physical variables, and $10^{-8}$ for energy ledgers normalized by $E_0=nC_VT_0$. The one-way variable $\theta$ uses absolute tolerance $10^{-9}$. Tighter DOP853 uses $2\times10^{-11}$ and $1/(1200f)$; coarser and independent Radau runs test the principal regimes. Radau receives a centered finite-difference Jacobian with fixed characteristic state scales to handle passive integral variables. All transport/composition variants receive tolerance/step comparisons.
+
+Temperature derivative roots are bracketed on accepted-step halves, augmented by saved mechanical nodes for one-way calculations. Roots use an absolute time request $10^{-24}$ s, but actual accuracy is limited by floating-point time spacing, solver and input errors. Refined maxima include endpoints. For each threshold $q\in\{10^3,10^4,10^5,10^6\}$ K, roots of $T-q$ delimit hot intervals; their lengths are summed, and $\int_{T>q}V\,dt$ is evaluated with Gauss quadrature. Narrow peaks are never inferred from a uniform plotting grid.
+
+With $W=\int p_g\dot V\,dt$, $Q=\int\dot Q_{\rm loss}\,dt$ and $S=\int\dot Q_{\rm source}\,dt$, the gas-energy residual is
+\begin{equation}
+\mathcal E(t)=nC_V[T(t)-T_0]+W(t)+Q(t)-S(t).
+\end{equation}
+The maximum residual is normalized by the largest of $E_0$, the internal-energy change, work and heat magnitudes. Independent 16-point Gauss integration over accepted intervals cross-checks the ODE ledgers. A small residual tests this subsystem and implementation; it does not validate omitted physical processes. The maximum production scaled residual is $\MaxResidual$. One-way interpolation/integration residuals exceed the nearly machine-precision coupled ledger residuals and are retained explicitly.
+
+Static pressure balance, the ideal-gas identity, signed flux above/below/equal to $T_\ell$, stationary unforced equilibrium, zero source, the implicit KM equation including viscosity, dimensional consistency, and the zero-heat limits are tested automatically. Coupled adiabatic peaks reproduce the accepted saved mechanics within relative discrepancy $\MaxRecoveryError$; the comparison does not rerun the old sweep. The maximum production coupled peak change under refinement is $\MaxCoupledError$; the independent Radau discrepancy is $\MaxIndependentError$. These are observed numerical differences, not rigorous error bounds.
+
+For one-way input resolution, full event-aware exports are compared with every second/fourth saved point and with accepted nodes plus authoritative extrema. The fine-grid peak discrepancy is at most $\MaxInputError$, and the corresponding relative $>1000$ K duration discrepancy is $\MaxInputDurationError$. Retaining authoritative extrema deliberately makes the adiabatic peak robust; threshold widths and withheld-node comparisons test information between extrema. The original dense solution is not recoverable from these files.
+\fig{07_numerical_checks}{1}{Numerical sensitivity of peak temperature. Left: coupled tolerance/step/method comparison. Right: one-way sensitivity to mechanical input resolution. Differences are measured relative to separate tighter references.}
+
+\newpage
+\section{Temperature histories and mechanical feedback}
+\fig{02_radius_temperature}{1}{Common absolute time axes over five acoustic cycles. Left: accepted radius and the radius from the fully coupled energy model. Right: adiabatic temperature, one-way post-processing and fully coupled temperature for the air-like gas with $\eta=1$. Different cycles can contain the global maxima. All saved time samples are event-aware.}
+The zero-heat energy model recovers Model A. Nonzero exchange changes the expansion state and subsequent compression work. In particular, an adiabatic bubble becomes cold during expansion, whereas signed heat flow from the liquid partly reheats it. Thus adding thermal exchange is not equivalent to subtracting a fixed amount from every adiabatic temperature peak. Feedback changes damping, radius histories and which collapse is deepest; the resulting coupled peak may be below or above the one-way peak.
+
+The one-way air-like 1.3 bar estimate rises above the adiabatic value, while mechanical feedback reduces it relative to one-way. This is a consequence of the specified closures, not evidence that a real bubble attains those values. The gas pressure mismatch is substantial (Appendix~\ref{app:events}). Uniform gas temperature and constant material properties remain conditional even when a trajectory completes and converges.
+
+\newpage
+\section{Peak location, duration and heat exchange}
+\fig{03_peak_zoom}{1}{Peaks are centered on each model's own temperature maximum; absolute peak times are printed in the legends. This normalization displays peak shape without identifying distinct collapses as the same physical event. The horizontal scale is nanoseconds.}
+\begin{table}[H]\centering\scriptsize
+\caption{Air-like Model B with $\eta=1$: independently located global temperature maximum and radius minimum, cumulative hot duration across five cycles, and sampled wall Mach diagnostic. The difference $t_T-t_R$ compares global selections and is not necessarily a local peak lag.}
+\input{../results/table_peaks.tex}
+\end{table}
+At a smooth radius minimum $U=0$, Eq.~\eqref{eq:energy} reduces to $\dot T=-\dot Q_{\rm loss}/(nC_V)$. If the gas is hotter than the liquid and $\eta>0$, this derivative is negative, so the temperature maximum generally occurs before that radius minimum. A global temperature peak can also belong to a different local collapse from the global radius minimum, as in the weak one-way case. Therefore assigning all Model B peaks to the minimum-radius time would be incorrect.
+
+Threshold durations are cumulative, not simply a full width at half maximum. A threshold not reached has duration exactly zero in that model; a missing tail would instead prevent a global duration claim. The saved tables include all four specified thresholds and hot volume--time integrals. The baseline air-like cases do not attain $10^5$ or $10^6$ K, while some formal composition/RP scenarios do; no threshold is enforced as a ceiling.
+
+The net signed heat loss over five cycles and the separately integrated inward/outward exchanges are retained. The heat flux can change sign repeatedly. A small net exchange would not imply small heat exchange during expansion and collapse separately. Comparison of $\tau_{\rm th}$ with the short hot intervals explains why whole-cycle thermal history matters even when the very fastest compression is approximately adiabatic.
+
+\newpage
+\section{Sensitivity and extreme mathematical estimates}
+\fig{04_amplitude_heat_sensitivity}{1}{Left: Model A over the accepted amplitude set. RP gaps denote incomplete trajectories; crosses retain their observed-interval temperatures. Shading marks the upper formal KM scenarios, not a universal cutoff. Right: thermal-efficiency sensitivity for the air-like gas. The response need not be monotone between sampled efficiencies.}
+\fig{05_gamma_initial_temperature}{1}{Conditional Model A sensitivities. The accepted mechanical trajectory and all water constants remain fixed. Changing $\gamma$ changes the reconstructed pressure law; except at $\gamma=1.4$, it no longer equals the pressure used to generate that trajectory. Changing $T_0$ changes $n$ according to equilibrium. These are not new self-consistent mechanical solutions.}
+The ideal-gas exponent is a major source of uncertainty because $T_A\propto(R_0/R)^{3(\gamma-1)}$. Intermediate effective exponents are not assigned exact chemistry. The argon-like thermal calculation changes $\gamma,C_V,k_g$ together, while fully coupled mechanics supplies feedback (Appendix~\ref{app:composition}). Its extreme one-way peak is much higher than its coupled peak, exposing the weakness of using a mechanically fixed history far from its original gas closure.
+
+The largest value in this finite parameter set is not a physical upper bound. Molecular excitation, dissociation, ionization, nonideal pressure and temperature-dependent transport would change the energy budget. None is represented by adjusting $\eta$ or imposing a temperature cap. All extreme states and their numerical status remain saved for independent scrutiny.
+
+\newpage
+\section{Applicability of extreme scenarios}
+The accepted 1.3 bar KM mechanics already has $M_{\max}\simeq\ExtremeMach$ and
+\[
+\chi=\max_t\frac{|p_L-p_0|}{\rho c^2}\simeq\ExtremeChi,\qquad
+p_L=p_g+p_v-2\sigma/R-4\mu U/R.
+\]
+These are warnings about the first-order weak-compressibility approximation and constant liquid properties. The ratio $\chi$ is a pressure-scale proxy, not a predicted liquid density change. Recomputed values for each thermal trajectory are saved. Neither small numerical error nor completion establishes a valid liquid EOS. KM does not resolve shock profiles or gas pressure gradients.
+
+The retained model assumes a spherical bubble in an unbounded liquid, uniform ideal-gas pressure and temperature, fixed noncondensable inventory, constant $\gamma$, constant conductivity, a fixed-temperature liquid reservoir and fixed vapor pressure. It omits shape instability, jets, gas acoustic nonuniformity, spatial thermal gradients, evaporation/condensation, latent heat, chemical reactions, ionization, radiative losses and finite molecular volume. The formal densities and pressures in Appendix~\ref{app:composition} are additional reasons to question an ideal-gas extrapolation; they do not establish the actual microscopic state.
+
+The work and energy are those of the selected gas only. Consequently there is no calculation of global gas--vapor--liquid energy conservation, neutron production, reaction rate, confinement quality or energy gain. High computed temperature alone proves none of these. Numerical technical stops have no interpretation as a physical limiting radius or temperature. All incomplete RP histories retain observed intervals only.
+
+For $P_a>p_0$, the prescribed far-field liquid pressure is negative over part of a cycle. This represents modeled tensile liquid pressure, not negative gas pressure. Whether the experimental liquid can sustain the drive depends on nuclei, geometry, impurities and time history, which are absent. It is neither silently rejected nor assumed experimentally attainable.
+
+The RP global results at 1.15 and 1.3 bar are particularly instructive diagnostics: completion of the incompressible ODE does not rescue wall speeds many times the reference liquid sound speed. Their temperatures are preserved, labeled formal, and excluded as validated physical predictions. Corresponding first strong collapses, independently selected cycle-deepest minima and five-cycle global minima are separate comparisons. At 1.3 bar, global RP and KM minima belong to cycles 2 and 1, respectively. Their difference in time is not the delay of a single physical collapse.
+
+\section{Conclusions and next-step limitations}
+The study provides reproducible temperature histories, independently extracted peaks and threshold durations from accepted mechanics, then demonstrates thermal exchange and mechanical feedback. Every principal calculation includes numerical refinement, and zero heat exchange reproduces the accepted KM closure. The strongest result is the separation of numerical reproducibility from closure validity: even converged temperatures depend strongly on composition, thermal history and feedback.
+
+The 1.0 bar calculation is a conditional baseline; 1.15 bar is a conditional sensitivity case; 1.3 bar remains a formal extreme scenario and a \emph{conditional model-based estimate}. None is experimentally validated here. A later study would need suitable liquid and gas EOS, spatial transport and vapor/chemistry before assigning physical significance to extreme temperature. Those extensions, Gilmore, laser heating and nanoparticles are outside this work. This report is submitted for independent review; Mini-Research 3 is not declared finally accepted.
+
+\newpage
+\section{Comparison with literature}
+The measured or modeled quantity must be identified before comparing temperatures. Model A/B here yields one uniform noncondensable-gas temperature in water with a specified ideal-gas inventory. It is not a spectroscopic emission temperature, an electron temperature or a plasma-core temperature.
+
+Sadighi-Bonabi and Gheshlaghi~\cite{sadighi} report about $10^4$ K for a quasi-adiabatic water case at 20 C, $R_0=6\ \mu$m, 30 kHz and 1.3 bar (Table II), and $2.7\times10^4$ K for their water hydrochemical case (Table III). Their excluded-volume, transport and chemical assumptions and liquid constants differ. Their much larger deuterated-acetone predictions concern chilled liquid, different gas/vapor treatment, radii and forcing. Table III associates $1.6\times10^6$ K with $-28.5$ C, $R_0=8\ \mu$m, 38 kHz and 14.4 bar, while nearby text uses atmospheres. Their laser-modified scenarios use still other parameters. A suggested hotter plasma core approaching $10^7$ K is an additional interpretation, not a measurement of the uniform temperature calculated here. None of these values is a target for parameter fitting.
+
+Flannigan and Suslick~\cite{flannigan} study moving bubbles in concentrated aqueous sulfuric acid. In 85 wt\% sulfuric acid regassed with Ar, reported Ar line-emission temperatures rise from $8000\pm1000$ K at 2.3 bar to $15200\pm1900$ K at 2.8 bar. These hydrophone pressures are upper limits to the drive experienced by a moving bubble away from the antinode. The observed excitation and opacity motivate a hot-core interpretation, but line-emitting populations do not directly measure the uniform gas temperature, and different spectral features need not come from the same location or time.
+
+Xu and Suslick~\cite{xu} obtain OH rovibronic emission temperatures of 6200--9500 K from 65\% phosphoric acid regassed with 50 torr Ar as the reported drive increases from 1.9 to 3.1 bar. They discuss the role of water vapor decomposition and noble-gas conductivity. Again, the emitting species, host, gas preparation and drive differ from the present water model. A numerical overlap in kelvin is not validation.
+
+Zhou and Prosperetti~\cite{zhou} develop more informative spatial thermal closures than the resistance used here. Their work motivates testing thermal feedback but does not validate this single-temperature extreme extrapolation. Resolving pressure uniformity, temperature gradients and interfacial transport is a separate task.
+
+\begin{thebibliography}{9}\small
+\bibitem{sadighi} R. Sadighi-Bonabi and M. Gheshlaghi, ``Laser induced sonofusion: A new road toward thermonuclear reactions,'' AIP Adv. \textbf{6}, 035218 (2016). \href{https://doi.org/10.1063/1.4945343}{doi:10.1063/1.4945343}.
+\bibitem{flannigan} D. J. Flannigan and K. S. Suslick, ``Plasma formation and temperature measurement during single-bubble cavitation,'' Nature \textbf{434}, 52--55 (2005). \href{https://doi.org/10.1038/nature03361}{doi:10.1038/nature03361}.
+\bibitem{xu} H. Xu and K. S. Suslick, ``Molecular Emission and Temperature Measurements from Single-Bubble Sonoluminescence,'' Phys. Rev. Lett. \textbf{104}, 244301 (2010). \href{https://doi.org/10.1103/PhysRevLett.104.244301}{doi:10.1103/PhysRevLett.104.244301}.
+\bibitem{zhou} G. Zhou and A. Prosperetti, ``Modelling the thermal behaviour of gas bubbles,'' J. Fluid Mech. \textbf{901}, R3 (2020). \href{https://doi.org/10.1017/jfm.2020.645}{doi:10.1017/jfm.2020.645}. \href{https://ris.utwente.nl/ws/files/240998140/Zhou2020modelling.pdf}{Institutional full text}.
+\bibitem{huber} M. L. Huber, ``Thermal Conductivity of Gases,'' NIST-hosted reference table, p. 1, 300 K entries for air and argon. \href{https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=926438}{Readable table}.
+\end{thebibliography}
+
+\newpage\appendix
+\section{Adiabatic derivation and extrema}\label{app:adiabatic}
+All calculations use SI units. The inherited constants are
+\[
+\begin{gathered}
+R_0=6\times10^{-6}\ {\rm m},\quad f=30000\ {\rm Hz},\quad T_0=T_\ell=293.15\ {\rm K},\\
+p_0=101325\ {\rm Pa},\quad p_v=2339\ {\rm Pa},\quad\sigma=0.07274\ {\rm N/m},\\
+\rho=998.2\ {\rm kg/m^3},\quad\mu=0.001002\ {\rm Pa\,s},\quad c=1482\ {\rm m/s},\quad\gamma=\kappa=1.4.
+\end{gathered}
+\]
+The forcing phase and equilibrium pressure are fixed:
+\begin{equation}
+p_\infty(t)=p_0-P_a\sin(\omega t),\qquad\omega=2\pi f,\qquad
+\boxed{p_{g0}=p_0+2\sigma/R_0-p_v=123232.666\ldots\ {\rm Pa}.}
+\end{equation}
+Here $p_g$ excludes the separately added vapor pressure. It is not normalized by $p_0$.
+
+For a spatially uniform, calorically perfect gas, define
+\begin{equation}
+V=\frac{4\pi R^3}{3},\qquad p_gV=nR_uT,\qquad U_g=nC_VT,\qquad
+C_P-C_V=R_u,\quad\gamma=C_P/C_V.
+\end{equation}
+With constant $n,C_V$ and no heat exchange, the first law gives every step of the reduction:
+\begin{align}
+dU_g&=-p_g\,dV,&nC_V\,dT&=-\frac{nR_uT}{V}\,dV,\\
+C_V\frac{dT}{T}&=-R_u\frac{dV}{V},&\frac{dT}{T}&=-(\gamma-1)\frac{dV}{V},\\
+\int_{T_0}^{T}\frac{dT'}{T'}&=-(\gamma-1)\int_{V_0}^{V}\frac{dV'}{V'},&
+\log(T/T_0)&=-(\gamma-1)\log(V/V_0).
+\end{align}
+Exponentiating yields
+\begin{equation}
+TV^{\gamma-1}=T_0V_0^{\gamma-1},\qquad
+p_gV^\gamma=nR_u(TV^{\gamma-1})=p_{g0}V_0^\gamma.
+\end{equation}
+Since $V/V_0=(R/R_0)^3$,
+\begin{equation}
+\boxed{T_A=T_0(R_0/R)^{3(\gamma-1)}},\qquad
+\boxed{p_{g,A}=p_{g0}(R_0/R)^{3\gamma}}.
+\end{equation}
+Their ratio gives $p_{g,A}V/(nR_uT_A)=1$ identically. The initial state is $(R_0,T_0)$; $R_{\max}/R_{\min}$ is not the temperature normalization. Writing $\alpha=3(\gamma-1)>0$,
+\[
+\frac{dT_A}{dR}=-\frac{\alpha T_A}{R}<0\qquad(R>0).
+\]
+Therefore the maximum temperature on any common compact observed interval occurs at its minimum radius, including endpoints. A censored interval gives only an observed maximum, not a five-cycle global maximum. Independently evaluating Eq.~\eqref{eq:adiabatic} at the published refined $R_{\min}$ agrees with the extrema of the reconstructed temperature to a maximum relative discrepancy $\AdiabaticConsistency$ over the audited set.
+
+The uniform model's hot volume is $V\,\mathbf 1_{T>q}$ for threshold $q$, and the gas mass density is $\rho_g=nM_g/V$. These are closure outputs, not a resolved hot core. The amount
+$n=p_{g0}V_0/(R_uT_0)=\Nmol\ {\rm mol}$ is fixed for each chosen initial state.
+
+
+\newpage
+\section{Event correspondence and RP diagnostics}\label{app:events}
+The first strong collapse is the first local radius minimum below $R_0/2$. At 1.0 bar neither model meets this rule. A cycle-deepest minimum is independently selected inside its acoustic cycle; the global deepest minimum is independently selected over the complete five-cycle interval. These are not interchangeable. All individual radius events and temperatures, and a separate cycle comparison, are saved.
+\begin{table}[H]\centering\small
+\caption{Model A comparison at identical amplitude. Extreme RP values are equation diagnostics. The global cycles differ for several cases; first strong events are compared under the shared rule.}
+\input{../results/table_rp_km.tex}
+\end{table}
+\fig{06_event_comparison_pressure}{1}{Left: separate first-strong and global temperature selections. Right: one-way pressure divided by the accepted mechanical gas pressure. The ratio exposes the lack of feedback; it is not an uncertainty band.}
+
+\section{Dimensions}
+$[R]={\rm m}$, $[U]={\rm m/s}$, $[V]={\rm m^3}$, $[p_g]={\rm Pa}$,
+$[nC_V]={\rm J/K}$, $[k_g]={\rm W/(m\,K)}$ and $[h_{\rm eff}]={\rm W/(m^2K)}$.
+Thus $[4\pi\eta k_gR(T-T_\ell)]={\rm W}$ and $[p_g\dot V]={\rm W}$.
+Both $UT/R$ and $\dot Q/(nC_V)$ have units K/s. In Eq.~\eqref{eq:dpg},
+$[p_gU/R]=[\dot Q/V]={\rm Pa/s}$. Every term of $B$ has units Pa/s;
+$[D]={\rm m}$; each acceleration numerator term has units m$^2$/s$^2$, giving
+$[\dot U]={\rm m/s^2}$. The capillary and dynamic viscous terms are pressures.
+These dimensional identities are also checked in the automated tests.
+
+\newpage
+\section{Composition, convergence and reproducibility}\label{app:composition}
+\begin{table}[H]\centering\scriptsize
+\caption{Composition sensitivity with $\eta=1$. Pressure and mass density are evaluated at the coupled temperature peak; their large formal values do not validate an ideal-gas EOS.}
+\input{../results/table_gases.tex}
+\end{table}
+\begin{table}[H]\centering\small
+\caption{Production versus tighter integration for the principal air-like cases, at the same mechanical input where applicable. Input interpolation sensitivity is a separate error component.}
+\input{../results/table_convergence.tex}
+\end{table}
+The reproducibility package provides \texttt{adiabatic\_summary.csv},
+\texttt{thermal\_summary.csv}, individual temperature histories, hot intervals,
+all transport parameters, source hashes, upstream admission decisions and solver statuses.
+\texttt{input\_grid\_convergence.csv} checks full/thinned/accepted input grids;
+\texttt{solver\_convergence.csv} records tolerance, step and independent-method checks;
+\texttt{adiabatic\_recovery.csv} compares the coupled zero-heat system with saved KM mechanics.
+The inherited mechanical convergence table supplies a separate upstream radius uncertainty.
+
+Report tables, numerical macros and figures are generated from saved CSV/NPZ artifacts.
+The Russian README contains commands; the dependency lock records a clean Python 3.12
+installation as well as production environment metadata. \texttt{FILE\_LIST.txt} and
+\texttt{SHA256SUMS} enumerate the package, excluding caches and build auxiliaries.
+Source interpretation and links are recorded in \texttt{results/source\_audit.md}.
+The code reads sibling MR1/MR2 inputs without duplicating their large trajectory files.
+Independent review should examine the mathematical closures, saved extrema and event
+selection, interpolation uncertainty and the scope of physical interpretation before acceptance.
+\end{document}

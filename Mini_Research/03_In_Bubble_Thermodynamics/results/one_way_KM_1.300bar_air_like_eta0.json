@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "mechanics": "KM",
+    "thermodynamics": "B_one_way_post_processing",
+    "Pa_bar": 1.3,
+    "gas": "air_like",
+    "gamma": 1.4,
+    "T0_K": 293.15,
+    "kg_W_m_K": 0.0264,
+    "eta": 0.0,
+    "completed": true,
+    "extrema_scope": "global_on_requested_interval",
+    "last_time_s": 0.0001666666666666667,
+    "observed_Tmax_K": 5148.378199676629,
+    "global_Tmax_K": 5148.378199676629,
+    "t_Tmax_s": 1.834106426519485e-05,
+    "peak_cycle": 1,
+    "R_at_Tmax_m": 5.50808707142226e-07,
+    "t_Rmin_s": 1.834106426519485e-05,
+    "Tmax_minus_Rmin_time_s": 0.0,
+    "pg_at_Tmax_Pa": 2797420485.5156856,
+    "max_pg_Pa": 2797420485.5156856,
+    "V_at_Tmax_m3": 6.99988653094827e-19,
+    "density_at_Tmax_kg_m3": 1893.2223307548525,
+    "max_wall_Mach": 0.7240086348605106,
+    "pressure_bulk_modulus_proxy": 1.2758169857454233,
+    "tau_thermal_at_peak_s": null,
+    "tau_thermal_at_R0_s": null,
+    "signed_heat_loss_J": 0.0,
+    "work_by_gas_J": -1.926423850719466e-11,
+    "source_energy_J": 0.0,
+    "energy_residual_max_J": 2.101116271419743e-14,
+    "energy_residual_scaled": 4.55116019203058e-06,
+    "solver_status": 0,
+    "solver_message": "Reached requested end time",
+    "accepted_steps": 4225,
+    "nfev": 73037,
+    "numerical_status": "tolerance_and_step_checked",
+    "applicability": "formal_extreme_scenario",
+    "max_abs_pressure_relative_mismatch": 1.5543122344752192e-15,
+    "pressure_mismatch_at_Tmax": 6.661338147750939e-16,
+    "duration_above_1000K_s": 2.3014359600952646e-07,
+    "duration_above_10000K_s": 0,
+    "duration_above_100000K_s": 0,
+    "duration_above_1000000K_s": 0,
+    "run_id": "one_way_KM_1.300bar_air_like_eta0",
+    "runtime_s": 6.945224022027105,
+    "numerical_peak_difference_relative": 0.0
+  },
+  "gas": {
+    "gamma": 1.4,
+    "T0": 293.15,
+    "Tl": 293.15,
+    "kg": 0.0264,
+    "molar_mass": 0.02897,
+    "name": "air_like"
+  },
+  "eta": 0.0,
+  "settings": {
+    "method": "DOP853",
+    "rtol": 2e-09,
+    "steps_per_period": 600
+  },
+  "source_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "hot_intervals": [
+    {
+      "threshold_K": 1000.0,
+      "duration_s": 2.3014359600952646e-07,
+      "hot_volume_time_m3_s": 5.7973600605010204e-24,
+      "intervals": [
+        [
+          1.8338732067056104e-05,
+          1.8348263350896108e-05
+        ],
+        [
+          2.0250572014565066e-05,
+          2.0268560781965857e-05
+        ],
+        [
+          2.1714698606561474e-05,
+          2.1733168941633286e-05
+        ],
+        [
+          5.163273271817484e-05,
+          5.1642290955514935e-05
+        ],
+        [
+          5.3552264772778435e-05,
+          5.357024273811184e-05
+        ],
+        [
+          5.5019846443954624e-05,
+          5.5038334802923115e-05
+        ],
+        [
+          8.495068456685498e-05,
+          8.496025421403147e-05
+        ],
+        [
+          8.687324716678913e-05,
+          8.689122089045116e-05
+        ],
+        [
+          8.834218714616056e-05,
+          8.836068249896183e-05
+        ],
+        [
+          0.00011827832303353068,
+          0.00011828789695467635
+        ],
+        [
+          0.00012020201087913136,
+          0.00012021998302924729
+        ],
+        [
+          0.00012167145480182734,
+          0.00012168995273699042
+        ],
+        [
+          0.00015160960145141198,
+          0.00015161917692160118
+        ],
+        [
+          0.0001535336957524733,
+          0.00015355166733431246
+        ],
+        [
+          0.0001550033216540103,
+          0.0001550218205199724
+        ]
+      ]
+    },
+    {
+      "threshold_K": 10000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 100000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 1000000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    }
+  ],
+  "interpolation_version": "round_trip_v1"
+}

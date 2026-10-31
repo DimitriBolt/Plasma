@@ -1,0 +1,12 @@
+{
+  "pdf_sha256": "c384e85710a2cefa7ce44824ded9bb6bccfce7ed9755f0a9dfb070d9cce0e53f",
+  "pages": 12,
+  "main_text_including_literature_pages": 9,
+  "appendix_pages": 3,
+  "rendered_pages": 12,
+  "all_pages_visually_inspected": true,
+  "overfull_boxes": 0,
+  "undefined_references": 0,
+  "main_result_values_found": true,
+  "review_note": "Equations, tables, legends, units, page numbers and appendix references checked; latest changed pages 5, 7, 8 re-rendered and inspected after cross-reference repair."
+}

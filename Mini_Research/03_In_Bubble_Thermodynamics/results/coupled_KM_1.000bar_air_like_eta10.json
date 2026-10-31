@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "mechanics": "KM",
+    "thermodynamics": "B_fully_coupled",
+    "Pa_bar": 1.0,
+    "gas": "air_like",
+    "gamma": 1.4,
+    "T0_K": 293.15,
+    "kg_W_m_K": 0.0264,
+    "eta": 10.0,
+    "completed": true,
+    "extrema_scope": "global_on_requested_interval",
+    "last_time_s": 0.00016666666666666666,
+    "observed_Tmax_K": 499.6638296598271,
+    "global_Tmax_K": 499.6638296598271,
+    "t_Tmax_s": 4.746172929650132e-05,
+    "peak_cycle": 2,
+    "R_at_Tmax_m": 2.669579339068124e-06,
+    "t_Rmin_s": 4.7471518325899786e-05,
+    "Tmax_minus_Rmin_time_s": -9.789029398464847e-09,
+    "pg_at_Tmax_Pa": 2384729.4437094587,
+    "max_pg_Pa": 2469498.7319696494,
+    "V_at_Tmax_m3": 7.969243681068401e-17,
+    "density_at_Tmax_kg_m3": 16.62935910044189,
+    "max_wall_Mach": 0.015895021696841233,
+    "pressure_bulk_modulus_proxy": 0.0010580534676407718,
+    "tau_thermal_at_peak_s": 1.0736474417913583e-07,
+    "tau_thermal_at_R0_s": 4.776978380082594e-08,
+    "signed_heat_loss_J": 1.581400292147785e-09,
+    "work_by_gas_J": -1.580558973129817e-09,
+    "source_energy_J": 0.0,
+    "energy_residual_max_J": 3.9612150005047154e-24,
+    "energy_residual_scaled": 2.301758102835977e-15,
+    "solver_status": 0,
+    "solver_message": "Reached requested end time",
+    "accepted_steps": 3251,
+    "nfev": 50411,
+    "numerical_status": "tolerance_and_step_checked",
+    "applicability": "conditional_model_based_estimate",
+    "duration_above_1000K_s": 0,
+    "duration_above_10000K_s": 0,
+    "duration_above_100000K_s": 0,
+    "duration_above_1000000K_s": 0,
+    "run_id": "coupled_KM_1.000bar_air_like_eta10",
+    "runtime_s": 5.2195898939389735,
+    "numerical_peak_difference_relative": 9.999334693588935e-11
+  },
+  "gas": {
+    "gamma": 1.4,
+    "T0": 293.15,
+    "Tl": 293.15,
+    "kg": 0.0264,
+    "molar_mass": 0.02897,
+    "name": "air_like"
+  },
+  "eta": 10.0,
+  "settings": {
+    "method": "DOP853",
+    "rtol": 2e-09,
+    "steps_per_period": 600
+  },
+  "source_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "hot_intervals": [
+    {
+      "threshold_K": 1000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 10000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 100000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 1000000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    }
+  ]
+}

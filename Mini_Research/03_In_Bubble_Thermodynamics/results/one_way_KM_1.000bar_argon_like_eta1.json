@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "mechanics": "KM",
+    "thermodynamics": "B_one_way_post_processing",
+    "Pa_bar": 1.0,
+    "gas": "argon_like",
+    "gamma": 1.6666666666666667,
+    "T0_K": 293.15,
+    "kg_W_m_K": 0.0177,
+    "eta": 1.0,
+    "completed": true,
+    "extrema_scope": "global_on_requested_interval",
+    "last_time_s": 0.0001666666666666667,
+    "observed_Tmax_K": 575.9567541142593,
+    "global_Tmax_K": 575.9567541142593,
+    "t_Tmax_s": 1.7235857170842664e-05,
+    "peak_cycle": 1,
+    "R_at_Tmax_m": 4.514446579286137e-06,
+    "t_Rmin_s": 2.00926236510165e-05,
+    "Tmax_minus_Rmin_time_s": -2.8567664801738364e-06,
+    "pg_at_Tmax_Pa": 568415.6409176152,
+    "max_pg_Pa": 575731.2033048958,
+    "V_at_Tmax_m3": 3.8539152860986804e-16,
+    "density_at_Tmax_kg_m3": 4.7417319577871115,
+    "max_wall_Mach": 0.004429726155427074,
+    "pressure_bulk_modulus_proxy": 0.00020294358350359226,
+    "tau_thermal_at_peak_s": 5.681747358951324e-07,
+    "tau_thermal_at_R0_s": 4.274990821497642e-07,
+    "signed_heat_loss_J": 1.7165127933413875e-09,
+    "work_by_gas_J": -1.7139951448903533e-09,
+    "source_energy_J": 0.0,
+    "energy_residual_max_J": 5.015620302407122e-15,
+    "energy_residual_scaled": 2.8272301582817153e-06,
+    "solver_status": 0,
+    "solver_message": "Reached requested end time",
+    "accepted_steps": 3027,
+    "nfev": 45959,
+    "numerical_status": "tolerance_and_step_checked",
+    "applicability": "conditional_model_based_estimate",
+    "max_abs_pressure_relative_mismatch": 1.1046412965733774,
+    "pressure_mismatch_at_Tmax": 0.3965095129807923,
+    "duration_above_1000K_s": 0,
+    "duration_above_10000K_s": 0,
+    "duration_above_100000K_s": 0,
+    "duration_above_1000000K_s": 0,
+    "run_id": "one_way_KM_1.000bar_argon_like_eta1",
+    "runtime_s": 4.951510512037203,
+    "numerical_peak_difference_relative": 6.495926019312036e-10
+  },
+  "gas": {
+    "gamma": 1.6666666666666667,
+    "T0": 293.15,
+    "Tl": 293.15,
+    "kg": 0.0177,
+    "molar_mass": 0.039948,
+    "name": "argon_like"
+  },
+  "eta": 1.0,
+  "settings": {
+    "method": "DOP853",
+    "rtol": 2e-09,
+    "steps_per_period": 600
+  },
+  "source_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "hot_intervals": [
+    {
+      "threshold_K": 1000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 10000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 100000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 1000000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    }
+  ],
+  "interpolation_version": "round_trip_v1"
+}

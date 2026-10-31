@@ -1,0 +1,19 @@
+{
+  "accepted_mechanical_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "adiabatic_cases": 112,
+  "thermal_cases": 30,
+  "full_thermal_cases": 30,
+  "censored_mechanical_cases": 7,
+  "max_adiabatic_refined_agreement": 6.4213079298269796e-12,
+  "max_coupled_production_peak_difference": 6.714637734717144e-10,
+  "max_independent_Radau_peak_difference": 1.9514290183764158e-10,
+  "all_current_convergence_runs_completed": true,
+  "max_one_way_tolerance_peak_difference": 1.436052832204382e-09,
+  "max_fine_input_peak_difference": 8.543969953755949e-08,
+  "max_scaled_production_gas_energy_residual": 6.541570947982134e-06,
+  "max_independent_quadrature_energy_residual": 3.703448742920665e-07,
+  "max_coupled_adiabatic_peak_difference_from_accepted": 1.1241718667065469e-10,
+  "source_zero_for_all_runs": true,
+  "physical_validation": false,
+  "acceptance": "awaiting independent review"
+}

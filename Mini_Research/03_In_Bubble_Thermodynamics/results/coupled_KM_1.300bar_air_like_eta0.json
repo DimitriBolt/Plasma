@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "mechanics": "KM",
+    "thermodynamics": "B_fully_coupled",
+    "Pa_bar": 1.3,
+    "gas": "air_like",
+    "gamma": 1.4,
+    "T0_K": 293.15,
+    "kg_W_m_K": 0.0264,
+    "eta": 0.0,
+    "completed": true,
+    "extrema_scope": "global_on_requested_interval",
+    "last_time_s": 0.00016666666666666666,
+    "observed_Tmax_K": 5148.378203123875,
+    "global_Tmax_K": 5148.378203123875,
+    "t_Tmax_s": 1.8341064265272546e-05,
+    "peak_cycle": 1,
+    "R_at_Tmax_m": 5.508087071487979e-07,
+    "t_Rmin_s": 1.8341064265272546e-05,
+    "Tmax_minus_Rmin_time_s": 0.0,
+    "pg_at_Tmax_Pa": 2797420487.288648,
+    "max_pg_Pa": 2797420487.288648,
+    "V_at_Tmax_m3": 6.999886531198826e-19,
+    "density_at_Tmax_kg_m3": 1893.2223306870858,
+    "max_wall_Mach": 0.7239969176363326,
+    "pressure_bulk_modulus_proxy": 1.2758141160627963,
+    "tau_thermal_at_peak_s": null,
+    "tau_thermal_at_R0_s": null,
+    "signed_heat_loss_J": 0.0,
+    "work_by_gas_J": -1.92725438014329e-11,
+    "source_energy_J": 0.0,
+    "energy_residual_max_J": 1.2378796876577236e-23,
+    "energy_residual_scaled": 2.6813312664435507e-15,
+    "solver_status": 0,
+    "solver_message": "Reached requested end time",
+    "accepted_steps": 4216,
+    "nfev": 70622,
+    "numerical_status": "tolerance_step_and_independent_Radau_checked",
+    "applicability": "formal_extreme_scenario",
+    "duration_above_1000K_s": 2.3014359753639822e-07,
+    "duration_above_10000K_s": 0,
+    "duration_above_100000K_s": 0,
+    "duration_above_1000000K_s": 0,
+    "run_id": "coupled_KM_1.300bar_air_like_eta0",
+    "runtime_s": 7.43088575208094,
+    "numerical_peak_difference_relative": 6.342628644517845e-10
+  },
+  "gas": {
+    "gamma": 1.4,
+    "T0": 293.15,
+    "Tl": 293.15,
+    "kg": 0.0264,
+    "molar_mass": 0.02897,
+    "name": "air_like"
+  },
+  "eta": 0.0,
+  "settings": {
+    "method": "DOP853",
+    "rtol": 2e-09,
+    "steps_per_period": 600
+  },
+  "source_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "hot_intervals": [
+    {
+      "threshold_K": 1000.0,
+      "duration_s": 2.3014359753639822e-07,
+      "hot_volume_time_m3_s": 5.7973601656617685e-24,
+      "intervals": [
+        [
+          1.8338732067139676e-05,
+          1.8348263350999473e-05
+        ],
+        [
+          2.0250572015014264e-05,
+          2.0268560782347984e-05
+        ],
+        [
+          2.171469860740762e-05,
+          2.1733168942342432e-05
+        ],
+        [
+          5.163273272340467e-05,
+          5.164229096082367e-05
+        ],
+        [
+          5.355226477810687e-05,
+          5.357024274349602e-05
+        ],
+        [
+          5.501984644981318e-05,
+          5.503833480889056e-05
+        ],
+        [
+          8.495068457885246e-05,
+          8.496025422610684e-05
+        ],
+        [
+          8.687324717831924e-05,
+          8.689122090210061e-05
+        ],
+        [
+          8.834218715805635e-05,
+          8.836068251106058e-05
+        ],
+        [
+          0.00011827832305281357,
+          0.00011828789697404472
+        ],
+        [
+          0.00012020201089736992,
+          0.00012021998304760774
+        ],
+        [
+          0.00012167145482047678,
+          0.00012168995275582219
+        ],
+        [
+          0.0001516096014784168,
+          0.00015161917694875754
+        ],
+        [
+          0.00015353369577772883,
+          0.00015355166735983323
+        ],
+        [
+          0.00015500332167966405,
+          0.00015502182054588707
+        ]
+      ]
+    },
+    {
+      "threshold_K": 10000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 100000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 1000000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    }
+  ]
+}

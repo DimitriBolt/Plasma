@@ -1,0 +1,2281 @@
+{
+  "accepted_snapshot": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "all_match": true,
+  "files": [
+    {
+      "path": "Library/035218_1_online.pdf",
+      "sha256": "e099ff7dc7eab87c154c442cad8aef907966033c987174082e17c9f3278c40cb",
+      "bytes": 3134183
+    },
+    {
+      "path": "Library/PhysRevLett.104.244301.pdf",
+      "sha256": "ad7a4e4523764a611ff1ca263ff04bef699603173903487f799827072885e578",
+      "bytes": 804053
+    },
+    {
+      "path": "Library/nature03361.pdf",
+      "sha256": "78871f772e8825bb9bb8694fe091310d827f8caa19e4005dffae7d372c46614f",
+      "bytes": 561809
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/.gitattributes",
+      "sha256": "035f6b044db47462d56a48589b183c1641bacc68d241d4e8faf5326b9e132379",
+      "bytes": 43
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/.gitignore",
+      "sha256": "c0c4d4fcc37faf24673c3dbdfef52b26fe40e8a3a1141434e5f7a7b6ba1d53f1",
+      "bytes": 128
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/FILE_LIST.txt",
+      "sha256": "83defdba2941ae7658523dfe4fb8a059120cff0478465d619372d484e125cf30",
+      "bytes": 1197
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/README.md",
+      "sha256": "ff181a85274e66a1807b5e9f1cd1b76cdfafa19759e58bffc7a062a4b95a08c6",
+      "bytes": 11743
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/SHA256SUMS",
+      "sha256": "ad147e548a42c330c654ee034b044f3e8a4ba5ba01962a88a74c3f1d5d8a3bd0",
+      "bytes": 3958
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/01_bubble_schematic.pdf",
+      "sha256": "84927d5542e820957c3254dac971357f5653d6614dcd996971660e70fb68807b",
+      "bytes": 19082
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/01_bubble_schematic.png",
+      "sha256": "f7b67f4fc7c56601d5ab8787e4927d82d71e96a2bf4b5f27dade664e49b67095",
+      "bytes": 89690
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/02_radius_vs_time.pdf",
+      "sha256": "6aa3353845731c82a919dcfdae1aea67a1c2a74db68dfafaba2b0f3683a5740e",
+      "bytes": 35124
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/02_radius_vs_time.png",
+      "sha256": "1b3e72ef0ec088c25516d9a52f0f72685ec349c3fc40b4e75a8b1f6e677f70a0",
+      "bytes": 259664
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/03_wall_velocity_vs_time.pdf",
+      "sha256": "a44e2ffd5f204164d7e6ebd75b315757c6f309cc774ad293f6257229ac1f4ec5",
+      "bytes": 849984
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/03_wall_velocity_vs_time.png",
+      "sha256": "0ce9d44be1a3d0aa306036b955d2deba475c78987193382afbcee306eae4c2c4",
+      "bytes": 461467
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/04_phase_portrait.pdf",
+      "sha256": "65163e204fef239c6da0076f85b94ec8a97c72d444a80a4a2dfc16069e76265f",
+      "bytes": 102198
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/04_phase_portrait.png",
+      "sha256": "06c03ba441786d7e2e688adb3ab4495c2125822582508b56a209c7e75a98c09a",
+      "bytes": 372657
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/05_amplitude_comparison.pdf",
+      "sha256": "9edd698377fd825b88525eb30f590db469637c8fa85d938cc3966df1840e0684",
+      "bytes": 35715
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/05_amplitude_comparison.png",
+      "sha256": "6c70b7e4c51a8fb4796e646975e4818e44c5469cd65af53ab53ef7d534e532d4",
+      "bytes": 222698
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/06_collapse_zoom.pdf",
+      "sha256": "82b13b778ef803156764c57061ec31b2bd305e237fcc9dc85fae81f23417d15c",
+      "bytes": 22404
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/06_collapse_zoom.png",
+      "sha256": "3399872fa9f0d700fe6bca5b5d70f3cf2c04f267f7590f3c181682b371ee343e",
+      "bytes": 204117
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/07_amplitude_sweep_metrics.pdf",
+      "sha256": "42bdb87a66685b361644ed896bc05ff571796099c8fd7cfe45a2869532a10b04",
+      "bytes": 24201
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/07_amplitude_sweep_metrics.png",
+      "sha256": "1659b377b59c3ea0dc44de17a952534c0a52a8f1be7a7a3aeab7caa85b656eb1",
+      "bytes": 145414
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/08_numerical_convergence.pdf",
+      "sha256": "4396e242a2ac8545cc18ef454f2cd0db5f1b3aee70b09fa668bd50e93cd7d4fc",
+      "bytes": 23947
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/08_numerical_convergence.png",
+      "sha256": "f347bd6747b5ff9e26ca71513acab76dda4fa053961a1e980d66ae00b9d1f402",
+      "bytes": 221421
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/09_validity_diagnostics.pdf",
+      "sha256": "64b46d880911737c7adbee11118470da53b42a9fb166e041210eea2b243a70d9",
+      "bytes": 67103
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/figures/09_validity_diagnostics.png",
+      "sha256": "1764a5c21998ffa6fc39894584a07a0ace15262a64adea283650ca307610e13b",
+      "bytes": 278994
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/report/mini_research_01.pdf",
+      "sha256": "ac9267668d3b130fd780c790ecc6308e5dca4299a9bcb5d85fdf8d48e6800ac6",
+      "bytes": 1571951
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/report/mini_research_01.tex",
+      "sha256": "7d553cfb8838526f63e8507ff23863f056e067fe987336a7d75fe5cb91442882",
+      "bytes": 25576
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/requirements-lock.txt",
+      "sha256": "0c29dd56f537f6898cd18e1f60a308fc798ea7ad12755e38b54c598c5b86392b",
+      "bytes": 287
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/requirements.txt",
+      "sha256": "38bf814f18ae7b5ed3cb30a3a8cb7f6564dff4b013e3b9bff9efcedaa13d3d0d",
+      "bytes": 73
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/amplitude_summary.csv",
+      "sha256": "a0176524a77d4fa5c8f1ed21e10a7020cd198e12724059baaebc4ee94e1a3d62",
+      "bytes": 2453
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/convergence.csv",
+      "sha256": "42beaac3bc38ce295c0485f7b47c240360520a2afc222a9dcaa75a93b2219ab1",
+      "bytes": 5700
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/extrema.csv",
+      "sha256": "20c612a6d81d9d0c2167764433138437be3a498223ccdd68684d9d05ec3e669b",
+      "bytes": 86383
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/linear_comparison.csv",
+      "sha256": "42c4cdf4d7f1956270d1e544b4e78022a2549bb982cad1dbbb5341799ace6589",
+      "bytes": 2903443
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/report_amplitude_table.tex",
+      "sha256": "24b247e29832afccf780c0de315de73232ff3398671721005850f3f0fd7f5572",
+      "bytes": 550
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/report_convergence_1bar_table.tex",
+      "sha256": "0f91b244dec94b2dc98801a212450af966a0de76fa88f088e2e329f1a09f2d5c",
+      "bytes": 686
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/report_convergence_table.tex",
+      "sha256": "5c9db8f6aac4b30435c67b0f26ebd90ec03e0a44b4fb8831bccaa5ad2c9900b2",
+      "bytes": 711
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/report_values.tex",
+      "sha256": "0c512296d542521689aee3ce612dc45a128e29788e3d666a2ff9dceedd2a182b",
+      "bytes": 690
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/run_metadata.json",
+      "sha256": "d65a5f0926be6d84e682228e89315569890afb2b2727869a3257439c05cc53be",
+      "bytes": 5113
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/trajectories.csv",
+      "sha256": "2715485ee4a97dbb0877a9d4e0d88a71d65bf0aa1cd4649c8cc2764b76262cd7",
+      "bytes": 17971527
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/results/validation.md",
+      "sha256": "08ddb241cde9dcb63928f7fc710f5b19892402e4828b93c2c523d9f757d13afb",
+      "bytes": 7233
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/src/__init__.py",
+      "sha256": "ee1a1d89e787987db02cd4a8ba234007da4c7d7b44a11b8d919f468a15e5c263",
+      "bytes": 72
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/src/bubble_dynamics.py",
+      "sha256": "f8c1baaf5a4fc891383b7203b67c026908f4bf005d5418e273b640784e161188",
+      "bytes": 8770
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/src/plot_results.py",
+      "sha256": "d1cc8b3b55f5652e8680b3787f051c5837cd51073767ad21992a0752fe7b5baf",
+      "bytes": 12913
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/src/run_experiments.py",
+      "sha256": "6863aa88cbe67acca95564fb337f15911a4ab5456e884d912d518ac9e28658e3",
+      "bytes": 8906
+    },
+    {
+      "path": "Mini_Research/01_Bubble_Dynamics/tests/test_bubble_dynamics.py",
+      "sha256": "141d0523ab3760b6c6e6325d9b22bc2c5f70ee5aa7b887f06092ca7ee0a71a85",
+      "bytes": 5695
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/.gitignore",
+      "sha256": "475407576681457edb46dac1f6de7ffe7a7e7b1ebcfdf196b5ada659b9cfd3af",
+      "bytes": 128
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/FILE_LIST.txt",
+      "sha256": "1a13307df0ff550a8ed90ac185202eb7b0900b5f1d0b37a4b92befff3efafa06",
+      "bytes": 15711
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/README.md",
+      "sha256": "01944d2cc089cde450509cc4fe87149949e6f978fa1c0777cefa28ab794296d9",
+      "bytes": 4991
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/SHA256SUMS",
+      "sha256": "b328560e304f6d05772feccb4c991c90dd46e316da6ad402021156632039d0dd",
+      "bytes": 42562
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/01_radius.pdf",
+      "sha256": "46414360ec50959d4cfd72b897b9f0e67f2180556fae27507f6637304b7bb6cd",
+      "bytes": 69991
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/01_radius.png",
+      "sha256": "c7b7f6b6a94d8b67a223ecdaf6254006f56e78bc0fb785fc68a817bfc648b02f",
+      "bytes": 707711
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/02_velocity.pdf",
+      "sha256": "c68abbf6f659aa785542e27541f8eec902857d316b8960a70b4c57fc0e190ff2",
+      "bytes": 85590
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/02_velocity.png",
+      "sha256": "cadfc37845a2713e036506f887b14a87b0d6a0bd82eeb9e29695c6e726ed10dc",
+      "bytes": 842719
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/03_strong_collapse.pdf",
+      "sha256": "d11d930b9afe9adbe96c2d2e1e0046ba9ff6a74370f4c29731479c3fb5669431",
+      "bytes": 17647
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/03_strong_collapse.png",
+      "sha256": "e5060d000897565faeb06bf0c3c4852218cfb1944760d7c8b732f4fa52737a7a",
+      "bytes": 257847
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/04_minimum_radius.pdf",
+      "sha256": "54b0aff4f3e0e558c6e40097fa067d203cbeb06e55e89f36a7fe505506c2a998",
+      "bytes": 15467
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/04_minimum_radius.png",
+      "sha256": "86a86c4b57678b9deec56c944e69f78d736a6a02878997c70e1bc9c9af5c2df0",
+      "bytes": 158296
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/05_wall_mach.pdf",
+      "sha256": "b737a355a025aa7f9b4269ebd8f4c1e7d925612d826473e1fdc37b32d3113f99",
+      "bytes": 16771
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/05_wall_mach.png",
+      "sha256": "e09468fac94c41baba7b41b0a7ce4aee9cebdd210cdeea1a0a8ce73f108f114a",
+      "bytes": 167674
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/06_collapse_timing.pdf",
+      "sha256": "ddb780a57a68bd6b49821cd15e73947018185d8b7e38b284c73da441f8d55b41",
+      "bytes": 18619
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/06_collapse_timing.png",
+      "sha256": "d629cfdf6d5dc77ad640ac817b2f85dde92c41d76c1b613553cd0240c5740e39",
+      "bytes": 198999
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/07_applicability.pdf",
+      "sha256": "6e3c6201b845102e477907a4286442b8831779a754e861d8866aebbf09ca0bf0",
+      "bytes": 19208
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/07_applicability.png",
+      "sha256": "abd577465960c4e42fbe5ecd84d21a0779df3ba95cd265b755c38c194f2ee47d",
+      "bytes": 189643
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/08_phase_portraits.pdf",
+      "sha256": "513fcdc0f9fea8b94dffadbe30e3caafd4b01382b3790e93306718c78e5ff171",
+      "bytes": 204618
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/08_phase_portraits.png",
+      "sha256": "81e9739f9029f8bf44bf525bdbca3d3214b54bec282b3409886f5f50eb41bcf4",
+      "bytes": 658033
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/09_volume_ratio.pdf",
+      "sha256": "efcc2ee9b4c265abd42afcc64a84cd899ab2e0616463ecf9665fe1417266e7e3",
+      "bytes": 16156
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/09_volume_ratio.png",
+      "sha256": "cffc632253a7e995e2fa3a668783dca14cf227859d00218d0b89c71d0068443f",
+      "bytes": 167284
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/10_relative_differences.pdf",
+      "sha256": "9ee1e8a6e829bd5b5da440ebb232504dffb6c18d4ca3c3f12571f4411673bda4",
+      "bytes": 15057
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/10_relative_differences.png",
+      "sha256": "f7c15e5f97576893d4d69e6d1b65261cf45afab4319f9185e6da03d2b53d7d55",
+      "bytes": 203244
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/11_multiscale_collapse.pdf",
+      "sha256": "64b77bfe713b27b45f778df84310ba6a295190254bc7413901b2edf4ca21caff",
+      "bytes": 139582
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/11_multiscale_collapse.png",
+      "sha256": "9816208b147005c44f160fa921cfc34799e32199049bb05acc77677bae9774f5",
+      "bytes": 318918
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/12_diagnostic_map.pdf",
+      "sha256": "92a6470c933aeacb17aa1bf0b1df895b513958799e77cbc21606e131741729a4",
+      "bytes": 19649
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/12_diagnostic_map.png",
+      "sha256": "f136ccf60266e5faa995c6a4a08911fbca66db103132b1718ca2718489468e87",
+      "bytes": 159757
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/13_validation.pdf",
+      "sha256": "d96d386479f59e691dc467c7a274fb208adeaa5c1dd0baf1d214a25465830e4a",
+      "bytes": 21167
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/figures/13_validation.png",
+      "sha256": "328a51e4b1f76b90cfba2a9eefa2698da9a4201200ce5312a5e3e73cb06ed6d9",
+      "bytes": 271475
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/report/main.pdf",
+      "sha256": "61486641c6155d8b90c3a247119d8587983225b2e40ce2043e9f6b2bba73debd",
+      "bytes": 969301
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/report/main.tex",
+      "sha256": "00d9e183fb675967255483d74d0f56b5f2ee680cde5c70ea468cfe2ac66abafc",
+      "bytes": 23978
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/requirements-lock.txt",
+      "sha256": "0c29dd56f537f6898cd18e1f60a308fc798ea7ad12755e38b54c598c5b86392b",
+      "bytes": 287
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/requirements.txt",
+      "sha256": "6cc8ffc5327e634ef72f0eab927786afb0a810678e755f39df39fa89f1f12176",
+      "bytes": 60
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/admission.csv",
+      "sha256": "ade58877c019bcaa7f46203458ce4e8a96b8b22e50396fa796ea168a9d82b66c",
+      "bytes": 75560
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/amplitude_summary.csv",
+      "sha256": "a785f66dda8cafb3e9f3e288a135e3442106c2e838b9b2c564795c883ed6be5d",
+      "bytes": 65338
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/audit_summary.json",
+      "sha256": "7d283f66ffab2943526e46ca3de46547804bac27142588d028dbe86cc1395331",
+      "bytes": 6223
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/c_limit.csv",
+      "sha256": "befaf4692c0a46ca5c94e00f7555b50e9e0e7c8c711a16f4ae513cef05d6afcd",
+      "bytes": 2501
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/c_limit_extended.csv",
+      "sha256": "9129ed12d7bb207600ba197754b556624addb3c08a1ae0ab94887cdadaa63d7b",
+      "bytes": 1031
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/clean_environment.json",
+      "sha256": "5107580110aa0b1bf21965016e51bd86c960194d28843fa3f70eda8571b55748",
+      "bytes": 433
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/clean_reproduction.csv",
+      "sha256": "0bdb9fd4c2d4ce569d6b8997c1291021937baecd2c9ad62387e5c504d791688d",
+      "bytes": 4938
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/clean_snapshot_verification.json",
+      "sha256": "8de1f1b509b4b02247ec60be445af0915e179b03221cc533e9ccf8f719c57031",
+      "bytes": 1426
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/comparison.csv",
+      "sha256": "ae29c8d5d18019b397325abe863f157417add43ced24fd0f3e6a1aa179d39ad3",
+      "bytes": 44622
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/convergence.csv",
+      "sha256": "228b84bfd2a8bbf530c26a81f093c0fedd6776eb32f92626ee98e9b1497f252c",
+      "bytes": 24434
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/cycle_comparison.csv",
+      "sha256": "c74fdd636bac28b8ee079017f3fd49be42984c3d674d42ffb344d6539fa8d58a",
+      "bytes": 65140
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/data_schema.md",
+      "sha256": "2f1d6599c811f59a7a9b5b14b15918d46e7ab1d9c12cf8b2f1cec4f5ecb05b48",
+      "bytes": 5482
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/extrema.csv",
+      "sha256": "4720aacdb68f64f412f54f7aec9e01b45eded2ed2ceed5928993d4711d708e28",
+      "bytes": 2487791
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/parameter_provenance.json",
+      "sha256": "95afdf441a1a87ca28140793f454231fee19323fc488e8381f6ae710d9f09c30",
+      "bytes": 3701
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/preliminary_scan.csv",
+      "sha256": "faa91fcf0b856e85bd328c46c989aaa31059e3f7bd5539e465e12db82d0dc344",
+      "bytes": 8729
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/report_values.json",
+      "sha256": "da39c9a23c77505a507a9e3b7488fc549cec71ae2c3230fd3c49ba5b7c02a566",
+      "bytes": 823
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/report_values.tex",
+      "sha256": "ca5625eab4b6e939b9457c70cd864b7e6c4c23ebb0aa76585db34b2c1432d63d",
+      "bytes": 820
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/rp_reproduction.csv",
+      "sha256": "68fb9af6c7d2fc006c3ca0c34e7e6accea0d7a4122eea3c0372a42947558096b",
+      "bytes": 1618
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/run_metadata.json",
+      "sha256": "bc015f9b1603e4e8e182f4c533de69b4a489a30e7941c2846f29427b076d658e",
+      "bytes": 2296
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/scan_design.json",
+      "sha256": "132a9b63fb4016965309a36d045b231fa7ba7fe441e47c8ed629c719a5bfefea",
+      "bytes": 1076
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/scan_slopes.csv",
+      "sha256": "47a15b1fc187f087cc0b4d41744b566044df6c63252dda5c9c18ca96efd8f70a",
+      "bytes": 2538
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/source_audit.md",
+      "sha256": "6ab0671156d169aa3978c11d11a2270de9692569fa51c680082b02b3ada04a6e",
+      "bytes": 2770
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/strongest_RP_validation.csv",
+      "sha256": "c6034eb392e2365aaecf6f5075b40b63efa01fcf214db97aa5b8412db79a6c28",
+      "bytes": 1918
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/table_convergence.tex",
+      "sha256": "863bb2e4953a840f6701854a78854c5650572c591b4461d6b95432bbde457014",
+      "bytes": 1133
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/table_main.tex",
+      "sha256": "8610ca329b92ac66fa8a1fb9d275ac43b7fa78746faecf79d0e81d4357650824",
+      "bytes": 866
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/table_parameters.tex",
+      "sha256": "4e74f62fafb431b88068be6aa5f2320b5788f68a22b1c60e765b9a42b522266e",
+      "bytes": 430
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/table_timing.tex",
+      "sha256": "382e40e879881dda8e32b56ec4efd3676b50acba902638ae2fb8957355012865",
+      "bytes": 608
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/test_results.txt",
+      "sha256": "88786c50e9855b52b57a8741a561af0e97899e92b5a83ec67628a99581670e0a",
+      "bytes": 100
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.000bar.csv.gz",
+      "sha256": "acf04f26fd410f0e079667c2e04c6e9ea1d1195ea8f2b3d63fffebbfa5aaefca",
+      "bytes": 425215
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.000bar.json",
+      "sha256": "49b0f7c40c6e89b98655c154d0716045b5b142d101ac64d701fca94d62522ddf",
+      "bytes": 2039
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.000bar_accepted.npz",
+      "sha256": "58d9e25c1e825926d721e50a2d282670392b31ab894d41adc5efeac94f213112",
+      "bytes": 56763
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.200bar.csv.gz",
+      "sha256": "f08b28f8b9430596533141a1b10155739bf76a5d8e9a68357123acdf7f3bed90",
+      "bytes": 1490211
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.200bar.json",
+      "sha256": "37a256d34cd0a8d9aa6f405c3514554caf7d15101115e2244acd7c6ad97dcad7",
+      "bytes": 12597
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.200bar_accepted.npz",
+      "sha256": "b2466e3220b4cb7a4ebdf4eaa0d0f432c6d075f9c7b1a3c65a7b0177e48ac5e5",
+      "bytes": 105613
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.500bar.csv.gz",
+      "sha256": "60e4c870a4adbccfd71ecfbceeff1fe989417bda5a14a8becaf638da480a6aa3",
+      "bytes": 1520090
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.500bar.json",
+      "sha256": "50ff26f182d1cbfa3b68e2e8c7c28e9e75d4c569947b1f0c23185a4b74896f1b",
+      "bytes": 12557
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.500bar_accepted.npz",
+      "sha256": "da09904e08b655a660b3d1d89d5489a18cf327c3a0f919b68125ccd4e7436c64",
+      "bytes": 106841
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.800bar.csv.gz",
+      "sha256": "66a35854883d57e5b4c0225709e1742e8f067cff91402dce4b3d60882b8225d3",
+      "bytes": 1654459
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.800bar.json",
+      "sha256": "a0f6399df2f112512871b4f8c15d5e3c3cb52d6c5451891ac149d9d79d0924c5",
+      "bytes": 41529
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_0.800bar_accepted.npz",
+      "sha256": "0756a99fcc4c93d24937962c096962f71f7d43255b748ec257ff2446a0234114",
+      "bytes": 107472
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.000bar.csv.gz",
+      "sha256": "95b1e54a3e52b9552b6e9fc2f69405305e6d33deaf8a16e50e7a5010e1efb827",
+      "bytes": 1984202
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.000bar.json",
+      "sha256": "261ff6ca355c91a154a04aaf9971520a2bf4ad8b1a2c0c773e735b2e1c370b5d",
+      "bytes": 55809
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.000bar_accepted.npz",
+      "sha256": "63e6e6d497cde947a44bde7536df71ea5ed0e23bc0824e100612db963fdba67a",
+      "bytes": 113668
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.005bar.csv.gz",
+      "sha256": "7f760d42dba319c298795baea02224d3f6084f3344caa2d97e41e421dca23c1b",
+      "bytes": 1992500
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.005bar.json",
+      "sha256": "e2ff1c5c17e3943ca2d6a34280cc96b2aa4fa7371492f510f316ff366e2f1656",
+      "bytes": 55772
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.005bar_accepted.npz",
+      "sha256": "60f74e67cca2a57b168979a161d8ce618ad5240d964431908754e149cf399e54",
+      "bytes": 113879
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.010bar.csv.gz",
+      "sha256": "1bd67fd1a38889d4f7ceb561b4b8c70895c660a70cea69c307940bf1cdf2be28",
+      "bytes": 1996898
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.010bar.json",
+      "sha256": "d8f0fee867f42832ed689cf49b54387751497025534ac3e539a99303eaf06420",
+      "bytes": 55803
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.010bar_accepted.npz",
+      "sha256": "5eed3d96c5dc5c1865eef7f494f2dae00684a4ccce9a62cb5755fc5026ea7e9d",
+      "bytes": 114285
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.015bar.csv.gz",
+      "sha256": "3af664edb2ce8cb6a180f8434ac4c38fcd1be5f11812e8a24d7acb9fb7fccb81",
+      "bytes": 2009182
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.015bar.json",
+      "sha256": "45835142a15f8b4eeac17ff9f5c6f440540d2d951887ec45ad360aac258a3c14",
+      "bytes": 55797
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.015bar_accepted.npz",
+      "sha256": "7ac10626d371f8bea9a3941b206be1c82db635ac3f25fe7883b8c59e941d9e38",
+      "bytes": 114838
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.020bar.csv.gz",
+      "sha256": "4e0f0707ce18bc51d76211c633a52f134edc6d42725e1102daea7dca12e9577e",
+      "bytes": 2017554
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.020bar.json",
+      "sha256": "ce798196ffe2e73ee2303fce8ae9b1269b162ab158fff6d0fac0b73f4531b569",
+      "bytes": 55632
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.020bar_accepted.npz",
+      "sha256": "4788eb20ca877e693961e12a2bba960c15d7da1d387e9913b23a1e1537859f3f",
+      "bytes": 115656
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.025bar.csv.gz",
+      "sha256": "44f29ed35916e9764e073593c472a47e5ecd34c7f470a708a1b33a6c34a2bc1b",
+      "bytes": 2029621
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.025bar.json",
+      "sha256": "13d4eb15f39d0dce98273920aa5f7b4330ed880f57bd5884d88263dd77fc41ba",
+      "bytes": 55652
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.025bar_accepted.npz",
+      "sha256": "1be882a2614bb2eeab37f655a5f48d5b089306ae5b969357018f428ccdb8a610",
+      "bytes": 116645
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.030bar.csv.gz",
+      "sha256": "f159cff1738ec70756c0b5f8575457299697d3d10ade0e71bb08ce895b2bab7a",
+      "bytes": 2040663
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.030bar.json",
+      "sha256": "4608237f0b94b92ac0fd7252b229d3030db73aedf627258e98069ba6ceb3ca65",
+      "bytes": 55652
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.030bar_accepted.npz",
+      "sha256": "2c80a51c5bc675bbab91d20958f896c99416ab38ad211feef87ac0f9c824a951",
+      "bytes": 117485
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.035bar.csv.gz",
+      "sha256": "3807d6671a7b5ee0d9ff79292fd0df28897de283e7529bc960cc138f5b0c6f04",
+      "bytes": 2053510
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.035bar.json",
+      "sha256": "9b435cb5644c72747e0b6399bef752f7bc4bee53960f7e6ef84af0ecc8a15e04",
+      "bytes": 55538
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.035bar_accepted.npz",
+      "sha256": "394367bd8805fcfd075769c8d18af29497bed1e44726e2aed786a770a1bfc900",
+      "bytes": 118283
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.040bar.csv.gz",
+      "sha256": "9be9af8114a794dba9e5d7dd93dff4ec0156a32335bbfba178c8bbad44945bd2",
+      "bytes": 2063945
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.040bar.json",
+      "sha256": "c90ef29857a2a60df8c585ab7279deff9a99b7a9d25d6a0d5e2706db31c7c556",
+      "bytes": 55529
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.040bar_accepted.npz",
+      "sha256": "09bd44f693125a459c40ab621cc0bd81ba0ec2a3f10f077c5554395f225773ab",
+      "bytes": 119063
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.045bar.csv.gz",
+      "sha256": "4e82550148fa1833e34b9bb6c53a466d63f99644c2f298896b087b53bcc4f6a6",
+      "bytes": 2073160
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.045bar.json",
+      "sha256": "679829e3961ce3aa2336532040115f2d09049800a87eaa78da87754d117c8ffd",
+      "bytes": 55525
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.045bar_accepted.npz",
+      "sha256": "a34b2aa4011086a9d47a3eea823cfbee4f22a35c377e235d42ff5c5f7a966407",
+      "bytes": 119720
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.050bar.csv.gz",
+      "sha256": "b17ce5dbe4c0f5edb54bf11ffdc7f11a73321a3645fedaeb751bd38f819156ae",
+      "bytes": 2081931
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.050bar.json",
+      "sha256": "7f49ec4c31aecd93c1a737e52d42cb78e9df3ac9b36820ff0173f0fa02e6c054",
+      "bytes": 55521
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.050bar_accepted.npz",
+      "sha256": "63cdd49feb1c35ff6d1b1aee04cdade097cac2e8b828805f173fe96e245174d7",
+      "bytes": 120521
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.055bar.csv.gz",
+      "sha256": "a2351d389714ed058fcf7adaec5d1d4c2e05622623b0676d1dcca7ce76c8135c",
+      "bytes": 2090795
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.055bar.json",
+      "sha256": "e9a253c836d5cbda17f7d49f058e2ff372dd9d7a0c76528d16723665c19d32ae",
+      "bytes": 55517
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.055bar_accepted.npz",
+      "sha256": "7ee2638b93f48ed2a324957e700510d3d758806bf9e2c58ec27484c5270dd1b7",
+      "bytes": 121314
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.060bar.csv.gz",
+      "sha256": "4131fc71db9cad8e5d8382052e16cb4ca604d31a785b9d6f247fb8bfa917253e",
+      "bytes": 2103895
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.060bar.json",
+      "sha256": "d3f9766bf7544fde0bc4f7235c1c9099cd6027b7b81097b57e381dd300ed9857",
+      "bytes": 55382
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.060bar_accepted.npz",
+      "sha256": "3935ac12389357220bf3a4630c3925ba4ab2d89d7020fd11d5ab1fb3d4809147",
+      "bytes": 122196
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.065bar.csv.gz",
+      "sha256": "271b0462e4152935428f81bdf8f08ff6c96521d816221b7bf7b271546ffe8091",
+      "bytes": 2116520
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.065bar.json",
+      "sha256": "83dae13791a8e34df85ce2f665f6aeaa826911cdec25bcd60e0174e41dacfe28",
+      "bytes": 55430
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.065bar_accepted.npz",
+      "sha256": "caef54991635db3338ea01869956bfbe9529a8fd18f4bfcdc61306ec61dde9b6",
+      "bytes": 123372
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.070bar.csv.gz",
+      "sha256": "58f93c2e320115a238b4d18279eee7c6c4167511445e5e9b0a132a94f140a420",
+      "bytes": 2142121
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.070bar.json",
+      "sha256": "bcacc6fa5dddfb9f423dbb4892a059cceb312b173b57396d0a351b18adf68dc7",
+      "bytes": 55458
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.070bar_accepted.npz",
+      "sha256": "4c16ec6115d211650585e0c8feac505e01b9264265ac17df15c6f1cd94646991",
+      "bytes": 125360
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.075bar.csv.gz",
+      "sha256": "fb8de7b3eaaa24fe0795255b9392fb2a6ce4514c4f63eb81ce7f6b6abd7f4364",
+      "bytes": 2177269
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.075bar.json",
+      "sha256": "cc75f7c10260b2ec1faaf3ea2fe3fd8db3af01c9a6b0a7a6e5a20090b00dd2a3",
+      "bytes": 54649
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.075bar_accepted.npz",
+      "sha256": "d8f062dbe2de444b7fe4eecbf30ca3d1f1fbbde9c7f85f88ed36ff4e0944c9c4",
+      "bytes": 128441
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.080bar.csv.gz",
+      "sha256": "9c905987ee6c98f7e4981e937c9cd5a5a655d3b7baeb613f65285ff8692f1aa5",
+      "bytes": 2191136
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.080bar.json",
+      "sha256": "6ef539c8492358c2323d1e490aa4a7f725128770d86992e7866a9d26780f1e5b",
+      "bytes": 54221
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.080bar_accepted.npz",
+      "sha256": "9398533f47642f0a79ee496ad2a66a2b58ba1b64aad3c32ddd3da18b95ece818",
+      "bytes": 129757
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.085bar.csv.gz",
+      "sha256": "00d6424a8b40f70832063280d7c6d376b4619e9bf93925ed28353120b89e3c49",
+      "bytes": 2193818
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.085bar.json",
+      "sha256": "3e76d8909237689524bfde55d9568de8ee27721eb810bad51ae215a1d0c937df",
+      "bytes": 53268
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.085bar_accepted.npz",
+      "sha256": "34d397525f6cc5af6fbb5ef0497665cd9f536165932fe5ca22ed54f779517b6b",
+      "bytes": 130569
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.090bar.csv.gz",
+      "sha256": "6ef911b9429191d6d1c7e471dc58ff61818a994e5ae5821a3b9ba72356e124c0",
+      "bytes": 2193281
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.090bar.json",
+      "sha256": "5a7e9ff0dbd140c7e6a19d0caaf5d1599f9d9cd02fc0e1c22854634637df2cee",
+      "bytes": 52693
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.090bar_accepted.npz",
+      "sha256": "dee1277177ffa16453a9af46b47d02587407312d3bcbb5bbf6ba91bb655e68e5",
+      "bytes": 131111
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.095bar.csv.gz",
+      "sha256": "0636c1f95f463976f7889be8e55478c39e57ab6edc46e80277edd2dc966fd196",
+      "bytes": 2199661
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.095bar.json",
+      "sha256": "44fbb89110242fac90d91dc432d388cab2fb3cecffc0911d5c3c45051bf6b364",
+      "bytes": 52525
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.095bar_accepted.npz",
+      "sha256": "4b9b2f3e59bf5da5fbfdc36b6e0b59d4c7c28ef99a8fd87c104c2c3f7282b4ad",
+      "bytes": 131816
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.100bar.csv.gz",
+      "sha256": "b3001a0ed7a6d2a6f6805fc0ce62af7d8fe736fae7bdad353397bb271bf88e7a",
+      "bytes": 2208529
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.100bar.json",
+      "sha256": "4349a1d4b5f4a0c8d3f5ed2c597e7f46ad80e9a0179ee524165e20f5d96cdfcd",
+      "bytes": 52515
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.100bar_accepted.npz",
+      "sha256": "465e4d87038ae496a0f3dc023e9fd15b7db76de05ab452c47cd0ef7a0e8e464c",
+      "bytes": 132377
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.105bar.csv.gz",
+      "sha256": "8b9d58d9eb8440bcad2b026f3b4e99022d15a71ca905e4a714dc04c7e96ec1a7",
+      "bytes": 2212561
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.105bar.json",
+      "sha256": "1e5e6cd4463a62d526a35d3b5323937b960baa28f6b7cbfbc977d45923d1d2f4",
+      "bytes": 52201
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.105bar_accepted.npz",
+      "sha256": "d8954c771b41cc0ba115d41bb3ddcefff10e40916f8f264d8e8f19dfff19eaae",
+      "bytes": 133032
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.110bar.csv.gz",
+      "sha256": "09d95e55d9a560985ebed7271a8ad8a9771f43bcc2cface43ac164bee934b92f",
+      "bytes": 2225732
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.110bar.json",
+      "sha256": "ac3f4701ff3e4e2cbbc8b575d5b310b8e9a19bdc1bfe9f31ec200dc7a508919a",
+      "bytes": 52227
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.110bar_accepted.npz",
+      "sha256": "ce5f5650548bad1a46f7b607fe16d36688e2de701dce0c60a256b0acd0a7f292",
+      "bytes": 133826
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.115bar.csv.gz",
+      "sha256": "57f9cb116bf5499e816796237ba047ea92c0b5cd6fb0e78dbad0d78f60be93fa",
+      "bytes": 2247218
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.115bar.json",
+      "sha256": "76d3fc9c56a5a22f4664d09d32b02ca7f6056526875d6dd5f3aed2b87de50bf0",
+      "bytes": 52054
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.115bar_accepted.npz",
+      "sha256": "738c05abf164fd711e087551da337130f68d74a6d13c5245954f1d68c410f78a",
+      "bytes": 135549
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.120bar.csv.gz",
+      "sha256": "6188536147808a65451291546a16f3ee1ec414576b6f9c9b25cba917813ad6a6",
+      "bytes": 2272485
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.120bar.json",
+      "sha256": "a662b4046c5127469c3d30562cc70801bbdc96e5df2c5a9e2d75f939db1a7c35",
+      "bytes": 51889
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.120bar_accepted.npz",
+      "sha256": "cea7041ba0ade965cacb726223711d787a1b1971bf149447a749eb1010b84377",
+      "bytes": 137626
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.125bar.csv.gz",
+      "sha256": "8249f97fccf2c7a03b5fc9b71987cc4a00f5f8579dc6a196a16bf2f4fd46d60c",
+      "bytes": 2285726
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.125bar.json",
+      "sha256": "6415e4b4ada7b628c273d66789ec48beae200b845af0ba60e7e3625ac3374020",
+      "bytes": 50960
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.125bar_accepted.npz",
+      "sha256": "45dddb8c41342ecaf426f6e6e561a699e24266adb34411f0c670dac34f049d26",
+      "bytes": 138614
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.130bar.csv.gz",
+      "sha256": "d80a88acfd884d8aae696a789b825e58f8727c8ec45898b01906a54428bdf7b7",
+      "bytes": 2291759
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.130bar.json",
+      "sha256": "7dc331256dfaaa04c633c3e6532e98cef08b50602bc711d93965fe4f9d14b702",
+      "bytes": 50685
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.130bar_accepted.npz",
+      "sha256": "eccb5af66a614bb2f994923cad2b4be522ad1282e95029b566035c61bc952a92",
+      "bytes": 139098
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.135bar.csv.gz",
+      "sha256": "50d15fa8fd9ecfec29e597acab4012bbe2127b1022fdbeb0f91d7e02c7e89ec6",
+      "bytes": 2294894
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.135bar.json",
+      "sha256": "8dfb78c5c4904a4f59c53a4d4a6ec39aadc680525101242df96b160f8ad6a9e6",
+      "bytes": 50640
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.135bar_accepted.npz",
+      "sha256": "febec1fca74fdc98d100fad93340e90f1ded12394c79e6861fd39bed1ebd6069",
+      "bytes": 139519
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.140bar.csv.gz",
+      "sha256": "db275dba7aa3d9fc57e7fe842d644c9a78593f52f616fb44f6d8b6476e770c2d",
+      "bytes": 2298535
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.140bar.json",
+      "sha256": "506baa9e5685064982f28cc3c6337b63a67a6e07008bba8e67194233e5a12681",
+      "bytes": 50539
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.140bar_accepted.npz",
+      "sha256": "3c0881cf2b009b880209a6c8427b78eea621588996a68aad573236311b2cad4d",
+      "bytes": 139864
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.145bar.csv.gz",
+      "sha256": "b76a286fc0935c8d8f7b070c5edd10d3c8e54118115ff994768c0a285cda9469",
+      "bytes": 2298662
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.145bar.json",
+      "sha256": "96ffbe18d4e6dde9ff35be88ed7beb2a7be4712dbdb031ac51ccef8b71390242",
+      "bytes": 50204
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.145bar_accepted.npz",
+      "sha256": "a5805d50beda7e94f35cebf7c5e0c668c130de10b6cd47d0602056f0d374ba15",
+      "bytes": 140143
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.150bar.csv.gz",
+      "sha256": "9283951de0139a2800cde7e2a723bc12cf1cbe5cbdabb43ef300ddd28fae2e70",
+      "bytes": 2290524
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.150bar.json",
+      "sha256": "c2dba81a1907e26d28540e710534d8c6912a7714d678ad2b5ca2d46805444d46",
+      "bytes": 49286
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.150bar_accepted.npz",
+      "sha256": "08c8002e1e582b780e4c5738656eaa9ccb26e9b18be375a8a8d989e835d459df",
+      "bytes": 140451
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.155bar.csv.gz",
+      "sha256": "2c03b494af7e1ce0a4784be6c83ecb3166a478a412075497143f94e57735bbfa",
+      "bytes": 2294291
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.155bar.json",
+      "sha256": "9d9ed82dba1bdf0f653403e5d4e670eba4caecd36f493f79c236081501ab7ab0",
+      "bytes": 49312
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.155bar_accepted.npz",
+      "sha256": "3d6a519c9ad42828d9c870bee6464b3bbb1eb67ba79a1af3e0ddd5c8a16f5400",
+      "bytes": 140765
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.160bar.csv.gz",
+      "sha256": "c3a162496979f5c4fad4686a0f39c0c426ccf3ba3748c8720208003a386619b6",
+      "bytes": 2297668
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.160bar.json",
+      "sha256": "94826a8ace68a6a8596b55801bcc80ff0740535c5d6d8ee064a609af2e6a5a77",
+      "bytes": 49280
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.160bar_accepted.npz",
+      "sha256": "ee2b2e3b44ec1311f5e8601ee638dd8c454c01d88bd5d05648c5d60720bcc862",
+      "bytes": 141113
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.165bar.csv.gz",
+      "sha256": "8ef1974e504a3889f22863b734e5234ef9b9adca798332d4093d4668949dd9f4",
+      "bytes": 2301168
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.165bar.json",
+      "sha256": "6c62b9431792299a9b97c8f20e9644befdb091387720d41fe67972aa84c5f6a2",
+      "bytes": 49120
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.165bar_accepted.npz",
+      "sha256": "21700a69d187c58793edb35704f8a17c5c6143bc8bd29e0f0519e76c0e0f20d9",
+      "bytes": 141431
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.170bar.csv.gz",
+      "sha256": "d18b3952ffa0c6dd57bbff52bbfb0195f71d0deba2c916d035e221270eb24adf",
+      "bytes": 2305389
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.170bar.json",
+      "sha256": "b0d9dc382d8e0b4fc9dcd7ca117f415740cecb55762040b899804e34cf4b19c7",
+      "bytes": 49124
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.170bar_accepted.npz",
+      "sha256": "b1d295be872b5d255679669cc39307e74c19d600bb4655a34a613277ff30645e",
+      "bytes": 141828
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.175bar.csv.gz",
+      "sha256": "69e845f7923527e0cce6e56a422b9b41271edb5adaec3f41100aa570fc4d4f77",
+      "bytes": 2312972
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.175bar.json",
+      "sha256": "9d4657e0be16caf380293c8016ff4d5ef426e8fd443dad6cdab3078beaa35004",
+      "bytes": 49132
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.175bar_accepted.npz",
+      "sha256": "525e0153c0a2fd72798ccaea6ebb5a2fa891d663abda6ee96e0d983456ffcf32",
+      "bytes": 142316
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.180bar.csv.gz",
+      "sha256": "28dbb3c5bd34caf5082456f5b923212ec9796717c1cc9437f3af2ff2bb386aa7",
+      "bytes": 2317505
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.180bar.json",
+      "sha256": "837298bff86025a6b5a95664fb0c06082be572648c52a17cbb74afc0541b5e56",
+      "bytes": 49135
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.180bar_accepted.npz",
+      "sha256": "8dbc4b9e5252f396d466c4474a016e63aa2448421596d91b82965990bdf07e89",
+      "bytes": 142769
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.185bar.csv.gz",
+      "sha256": "524823e97833dc6591e2fe366b9d499de61abb86affc622c9bc7f358174d7028",
+      "bytes": 2322223
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.185bar.json",
+      "sha256": "9e9a4d4cdcb0a65faef9fc280e38b391f8f83ab37869ff034e73453343843805",
+      "bytes": 48983
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.185bar_accepted.npz",
+      "sha256": "f95b00e9354b3ef3076a021b20cb94bef0966380c31423dbf80c0e4577b6e0f5",
+      "bytes": 143208
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.190bar.csv.gz",
+      "sha256": "6274acc4c8307e1386729ba9cf12fde8bd8cb467c9bdae6e01219e83d7e2da4c",
+      "bytes": 2325037
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.190bar.json",
+      "sha256": "46e4c3b32e1de4f239cb65461331051eb97dd130961d2621a7d173fc12071ea2",
+      "bytes": 48965
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.190bar_accepted.npz",
+      "sha256": "faacd9c60a497b238a66b1f1f49b53f95a1b554ba60f1b413804d2130a392e64",
+      "bytes": 143519
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.195bar.csv.gz",
+      "sha256": "b3ff2dfd2a9667c706644e14dd366e484c74c58cd0581489fbf9cc2d907cdd0f",
+      "bytes": 2326703
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.195bar.json",
+      "sha256": "41c98b5248c70d6867bb4e3e924d9247f3c50be956f7383c7c2276a8b77c49b1",
+      "bytes": 48983
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.195bar_accepted.npz",
+      "sha256": "fc63fff03079b566eaa447be6fa7839dcbbbbb0d8784df7074fb9cce8c54a005",
+      "bytes": 143721
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.200bar.csv.gz",
+      "sha256": "b2216223439c45be5646df075aede1d0765e019ed2d20b1c267e37c3f60531d6",
+      "bytes": 2328748
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.200bar.json",
+      "sha256": "109743e33b55e2eaa798c3bed24b718f35bff70df55270a20cdd3c971fc7ec8f",
+      "bytes": 48977
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.200bar_accepted.npz",
+      "sha256": "3144becc67a175e7cc470a4caa20d9a52a42583a678c8777b597b29ea3bd4126",
+      "bytes": 143756
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.250bar.csv.gz",
+      "sha256": "67f748c564703f2e87ef1864cfc88a85f9f5a54a38aa7ccc5afde5e349dac560",
+      "bytes": 2335923
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.250bar.json",
+      "sha256": "ec1abd4b3fca8bb1301d8870d3b6fe5cd72f3030485a2488d06dd8596111ea57",
+      "bytes": 47541
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.250bar_accepted.npz",
+      "sha256": "f45a9e9caafc0000c1c789e1c8cb8468ee671ada4692ff9431605c8427895973",
+      "bytes": 144475
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.255bar.csv.gz",
+      "sha256": "ad72529143c3e26a933c0a6fcb07049b28e93ced5285828332c5377c265067e8",
+      "bytes": 2332905
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.255bar.json",
+      "sha256": "3a490c83d99f035badea08e7d5d1f5509856ed1e66b7166a172db8d8d6b22432",
+      "bytes": 47273
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.255bar_accepted.npz",
+      "sha256": "d5f8fe720c4e7950ef940bac204441149ea7d552b41800c779645e6efcf92170",
+      "bytes": 144505
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.260bar.csv.gz",
+      "sha256": "505bde351ea7128b1110f2c040622c0f1be6f942810c24ef5b6f6530caf6009a",
+      "bytes": 2320920
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.260bar.json",
+      "sha256": "082d1609c99300b67e4eb6b104cc120287ee82e462e94a630d985808718e4597",
+      "bytes": 46313
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.260bar_accepted.npz",
+      "sha256": "8186f2516d73816b6f3c135c9ea45fd29173faf3031ff584bab4db13b8de3ad3",
+      "bytes": 144641
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.265bar.csv.gz",
+      "sha256": "98af06090f8ed3715d63b97b2e817f28cde11404c810d5a1c4a9a2b1b193296c",
+      "bytes": 2321710
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.265bar.json",
+      "sha256": "09c7e7dff4f81b6a8bce47c50e4861658bce28c5f96144b6f0ea6c8ae2f7c3d8",
+      "bytes": 46364
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.265bar_accepted.npz",
+      "sha256": "00e90160302ba11f9579b7d7efd26c9a48ad5df68a7079fff56f251658c98df7",
+      "bytes": 144677
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.270bar.csv.gz",
+      "sha256": "3b33eec10a234e0cca0bfa850de03b70439a8c9cb6209c5577b46a0a59259040",
+      "bytes": 2320551
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.270bar.json",
+      "sha256": "5e5bcc6bba9880830589eb9c16f7cd660c0e44abb456d14bbcaad994828ee9cf",
+      "bytes": 46373
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.270bar_accepted.npz",
+      "sha256": "a1336ad3664f57abd95f82b3fe20bc7860469a0b883cfd0342764d326f842fa6",
+      "bytes": 144678
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.275bar.csv.gz",
+      "sha256": "b7c8a0538ccf5dbd7eac9cd4b130f1c0fd6836dcfe19d71f5c4ac635fccf1278",
+      "bytes": 2320789
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.275bar.json",
+      "sha256": "341e11210d9944aca2944315c38008df551902c8d64de7d24b1a2ae2b38edcc9",
+      "bytes": 46342
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.275bar_accepted.npz",
+      "sha256": "1d06e900077548fffe2772831bf38e339d07e8ce27147d02e64459bc2bb99367",
+      "bytes": 144764
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.280bar.csv.gz",
+      "sha256": "a339c059f664ea7a1f6583948572ad616ec0041ab6f7de80e6d6ee6a94410305",
+      "bytes": 2321366
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.280bar.json",
+      "sha256": "f97fa1c713f7febdf615a2cecd0d955a510109e16240c0de49368637eea2d6a6",
+      "bytes": 46327
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.280bar_accepted.npz",
+      "sha256": "26f09db198d57398b10cb01a77260df50f34c153cb76e34b8d412979c616a3c5",
+      "bytes": 144754
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.285bar.csv.gz",
+      "sha256": "557d1b75511148b271de01f5afd22eed106242eeeb45c0a3b9cf4d145a724aa7",
+      "bytes": 2319226
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.285bar.json",
+      "sha256": "4df72e88b1e327b72887c62623d2aaac67719213a7f1362b8f01d4b513ec94e0",
+      "bytes": 46197
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.285bar_accepted.npz",
+      "sha256": "d2d03cc5a22fba1983436504b0d75da1cd80b0fc2dd9b9a28f800d3b7245b1f1",
+      "bytes": 144404
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.290bar.csv.gz",
+      "sha256": "84223da2d5db079a2f2def9ac644a789947ea62bebf0a14d39050a430b1dbbbf",
+      "bytes": 2317876
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.290bar.json",
+      "sha256": "79deb6705b14add4da25a7e6ebc11dc66505658376679adca382c87ae8767a16",
+      "bytes": 46202
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.290bar_accepted.npz",
+      "sha256": "aa4f90a6757e83c89b7e3b0eea6b237cb15029ebd05caffa947c6b775bcb5ad0",
+      "bytes": 144983
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.295bar.csv.gz",
+      "sha256": "a5374a5e7e46e16874d6efa08d9e412b1716a8036d2527cf5fa156323edb72a4",
+      "bytes": 2318836
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.295bar.json",
+      "sha256": "d7dd7f3031f067011122627d774ad23eb9dd54d78d193df90545471d56ba549d",
+      "bytes": 46189
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.295bar_accepted.npz",
+      "sha256": "c9719c97be709d4c7fccf8e17431e5730121978fd80755342cca58104fbf2b25",
+      "bytes": 145016
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.300bar.csv.gz",
+      "sha256": "8d7705aeda50213b161d0b69ffbb0ae853c978075ae6f90c24b4ca4e704d2f1e",
+      "bytes": 2317699
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.300bar.json",
+      "sha256": "98d0407b3578ec07eafd4d4edaf5d464e9a4c7e0acf79fe74d2349ff83a8e124",
+      "bytes": 46196
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/KM_1.300bar_accepted.npz",
+      "sha256": "b04d65d646a3ef8c34481ed113fe0211b48744c0cb69417d8877b524f6800690",
+      "bytes": 144997
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.000bar.csv.gz",
+      "sha256": "b36e157f1a5e99a5148c0a5ed59832712f5c99e02b6512df95faaf7a39772ad2",
+      "bytes": 466237
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.000bar.json",
+      "sha256": "5291203c5ce1c169be40882dee4b86b272f9111a52b62275d4bbe2d9d5a195e1",
+      "bytes": 2039
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.000bar_accepted.npz",
+      "sha256": "bc534160fb84f7a59c9c816d502f0bde6b52811d77aa1ef2520c3686ab51f978",
+      "bytes": 61073
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.200bar.csv.gz",
+      "sha256": "50615f25af843ed5cbf36a808d1647eb0ac8056693bf23725a461a5c66e483cd",
+      "bytes": 1508251
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.200bar.json",
+      "sha256": "879070ff33354849bd522f5806a5a6a213e31e9dbce731eb848cb375c71b6191",
+      "bytes": 19190
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.200bar_accepted.npz",
+      "sha256": "f08a7842fd77ecf5bba4380a3a8882002ff951aa9cbe2904268ae3e507c22c47",
+      "bytes": 106309
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.500bar.csv.gz",
+      "sha256": "1337b5fb541b769dc04169710d7c192e18894670be77739496407607464d7b42",
+      "bytes": 1531085
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.500bar.json",
+      "sha256": "428a5b5508fe0ec4e4c982ae352b6819d3bc879ecfddf45d3720281588c259b5",
+      "bytes": 17255
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.500bar_accepted.npz",
+      "sha256": "bb17c7b159ce86c497ed82c49f1000a02950320ffccc609f97a49c40f755b89a",
+      "bytes": 107345
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.800bar.csv.gz",
+      "sha256": "b673efd947f3b1356826e63e5d5887deb24dac35fc721df50f73030cf34c6348",
+      "bytes": 1696192
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.800bar.json",
+      "sha256": "e289968131379b265d2573a55918e313171630a2627979454d2dcefd1d31c313",
+      "bytes": 44847
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_0.800bar_accepted.npz",
+      "sha256": "09693445a3006b0ceb4f7d0603745d5e8418219a378a5c08e9a104c5f853670e",
+      "bytes": 107860
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.000bar.csv.gz",
+      "sha256": "26760f7965c94696b273e6d37bb29d71455231ae6e639b0e416bdde1346f6e8b",
+      "bytes": 2026524
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.000bar.json",
+      "sha256": "592b6d921f55a909584538050e1752d0d5cc71dfbd1b96913b55c1bdfce13f5a",
+      "bytes": 56977
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.000bar_accepted.npz",
+      "sha256": "54db8a6918b11cdf64219104d8892c9248e24d3fc14a3a628d74d26807542b35",
+      "bytes": 114774
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.005bar.csv.gz",
+      "sha256": "0fd20253ea7205831502caa96ce5c69e2f8ee781b6c36fd8f8594545ab7cae9a",
+      "bytes": 2058127
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.005bar.json",
+      "sha256": "4243944a147ee250df18dca97a11307123e94fa04d3a1dc03abb1d24055d093e",
+      "bytes": 56671
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.005bar_accepted.npz",
+      "sha256": "8475ab7e0b20e48c1669855bf681ac08e267a39fa9940724e522dd1e40ccc7b4",
+      "bytes": 117207
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.010bar.csv.gz",
+      "sha256": "fc28e6c639be37a2e83f14440d304ca6139f71368ab5c83cd4fdf7781872a94e",
+      "bytes": 2078535
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.010bar.json",
+      "sha256": "972fc62cc7bdcfcaf8eea0e9a84c95adec03983d1b438b512db8b69deeb9cb70",
+      "bytes": 56692
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.010bar_accepted.npz",
+      "sha256": "609b561d4049982fb8dc706440ec34df60f1212474163f7ced186187a135db66",
+      "bytes": 118758
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.015bar.csv.gz",
+      "sha256": "468cffbf867fd5dfb0ce748793fefb8474fa52c593094ff8149bfeebb3029aab",
+      "bytes": 2091949
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.015bar.json",
+      "sha256": "69a97b3c0ff278dfb2e319a59d21277be3968eabd5f9d3e8ea67a3abd5c0d269",
+      "bytes": 56697
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.015bar_accepted.npz",
+      "sha256": "d20ea31f104bdf0227cc6c3da8c968edbd825da0fa698900967e1190ae0cb0e6",
+      "bytes": 119468
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.020bar.csv.gz",
+      "sha256": "9e337dd0289c0365a6ccd69bad73359e3c84d3cbee51cc24cd7df78381326201",
+      "bytes": 2093090
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.020bar.json",
+      "sha256": "ffa15fd490bda601f11feb2a116d6cc1b72c7d6e620da61481e730d4a5e8740a",
+      "bytes": 56677
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.020bar_accepted.npz",
+      "sha256": "8fb67f1201d3fd33cd221fa591d073e31b68957a4d7c6aff503ad7a5ed830424",
+      "bytes": 119800
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.025bar.csv.gz",
+      "sha256": "6f1c2d0b8f4c642a654f97464972d43c1845734a6fb6f09afc80e9cd7d2204ad",
+      "bytes": 2091290
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.025bar.json",
+      "sha256": "90cb4a67fc7cf1c556250b6274f9d4b64f6fb2bd857b130e1c0ed529784601ef",
+      "bytes": 56267
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.025bar_accepted.npz",
+      "sha256": "55e475475a8343226abff1edec1d017826a4cc3854f1e1bc1fe9c747e9ede257",
+      "bytes": 120221
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.030bar.csv.gz",
+      "sha256": "28e293a41f3c1d7d828c17cfef67bf5214981668e90d8ab0ad4068bb698449be",
+      "bytes": 2105623
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.030bar.json",
+      "sha256": "dc8f931b262303d7a67ac712ac36e507a01016afdc09c0199aeb1d6fc27b65f5",
+      "bytes": 56417
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.030bar_accepted.npz",
+      "sha256": "5800f471233a71cbdd51e4c0f094c58090be664a900298cd01c100acc9fdd64b",
+      "bytes": 121089
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.035bar.csv.gz",
+      "sha256": "c8b5fe14c24c4ddbcb26b087d753285d615645053b9939fcfbb434aa090822d1",
+      "bytes": 2126240
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.035bar.json",
+      "sha256": "1411d739c3ea95c3b1a7015c0fb8cf036a43b0f6ed2f65433f82dd8ca7edc67a",
+      "bytes": 55964
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.035bar_accepted.npz",
+      "sha256": "eec5d2fff36667e72743a342568e45b94409038c2b33f4cf8299ea1e57ba2d91",
+      "bytes": 122998
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.040bar.csv.gz",
+      "sha256": "f06d6987423465da52e37e91f48db5dc22342e021e824a0b7dae0e68d2875474",
+      "bytes": 2146010
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.040bar.json",
+      "sha256": "152085f99c4656f6bf4205d10408f2c85a13507496d24b874a74e148b0045316",
+      "bytes": 55228
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.040bar_accepted.npz",
+      "sha256": "d96723ef672778ea02b25664f6746ade5b52985405134233774a20825bbdd029",
+      "bytes": 124775
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.045bar.csv.gz",
+      "sha256": "51192e4a66176388dbac8aa5493f0a9c92628774fec2fb9bda966ab82001c2c0",
+      "bytes": 2128849
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.045bar.json",
+      "sha256": "91434b536c32afb9b2fb241287b3927598bd087658bcb03a3279fc5757ced50c",
+      "bytes": 55210
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.045bar_accepted.npz",
+      "sha256": "d4747381d0a34bee03ecb737868e5a885d812191a62fd80943cfa01a674be003",
+      "bytes": 123734
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.050bar.csv.gz",
+      "sha256": "1c881a1b1717090feefd3a4dc73a145b21848f8a68fc78b1187ec0566994ba02",
+      "bytes": 2210895
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.050bar.json",
+      "sha256": "e095a2614db10636b58a18f902c14784daafa317a30d0c9b409f45d070d9a0e6",
+      "bytes": 54191
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.050bar_accepted.npz",
+      "sha256": "4ce583a5b1c4ec191c2b578e791fbc534e89e889b624fac6a0c4eeb5feb1684a",
+      "bytes": 130655
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.055bar.csv.gz",
+      "sha256": "b726471e911820d6f6f039b183248b4876c674f9fed8a9941ac558b1c1a2401b",
+      "bytes": 2251107
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.055bar.json",
+      "sha256": "1137cb8db09092b2985c24bbdba556d95a9a115e1ad3d4e3089b0e33a82193fd",
+      "bytes": 53572
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.055bar_accepted.npz",
+      "sha256": "e0da1f1df67443058d1b97cb8ffb3238a8d71f667f96a7043a313d3b5af262ee",
+      "bytes": 133939
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.060bar.csv.gz",
+      "sha256": "fbd4b3ad6da1a40de4a198078fd111d411ad25809529a9708bc7d391659e6d18",
+      "bytes": 2286285
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.060bar.json",
+      "sha256": "edd884aca8f2fa8f8728fb8d5ef9a34fad6951616102a3f10a4fc95dce3f538e",
+      "bytes": 53006
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.060bar_accepted.npz",
+      "sha256": "469650d1a7951c121751ac20780bfe91aeedc9c8af5c97c3c55c31357dd66b94",
+      "bytes": 137190
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.065bar.csv.gz",
+      "sha256": "fbb47087fb2f24d07b92ffeba435e79544a152f0d5e80c5ec53d40232fd95d3d",
+      "bytes": 2302997
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.065bar.json",
+      "sha256": "310d733ca71b14ee9f6eb6b08021d999e3ea573f327da1a5dbf17e4a37f61993",
+      "bytes": 52221
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.065bar_accepted.npz",
+      "sha256": "474dafd12ca82edd14a4ba1e25c705f3cc3aa6f2a3d8e5fffaab6a1b27229952",
+      "bytes": 139031
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.070bar.csv.gz",
+      "sha256": "508a2bbfde456fa3ecdd28f52da683adfdb1cdc1dd6b56b26e39b18053440c31",
+      "bytes": 2283262
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.070bar.json",
+      "sha256": "c8e0b9b9c529d3c9d58258cc386d22082edc2bb0c8729d622dd49480c67b2a27",
+      "bytes": 52704
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.070bar_accepted.npz",
+      "sha256": "2ae0f8888ab74ace73ce81b58b7b850c363f72b297c2f0373baf495b559e4252",
+      "bytes": 137272
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.075bar.csv.gz",
+      "sha256": "128af4d4b825f03c64af6636055eacca3a7f99e3d5ad0837fca7bfb8b4592ad7",
+      "bytes": 2322610
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.075bar.json",
+      "sha256": "d83f05c006270d4a3bb6585d5568b6e228602addd12f7481f954a48839ea01d5",
+      "bytes": 51462
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.075bar_accepted.npz",
+      "sha256": "62079b2a8e1cf56591f6b91841b4ea41305e11515f079538804eb90ea598dc14",
+      "bytes": 141173
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.080bar.csv.gz",
+      "sha256": "56ed73f2f9ab37e44f86bc0eabbf88387a361db51f3fdfc035ce0aa78e22524f",
+      "bytes": 2408919
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.080bar.json",
+      "sha256": "a0b7c1e7e56e5e09e6e74965a3e6c0a74e63a3efe1be999f7c50868e8582359a",
+      "bytes": 48701
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.080bar_accepted.npz",
+      "sha256": "29dd68d7f68903594214c7c43bb8daecbdc2c9512517ea9126eef0e676f3d6e3",
+      "bytes": 149815
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.085bar.csv.gz",
+      "sha256": "b541bd6b474ff20d9d7c03d63eb5a4695f8a48d734e20f221a5c71339fb13c5a",
+      "bytes": 2371475
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.085bar.json",
+      "sha256": "af4f655b10b8c280754ccde149c6eaf85bcc98f63d353032bdface4fc3f4f9f2",
+      "bytes": 50368
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.085bar_accepted.npz",
+      "sha256": "44d918f9cae4ca4e18c5570d0a188c6e524d8741ca5d9b372f7934852a305865",
+      "bytes": 145688
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.090bar.csv.gz",
+      "sha256": "d7bdd557443f274058107009e7abaf050e79843f44a1a2beeaa208b476cd9fd8",
+      "bytes": 2365798
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.090bar.json",
+      "sha256": "d69dff4c965a348d948ba9118de0b2508894b0af53e52cb54c29f4ff4b97c735",
+      "bytes": 50558
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.090bar_accepted.npz",
+      "sha256": "aafa9affe34a0f595ef9863ca535480339dbdbdde5b1525d407e1975ff69bfa4",
+      "bytes": 145567
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.095bar.csv.gz",
+      "sha256": "6a1d82abde40e0af5069085053807e86eb32b37210b9915a4116d5a6466b57b0",
+      "bytes": 2523403
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.095bar.json",
+      "sha256": "26abbad00c05de4cb8e9ba72e232cf4448abbe97a05b8377bb84114bae8628f4",
+      "bytes": 42830
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.095bar_accepted.npz",
+      "sha256": "b98b451323d473fd7a24cf04bbb4ab26977bf7fe6d06fa1507b8c281c9c51191",
+      "bytes": 162163
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.100bar.csv.gz",
+      "sha256": "922843a5fc6d3a9626970a735059e2853cf64bae06b93f3282ef00736c6e3b6b",
+      "bytes": 2527650
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.100bar.json",
+      "sha256": "9737c79c7111b53c7658300ef3ca7a1137cd6e1d58d2f449044d19301645afc4",
+      "bytes": 45953
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.100bar_accepted.npz",
+      "sha256": "81c75af62f5e80428914de4c1cc41d496c5e7dc426b3ccd803fa17e7c269743b",
+      "bytes": 160642
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.105bar.csv.gz",
+      "sha256": "6c242c61c50e9b8da3a4833e7ff6b28db51ac2ef2608cdd84517cc6e749285cf",
+      "bytes": 2464862
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.105bar.json",
+      "sha256": "7a3b565484abc1e82a3499278cfbc119ae4fadf0ab6b48cacf39ce75b8e19c1b",
+      "bytes": 46084
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.105bar_accepted.npz",
+      "sha256": "cb11628b7ba1679347e1ed4da123ac19698f49eac53737bf5936c94088391201",
+      "bytes": 155759
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.110bar.csv.gz",
+      "sha256": "29f09b8880031aa665d8c9d6b4ea1c7a82b23bcad7f1d0645f1b957bd54f311c",
+      "bytes": 2593136
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.110bar.json",
+      "sha256": "06bb52e05ff64931c788f46398f6c4ede069db3a568d5aa9c2ea5c695c2e44d4",
+      "bytes": 42867
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.110bar_accepted.npz",
+      "sha256": "67ecae44984c714ce67b17dda981baa53cac0d4b2c03194708745c35188ab703",
+      "bytes": 167935
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.115bar.csv.gz",
+      "sha256": "d212f4944a713422ccc2c19ffe18523bbb8464ff972fd60ed5b120cdd2702938",
+      "bytes": 2517008
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.115bar.json",
+      "sha256": "d9f54a3a3e993200818c20e737468e54f1bcde1133b569061de1cb397666105c",
+      "bytes": 45506
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.115bar_accepted.npz",
+      "sha256": "f1d4a9c887ea25c9a195dfdd5b2f33d0930b8ef7dd64da26ad46e0d0903cb400",
+      "bytes": 160186
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.120bar.csv.gz",
+      "sha256": "98d54aee83419c05f5676a6b72276191bba6612d9d0c70b7cacd5a51e657cd3d",
+      "bytes": 2606600
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.120bar.json",
+      "sha256": "c1e85d5ea4c0b6576978e0e452e2ac475581e245641fb1f98356317c47be362e",
+      "bytes": 40858
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.120bar_accepted.npz",
+      "sha256": "2a8f53432aefe9742161590030765ce219052fad01a6635b4144ecf60e9bf506",
+      "bytes": 170139
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.125bar.csv.gz",
+      "sha256": "dd3e8489d763e8956726a0c10b9ce76b06478a3f4ec5e66f2c70b5c3c6838c48",
+      "bytes": 2605947
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.125bar.json",
+      "sha256": "aaeb828f7a7546a14887e323de073bb39f3398249244c3aedc790b66f369185b",
+      "bytes": 39589
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.125bar_accepted.npz",
+      "sha256": "cbc1f1137831819552047950c47aa815f74ef9a317cd781d51da67d8b521ed02",
+      "bytes": 170467
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.130bar.csv.gz",
+      "sha256": "ec8e48709a4c501f1dc0b2fb386034eb9400549847f4e5738850c6e3e6994f51",
+      "bytes": 2674155
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.130bar.json",
+      "sha256": "b4f2a9c5efde138b122336510be6d74212cb6685b0156f8c50a056cddc3176bd",
+      "bytes": 35627
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.130bar_accepted.npz",
+      "sha256": "ceb0d532a1424909575d03b33873763530ee6e6cc285b21dfaf7baa15ec287e9",
+      "bytes": 178276
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.135bar.csv.gz",
+      "sha256": "2c7050c14487be46e905a751c4c14ab82c06c70c658ebda806ce0d63d41585a8",
+      "bytes": 2619574
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.135bar.json",
+      "sha256": "e5debd3184da4ac17e88e390802b8a705602c771c7e1d63e98b2249357c22feb",
+      "bytes": 40385
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.135bar_accepted.npz",
+      "sha256": "e0dafca137b402d78e15a3ee41cd4869409761a85e9ec7c109b375204952fbde",
+      "bytes": 171397
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.140bar.csv.gz",
+      "sha256": "16afc8a7ec84c362659c4f61c9bc5e1182fcaaa460ef1038f56f14f7454f5ddc",
+      "bytes": 2565851
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.140bar.json",
+      "sha256": "317b7abe3e130591f49fad9cd78236ddddff0f0a79819e1d0a27c9e1a1ad7104",
+      "bytes": 20803
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.140bar_accepted.npz",
+      "sha256": "23dc509f0a5ddf8cef178b0352e328890d814db6ea7066fa48c20b69ae2a7de1",
+      "bytes": 178584
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.145bar.csv.gz",
+      "sha256": "828ace6e3391e3efb8918d43e4b4810f14f5473250c4872fcbbb990a2ffc2dee",
+      "bytes": 2649542
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.145bar.json",
+      "sha256": "b15688a86c7a5c83cd99bf89a065bff41c811b97971a297a606543550fc97ddf",
+      "bytes": 34050
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.145bar_accepted.npz",
+      "sha256": "0a7b2819e1a03195151cb9374cc4030b8daba6279760f15df79320988fa317f2",
+      "bytes": 177619
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.150bar.csv.gz",
+      "sha256": "29e53cecf9ae2bf43cf31dc73344815c7d1d7eed1356910ebc9f83e0a4398931",
+      "bytes": 2573358
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.150bar.json",
+      "sha256": "78377e271c83ecdca120cb987cbb8d0edb7eed9dbabe146e3bd824d6e5388ad5",
+      "bytes": 20485
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.150bar_accepted.npz",
+      "sha256": "71772a29972bed9f429c9d5866f58e08f64bbe0c2ffd6e13760644878f471f5d",
+      "bytes": 179482
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.155bar.csv.gz",
+      "sha256": "9b44eacc5abffa7edb2c69eb9815125c6f5fe79fc78e560134da5bb258bf13a3",
+      "bytes": 2514163
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.155bar.json",
+      "sha256": "02bf6cc37f478d140e3f40df0820ae7a0645100edf239f4a482cf9ea459d443f",
+      "bytes": 18609
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.155bar_accepted.npz",
+      "sha256": "7a641e6e6636274b2c42d4e8bb76f9d4876fb8e0e8416912c2f72de832edf549",
+      "bytes": 176055
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.160bar.csv.gz",
+      "sha256": "ec70a564a45f1034edbcd4261bd40038c0d2ef27e5646bc4b970d8d31824eb23",
+      "bytes": 2699228
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.160bar.json",
+      "sha256": "af7086d5f275e24c9e3708b2a828ec1083b70f3fc8aae74e14fb427218eac93b",
+      "bytes": 35755
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.160bar_accepted.npz",
+      "sha256": "2a3a60a12f991c217520edb544223d795cb73522783fb9a2041e3ead6095f25a",
+      "bytes": 179956
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.165bar.csv.gz",
+      "sha256": "c02dc0588f394ef152585af3ad6d140aa3e1c5779da6601075a0eab1c1708e6c",
+      "bytes": 2715881
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.165bar.json",
+      "sha256": "7607b66d3317130943946c6b8d8faacd280fd235f6c838c16d38e1351a2d8337",
+      "bytes": 25090
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.165bar_accepted.npz",
+      "sha256": "4c0ed715e31a762e068ab70d77143f83af7f934018052398191ddc0812eace84",
+      "bytes": 188130
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.170bar.csv.gz",
+      "sha256": "b6497cef762ce6d4e818b76604a235234dabeaf43b1dc28d643218d8a9d296bb",
+      "bytes": 2580378
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.170bar.json",
+      "sha256": "60c03c07a2ecfa7ab4341def535a9afbe48a9f96ab3aa790214478703cff11a2",
+      "bytes": 18436
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.170bar_accepted.npz",
+      "sha256": "e00d0d3765daaee99358344293460c5b12ce6a2c2818ffe5e57b9f7ee7155dc1",
+      "bytes": 181639
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.175bar.csv.gz",
+      "sha256": "3a66c3853cecb85c3f5b9682abef5117e948429d79ab223f3d01ef9a05e26511",
+      "bytes": 2669855
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.175bar.json",
+      "sha256": "f0ea3ac3abd38f9cbde6896482465bfef0c6f4c912763bf4602fe84758fcbc08",
+      "bytes": 36648
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.175bar_accepted.npz",
+      "sha256": "1cb217487fc4e71eef02a996e3ac358332cd20e5941664326bde92513047df33",
+      "bytes": 177211
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.180bar.csv.gz",
+      "sha256": "5070340bc4afe49f6f6caf73449a0a57ae3f49d430519236fa6a8e966c3bb077",
+      "bytes": 2617944
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.180bar.json",
+      "sha256": "f58797b961d59488ea7e98f446e65cbc2d50e8c4d018d93d8eaf3fb3b860d604",
+      "bytes": 19368
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.180bar_accepted.npz",
+      "sha256": "f126b2906770ff71ae0405ce5e5ebbd3b13667e744ae0973b885aa241e8e943a",
+      "bytes": 184444
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.185bar.csv.gz",
+      "sha256": "12b2ddb1616b120572872b25ba4ead8fc0d614236a0f0d4e587312273e1805fc",
+      "bytes": 2441218
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.185bar.json",
+      "sha256": "567ed7cc34fa29252c1e65253e196777c858f56c56fbeef3d00f8fe151ff5c03",
+      "bytes": 14914
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.185bar_accepted.npz",
+      "sha256": "203234c16ce1070f4d7d5573afb8e007b27084301ffc376eda35554a29dd474a",
+      "bytes": 169249
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.190bar.csv.gz",
+      "sha256": "f960e8184ad9d2a79c13fba6e8619bbd668e829f1c35b13f651f975118a0cd08",
+      "bytes": 2594512
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.190bar.json",
+      "sha256": "7f175954a551cb09f3cecea9167c1e90ce736647bff6f1e9bdc043a5ec3e1d3f",
+      "bytes": 18297
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.190bar_accepted.npz",
+      "sha256": "1f88c7c1543f84854bb7694d593f29b4f4f31c811861389c4ec64259674d1315",
+      "bytes": 182769
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.195bar.csv.gz",
+      "sha256": "9930eebf2576648216e5a2c54cf591d298c9b73cda03beec9558674078bc9104",
+      "bytes": 2739324
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.195bar.json",
+      "sha256": "8c72eb868662a10e310c910f51861e2381e9cb07e46f8c0e8c8eb04ff52cf853",
+      "bytes": 32957
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.195bar_accepted.npz",
+      "sha256": "71c34773e6bfacd429b04abce4ca92c38490cb6309d1441a293d351dc0340086",
+      "bytes": 184652
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.200bar.csv.gz",
+      "sha256": "1470a3f81a74d5e0b19c0024b12926c49f7ae20e37951fe4bc0eb5b5d14ce342",
+      "bytes": 2449449
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.200bar.json",
+      "sha256": "8867696668e4fd8457cd068fb4e340f74451c1e0a2d41f1bd5d15cfda648206b",
+      "bytes": 14301
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.200bar_accepted.npz",
+      "sha256": "c655ad83110c9c8aa641e754d8ed5e1d0a12a8690727bd1d225aa196890c9483",
+      "bytes": 170382
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.250bar.csv.gz",
+      "sha256": "8b92bed1bf9bc3661027a11d33564c4bb416fc4a243fb84a02393e93f62fc86f",
+      "bytes": 1989307
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.250bar.json",
+      "sha256": "3efba29d3e617c95cc37e835e9d5cb32d9c8c00653da4035533e0b7a9de302ef",
+      "bytes": 10896
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.250bar_accepted.npz",
+      "sha256": "d0133f738a38ab1fa937ee45c34b2e1fb94327a758b95434ed490a1713c349d9",
+      "bytes": 132307
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.255bar.csv.gz",
+      "sha256": "0736aa48a920348d7825335d614f697794ea1f62531cf48a1245c99282356328",
+      "bytes": 1962720
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.255bar.json",
+      "sha256": "11c9a0edc1950d9faed9c891f7644e1c2143c472899fe1a0479360205435b55c",
+      "bytes": 10283
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.255bar_accepted.npz",
+      "sha256": "58fdbe52de5b6ebacc3882bab575070db801cfccc109ecc8f41b8cef035f2c6a",
+      "bytes": 130710
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.260bar.csv.gz",
+      "sha256": "d2d23e6a063b5fc85de920737c320359e745222fdbd57a9e21fe216775d0b1ec",
+      "bytes": 2424297
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.260bar.json",
+      "sha256": "8474a21e196363750038d68ae8ed3246444a833abab4653a5d8c9a08feb914dd",
+      "bytes": 12423
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.260bar_accepted.npz",
+      "sha256": "36a6c314a28dacaa6d5739a6823e84a284b68c62f1c621b40cf7580d9d61573f",
+      "bytes": 173043
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.265bar.csv.gz",
+      "sha256": "1358c794ea50b0ea813c820c624c27ab965310f280e1a2f85beb31b363f6f20e",
+      "bytes": 2350332
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.265bar.json",
+      "sha256": "dbf333a11c6a7d92467dcc12ff54fc8d6ecc235d885ae5e35914604f65519c79",
+      "bytes": 11210
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.265bar_accepted.npz",
+      "sha256": "a3bad06c886bc94e3e143394537cc16394dac35eb8f86df0dcfc3bc186c31886",
+      "bytes": 164413
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.270bar.csv.gz",
+      "sha256": "96df345c3c44d1d842f2443382646c7ba61c2819f84a5a565b9a76f91e7f3a80",
+      "bytes": 2485020
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.270bar.json",
+      "sha256": "942151aefd686180d82a0bc9eb6ad7a4738ef53524f269d56f93ca493ee0c196",
+      "bytes": 12592
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.270bar_accepted.npz",
+      "sha256": "9d11ef894235faa157613630f65bbe7d8aac316341847cb94550823d685235dd",
+      "bytes": 177606
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.275bar.csv.gz",
+      "sha256": "d3bb61155790c63d384917473c26edd4487852dff187869f62fcb60a22a1b52e",
+      "bytes": 1977835
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.275bar.json",
+      "sha256": "7a7eb0b4a46a6c3ebca608e6178f97c4a314e522293fe4942414e79049a0be8a",
+      "bytes": 9971
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.275bar_accepted.npz",
+      "sha256": "eea21f5d6f2c92737f155af4d634098fa1b0245bc9d629c04c07a9500a800b34",
+      "bytes": 131978
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.280bar.csv.gz",
+      "sha256": "985bf58ec5c571f08a668c0c98bf8b16c5ff770922ce011d82e6ca498421bcb1",
+      "bytes": 2512233
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.280bar.json",
+      "sha256": "be1ca515b19922c7265caed6fa3f47185e9a64bd0acee56117a2dfba95c41e7b",
+      "bytes": 17063
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.280bar_accepted.npz",
+      "sha256": "c1055691fb5e8ad956c6038c0a9add2b458510ac31a3490a1fb9684320ebb5e4",
+      "bytes": 177327
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.285bar.csv.gz",
+      "sha256": "cb6671e9c7475db7766818e4c7254031ef80e1730ed7c6def7ddf7ab4b2f5c44",
+      "bytes": 2393070
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.285bar.json",
+      "sha256": "8769f7e7479394e4be3c70eef4ee99ad0c5195f67ce4f79454ad34cd661d7d5a",
+      "bytes": 13228
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.285bar_accepted.npz",
+      "sha256": "f22d4297db2367973d3f022b0447987281643870f52837d8c01f886f778c1bc1",
+      "bytes": 166414
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.290bar.csv.gz",
+      "sha256": "9c6f9b0af42213995a2ee63d1911adce8e920aeb17dbdc5e0c89ed08df13c2b5",
+      "bytes": 2528407
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.290bar.json",
+      "sha256": "46156f8ea5d27d8ce4dfa9f7240c9c8c26fa299541eacab49d00c78bf9a30979",
+      "bytes": 15045
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.290bar_accepted.npz",
+      "sha256": "16677b61e5463cb8ce39bc49ada155d949c057acf5225b15036ff644c5ddae5e",
+      "bytes": 179651
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.295bar.csv.gz",
+      "sha256": "b8523de899afea41dc53c1aba1a5316a33882caf8716d0a91d7742405faa24ce",
+      "bytes": 2478905
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.295bar.json",
+      "sha256": "a04d32030d46af170e3c74146bcb356dac44b9275d46211ba9fe1aff7b163c91",
+      "bytes": 14172
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.295bar_accepted.npz",
+      "sha256": "9a91a8c85a567ac8743b43b4ae520427d1318ce0fc39624ddec312a11be32f81",
+      "bytes": 176854
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.300bar.csv.gz",
+      "sha256": "b2e8086631c8edc6f80a493312a5525ba371a7919c5609ab1fcd5589f5cd8672",
+      "bytes": 2648305
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.300bar.json",
+      "sha256": "b060ad11b2eb9ae8ffd374a464c20ad01b99084d41a30604d83bca22fcdfa508",
+      "bytes": 20319
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/trajectories/RP_1.300bar_accepted.npz",
+      "sha256": "5b3dd7bea6f27bc78ed94d03f0b018cf01fc1fba3c0175fa6e964f569b15de0d",
+      "bytes": 185864
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/validation.md",
+      "sha256": "e7f3d9fce53143e059811e739d29f2033c3f6397d15d565a66965b25f3361ef1",
+      "bytes": 4806
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/results/visual_qa.json",
+      "sha256": "73a44e1459f91e247fb61395ecceeee4027a69ede7ed09535d350bd444df013a",
+      "bytes": 1625
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/__init__.py",
+      "sha256": "fa3b2651f3bdd58566196be7074ad45616627fcd4e6d5741bab541cce241d48a",
+      "bytes": 78
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/audit.py",
+      "sha256": "83b3dbd5a1d9825b8d6e12836f326b2a3a61463935301ead3844ec729cc1f818",
+      "bytes": 9920
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/experiments.py",
+      "sha256": "8f8ee62f366df50c76754aada8e54665ce25c162211210f7e57adc7238de4c3e",
+      "bytes": 13085
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/extended_validation.py",
+      "sha256": "0660baa47f77493db4a628a78ea92ccc31fd4581508990194452bf542c5d955e",
+      "bytes": 3782
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/manifest.py",
+      "sha256": "e307edeccebd4f5be829225ddf7c7a10da9c6d4d3607bb76163e2646004a2309",
+      "bytes": 1078
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/model.py",
+      "sha256": "1dfdb8c8f86e1741e20a9f1cd8b65f42e7cb74a77be9e05452ce12a9efc7b7c1",
+      "bytes": 12167
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/src/presentation.py",
+      "sha256": "5f0ec0b71ef39dd7546d68cab06cf13002b3c9c042f300a76da8b9918bf8c003",
+      "bytes": 15423
+    },
+    {
+      "path": "Mini_Research/02_Compressible_Bubble_Dynamics/tests/test_model.py",
+      "sha256": "40dd4bfbf53b33c0e8a51f02d98768c04929b780664daa46c3aa0f23c51f098a",
+      "bytes": 8990
+    },
+    {
+      "path": "Plasma-plan.tex",
+      "sha256": "6fd07a40ba7467a934b6f52e2bd025ebd19cdf1af7715251d03dc0ebd002928d",
+      "bytes": 24679
+    }
+  ]
+}

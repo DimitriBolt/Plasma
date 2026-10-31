@@ -1,0 +1,153 @@
+{
+  "summary": {
+    "mechanics": "KM",
+    "thermodynamics": "B_one_way_post_processing",
+    "Pa_bar": 1.15,
+    "gas": "air_like",
+    "gamma": 1.4,
+    "T0_K": 293.15,
+    "kg_W_m_K": 0.0264,
+    "eta": 0.0,
+    "completed": true,
+    "extrema_scope": "global_on_requested_interval",
+    "last_time_s": 0.0001666666666666667,
+    "observed_Tmax_K": 1966.8239318396184,
+    "global_Tmax_K": 1966.8239318396184,
+    "t_Tmax_s": 1.56643194636936e-05,
+    "peak_cycle": 1,
+    "R_at_Tmax_m": 1.2281599445654596e-06,
+    "t_Rmin_s": 1.56643194636936e-05,
+    "Tmax_minus_Rmin_time_s": 0.0,
+    "pg_at_Tmax_Pa": 96402965.95855036,
+    "max_pg_Pa": 96402965.95855036,
+    "V_at_Tmax_m3": 7.75985125688205e-18,
+    "density_at_Tmax_kg_m3": 170.7808700764484,
+    "max_wall_Mach": 0.10407059425845427,
+    "pressure_bulk_modulus_proxy": 0.04387341798369292,
+    "tau_thermal_at_peak_s": null,
+    "tau_thermal_at_R0_s": null,
+    "signed_heat_loss_J": 0.0,
+    "work_by_gas_J": -2.742390362252524e-11,
+    "source_energy_J": 0.0,
+    "energy_residual_max_J": 7.484616505176753e-15,
+    "energy_residual_scaled": 4.703056507631731e-06,
+    "solver_status": 0,
+    "solver_message": "Reached requested end time",
+    "accepted_steps": 4095,
+    "nfev": 70535,
+    "numerical_status": "tolerance_and_step_checked",
+    "applicability": "conditional_model_based_estimate",
+    "max_abs_pressure_relative_mismatch": 1.4432899320127035e-15,
+    "pressure_mismatch_at_Tmax": 4.440892098500626e-16,
+    "duration_above_1000K_s": 2.657667682983756e-07,
+    "duration_above_10000K_s": 0,
+    "duration_above_100000K_s": 0,
+    "duration_above_1000000K_s": 0,
+    "run_id": "one_way_KM_1.150bar_air_like_eta0",
+    "runtime_s": 5.884574390016496,
+    "numerical_peak_difference_relative": 0.0
+  },
+  "gas": {
+    "gamma": 1.4,
+    "T0": 293.15,
+    "Tl": 293.15,
+    "kg": 0.0264,
+    "molar_mass": 0.02897,
+    "name": "air_like"
+  },
+  "eta": 0.0,
+  "settings": {
+    "method": "DOP853",
+    "rtol": 2e-09,
+    "steps_per_period": 600
+  },
+  "source_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "hot_intervals": [
+    {
+      "threshold_K": 1000.0,
+      "duration_s": 2.657667682983756e-07,
+      "hot_volume_time_m3_s": 6.940260185686647e-24,
+      "intervals": [
+        [
+          1.5656947477098674e-05,
+          1.5673116103836998e-05
+        ],
+        [
+          1.8172325409011997e-05,
+          1.8191092094024246e-05
+        ],
+        [
+          1.993946954260885e-05,
+          1.9957556341598765e-05
+        ],
+        [
+          4.895489867316582e-05,
+          4.897140703406649e-05
+        ],
+        [
+          5.1468882842915766e-05,
+          5.148774246031091e-05
+        ],
+        [
+          5.323715193694798e-05,
+          5.325506853812682e-05
+        ],
+        [
+          8.231991600319579e-05,
+          8.233617500436753e-05
+        ],
+        [
+          8.483290491245332e-05,
+          8.485169905415185e-05
+        ],
+        [
+          8.659960785772421e-05,
+          8.661764531910429e-05
+        ],
+        [
+          0.0001156280816014382,
+          0.00011564453864350846
+        ],
+        [
+          0.00011814187803243668,
+          0.00011816072433143993
+        ],
+        [
+          0.00011990983124262927,
+          0.00011992777381471473
+        ],
+        [
+          0.00014898136151473754,
+          0.0001489976615703457
+        ],
+        [
+          0.00015149452859373393,
+          0.00015151333364050602
+        ],
+        [
+          0.00015326149479780087,
+          0.00015327951325609453
+        ]
+      ]
+    },
+    {
+      "threshold_K": 10000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 100000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    },
+    {
+      "threshold_K": 1000000.0,
+      "duration_s": 0,
+      "hot_volume_time_m3_s": 0.0,
+      "intervals": []
+    }
+  ],
+  "interpolation_version": "round_trip_v1"
+}

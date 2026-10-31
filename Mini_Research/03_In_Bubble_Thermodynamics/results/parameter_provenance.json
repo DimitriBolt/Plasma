@@ -1,0 +1,45 @@
+{
+  "source_commit": "f1f3e812d77fd7fa058ce111ff484b1c8658f937",
+  "MR1_commit": "d59bc0d0119b514152f763e2537a0477c7c63663",
+  "water": {
+    "R0": 6e-06,
+    "f": 30000.0,
+    "p0": 101325.0,
+    "rho": 998.2,
+    "mu": 0.001002,
+    "sigma": 0.07274,
+    "pv": 2339.0,
+    "kappa": 1.4,
+    "c": 1482.0,
+    "floor_fraction": 0.001
+  },
+  "gas": {
+    "gamma": 1.4,
+    "T0": 293.15,
+    "Tl": 293.15,
+    "kg": 0.0264,
+    "molar_mass": 0.02897,
+    "name": "air_like"
+  },
+  "pg0_Pa": 123232.66666666666,
+  "n_mol": 4.574505175402617e-14,
+  "Cv_J_mol_K": 20.786156545383104,
+  "E0_J": 2.787457250032415e-10,
+  "conductivity_source": "Huber, Thermal Conductivity of Gases, NIST table, 300 K",
+  "conductivity_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=926438",
+  "conductivity_note": "Air 0.0264 W/(m K) at 100 kPa; argon 0.0177 W/(m K), dilute limit. 300 K values held constant even though T0=293.15 K. Phenomenological sensitivity, not high-T properties.",
+  "gas_inventory_note": "n fixed by equilibrium for each T0; same n for air and argon at equal initial state; molar mass affects mass density, not the number of moles.",
+  "eta_values": [
+    0,
+    0.1,
+    1,
+    10
+  ],
+  "eta_note": "Uncalibrated decade sensitivity around geometry estimate eta=1.",
+  "source_power_W": 0,
+  "python": "3.14.4",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "pandas": "2.3.3",
+  "interpolation": "New C1 cubic Hermite R(t), nodal slopes=stored U; U(t)=dR/dt; event-aware CSV primary, accepted nodes and thinned exports are resolution checks; no extrapolation."
+}
