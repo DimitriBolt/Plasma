@@ -91,7 +91,36 @@ references retain full accepted states for paired reconstruction. The earlier
 archive, not the smaller public subset. Set `MR7_DATA_MODE=full` only when using
 or regenerating `results/raw`; that directory is deliberately ignored by Git.
 
-For the nominal pulse, the stable Level 3 changes are about **1.41 µK at 1.0 bar**
-and **2.18 µK at 1.15 bar**, conditional on spherical source averaging and an
-unverified prescribed particle position. The late 1.15 bar tail is unresolved
-under refinement. Static integrated transfers do not validate local Au heating.
+## Numerical completion and physical applicability
+
+The reported finite nonlinear increments retain their original numerical values:
+
+| Amplitude | Five-cycle change | Numerical completion | Physical applicability |
+|---|---:|---|---|
+| 1.00 bar | +1.4088163 µK | Complete, five cycles | Conditional reduced-model result; prescribed AuNP retention at a 100 nm gap is not physically validated |
+| 1.15 bar | +2.1848791 µK | Complete, five cycles | Formal fixed-composition scenario; not a validated physical gas state |
+| 1.30 bar, wet | undefined | Censored at 6000 K gas-coefficient boundary | Formal, incomplete trajectory; no global five-cycle difference |
+
+For 1.15 bar, prescribed far-field absolute pressure becomes negative during part
+of each period, gas pressure reaches approximately **1.30×10⁸ Pa**, and fixed
+composition omits dissociation and ionization. Phase changes and the applicability
+of first-order mechanics and incompressible liquid transport remain unresolved.
+Negative liquid pressure alone is not a mathematical proof of impossibility:
+metastable tension, cavitation and its stability are separate physical questions.
+Completing numerical integration does not resolve them.
+
+In the matched static comparisons, MR7 predicts peak Au temperature rises of only
+**21–30% of resolved finite-Au MR6 values**. Integrated gas-energy delivery differs
+by about 0.04–1.68%; that agreement does not validate the local Au temperature
+field. Melting, boiling and nearby phase-transition thresholds in MR7 are
+diagnostic references and cannot establish physical admissibility. The static
+discrepancy is not a universal error bound for the moving model.
+
+The late event-centered 1.15 bar response changes by **89.6%** from 48 to 96 cells
+and remains **unresolved**, distinct from the stable early response. Wet 1.30 bar
+censoring is preserved; 6000 K is not a physical ceiling and no missing tail is
+filled. Dry formal baselines remain 6263.579 K (air) and 22808.716 K (constant-Cv Ar),
+not temperatures of the wet bubble or experimentally achieved states.
+
+[Final acceptance editorial checks](results/final_acceptance_review.md) describe
+the current correction separately from historical full-archive verification.

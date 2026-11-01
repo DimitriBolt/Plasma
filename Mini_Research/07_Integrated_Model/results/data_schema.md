@@ -116,3 +116,10 @@ channel scales are J and dimensionless ratios to observed frozen sensible
 energy. They overlap and are not additive reaction or phase-change predictions.
 Boolean material/optical/Mach screens are diagnostic conditions, not evidence
 that omitted local fields, retaining forces or an experimental state are valid.
+
+The final report table presents two independent documentation columns:
+`Numerical completion` and `Physical applicability`. This does not change any
+CSV field or classification. `completed=True` records integration completion
+only. In particular, the 1.15 bar completed pair remains a formal fixed-composition
+scenario, the 1.00 bar completed pair remains conditional on unvalidated prescribed
+confinement, and the wet 1.30 bar global five-cycle difference remains unavailable.

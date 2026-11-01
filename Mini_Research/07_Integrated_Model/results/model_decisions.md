@@ -92,3 +92,22 @@ For censored gas histories, a variational temperature derivative at the fixed
 reference endpoint is a formal endpoint diagnostic. It is not the derivative of
 a five-cycle maximum, nor the derivative of the coefficient-censored maximum
 (which is fixed at the boundary value). Global derivatives remain unavailable.
+
+## Final presentation clarification (no model change)
+
+Numerical completion is separate from physical applicability. The 1.00 bar
+five-cycle pair is a conditional reduced-model result with unvalidated prescribed
+AuNP confinement at a 100 nm gap. The completed 1.15 bar pair is a formal
+fixed-composition scenario: far-field absolute pressure is prescribed negative
+during part of a period, gas pressure reaches about 1.30e8 Pa, and chemistry,
+phase change, mechanical accuracy and incompressible transport remain unresolved.
+Negative liquid pressure alone is not a mathematical proof of impossibility;
+metastable liquid tension and its stability are separate physical questions.
+
+The matched static Au peak rises in MR7 are only 21–30% of resolved finite-Au
+MR6 values. Agreement of integrated gas-energy delivery (about 0.04–1.68%
+differences) cannot validate local heating, melting or nearby phase transitions.
+Material thresholds remain diagnostic references; the static comparison is not
+a universal moving-model error bound. The 89.6% late-tail mesh sensitivity remains
+unresolved, wet 1.30 bar remains coefficient-censored at 6000 K, and dry extrema
+remain formal. No equations, parameters, arrays or results change in this note.

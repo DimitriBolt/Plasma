@@ -40,6 +40,13 @@ results/environment.json
 results/extra_controls.csv
 results/extra_controls_log.txt
 results/feedback_decomposition.csv
+results/final_acceptance_check.py
+results/final_acceptance_latex.txt
+results/final_acceptance_preservation.json
+results/final_acceptance_prompt.md
+results/final_acceptance_replay.json
+results/final_acceptance_review.md
+results/final_acceptance_tests.txt
 results/final_verification.json
 results/full_archive_final_verification.json
 results/full_archive_tests.txt

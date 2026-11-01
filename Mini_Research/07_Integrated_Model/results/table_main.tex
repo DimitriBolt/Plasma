@@ -1,10 +1,10 @@
-\begin{table}[H]\centering\small
-\begin{tabular}{lrrrrrr}
+\begin{table}[H]\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr>{\raggedright\arraybackslash}p{1.55cm}>{\raggedright\arraybackslash}p{3.1cm}}
 \toprule
-$P_a$ (bar) & $T_0^{obs}$ (K) & $T_L^{obs}$ (K) & $\Delta T$ ($\mu$K) & $t_0$ ($\mu$s) & $t_L$ ($\mu$s) & Scope \\ \midrule
-1 & 553.02304 & 553.02304 & 1.409 & 147.13186 & 147.13186 & full \\
-1.15 & 2798.2813 & 2798.2813 & 2.185 & 16.23774 & 16.23774 & full \\
-1.3 & 6000 & 5999.9999 & \textit{undefined} & 18.545314 & 18.545314 & censored \\
+$P_a$ (bar) & $T_0^{obs}$ (K) & $T_L^{obs}$ (K) & $\Delta T$ ($\mu$K) & $t_0$ ($\mu$s) & $t_L$ ($\mu$s) & Numerical completion & Physical applicability \\ \midrule
+1.00 & 553.02304 & 553.02304 & 1.4088163 & 147.13186 & 147.13186 & Complete, five cycles & Conditional reduced model; confinement unverified \\
+1.15 & 2798.2813 & 2798.2813 & 2.1848791 & 16.23774 & 16.23774 & Complete, five cycles & Formal fixed-composition scenario \\
+1.30 & 6000 & 5999.9999 & \textit{undefined} & 18.545314 & 18.545314 & Censored at 6000 K gas-coefficient boundary & Formal, incomplete trajectory \\
 \bottomrule\end{tabular}
-\caption{Cancellation-controlled nonlinear pairs, F=10 J/m$^2$, 10 ns, a=20 nm and prescribed 100 nm confinement. A checked reconstructed no-laser reference is shared. Censored observed maxima do not define a five-cycle difference. Direct independent subtraction and a full nonlinear Radau check are archived separately.}
+\caption{Cancellation-controlled nonlinear pairs, F=10 J/m$^2$, 10 ns, a=20 nm and prescribed 100 nm gap. Completion refers only to the requested integration interval; it does not validate a physical state. Censored observed maxima do not define a five-cycle difference.}
 \end{table}

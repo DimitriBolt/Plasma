@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "interval_s": [
+    0,
+    3.1666666666666666e-05
+  ],
+  "samples": 1001,
+  "R_max_difference_m": 3.0182665167188815e-13,
+  "Tg_max_difference_K": 1.5960019443284066e-05,
+  "water_max_difference_K": 1.030244703964064e-07,
+  "scope": "fresh one-cycle no-laser replay; not a rerun of all sweeps"
+}
