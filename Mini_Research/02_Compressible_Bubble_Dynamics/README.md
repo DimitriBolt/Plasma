@@ -2,7 +2,7 @@
 
 Five-cycle Keller-Miksis (KM) mechanics with the exact gas law and fixed water constants of accepted Mini-Research 1 (RP). Author: Dimitri Bolt. Academic advisor: Prof. Dr. Ildar R. Gabitov. No temperature, reactions, optical heating or nanoparticles are calculated. The general project plan is unchanged.
 
-The scientific report is [report/main.pdf](report/main.pdf); its English LaTeX source is [report/main.tex](report/main.tex). Numerical results and figures are generated from saved data, including formal extreme trajectories and explicitly censored incomplete RP solutions. The independent clean-snapshot checks are recorded in [results/clean_snapshot_verification.json](results/clean_snapshot_verification.json). See [results/validation.md](results/validation.md), [results/source_audit.md](results/source_audit.md), and [results/data_schema.md](results/data_schema.md).
+The canonical scientific report is [02_Compressible_Bubble_Dynamics.pdf](report/02_Compressible_Bubble_Dynamics.pdf), a byte-identical copy of the retained [report/main.pdf](report/main.pdf) compatibility file; its English LaTeX source is [report/main.tex](report/main.tex). Numerical results and figures are generated from saved data, including formal extreme trajectories and explicitly censored incomplete RP solutions. The independent clean-snapshot checks are recorded in [results/clean_snapshot_verification.json](results/clean_snapshot_verification.json). See [results/validation.md](results/validation.md), [results/source_audit.md](results/source_audit.md), and [results/data_schema.md](results/data_schema.md).
 
 ## Reproduce from a clone
 

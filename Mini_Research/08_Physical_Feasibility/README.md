@@ -1,45 +1,60 @@
-# Mini-Research 8: Physical Feasibility and Extreme Temperature Limits
+# Mini-Research 8: физическая реализуемость и пределы экстремальной температуры
 
-**Dimitri Bolt** · Academic supervisor: **Prof. Dr. Ildar R. Gabitov**.
+**Dimitri Bolt** · Научный руководитель: **Prof. Dr. Ildar R. Gabitov**.
 
-[Technical report](report/08_Physical_Feasibility.pdf) ·
-[Numbered results](08_Physical_Feasibility.ipynb) ·
-[Consolidated final scientific report](../../Final_Report/Consolidated_Final_Scientific_Report.pdf).
+[Технический отчёт](report/08_Physical_Feasibility.pdf) ·
+[Нумерованные результаты](08_Physical_Feasibility.ipynb) ·
+[Сводный заключительный научный отчёт](../../Final_Report/Consolidated_Final_Scientific_Report.pdf).
 
-The new bounded work compares one-cycle KM and Gilmore–Tait mechanics with a
-common polytropic gas, audits saved signed thermal energies, inverts the existing
-gas caloric law for a defined ideal direct-heating operation, and screens particle
-retention and transport times. It does not change previous models or move gas
-temperatures between mechanical trajectories.
+Исследование ограниченного объёма сопоставляет механику KM и Gilmore–Tait за
+один акустический цикл при общей политропной модели газа, проверяет сохранённые
+тепловые энергии с учётом знаков потоков, обращает существующую калорическую
+зависимость для идеализированного прямого нагрева газа и оценивает требования
+к удержанию частицы и характерные времена переноса. Предыдущие модели не
+изменяются; температуры газа не переносятся между механическими траекториями.
 
-At 1.30 bar, Gilmore gives a 0.513361 µm minimum versus 0.550809 µm for KM.
-These are formal mechanical outputs. For nominal 34.3373 fJ absorption by one
-particle, ideal fixed-volume wet-gas increments are 0.03347 and 0.02499 K;
-the inherited coupled global changes remain 1.408816 and 2.184879 µK.
-The 1.15 bar result is physically formal despite numerical completion. Wet
-1.30 bar has no global difference after its 6000 K coefficient boundary.
+При 1.30 bar модель Gilmore даёт минимальный радиус 0.513361 µm против
+0.550809 µm в KM. Это формальные результаты механической модели. Для
+номинальной поглощённой одной частицей энергии 34.3373 fJ идеализированные
+приращения температуры влажного газа при фиксированном объёме составляют
+0.03347 и 0.02499 K; сохранённые глобальные приращения в связанной модели —
+1.408816 и 2.184879 µK. Результат при 1.15 bar остаётся физически формальным,
+несмотря на численную завершённость. Для влажного газа при 1.30 bar глобальная
+разность не определена после достижения границы коэффициентов 6000 K.
 
-The gas identity is ΔU = −∫p dV + ∫Q(l→g) dt. The combined thermal identity is
-Δ(Ug+El+EAu)+Wby+Qbath=Eabs. Mechanical feedback, signed heat and storage
-are kept separate; net gas heat is not a photon-delivery fraction.
+Баланс газа имеет вид ΔU = −∫p dV + ∫Q(l→g) dt. Совместный тепловой баланс:
+Δ(Ug+El+EAu)+Wby+Qbath=Eabs. Механическая обратная связь, тепловые потоки с
+их знаками и накопленная энергия учитываются раздельно; результирующее тепло,
+переданное газу, не является долей доставки энергии лазерных фотонов.
 
-**Conclusion:** no physically reliable universal upper temperature or
-thermonuclear yield is established. Spatial hot regions, ion/electron states,
-reacting fuel density and lifetime remain unresolved. Formal extremes are retained.
+**Научный вывод:** физически достоверная универсальная верхняя температура
+и выход термоядерных реакций не установлены. Пространственные горячие области,
+состояния ионов и электронов, плотность реагирующего топлива и время существования
+состояния остаются неопределёнными. Формальные экстремумы сохранены. Проверка
+уравнений и численной сходимости не равнозначна физической или экспериментальной
+валидации полной связанной модели.
 
-[Data schema and assumptions](results/data_schema.md) ·
-[Primary-source audit](results/source_audit.md) ·
-[Numerical validation](results/validation.md) ·
-[Standalone-reader assessment](results/standalone_reader_test.md).
+[Схема данных и допущения](results/data_schema.md) ·
+[Проверка первичных источников](results/source_audit.md) ·
+[Численная проверка](results/validation.md) ·
+[Проверка самостоятельности заключительного отчёта](results/standalone_reader_test.md).
 
-## Reproduction
+## Воспроизведение
 
-Keep the whole repository: read-only imports use MR2 and the transitive MR1/MR3/MR4
-modules. The public compact MR7 traces are sufficient; its full local archive is
-not required or published. Use Python 3.12 and `requirements-lock.txt` in an isolated
-environment. LaTeX/latexmk and Poppler are additional system tools.
+Нужен весь репозиторий: импорты только для чтения используют MR2 и транзитивные
+модули MR1/MR3/MR4. Достаточно опубликованных компактных траекторий MR7;
+полный локальный архив не требуется и не опубликован. Используйте Python 3.12
+и `requirements-lock.txt` в изолированном окружении. Дополнительные системные
+средства — LaTeX/latexmk и Poppler.
 
-From this directory:
+Полное численное воспроизведение исходной научной версии выполняется из
+неизменённого научного коммита `083fc4a4fc635d0191b4c78b6b96a7ecf1e6b4f2`.
+Сохранённые исторические проверки дерева относятся именно к исходным файлам;
+разрешённые редакционные изменения README MR2 и ссылок не подменяют эту базу.
+В текущей редакции отдельно проверяются сохранность научного кода/данных,
+идентичность копии PDF MR2, документы, ссылки и актуальные манифесты.
+
+Из этого каталога:
 
 ```bash
 export PYTHONDONTWRITEBYTECODE=1
@@ -52,12 +67,19 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -cd ../../Final_Report/Cons
 sha256sum -c SHA256SUMS
 ```
 
-`src.run` performs 18 bounded mechanical integrations, followed by saved-data
-analysis. `src.presentation` only reads results and regenerates JPGs/tables.
-Numerical replay is compared with the archived values within the recorded
-convergence differences, not by demanding bitwise equality across platforms.
-Run the manifest check before regeneration to verify the published snapshot;
-regenerated numerical files and PDFs need not have identical hashes.
+`src.run` выполняет 18 ограниченных механических интегрирований, затем анализирует
+сохранённые данные. `src.presentation` только читает результаты и заново создаёт
+JPG/таблицы. Численное воспроизведение сопоставляется с архивными значениями
+в пределах зарегистрированных расхождений сходимости; побайтовое совпадение
+между платформами не требуется. Проверяйте манифест до повторной генерации,
+чтобы удостовериться в целостности опубликованного состояния: заново созданные
+численные файлы и PDF могут иметь другие контрольные суммы.
 
-Independent scientific/editorial review and RoadMap closure remain separate.
-The delivery record and review handoff are technical supporting files.
+## Статус проверки и публикации
+
+Исходная научная версия опубликована; редакционная доработка не пересчитывает
+результаты MR1–MR8 и не меняет научные выводы. Протокол доставки и сообщение
+для независимой проверки являются техническими сопроводительными файлами.
+Научная и редакционная приёмка MR8 остаётся за Mini-Research 8 (Web),
+официальное закрытие программы — за RoadMap. Публикация сама по себе не
+означает принятия исследования или закрытия программы.

@@ -28,6 +28,7 @@ figures/12_diagnostic_map.pdf
 figures/12_diagnostic_map.png
 figures/13_validation.pdf
 figures/13_validation.png
+report/02_Compressible_Bubble_Dynamics.pdf
 report/main.pdf
 report/main.tex
 requirements-lock.txt

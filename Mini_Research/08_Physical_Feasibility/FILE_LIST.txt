@@ -20,6 +20,9 @@ results/data_schema.md
 results/delivery_receipt.json
 results/development_note.md
 results/document_environment.json
+results/editorial_checks.json
+results/editorial_review.md
+results/editorial_verify.py
 results/energy_audit.csv
 results/environment.json
 results/external_source_inventory.json
