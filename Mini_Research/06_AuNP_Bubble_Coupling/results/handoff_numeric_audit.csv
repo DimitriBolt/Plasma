@@ -1,0 +1,60 @@
+claim,source,unit,stated_value,actual_value,absolute_tolerance,relation,passed
+reference_absorption,reference.npz,fJ,3.4337324474063742,3.4337324474063742,9.9999999999999998e-13,rounded,True
+Au_peak,reference.npz,K rise,2.3066,2.306634453242816,5.0000000000000002e-05,rounded,True
+facing_water_peak,reference.npz,K rise,1.6322000000000001,1.6321833318310364,5.0000000000000002e-05,rounded,True
+gas_power_peak_time,reference.npz,ns from start,53.939999999999998,53.935015278291687,0.0050000000000000001,rounded,True
+gas_power_peak_lag,reference.npz,ns from center,48.939999999999998,48.935015278291687,0.0050000000000000001,rounded,True
+gas_peak_power,reference.npz,pW,14.0702,14.070236707970988,5.0000000000000002e-05,rounded,True
+gas_energy_2us,reference.npz,aJ,11.186500000000001,11.186522422122817,5.0000000000000002e-05,rounded,True
+gas_fraction_2us,reference.npz,%,0.32579999999999998,0.32578317016436192,5.0000000000000002e-05,rounded,True
+sigma_abs,MR5 optical API,m^2,3.4337324474063743e-15,3.4337324474063743e-15,1e-27,rounded,True
+max_local_flux_W_m2,local_flux_metrics.json,SI or dimensionless as named,161.63999999999999,161.6398248378255,0.0050000000000000001,rounded,True
+surface_mean_flux_W_m2,local_flux_metrics.json,SI or dimensionless as named,0.031099999999999999,0.031102051702036376,5.0000000000000004e-06,rounded,True
+max_over_mean,local_flux_metrics.json,SI or dimensionless as named,5197,5197.0791633415711,0.5,rounded,True
+area90_percent,local_flux_metrics.json,%,0.048099999999999997,0.048104090753588978,5.0000000000000002e-05,rounded,True
+late_window_fraction,timing_scan.csv,%,0.0081700000000000002,0.0081664543450951955,5.0000000000000004e-06,rounded,True
+best_timing_center,timing_scan.csv,ns,-50,-50,1e-10,rounded,True
+finite_design_count,finite_design.csv,rows,216,216,0,rounded,True
+moderate_max_gas,finite_design.csv,fJ,3.9517000000000002,3.951702966400588,5.0000000000000002e-05,rounded,True
+absorption_at_gas_max,finite_design.csv,pJ,3.4846200000000001,3.4846235893702278,5.0000000000000004e-06,rounded,True
+moderate_max_absorption,finite_design.csv,pJ,3.4847600000000001,3.4847573876812197,5.0000000000000004e-06,rounded,True
+formal_all_grid_gas_max,finite_design.csv,fJ,9.4349399999999992,9.4349418416509643,5.0000000000000004e-06,rounded,True
+tc_1.0,mechanical_events.csv,us,20.092624000000001,20.092623651023164,4.9999999999999998e-07,rounded,True
+Rc_1.0,mechanical_events.csv,um,4.3930899999999999,4.3930896108744735,5.0000000000000004e-06,rounded,True
+tc_1.15,mechanical_events.csv,us,15.664319000000001,15.664319463686937,4.9999999999999998e-07,rounded,True
+Rc_1.15,mechanical_events.csv,um,1.2281599999999999,1.2281599445654596,5.0000000000000004e-06,rounded,True
+tc_1.3,mechanical_events.csv,us,18.341063999999999,18.341064265194849,4.9999999999999998e-07,rounded,True
+Rc_1.3,mechanical_events.csv,um,0.55080899999999999,0.55080870714222596,5.0000000000000004e-06,rounded,True
+radius_width_1.15,mechanical_events.csv,ns,21.530000000000001,21.530837365186052,0.0050000000000000001,rounded,True
+radius_width_1.3,mechanical_events.csv,ns,2.278,2.2784494765373777,0.0050000000000000001,rounded,True
+separate_MR4_thermal_width,mechanical_events.csv,ns,17.850000000000001,17.851457765452512,0.0050000000000000001,rounded,True
+delta_T_at_peak_A_preheat,gas_diagnostic.csv,K,1.8870000000000001e-05,1.8866038803107614e-05,5.0000000000000001e-09,rounded,True
+delta_T_at_peak_B_wall,gas_diagnostic.csv,K,4.6800000000000001e-07,4.6795209350653558e-07,5.0000000000000002e-11,rounded,True
+delta_T_at_peak_C_B_energy,gas_diagnostic.csv,K,5.6020000000000002e-05,5.6016679428319392e-05,5.0000000000000001e-09,rounded,True
+delta_T_at_peak_C_ideal_upper,gas_diagnostic.csv,K,0.003506,0.0035064630075220837,4.9999999999999998e-07,rounded,True
+delta_T_at_peak_B_after,gas_diagnostic.csv,K,0,0,0,rounded,True
+max_B_delta_T,gas_diagnostic.csv,K,6.1500000000000004e-06,6.1497609500309269e-06,5.0000000000000003e-10,rounded,True
+baseline_pressure_mismatch_1.0,gas_diagnostic.csv,%,16,15.54985989627764,0.51000000000000001,rounded,True
+baseline_pressure_mismatch_1.15,gas_diagnostic.csv,%,119,118.6844313198348,0.51000000000000001,rounded,True
+baseline_pressure_mismatch_1.3,gas_diagnostic.csv,%,193,193.49626398240338,0.51000000000000001,rounded,True
+NASA_boundary_time,gas_diagnostic.csv,us,18.340899070599999,18.340899070561726,5.0000000000000002e-11,rounded,True
+NASA_boundary_temperature,gas_diagnostic.csv,K,6000,6000.0000000002929,1.0000000000000001e-05,rounded,True
+production_gas_energy_spatial_relative_max,validation_summary.json,relative or % as named,0.19600000000000001,0.19560976015584597,0.00050000000000000001,rounded,True
+production_gold_spatial_relative_max,validation_summary.json,relative or % as named,1.206,1.2055061809743362,0.00050000000000000001,rounded,True
+production_water_spatial_relative_max,validation_summary.json,relative or % as named,1.1919999999999999,1.1919878233960235,0.00050000000000000001,rounded,True
+isolated_gold_peak_finest_relative_max,validation_summary.json,relative or % as named,0.089300000000000004,0.089238686124415434,0,upper_bound,True
+independent_Radau_gold_relative,validation_summary.json,relative or % as named,1.4100000000000001e-09,1.4113019339349606e-09,4.9999999999999997e-12,rounded,True
+independent_Radau_gas_relative,validation_summary.json,relative or % as named,1.9100000000000001e-12,1.9053647548616937e-12,5e-15,rounded,True
+energy_balance_relative_max,validation_summary.json,relative or % as named,2.6600000000000002e-14,2.6574751744632832e-14,4.9999999999999999e-17,rounded,True
+gaussian_normalization_relative_max,validation_summary.json,relative or % as named,2.2200000000000001e-16,2.2204460492503131e-16,5.0000000000000004e-19,rounded,True
+baseline_static_matching_error,validation_summary.json,relative or % as named,4.2145999999999999,4.2145593869731801,5.0000000000000002e-05,rounded,True
+spatial_control_count,validation_summary.json,rows,15,15,0,rounded,True
+increment_time_step_discrepancy,gas_increment_convergence.csv,relative,8.54e-07,8.5373323233106646e-07,5.0000000000000003e-10,rounded,True
+far_point_2us_discrepancy,analytic_point_controls.csv,%,0.051999999999999998,0.051824215911420002,0.00050000000000000001,rounded,True
+formal_snapshot_count,event_snapshots.csv,rows,45,45,0,rounded,True
+B_feedback_estimate_1.0,gas_feedback_estimate.csv,%,0.23230000000000001,0.232340009296126,5.0000000000000002e-05,rounded,True
+B_feedback_bound_1.0,gas_feedback_estimate.csv,%,74.299999999999997,74.300933061905383,0.050000000000000003,rounded,True
+B_feedback_estimate_1.15,gas_feedback_estimate.csv,%,0.092840000000000006,0.092837030917236579,5.0000000000000004e-06,rounded,True
+B_feedback_bound_1.15,gas_feedback_estimate.csv,%,12.1,12.092301068182316,0.050000000000000003,rounded,True
+B_feedback_estimate_1.3,gas_feedback_estimate.csv,%,0.00022499999999999999,0.00022455674631100038,4.9999999999999998e-07,rounded,True
+B_feedback_bound_1.3,gas_feedback_estimate.csv,%,0.127,0.12732246255083277,0.00050000000000000001,rounded,True

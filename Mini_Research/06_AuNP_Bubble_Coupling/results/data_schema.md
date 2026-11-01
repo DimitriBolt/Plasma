@@ -97,12 +97,18 @@ is absolute temperature. `baseline_T_K` is the common no-laser gas state;
   energy is not silently treated as first-order transfer. `max_delta_T_K` and
   `delta_T_at_baseline_peak_K` are different metrics. The latter is unavailable
   if a laser-induced censoring event precedes that baseline peak.
-- `histories/*_source.npz`: absolute time, signed baseline, laser increment,
-  total W, JSON metadata with tc, finite interval, geometry, optical fluence,
-  pulse center, model identity and validity status. These are first-order gas
-  diagnostics using frozen liquid geometry. `ThermalHistory` never extrapolates.
-  `refined_` histories and summary repeat the 1.15 bar increment with 0.5 ns
-  maximum step; `gas_increment_convergence.csv` compares them with the 2 ns cap.
+- `histories/*_source.npz`: v2 reference-state schema. The powers are
+  `q_wall_reference_baseline_W`, `q_wall_reference_sum_W` and
+  `q_wall_laser_increment_W`. The first two are diagnostic values at explicitly
+  archived `reference_gas_temperature_K` and `reference_bubble_radius_m`, not
+  a physical total for a supplied changed Tg. In these retained traces T_ref is
+  exported Tb+delta_T and R_ref is the prescribed gas trajectory; thermal geometry
+  remains frozen at its separate metadata radius. All original numerical source
+  arrays are preserved under the explicit names. `q_wall_total_W` is absent.
+  Metadata states the source contract and that an ODE already evaluating its own
+  heat loss adds only `laser_increment_W()`. No gas-temperature feedback into the
+  liquid is implied. Time/geometry guards remain. `refined_` traces retain the
+  original 0.5 ns time-cap comparison; no gas calculation is rerun for this schema.
 - Validation CSVs: `mesh_convergence`, `time_method_convergence`,
   `domain_convergence`, `isolated_MR5`, `analytic_point_controls`,
   `planar_spherical_comparison`, `mechanics_interpolation`,
@@ -114,6 +120,30 @@ is absolute temperature. `baseline_T_K` is the common no-laser gas state;
   production model/design. `environment.json` records actual versions.
   `input_inventory.json` fingerprints every tracked accepted upstream file.
   Validation and clean-reproduction records state empirical numerical scope.
+
+- `handoff_numeric_audit.csv`: 59 scientific rounded claims/upper bounds with
+  original data source, unit, claimed and actual values, tolerance/relation and
+  pass status; includes the corrected late-window 0.00817%.
+- `final_field_verification.csv`: five saved fields, independent degree-2 triangle
+  quadrature of water storage, wall-power integral, signed residual and minimum
+  retained water temperature. The archived mesh is input, not remeshed.
+- `saved_mesh_replay.csv`: only three pre-existing thermal cases on their archived
+  meshes; scalar observable max-norm differences admitted at 2e-5 (100 times the
+  2e-7 time tolerance). No pointwise equality with a platform's regenerated mesh
+  is required. Existing spatial convergence remains the separate error measure.
+- `gas_feedback_estimate.csv`: nine saved A/B/ideal-C traces evaluated by an
+  analytic stationary, infinite-liquid, uniform-gas step response. Powers and
+  energies are estimated additional **positive water-return** terms. The direct
+  negative gas loss is already in MR4 and recorded separately. Bounds based on
+  maximum past gas perturbation and two-grid differences are explicit. Ratios use
+  actual source energy on each observed interval; censored 1.3 bar tails remain
+  unavailable. No gas, mechanics or finite-particle response is updated.
+- `correction_input_manifest.json`: byte fingerprints of 55 original numeric files
+  and original numeric array hashes of 24 renamed source archives at the original
+  MR6 snapshot. All original CSVs and non-source NPZs are untouched.
+- `clean_reproduction_original.json`: historical original same-machine full-scan
+  record. The current `clean_reproduction.json` covers the bounded correction
+  reproduction, fixed-mesh checks and portable test contract.
 
 All eight JPG figures and report numbers read these files. FILE_LIST includes
 itself and SHA256SUMS; the checksum manifest hashes every listed file except

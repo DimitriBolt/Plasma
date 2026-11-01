@@ -340,7 +340,7 @@ def gas_diagnostic(amplitudes=(1.,1.15,1.3),prefix='',delta_max_step_ns=2.):
                           fluence_J_m2=1.,pulse_center_s=tc+offset,baseline='signed MR4 closure; not absolute liquid baseline',
                           laser='zero gas-perturbation BVP; C is a diagnostic Gaussian',gas='first-order small-increment sensitivity',
                           status='formal_frozen_one_way_diagnostic',mechanism=mechanism)
-            ThermalHistory(tt,laser,baseline,metadata).save(RESULT/'histories'/f'{key}_source.npz')
+            ThermalHistory(tt,laser,baseline,metadata,reference_temperature_K=T,reference_radius_m=R).save(RESULT/'histories'/f'{key}_source.npz')
             np.savez_compressed(RESULT/'histories'/f'{key}.npz',time_s=tt,time_minus_tc_s=tt-tc,R_m=R,T_K=T,
                                 baseline_T_K=Tb,delta_T_K=delta,p_Pa=pg,pressure_relative_mismatch=mismatch,
                                 work_by_gas_J=(baseline_states[1]+states[1])*mix.Eref,

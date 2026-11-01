@@ -1,0 +1,444 @@
+{
+  "original_MR6_commit": "faa2828f554517a0e2e43d9ae42cff37d682fbd0",
+  "unchanged_files": [
+    {
+      "path": "results/analytic_point_controls.csv",
+      "sha256": "accf3a35591512532c60017c9989800c2deb74230db1f53942fe127a14c2dca6"
+    },
+    {
+      "path": "results/domain_convergence.csv",
+      "sha256": "6eecf425591f9f9faefc7da03a66480ba716e48ce9b12533c8939fae5943025e"
+    },
+    {
+      "path": "results/event_snapshots.csv",
+      "sha256": "b611aef841f268e186048d0bd1b200dd40b808695eae7bd87373a09cad51291e"
+    },
+    {
+      "path": "results/finite_design.csv",
+      "sha256": "3a8c5b0e80f795782f8629358ab22f8ff27758ae52e4fc99acd64370319a4db0"
+    },
+    {
+      "path": "results/formal_regimes.csv",
+      "sha256": "e8cfcdc5174787f9253eeee26f5b12f75a4f18044dea84417a14e5a495eb046e"
+    },
+    {
+      "path": "results/gap_scan.csv",
+      "sha256": "71dc0bfaf0453792b05b6526a044c2e587525f0c82738b570941e7e4822b1d2a"
+    },
+    {
+      "path": "results/gap_timing_map.csv",
+      "sha256": "77af8bffac08f03adfe35441e3a1d622c72c12e2bd0052c8048860981e3b7d33"
+    },
+    {
+      "path": "results/gas_diagnostic.csv",
+      "sha256": "49d47e73c941f042b585e30b8d5cc0379eefb21aa5354b352e85e69109252599"
+    },
+    {
+      "path": "results/gas_increment_convergence.csv",
+      "sha256": "8da263f25ac38039557aec1a6bf4c9aedf5b125a83ce240e858e5f142c5df5b1"
+    },
+    {
+      "path": "results/gaussian_normalization.csv",
+      "sha256": "1b8d22b048ac51b2ad2bda9a4ea42889467611105724d9e4ba9fad98e73077c8"
+    },
+    {
+      "path": "results/isolated_MR5.csv",
+      "sha256": "75d43c455bb0c225420671ebd2973fcfa3811202fcaa28a522f390817343123f"
+    },
+    {
+      "path": "results/kinematics.csv",
+      "sha256": "666291479ce0be8e4f1bd1ce6a3697dfd36d77eeb68c9ace9f10f7d90ef62a29"
+    },
+    {
+      "path": "results/mechanical_events.csv",
+      "sha256": "2b57de093b423b837658aa91fe3bdd7702785827be23e9e0bb19fcde04b7978a"
+    },
+    {
+      "path": "results/mechanics_interpolation.csv",
+      "sha256": "df54ea3d2bd12629e49d765114560e2d147516dfd99c1b68d63ca93175c49cbc"
+    },
+    {
+      "path": "results/mesh_convergence.csv",
+      "sha256": "105d2815f67113437ac8c017bf9199f1afc97bec159d2b4016b5527ca2f5f71c"
+    },
+    {
+      "path": "results/multiparticle.csv",
+      "sha256": "0475b8d073c7ea26883c6505383ad1764ae3742c211d1d2a17b60bb17e7d2eae"
+    },
+    {
+      "path": "results/planar_spherical_comparison.csv",
+      "sha256": "e4a51c37d5520b0a7f0f816a507259404eb2d5e59fe91890f467b3543c7fbe7f"
+    },
+    {
+      "path": "results/refined_gas_diagnostic.csv",
+      "sha256": "fd97972719fa1b8b8711e77e8c1950d0e60ccd98bea300ae05d36ea197567f27"
+    },
+    {
+      "path": "results/time_method_convergence.csv",
+      "sha256": "9619b856dc70b1b933bbf9a85458fa6ecc3c270f08f9d31b0bb9795889e1cf7d"
+    },
+    {
+      "path": "results/timing_scan.csv",
+      "sha256": "de8734171cda1d98c3d38ea7107284725943196b032dc8e8d4c766392698e2b8"
+    },
+    {
+      "path": "results/transport_sensitivity.csv",
+      "sha256": "b852350f67f6f391ace79887d608d6420629a50e5caa8237d5897cc549e97d39"
+    },
+    {
+      "path": "results/fields/event_1.00.npz",
+      "sha256": "9e4a0abb719c05bce6f8f3b39777cb69aaf598d2d199c97122878cefe01ee5c1"
+    },
+    {
+      "path": "results/fields/event_1.15.npz",
+      "sha256": "d6cad2ee699c891901f103b94eba878dfde8896269c592d6a4fd4877e55fdda7"
+    },
+    {
+      "path": "results/fields/far_particle.npz",
+      "sha256": "c5da2bd26474be7662aaea64d2af0d7f4ccc877beb117ac37220798f0f64bd2f"
+    },
+    {
+      "path": "results/fields/near_contact.npz",
+      "sha256": "22214f1176f02f0424407733dece62d42a594f274b7e2f542b72d5653573b232"
+    },
+    {
+      "path": "results/histories/gas_1.00_A_preheat.npz",
+      "sha256": "18284742c9ad22edbdd34b5c20d51c7fac3f2359d7c07899bf8ad0c42875c1f5"
+    },
+    {
+      "path": "results/histories/gas_1.00_B_after.npz",
+      "sha256": "8b2ecef0ba2e6253ef4624ac03ef7ef3e5fd288746a3fc2d152d4d04c0f249e1"
+    },
+    {
+      "path": "results/histories/gas_1.00_B_wall.npz",
+      "sha256": "1a49e289d3b4377dda9cfaf777466b4007a38690b59310d7c36f64e3b5d674b8"
+    },
+    {
+      "path": "results/histories/gas_1.00_C_B_energy.npz",
+      "sha256": "ee0af8eab2ac155cc0f6b3392c107bf4cf5fbb284df5ec9d0a186069f2a24bb2"
+    },
+    {
+      "path": "results/histories/gas_1.00_C_ideal_upper.npz",
+      "sha256": "f7a57fd03ecffde0a6e99e7c56412994a935d9724b2f86cef62e1df974e2f217"
+    },
+    {
+      "path": "results/histories/gas_1.00_baseline.npz",
+      "sha256": "80263458d51db7ce1cd8a7c5f0d8523eadde47082a2f18cd8676a5360e448caf"
+    },
+    {
+      "path": "results/histories/gas_1.15_A_preheat.npz",
+      "sha256": "a43f903a20ae5bf1491054cbf17d11badc9f225d755ca95a404f48dff0222ea4"
+    },
+    {
+      "path": "results/histories/gas_1.15_B_after.npz",
+      "sha256": "889b5ad928113072c52cf826d266d078f556b349c94f6d122e715e10d67ad56e"
+    },
+    {
+      "path": "results/histories/gas_1.15_B_wall.npz",
+      "sha256": "48a06959d7dc0b875f4179d2a8b257ca6807ac84fb6394431122187a3ee64aa5"
+    },
+    {
+      "path": "results/histories/gas_1.15_C_B_energy.npz",
+      "sha256": "66e7e1dc979d5103d6a0cc6c1fe588f2a6d4656fc8202495c81714b7e8076c15"
+    },
+    {
+      "path": "results/histories/gas_1.15_C_ideal_upper.npz",
+      "sha256": "c826afde418d1648e20ab151e2cde96d89f42e9218447aeee7ba08c1932ac0a9"
+    },
+    {
+      "path": "results/histories/gas_1.15_baseline.npz",
+      "sha256": "79ebe5e43865af8b66408c01b127873f37fbc448e4e538ce2ae1fc8cbc074ca0"
+    },
+    {
+      "path": "results/histories/gas_1.30_A_preheat.npz",
+      "sha256": "a78b47afbd6a21d92d8939631cbd5c5ddd47f4948d1cf32c69291b90b22de621"
+    },
+    {
+      "path": "results/histories/gas_1.30_B_after.npz",
+      "sha256": "7725c8157219a5ad27d19c5dbc104c0f7f6343294533e985dfe934077c3694a9"
+    },
+    {
+      "path": "results/histories/gas_1.30_B_wall.npz",
+      "sha256": "a702947e93d1f40e23a363f074083d051dc2334c8924ed24da89bdcb7ce1ed44"
+    },
+    {
+      "path": "results/histories/gas_1.30_C_B_energy.npz",
+      "sha256": "0220b096b3fc833dbd8f347ad2e783ef6674e6589f6bcb0ce3f2d057b87b96d2"
+    },
+    {
+      "path": "results/histories/gas_1.30_C_ideal_upper.npz",
+      "sha256": "62eed53d64c70e6bd9b4a536d896bfe15d1518662bf79ac2f0097d6d57ab765f"
+    },
+    {
+      "path": "results/histories/gas_1.30_baseline.npz",
+      "sha256": "7725c8157219a5ad27d19c5dbc104c0f7f6343294533e985dfe934077c3694a9"
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_A_preheat.npz",
+      "sha256": "fce21aed77ec4ee23e4130664196cd9db98abe8c20172dc9333be92712679007"
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_B_after.npz",
+      "sha256": "3a696cd6ee873847498441d3600e1ec1da3a12f01cb1b54cd1243173ec21e672"
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_B_wall.npz",
+      "sha256": "fa09e1c68581020167f98ce2198bd1b44528aa08da70344e9330abec3b4295c3"
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_C_B_energy.npz",
+      "sha256": "4760f1d579a3b97e4447bf1a6c961608c410b80b7e8403c6be706554d7dd4587"
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_C_ideal_upper.npz",
+      "sha256": "7e5b22f328695613541560b3acb201ad3d6166e354f3a560da944fa8214dbe76"
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_baseline.npz",
+      "sha256": "9899f0cb74de6209a52c28d757dd83b3ed9b2f54df2d9869ac38cbb697752a8b"
+    },
+    {
+      "path": "results/reference.npz",
+      "sha256": "f9d115a9ea068d2fed90bcfe0e176c66808721f66dba023699c4e343a382c6bd"
+    },
+    {
+      "path": "results/parameters.json",
+      "sha256": "e84bcb5697287df8a228e32ddc1c29fe773f938ee66d31fa20f5e128f985e494"
+    },
+    {
+      "path": "results/design_extrema.json",
+      "sha256": "5c5a5bf4f4fb1310f8bbb8f3e24f78fa58699dc6da476b43b779805671e6ba3f"
+    },
+    {
+      "path": "results/validation_summary.json",
+      "sha256": "c3c3b3aa034c1ccf2a39bdcc2ee16d1a0fb7e539078375305220495cba9bef6e"
+    },
+    {
+      "path": "results/optical_contract.json",
+      "sha256": "2fe0e0dfffecc2e212be79e422e8a94ab2fd8c84bbf7616ca6593371afdffc5b"
+    },
+    {
+      "path": "results/local_flux_metrics.json",
+      "sha256": "21326a83403697536f808a6e69d49e8fd861b09f72014f7c98a0325cea85a4f5"
+    }
+  ],
+  "renamed_source_arrays": [
+    {
+      "path": "results/histories/gas_1.00_A_preheat_source.npz",
+      "arrays": {
+        "time_s": "a1c52b20512aeced8491857b719c1a431c84a9ffc59c1371ebf5c973f684502b",
+        "q_wall_laser_increment_W": "9bc888daba554faece1c7e486a82f4817fd158988345a397a415118af8f3a218",
+        "q_wall_baseline_W": "ff577b6d736bd608a0a1c992d92f2c7a2e2f888966693938a5cc27599c192b2e",
+        "q_wall_total_W": "98c7a684f2243672db03fee04f74b2c78aab4f3a7128181657f2c71e6a420879"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.00_B_after_source.npz",
+      "arrays": {
+        "time_s": "ed8288d6d9873d61da569dfc5e5d1495a87513d4807b7d7d559f15dd37b6347c",
+        "q_wall_laser_increment_W": "206df8f83d86e285ee624ee64b479e8ef36de76cef92d110e796c8e921715741",
+        "q_wall_baseline_W": "c84e8880a3e441eac092187a2df18e678afa65b867b9fe0cc7b2e74b802425cc",
+        "q_wall_total_W": "1fcc3e77feb3c835bb965bf44ae22cebefd4428c19ba50caa1e15ba5d31937bd"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.00_B_wall_source.npz",
+      "arrays": {
+        "time_s": "288f243fac6e8acd1378feba694027409b5bd07adb3db0e550e06ddd73095d5c",
+        "q_wall_laser_increment_W": "57fae01bff9af05898d0beddfe1a33553a63a56c246efe0e1e41bb9967be20ba",
+        "q_wall_baseline_W": "0cd05021b1898323a5a3411cc9f81f197178d600e0c334ef4aa93837eb8fdfd2",
+        "q_wall_total_W": "be8f5f271cbe29fe4a55c0361f032e42b25c1068ebb82f2db30e01fa35415aff"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.00_C_B_energy_source.npz",
+      "arrays": {
+        "time_s": "a978e4bf68dedc2cf1805dd9c1bb2917d6a308a8a9f2e2231ff30b141e4ba3e4",
+        "q_wall_laser_increment_W": "5de91a0bbcaec3f2d26a623a62401ff588626db2785e791af9f181ed74f8c7a1",
+        "q_wall_baseline_W": "321cd1c36a0a2305b869047bca3d830ac6249b124c474906a89785bb2be17753",
+        "q_wall_total_W": "f2316e122cf17165b34888cb025bda41910aaec56f2a2f2b1270fa0d5225114c"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.00_C_ideal_upper_source.npz",
+      "arrays": {
+        "time_s": "d9d4cdfa5559a589869c472dbb2ed84998873791c05eb378e4dcde3d5dc8afcb",
+        "q_wall_laser_increment_W": "d8d4ce3d6d8edb852cb69c841fc381bc9a6a86dfe4a8a0f13a4f61362714adcf",
+        "q_wall_baseline_W": "bef96fe1cfa32c680375835f47fe06e307e2f55ecf928c4eac8eccf63ec5131b",
+        "q_wall_total_W": "39df2c405f820e4638dee58b7cd1f0757e273dc3766451e531ebef2e1082d8f3"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.00_baseline_source.npz",
+      "arrays": {
+        "time_s": "7f4d10fb0b7ddb7738767071b50fdca28762b93a547f36009492a32a12904bf9",
+        "q_wall_laser_increment_W": "a67e7670f5d021108811f886d718f36e25c978f1f901adb3d8b7603326eea8c6",
+        "q_wall_baseline_W": "7f3e5c1d5cbba7d6b065f8aee94c50ae630378ca21c248d88caf3c4c8266c2bf",
+        "q_wall_total_W": "7f3e5c1d5cbba7d6b065f8aee94c50ae630378ca21c248d88caf3c4c8266c2bf"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.15_A_preheat_source.npz",
+      "arrays": {
+        "time_s": "9eeae33729854e80ceea765d47c9c92981e7cef0091ce70c257819e319c9a652",
+        "q_wall_laser_increment_W": "20b70cf40dd13e8c86bec76371b027207a0eb795be0a9310ff8c01b197f56719",
+        "q_wall_baseline_W": "efba9198e46bbb2829d9f9073fc88be36a5d71b87315fec0664bd2dfc0ab3b92",
+        "q_wall_total_W": "9422a4e6c2de924a2469787dd9ad86b8b0020aa7b58d8ce8882db06f8938ca17"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.15_B_after_source.npz",
+      "arrays": {
+        "time_s": "b1c72ea5dc2464e60391828d6ee7bd239c0635983abac2c93f99b747575f3110",
+        "q_wall_laser_increment_W": "27065b6d95e22b244a39e1f029c9f52f7c9356297360b5a99766de30c04a1ee2",
+        "q_wall_baseline_W": "bd7f884ccd2db612634277914c5871192ca8a6c219346561e60b44c394f9e9f9",
+        "q_wall_total_W": "0834b7bb62463ee514f00dffd4a082f6955c45678d723bf947ddc6b71aa7c0c3"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.15_B_wall_source.npz",
+      "arrays": {
+        "time_s": "5ad43777abdd0185ad84144a0784606db1639e69e7215c7f35a5aa10af731d31",
+        "q_wall_laser_increment_W": "064becaf087f6d534b6c6e3a09b2593d6ba7b672e5def241f30f0c8e4a9872aa",
+        "q_wall_baseline_W": "67d423b05d3eda1090871042220b7f6475512defa37e2b5de47724d5a682102c",
+        "q_wall_total_W": "c7682ab65fa0b0c84686510883dca8e42b98d08dfecc20c79e9a0e9749fbfb9d"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.15_C_B_energy_source.npz",
+      "arrays": {
+        "time_s": "e3f4158b0644d2395c3cdd78d8a05bc96762fa8fe1af7b0f128403f69a83b20e",
+        "q_wall_laser_increment_W": "303fa3cbf07bb3555dd9c6e90a2d486c4a32d72eccd59529d40fda879c073c2f",
+        "q_wall_baseline_W": "306eb19ba1ecb341ea1d427382bc0fad2cf3ca9351c08b871e1ce06e747039df",
+        "q_wall_total_W": "6e24ac058510688142acea4d9c5eddf73e4dc20906faff862ff520b968e685bb"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.15_C_ideal_upper_source.npz",
+      "arrays": {
+        "time_s": "c25f584e3c8007c60f2e5222e665978201fda430b8f1a578b4da3041a7bdf0f2",
+        "q_wall_laser_increment_W": "4d1f837b573be30bb684fc8ba2f7361a2f529feb7a44b52801f3be74047fe6eb",
+        "q_wall_baseline_W": "ea9b2b158badf6e82c98d148b3bd56bf8e88d8a7ac16f22cb201cbb36106ea73",
+        "q_wall_total_W": "9b739d41d2d7145700ddeece967e6588e04decddd78fa9b1289d5f52393e277a"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.15_baseline_source.npz",
+      "arrays": {
+        "time_s": "52efa059202976dbb631d6cc072a9d6a6d8a9033a57903952cb2d6bdd953e672",
+        "q_wall_laser_increment_W": "05343656ac43d287e088f4d66a663cc37e07e73cf9f6a0c9ef32aea6ae58751c",
+        "q_wall_baseline_W": "f81e044a12b29ce968a8d94e769a30e75c5af6095cc354739793019c2cab01a3",
+        "q_wall_total_W": "f81e044a12b29ce968a8d94e769a30e75c5af6095cc354739793019c2cab01a3"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.30_A_preheat_source.npz",
+      "arrays": {
+        "time_s": "30ad63a72960fa5ed8c5f9038029d8d6e0938eefd2abc96a7d3556cd999ee9e3",
+        "q_wall_laser_increment_W": "04bb7505682435d858a59ae4a3ce9e9d12b4d2cf9d16b633d5030368f7e10c18",
+        "q_wall_baseline_W": "7c97eb0705474a1b74ca56c1ca4676d82205a22bb1957e255d84149d4c618220",
+        "q_wall_total_W": "71e36bb3fb81237b327c33fad25db172cf7e12c0eb20c103ecf7f5e6f6336030"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.30_B_after_source.npz",
+      "arrays": {
+        "time_s": "bb253ddb38daf35121161d0a689b0c79d2925d20104bb1bb3448e4e3b360d31c",
+        "q_wall_laser_increment_W": "da865bd128c17bbc33d67b8c746a81d6a47a65370be77c987942ce41eb77470e",
+        "q_wall_baseline_W": "2e8ddb447fd04beff51ae92b5c4587d37c491953a4eb2217dcbd733efa4b65dd",
+        "q_wall_total_W": "2e8ddb447fd04beff51ae92b5c4587d37c491953a4eb2217dcbd733efa4b65dd"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.30_B_wall_source.npz",
+      "arrays": {
+        "time_s": "df25ddaa0c0e5f0f15357f316681f3b9eddf88bb285b76fa0e34042b68977b8f",
+        "q_wall_laser_increment_W": "95d2db787f2a4dd77f9ceca70ebeebc5562f9a2f0e28e2d85c314c62dfac1805",
+        "q_wall_baseline_W": "73e0325228e91d5c90e8efd40bf76984da0dca1c4700e07258effc5711223b00",
+        "q_wall_total_W": "f98e9e14c27bb9dcf27249cde01e7dfbaec7cb4839face90ae34a5fa3368ab17"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.30_C_B_energy_source.npz",
+      "arrays": {
+        "time_s": "90936939e90c52e8584ad0c3a69197919517ad60243ec417f500ff7705d8ff23",
+        "q_wall_laser_increment_W": "471cde23b8c3b8d1870b05d6066f73791e401308286ff9d445cec511981bf89d",
+        "q_wall_baseline_W": "a474ef73208216820202d042ba768365313f04fdb93c43e52c6f2a6f58ba7851",
+        "q_wall_total_W": "3cb87f46ce329834199311796efbbc9217a14902ff243623dc113ba2b379f488"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.30_C_ideal_upper_source.npz",
+      "arrays": {
+        "time_s": "706b6f0275b5f7a5c8fd77ea27b454e1cbef34d49df1ada4b85c88a0a7a9ba1e",
+        "q_wall_laser_increment_W": "0ca87fa24a6887d9bc85db27528da334a581b900e3b69383cc7b6689ac9456ab",
+        "q_wall_baseline_W": "684e7411e7cfcd02d4a25f91dabcbe314c9904ec37827fb5fe83f3182ea90dc3",
+        "q_wall_total_W": "0b197c59dc7742f1accf0b996f519e26b616b597ab222d6e915200e747dec173"
+      }
+    },
+    {
+      "path": "results/histories/gas_1.30_baseline_source.npz",
+      "arrays": {
+        "time_s": "bb253ddb38daf35121161d0a689b0c79d2925d20104bb1bb3448e4e3b360d31c",
+        "q_wall_laser_increment_W": "da865bd128c17bbc33d67b8c746a81d6a47a65370be77c987942ce41eb77470e",
+        "q_wall_baseline_W": "2e8ddb447fd04beff51ae92b5c4587d37c491953a4eb2217dcbd733efa4b65dd",
+        "q_wall_total_W": "2e8ddb447fd04beff51ae92b5c4587d37c491953a4eb2217dcbd733efa4b65dd"
+      }
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_A_preheat_source.npz",
+      "arrays": {
+        "time_s": "16dcf2592caa7f589f8975a9db17cba79b1f588320119137101691d917f58768",
+        "q_wall_laser_increment_W": "db002e43cd70f5b294570d1bb7197ff93de7a9a443855a4b8de9553d3336206e",
+        "q_wall_baseline_W": "352f5b23691c05e2a1e948e6fa3c4fded6da37144446dbe00b8ee4932b7b6cac",
+        "q_wall_total_W": "8dd66dd45ec56401b8c1c583e0ec12dbbb9bc93d08ace02e40b7f272dd490554"
+      }
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_B_after_source.npz",
+      "arrays": {
+        "time_s": "7e26c23248ea5840f5c91dd7a25fd13da3617d9d08f12e12f2b7f9c5b9155c8e",
+        "q_wall_laser_increment_W": "db7ef2cb02d48fb873bd83cab06f9a6486fcce9dfb059418f9ff4d0bee09a941",
+        "q_wall_baseline_W": "bf25a361d00608eeff0b0255140023aa68067dcd248ca6895e56878e92b491e9",
+        "q_wall_total_W": "98e0b9c9b2614942196145cdb07df28077099f0ac0906b3ddd95f571c54e6713"
+      }
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_B_wall_source.npz",
+      "arrays": {
+        "time_s": "412b84c7d58d8b729889a116135cae8befba5e7fccc3825e7e12aecb46ccead4",
+        "q_wall_laser_increment_W": "f1f0d2fb688aa33fe545e9ed38f9a5f1e384fa84230fc16c660fabda90d42b9a",
+        "q_wall_baseline_W": "3116bfe7004bb05454c8449722a3b97c3b168564aebd40319034535717e44f52",
+        "q_wall_total_W": "d5cbdc0995bfcd302c524597f1ebff3b63d9423f4775cf1a58a0b1bee826d7f3"
+      }
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_C_B_energy_source.npz",
+      "arrays": {
+        "time_s": "f51ee5383e3df350686fc5be997e18233ea417fc21dc4d1be1b9de6240b594d5",
+        "q_wall_laser_increment_W": "ce9db583ee2bc32af3c48e65716e2a3cdcead5222724d9efdc7713f300f6750d",
+        "q_wall_baseline_W": "1d20f44f22cab223098c9df251de0f3418fd7272b5d4806ac2b65d360f290497",
+        "q_wall_total_W": "e3f76b967b615771c25c414166ae48e23f7761a3b551861e2d34024831b7bed7"
+      }
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_C_ideal_upper_source.npz",
+      "arrays": {
+        "time_s": "1914158c83c9b59d3b9fa37bd44ecdb6e8758c08b9eb978d314801a60b60e2d8",
+        "q_wall_laser_increment_W": "cb1d497edec273bf30690ebb2c395d4c9aa4d837fcf7f3a9c9cdc8fefbffc801",
+        "q_wall_baseline_W": "bc236c6aa449f4c3eaae6cb430ca5f8238552d1a25e737da93f7bfbaae2f8942",
+        "q_wall_total_W": "098553816aa3db36a947f710453a5e6f158897c7c05be3e5bc2946a30764b4ea"
+      }
+    },
+    {
+      "path": "results/histories/refined_gas_1.15_baseline_source.npz",
+      "arrays": {
+        "time_s": "c56148d5640a57ebb67a8a89e7f96d18d3de26e493b13db703313bfd04aadcc9",
+        "q_wall_laser_increment_W": "5f35464bc61299d89d4f786a3d9fde3224dff27439993ab0b460b3cd834854b2",
+        "q_wall_baseline_W": "6c7c74da3fd02990346ae4535a2b0adc077e08ebe536820210449ca596228933",
+        "q_wall_total_W": "6c7c74da3fd02990346ae4535a2b0adc077e08ebe536820210449ca596228933"
+      }
+    }
+  ],
+  "scope": "Only source field names/metadata change; original numerical traces remain identical."
+}

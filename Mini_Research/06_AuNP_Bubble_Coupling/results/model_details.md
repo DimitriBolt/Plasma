@@ -93,7 +93,9 @@ subtracting noisy large temperatures. Incremental work and loss use
 The independently accumulated ledger checks their first-order first law.
 This does not include gas perturbation feedback into the liquid PDE.
 
-A/B use computed diffusion histories at early/near/late pulse centers. C uses
+A is a **transient early-heating diagnostic**, not a new equilibrium transformation
+of R0, vapor pressure or gas composition. A/B use retained diffusion histories
+at early/near/late pulse centers. C uses
 a finite-interval normalized Gaussian with either the computed B energy over
 5 µs or the ideal local absorbed energy. No energy is tuned to a temperature
 target. The upper NASA boundary applies to T_base+delta_T; actual stopping
@@ -110,17 +112,66 @@ markers, nodal areas and liquid temperatures. Boundary markers: bubble=1,
 bath=2, axis=3, Au=4. Storage on omitted bath nodes is excluded consistently
 from the active semidiscrete domain; domain refinement tests that approximation.
 
-`ThermalHistory(time_s, laser_W, baseline_W, metadata)` carries the precomputed
-thermal memory and a closed interval. `thermal_source(t_s, history,
-bubble_state=None)` returns `q_wall_total_W`, `q_wall_baseline_W`,
-`q_wall_laser_increment_W`, `q_wall_positive_W` and signed
-`q_wall_negative_W`, model ID and status. It uses PCHIP, with no extrapolation.
-If R_m is supplied, mismatch with the frozen radius beyond the metadata's
-radius_tolerance (default 1%) raises an exception. A missing bubble state
-does not validate the history for changed mechanics. All saved event sources
-are explicitly formal frozen diagnostics. A stateful moving liquid solver,
-not a new time-only source formula, is required for general MR7 use.
+`FrozenHeatModel.from_saved_field(path, geometry=...)` reassembles the
+stationary operator directly from archived nodes, triangles, edges and markers.
+The original reference file requires explicit geometry; other fields carry it
+in metadata. The saved mesh is a numerical input. A remesher is not called and
+freshly generated node lists are not required to match between platforms. The
+field test independently integrates water energy with degree-2 triangle
+quadrature; three archived-mesh replays compare observable max norms at 2e-5
+relative tolerance, rather than claiming remesher bitwise identity.
 
-`save/load` use NPZ with numeric arrays and JSON metadata, no object pickles.
-Absolute SI times, tc, pulse center, frozen R/gap, units and sign convention
-make event alignment auditable. The baseline and laser arrays remain separate.
+`ThermalHistory(time_s, laser_W, baseline_W, metadata,
+reference_temperature_K=None, reference_radius_m=None)` stores thermal memory
+on a closed interval. `baseline_W` is a **stored reference-state trace**.
+The v2 return/NPZ fields are `q_wall_reference_baseline_W`,
+`q_wall_reference_sum_W`, `q_wall_laser_increment_W` and reference-only
+positive/negative parts. The reference sum is
+
+`q_ref(t) = -4*pi*k_g*R_ref(t)*(T_ref(t)-T0) + delta_q_frozen(t)`.
+
+It is not a physical total flux evaluated at a future supplied Tg. New exports
+contain no `q_wall_total_W`. `current_state_total_flux_available` is always false.
+In the retained original diagnostics, T_ref is the paired exported Tb+delta_T
+and R_ref is that trajectory's prescribed R(t), both now explicitly archived;
+they are distinct from the thermal solver's frozen geometry. No numerical source
+trace is changed by the renaming. Older field names can be loaded but are always
+returned as reference diagnostics with the v2 contract.
+
+For an ODE evaluating its current-state baseline loss, use only
+
+```python
+qnet_W = -heat_loss_at_current_state_W + history.laser_increment_W(t_s)
+```
+
+The stored baseline is not added again. The changed-gas-temperature test checks
+this rule. Neither the scalar increment nor the reference sum includes the
+omitted gas-temperature response of the liquid. PCHIP, no extrapolation and
+frozen-radius checks remain in force. Future moving-boundary coupling requires
+MR7; this interface is not a universal dynamic gas/liquid source.
+
+## 6. Saved-trace estimate of omitted liquid feedback
+
+For a stationary unobstructed sphere in infinite water, uniform prescribed gas
+perturbation has transfer function h/[h+k/R+k*sqrt(s/alpha)] from gas to surface
+water. Its step response is
+
+`S(t)=h/(h+k/R)*(1-erfcx((1/R+h/k)*sqrt(alpha*t)))`.
+
+The surface rise is the Stieltjes convolution of S with saved delta_Tg. Piecewise
+linear reconstruction and four-point Gauss quadrature evaluate it at two time
+resolutions. This is a one-pass analytic diagnostic with prescribed input, no gas
+update, no new finite-particle PDE, no parameter optimization and no MR7 solution.
+It excludes finite-Au obstruction and finite-domain/motion effects.
+
+The extra positive water-return term is H*theta_surface, H=4*pi*R²*h. The gas ODE already includes its own
+negative -4*pi*k_g*R(t)*delta_Tg loss derivative; no second direct gas-loss term
+is added in this estimate. `gas_feedback_estimate.csv` separately records
+the already counted loss from 4*pi*k_g*R(t)*delta_Tg. For B, estimated integrated
+return/source energy is about 0.2323%,0.09284%,0.000225% at 1.0,1.15,1.3 bar,
+respectively. The last value covers only the censored observed interval.
+A maximum-principle bound H*integral(max_so_far(delta_Tg)) is much looser: about
+74.3%,12.1%,0.127%. Those bounds apply to the prescribed-trace stationary control;
+the small analytic estimates are not rigorous error bounds for changing geometry,
+and no universal negligibility claim follows. Original gas-temperature histories
+remain unchanged.

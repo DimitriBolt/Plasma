@@ -18,6 +18,7 @@ import triangle
 from .upstream import optics
 
 MODEL_ID = 'axisymmetric-P1-lumped-mass-frozen-spheres-v1'
+SOURCE_CONTRACT_ID = 'frozen-reference-baseline-plus-laser-v2'
 
 @dataclass(frozen=True)
 class Geometry:
@@ -151,18 +152,33 @@ class FrozenHeatModel:
     No advection or moving-domain work is present; geometry is fixed throughout.
     """
     def __init__(self, geometry=Geometry(), h_W_m2K=4400., props=None, refinement=1.,
-                 isolated=False, planar=False, outer_bc='bath', interface_W_m2K=None):
+                 isolated=False, planar=False, outer_bc='bath', interface_W_m2K=None,
+                 mesh=None):
         self.geometry=geometry; self.props=optics.ThermalProperties() if props is None else props
         if not np.isfinite(h_W_m2K) or h_W_m2K < 0 or refinement <= 0 or outer_bc not in ('bath','insulated'):
             raise ValueError('Nonnegative h, positive refinement, bath/insulated required')
         self.h=h_W_m2K; self.isolated=isolated; self.planar=planar
         self.G=self.props.interface_W_m2K if interface_W_m2K is None else interface_W_m2K
         if not np.isfinite(self.G) or self.G<0: raise ValueError('Nonnegative Au-water G required')
-        xy,tri,edges,markers=_mesh(geometry,refinement,isolated,planar)
+        if mesh is None:
+            xy,tri,edges,markers=_mesh(geometry,refinement,isolated,planar)
+        else:
+            # An archived mesh is an explicit numerical input. No remesher or
+            # cross-machine assertion about Triangle's node choices is involved.
+            xy,tri,edges,markers=[np.asarray(x).copy() for x in mesh]
+            if (xy.ndim!=2 or xy.shape[1]!=2 or not np.isfinite(xy).all()
+                    or np.any(xy[:,0]<0) or tri.ndim!=2 or tri.shape[1]!=3
+                    or edges.ndim!=2 or edges.shape[1]!=2 or markers.shape!=(len(edges),)
+                    or tri.dtype.kind not in 'iu' or edges.dtype.kind not in 'iu'
+                    or np.any(tri<0) or np.any(tri>=len(xy))
+                    or np.any(edges<0) or np.any(edges>=len(xy))
+                    or not np.isin(markers,[1,2,3,4]).all()):
+                raise ValueError('Invalid archived meridional mesh')
         self.xy,self.tri,self.edges,self.markers=xy,tri,edges,markers
         n=len(xy); points=xy[tri]; r=points[:,:,0]
         u=points[:,1]-points[:,0];v=points[:,2]-points[:,0]
         twice=u[:,0]*v[:,1]-u[:,1]*v[:,0]
+        if np.any(twice==0): raise ValueError('Degenerate archived triangle')
         area=np.abs(twice)/2
         gradients=np.stack([np.roll(points[:,:,1],-1,axis=1)-np.roll(points[:,:,1],-2,axis=1),
                             np.roll(points[:,:,0],-2,axis=1)-np.roll(points[:,:,0],-1,axis=1)],axis=-1)/twice[:,None,None]
@@ -200,6 +216,26 @@ class FrozenHeatModel:
         self.forcing=np.zeros(len(self.active));self.forcing[self.gold_index]=1/self.capacity[self.gold_index]
         self.outer_bc=outer_bc
         self.wall_weights=surface[1]
+
+    @classmethod
+    def from_saved_field(cls,path,geometry=None,props=None):
+        """Reassemble the heat operator on the archived mesh, in SI.
+
+        Field archives already contain nodes, triangles, boundary edges/markers
+        and h. Geometry is read from metadata or explicitly supplied for the
+        original reference archive, which predates geometry metadata. Material
+        properties must match the source run; defaults are the MR6 reference.
+        """
+        with np.load(path,allow_pickle=False) as z:
+            meta=json.loads(str(z['metadata_json'])) if 'metadata_json' in z else {}
+            recorded=Geometry(**meta['geometry']) if 'geometry' in meta else None
+            if geometry is None: geometry=recorded
+            if geometry is None: raise ValueError('Reference field requires explicit Geometry')
+            if recorded is not None and geometry!=recorded:
+                raise ValueError('Geometry differs from archived field metadata')
+            mesh=tuple(z[key].copy() for key in ('xy_m','triangles','boundary_edges','boundary_markers'))
+            h=float(z['h_W_m2K'])
+        return cls(geometry,h,props,mesh=mesh)
 
     def pulse(self, absorbed_energy_J, duration_s, time_s, rtol=2e-7, method='BDF', max_step_s=np.inf, save_field=False):
         """Start a top-hat at t=0. Return temperatures [K], signed flux [W], J.
@@ -247,18 +283,36 @@ class FrozenHeatModel:
         return out
 
 class ThermalHistory:
-    """Precomputed memory, closed time interval and geometry stamp, SI fluxes.
+    """Stored reference-state diagnostic and frozen laser increment, SI.
 
-    baseline is the signed MR4 closure, supplied at the same reference gas state.
-    It is NOT the absolute baseline of the resolved liquid BVP. No extrapolation.
-    Significant changes of geometry/gas perturbation require a new stateful PDE.
+    The baseline belongs to the archived reference gas-temperature trace. Its
+    sum with the laser increment is NOT the full physical flux for another gas
+    state. No q_wall_total_W is exported. An ODE with its own current-state MR4
+    loss must add ONLY laser_increment_W(), exactly once. The liquid response
+    remains frozen with zero gas-temperature perturbation; no MR7 model is implied.
     """
-    def __init__(self, time_s, laser_W, baseline_W, metadata=None):
+    def __init__(self, time_s, laser_W, baseline_W, metadata=None,reference_temperature_K=None,
+                 reference_radius_m=None):
         self.t=np.asarray(time_s,dtype=float)
         if len(self.t)<2 or np.any(np.diff(self.t)<=0): raise ValueError('Strictly ordered times required')
         self.laser=np.asarray(laser_W,dtype=float);self.baseline=np.asarray(baseline_W,dtype=float)
         if self.laser.shape!=self.t.shape or self.baseline.shape!=self.t.shape or not np.isfinite(np.r_[self.t,self.laser,self.baseline]).all(): raise ValueError('Finite matching histories required')
-        self.metadata={} if metadata is None else metadata
+        self.metadata={} if metadata is None else dict(metadata)
+        self.metadata['source_contract_id']=SOURCE_CONTRACT_ID
+        self.metadata['baseline_scope']='stored_reference_state_only'
+        self.metadata['gas_ode_addition']='q_wall_laser_increment_W_only'
+        self.reference_temperature=None if reference_temperature_K is None else np.asarray(reference_temperature_K,dtype=float)
+        if self.reference_temperature is not None and (self.reference_temperature.shape!=self.t.shape
+                or not np.isfinite(self.reference_temperature).all() or np.any(self.reference_temperature<=0)):
+            raise ValueError('Finite positive reference gas temperatures must match time grid')
+        self.temperature_function=(None if self.reference_temperature is None else
+                                   PchipInterpolator(self.t,self.reference_temperature,extrapolate=False))
+        self.reference_radius=None if reference_radius_m is None else np.asarray(reference_radius_m,dtype=float)
+        if self.reference_radius is not None and (self.reference_radius.shape!=self.t.shape
+                or not np.isfinite(self.reference_radius).all() or np.any(self.reference_radius<=0)):
+            raise ValueError('Finite positive reference radii must match time grid')
+        self.radius_function=(None if self.reference_radius is None else
+                              PchipInterpolator(self.t,self.reference_radius,extrapolate=False))
         self.functions=[PchipInterpolator(self.t,q,extrapolate=False) for q in (self.laser,self.baseline)]
 
     def thermal_source(self,t_s,bubble_state=None):
@@ -266,20 +320,40 @@ class ThermalHistory:
         if bubble_state is not None and 'frozen_radius_m' in self.metadata:
             if not np.isclose(bubble_state['R_m'],self.metadata['frozen_radius_m'],rtol=self.metadata.get('radius_tolerance',.01),atol=0):
                 raise ValueError('Geometry differs from precomputed response; solve stateful liquid equation')
-        laser,base=[float(f(t_s)) for f in self.functions];total=laser+base
-        return dict(q_wall_total_W=total,q_wall_baseline_W=base,q_wall_laser_increment_W=laser,
-                    q_wall_positive_W=max(total,0.),q_wall_negative_W=min(total,0.),
+        laser,base=[float(f(t_s)) for f in self.functions];reference_sum=laser+base
+        return dict(q_wall_reference_sum_W=reference_sum,q_wall_reference_baseline_W=base,
+                    q_wall_laser_increment_W=laser,q_wall_reference_positive_W=max(reference_sum,0.),
+                    q_wall_reference_negative_W=min(reference_sum,0.),
+                    reference_gas_temperature_K=(None if self.temperature_function is None else float(self.temperature_function(t_s))),
+                    reference_bubble_radius_m=(None if self.radius_function is None else float(self.radius_function(t_s))),
+                    current_state_total_flux_available=False,source_contract_id=SOURCE_CONTRACT_ID,
                     model_id=MODEL_ID,status=self.metadata.get('status','conditional_frozen_geometry'))
 
+    def laser_increment_W(self,t_s,bubble_state=None):
+        """The only additive term for a gas ODE already evaluating its heat loss.
+
+        Does not re-evaluate the loss at a supplied T_g_K or include gas feedback
+        into the liquid. Geometry/time restrictions remain those of this history.
+        """
+        return self.thermal_source(t_s,bubble_state)['q_wall_laser_increment_W']
+
     def save(self,path):
-        np.savez_compressed(path,time_s=self.t,q_wall_laser_increment_W=self.laser,
-                            q_wall_baseline_W=self.baseline,q_wall_total_W=self.laser+self.baseline,
-                            metadata_json=np.array(json.dumps(self.metadata,sort_keys=True)))
+        arrays=dict(time_s=self.t,q_wall_laser_increment_W=self.laser,
+                    q_wall_reference_baseline_W=self.baseline,q_wall_reference_sum_W=self.laser+self.baseline,
+                    metadata_json=np.array(json.dumps(self.metadata,sort_keys=True)))
+        if self.reference_temperature is not None:arrays['reference_gas_temperature_K']=self.reference_temperature
+        if self.reference_radius is not None:arrays['reference_bubble_radius_m']=self.reference_radius
+        np.savez_compressed(path,**arrays)
 
     @classmethod
     def load(cls,path):
         with np.load(path,allow_pickle=False) as z:
-            return cls(z['time_s'],z['q_wall_laser_increment_W'],z['q_wall_baseline_W'],json.loads(str(z['metadata_json'])))
+            key='q_wall_reference_baseline_W' if 'q_wall_reference_baseline_W' in z else 'q_wall_baseline_W'
+            meta=json.loads(str(z['metadata_json']))
+            if key=='q_wall_baseline_W':meta['legacy_reference_fields_loaded']=True
+            T=z['reference_gas_temperature_K'] if 'reference_gas_temperature_K' in z else None
+            radius=z['reference_bubble_radius_m'] if 'reference_bubble_radius_m' in z else None
+            return cls(z['time_s'],z['q_wall_laser_increment_W'],z[key],meta,T,radius)
 
 def thermal_source(t_s,history,bubble_state=None):
     """Stateless facade over an explicitly supplied, history-bearing object."""

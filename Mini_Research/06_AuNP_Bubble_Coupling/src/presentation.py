@@ -59,7 +59,7 @@ def main():
     fig.tight_layout();save(fig,'03_time_response')
     gap=read('gap_scan');sens=read('transport_sensitivity');fig,(ax,bx)=plt.subplots(1,2,figsize=(7,2.5))
     ax.loglog(gap.d_m*1e9,gap.gas_fraction*100,'o-');ax.axvspan(.8,2,color='#c44e52',alpha=.15)
-    ax.axvline(100,ls=':',color='gray');ax.set_xlabel('Surface gap $d$ (nm)');ax.set_ylabel('Absorbed energy reaching gas by 2 $\mu$s (%)')
+    ax.axvline(100,ls=':',color='gray');ax.set_xlabel('Surface gap $d$ (nm)');ax.set_ylabel(r'Gas delivery by 2 $\mu$s (%)')
     ax.set_title('20 nm Au, 10 ns, $h=4400$ W/(m$^2$ K)')
     hh=sens[(sens.varied_parameter=='h')&(sens.value_SI>0)];bx.semilogx(hh.value_SI,hh.gas_fraction*100,'o-',color='#b57128')
     bx.set_xlabel('Effective gas transfer $h$ (W/m$^2$/K)');bx.set_ylabel('Transfer by 2 $\mu$s (%)');bx.set_title('Gap = 100 nm; high $h$ is a mathematical limit')
@@ -86,7 +86,7 @@ def main():
     from scipy.interpolate import PchipInterpolator
     bf=PchipInterpolator(bt,bT,extrapolate=False)
     fig,(ax,bx)=plt.subplots(1,2,figsize=(7,2.5))
-    for mechanism,label in [('A_preheat','A: preheat'),('B_wall','B: diffusive wall'),('B_after','B: after collapse'),('C_B_energy','C: same B energy'),('C_ideal_upper','C: ideal 100%')]:
+    for mechanism,label in [('A_preheat','A: early heating'),('B_wall','B: diffusive wall'),('B_after','B: after collapse'),('C_B_energy','C: same B energy'),('C_ideal_upper','C: ideal 100%')]:
         with np.load(R/'histories'/f'gas_{amp:.2f}_{mechanism}.npz') as z:
             x=z['time_s'];y=z['delta_T_K'];xx=z['time_minus_tc_s']*1e9
         ax.plot(xx,y,label=label)
@@ -110,7 +110,7 @@ def main():
     cells=[]
     def md(s):cells.append(dict(cell_type='markdown',metadata={},source=[s]))
     def code(s):cells.append(dict(cell_type='code',metadata={},source=[s],execution_count=None,outputs=[]))
-    md('# Mini-Research 6: AuNP-Bubble Thermal Coupling\nDimitri Bolt. Academic supervisor: Prof. Dr. Ildar R. Gabitov.\n\nThis notebook reads saved results. [Scientific report](report/06_AuNP_Bubble_Coupling.pdf); [model details](results/model_details.md).')
+    md('# Mini-Research 6: Frozen-Geometry AuNP-Bubble Thermal Coupling\nDimitri Bolt. Academic supervisor: Prof. Dr. Ildar R. Gabitov.\n\nThe completed scope is stationary thermal coupling. Motion/advection and self-consistent mechanics belong to MR7. This notebook reads saved results. [Scientific report](report/06_AuNP_Bubble_Coupling.pdf); [model details](results/model_details.md).')
     md('## 1. Model and energy channel\nThe axisymmetric liquid equation resolves a finite Au sphere and a spherical gas boundary in frozen geometry. The signed MR4 gas loss is supplemented only by the laser-tagged increment. All dynamic event applications are conditional diagnostics.\n\n'
        f'Reference: a=20 nm, surface gap=100 nm, R=6 micrometres, 532 nm, local F=1 J/m², 10 ns. Absorbed energy: **{E*1e15:.5f} fJ**. Gas energy by 2 microseconds: **{ref["gas_energy_J"][-1]*1e18:.4f} aJ**, or **{ref["gas_energy_J"][-1]/E*100:.4f}%**.\n\n![Reference transient](figures/03_time_response.jpg)')
     code("from pathlib import Path\nimport json, numpy as np, pandas as pd\nfrom IPython.display import display, Image\nr=Path('results')\ndisplay(pd.read_csv(r/'gap_scan.csv'))")
@@ -120,7 +120,7 @@ def main():
     code("display(pd.read_csv(r/'mechanical_events.csv'))\ndisplay(pd.read_csv(r/'event_snapshots.csv'))\ndisplay(Image(filename='figures/06_kinematics.jpg'))")
     md('## 4. Finite design objectives and formal extremes\nThe 216-point design has separate absorbed-energy, gas-energy and fraction objectives. The moderate static maximum gas delivery is about 3.95 fJ by 2 microseconds from about 3.48 pJ absorption. Wavelength plateaus and unresolved small gap differences do not identify a physical optimum. Formal short-pulse/near-contact states remain with their failure flags.\n\n![Gap and transfer coefficient](figures/04_gap_transport.jpg)')
     code("display(pd.read_csv(r/'finite_design.csv'))\ndisplay(pd.read_csv(r/'formal_regimes.csv'))\nprint((r/'design_extrema.json').read_text())")
-    md('## 5. One-way gas diagnostic and coefficient censoring\nA common nonlinear gas baseline and a directly integrated first-order laser increment avoid subtractive numerical noise. At 1.15 bar the B increment at the baseline peak is about 0.468 microkelvin; ideal 100% C delivery gives about 3.506 millikelvin. These are formal frozen diagnostics with substantial baseline pressure mismatch. The 1.3 bar histories stop at the actual NASA coefficient boundary; 6000 K is not a physical ceiling.\n\n![A/B/C diagnostic](figures/07_ABC_diagnostic.jpg)')
+    md('## 5. One-way gas diagnostic and coefficient censoring\nA is a **transient early-heating diagnostic**, without an equilibrium update of radius, vapor pressure or composition. A common nonlinear gas baseline and a directly integrated first-order laser increment avoid subtractive numerical noise. At 1.15 bar the B increment at the baseline peak is about 0.468 microkelvin; ideal 100% C delivery gives about 3.506 millikelvin. These are formal frozen diagnostics with substantial baseline pressure mismatch. The 1.3 bar histories stop at the actual NASA coefficient boundary; 6000 K is not a physical ceiling.\n\n![A/B/C diagnostic](figures/07_ABC_diagnostic.jpg)')
     code("display(pd.read_csv(r/'gas_diagnostic.csv'))\ndisplay(Image(filename='figures/07_ABC_diagnostic.jpg'))")
     md('## 6. Numerical checks and interpretation\nProduction-to-finest gas-energy discrepancy is at most 0.196% in the selected controls. The finest isolated Au peaks agree with MR5 within 0.0893%. Numerical convergence does not validate capture, interfacial optics, fixed transport, or a frozen strong collapse. The history interface cannot be applied to changed mechanics without evolving the liquid state.\n\n![Separate energy channels](figures/08_energy_partition.jpg)')
     code("print((r/'validation_summary.json').read_text())\ndisplay(pd.read_csv(r/'isolated_MR5.csv'))\ndisplay(pd.read_csv(r/'analytic_point_controls.csv'))")

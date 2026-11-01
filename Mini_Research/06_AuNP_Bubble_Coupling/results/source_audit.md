@@ -53,3 +53,15 @@ the radial diffusion equation with w=r*T and inverting its elementary Laplace
 transform. It is a separate analytic benchmark, not an approximation asserted
 valid at d<<a. The local finite-particle model is axisymmetric, not angularly uniform.
 No proprietary paper PDF is duplicated into MR6.
+
+## Final correction scope
+
+The original MR6 snapshot is faa2828f554517a0e2e43d9ae42cff37d682fbd0.
+The correction retains the original static PDE and numerical data. Saved meshes
+are now explicit replay inputs; independent remeshing is not required to reproduce
+stored field validation. Source schema v2 labels its reference-state baseline/sum,
+not a full flux for a changed gas temperature. Mechanism A is transient early
+heating only. The gas-feedback estimate is derived from the same stationary
+linear heat equation and evaluated on saved gas traces, without another gas or
+mechanical solution or new literature-calibrated parameter. Moving boundaries,
+advection and self-consistent mechanics remain assigned to MR7.

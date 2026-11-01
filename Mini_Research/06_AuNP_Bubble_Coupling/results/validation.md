@@ -1,25 +1,60 @@
-# Numerical and artifact verification
+# Final-correction verification: frozen-geometry MR6
 
-The checks establish reproducibility of the stated conditional models; they do
-not establish experimental validity or independent scientific acceptance.
+The agreed final scope is stationary AuNP-liquid-bubble thermal coupling.
+0.3258% is a conditional static-geometry result for the specified 2 microsecond
+window, not a physically verified efficiency during acoustic collapse. Moving
+boundaries, advection and self-consistent mechanics are deferred to MR7.
+Publication is not independent acceptance or official stage closure.
 
-- Starting local and remote main: `0204ce7a8429406b7ec235b02cec8581274fc8c6`.
-- All 1083 tracked starting files were compared byte-for-byte to accepted Git
-  blobs and SHA-256 inventoried. No prior stage, plan or unrelated user file changed.
-- 24 tests pass in the production environment. Tests include saved-field storage
-  and maximum-principle checks across five serialized physical geometries, rather
-  than only checking the internally integrated scalar energy ledger.
-- All CSV and all NPZ numeric arrays are readable, finite where defined, SI
-  documented and retained with validity/censoring flags. Formal extremes are not
-  clipped. Tiny signed far-tail FEM undershoots are retained.
+## Original data and scope preservation
 
-## Selected quantitative checks
+The correction starts from published MR6
+`faa2828f554517a0e2e43d9ae42cff37d682fbd0`; its initial 117 checksums passed.
+All 1083 accepted upstream fingerprints pass again. MR1-MR5, Plasma-plan.tex
+and unrelated user files remain unchanged. No new parameter optimization,
+large sweep or mechanical/gas trajectory calculation was performed.
 
-| Check | Result |
+`correction_input_manifest.json` verifies 55 original numerical files byte-for-byte
+(21 CSVs, 29 non-source NPZs and five scientific JSONs). All original time, laser,
+baseline and sum arrays in 24 source NPZs are numerically identical after explicit
+reference-state renaming. Reference gas temperature and radius are now included.
+The historical full-run record remains in `clean_reproduction_original.json`.
+
+## Corrections checked
+
+- Handoff late-window fraction corrected from 0.01817% to 0.00817%; the original
+  CSV value is 0.008166454345095196%. No underlying result was changed.
+- 59 rounded scientific claims and bounds pass their source-data audit, including
+  the six newly reported feedback estimates/bounds. See `handoff_numeric_audit.csv`.
+- The failed mesh test no longer regenerates a mesh to assert bitwise equality.
+  Archived nodes/triangles/edge markers are explicit inputs. The reported 1405
+  versus 1404 node difference is therefore immaterial to stored-field validation.
+  A test disables the mesher entirely and still loads the event_1.00 field.
+- Five archived fields pass independent degree-2 triangle quadrature of water
+  energy, wall-flux integration and balance/temperature checks. Signed far-tail
+  undershoots remain unmodified.
+- Three bounded saved-mesh replays compare temperature, power and energy at a
+  2e-5 max-norm tolerance, 100 times the 2e-7 time-solver tolerance. This is a
+  tolerance for replay on known meshes, not an error certificate for new meshes.
+- The v2 API exports reference baseline/sum and laser increment separately, with
+  no q_wall_total_W. An ODE already evaluating current-state heat loss adds only
+  laser_increment_W(). Tests check changed gas temperature, absence of ambiguous
+  keys, source-state consistency, legacy loading and no double-counted baseline.
+- Mechanism A is explicitly a transient early-heating diagnostic, not a new
+  equilibrium R0/vapor-pressure/composition model.
+- Figure 04's vertical label is shortened to fit; Figure 07's A legend and the
+  saved-results notebook use early-heating terminology. The PDF is rebuilt.
+
+## New bounded checks versus retained original convergence
+
+Fresh replay worst observable relative difference: 1.4755496e-08 (admitted 2e-5).
+
+Independent stored-water energy residual / absorption: 2.412255361e-15.
+
+The original mesh/time/domain/isolated studies are retained rather than repeated:
+
+| Original selected-case metric | Relative discrepancy |
 |---|---:|
-| spatial_cases | 15 |
-| time_method_cases | 3 |
-| domain_cases | 6 |
 | production_gas_energy_spatial_relative_max | 0.001956097602 |
 | production_gold_spatial_relative_max | 0.01205506181 |
 | production_water_spatial_relative_max | 0.01191987823 |
@@ -27,84 +62,58 @@ not establish experimental validity or independent scientific acceptance.
 | independent_Radau_gold_relative | 1.411301934e-09 |
 | independent_Radau_gas_relative | -1.905364755e-12 |
 | energy_balance_relative_max | 2.657475174e-14 |
-| gaussian_normalization_relative_max | 2.220446049e-16 |
-| mechanics_input_radius_difference_over_R0_max | 6.251416331e-06 |
-| baseline_static_matching_error | 0.04214559387 |
 
-Spatial differences are empirical selected-case discrepancies, not rigorous
-universal bounds. Independent sampled wall-flux integration differs from the
-ODE ledger by at most 7.405e-6 relative in its selected control. The gas increment
-2 ns/0.5 ns step-cap comparison differs by at most 8.538e-7 relative. The isolated
-comparison uses exactly matched Au/water coefficients and does not validate the
-new bubble geometry. The analytic finite-h point-sphere control is independently
-derived; early vanishing far tails are explicitly not relatively resolved.
+These are empirical selected-case differences, not universal error bounds.
+The static MR4-boundary matching discrepancy remains 4.2146%, with no bound
+claimed for unsteady matching. All 45 existing event snapshots remain formal.
 
-Domain/insulated controls distinguish gas delivery convergence from artificial
-bath escape. Expanding 1 to 2 micrometre padding changes reference gas delivery
-about 0.2%, while water-versus-bath storage changes materially. The 0.5 micrometre
-domain is too close for the same result. Full sphere/planar comparisons and all
-high-h limits remain available.
+## Omitted gas-to-liquid feedback estimate
 
-## Physical and model limits
+The estimate uses only the saved gas increments, an unobstructed stationary sphere
+in infinite water and an analytic surface step response. It does not change the
+original gas trajectories, liquid finite-particle calculations or mechanics.
+The gas ODE already includes its own -4*pi*k_g*R(t)*delta_Tg loss derivative;
+no second direct loss is added. Only the possible extra positive liquid-return
+term is estimated. For B, return/source-energy ratios are approximately 0.2323%,
+0.09284%,0.000225% at 1.0,1.15,1.3 bar. The 1.3 bar result covers its censored
+observed interval only. Maximum-principle bounds are much looser: 74.3%,12.1%,0.127%.
+Thus the small estimates do not prove universal negligibility or a physically
+validated collapse efficiency. Finite-Au obstruction, flow and changing radius
+are outside this analytic control. `gas_feedback_estimate.csv` retains nine
+A/B/ideal-C controls, already-counted gas loss, bounds and two-grid differences.
 
-All 45 event snapshots fail the declared frozen-motion screens. Their event-aligned
-outputs remain formal diagnostics, including the conditional mechanical baselines.
-The 1.3 bar flow has additional inherited compressibility limitations. Passive
-particles are not asserted to remain at a prescribed wall gap. Near-interface
-optics, capture forces, hot transport, mass transfer, phase change and chemistry
-remain unresolved. The 4.2146% static MR4-boundary matching difference exceeds the
-tiny one-particle gas-temperature effects and is not an unsteady error bound.
+## Clean environment and presentation
 
-The gas calculation evolves a common nonlinear baseline plus its first-order
-laser perturbation to resolve tiny increments without subtractive noise. Its own
-perturbed work/heat/source identity is checked. Large pressure mismatch with the
-original mechanical gas is retained. The actual first NASA boundary censors each
-strong history; no 6000 K physical ceiling, missing tail or global censored Tmax
-comparison is claimed. Late sources have no effect on preceding peaks.
+A new Python 3.12.14 environment was installed from the published dependency lock;
+pip check passed. A separate repository archive without .git was overlaid with
+correction sources while retaining the original v1 source files. The fresh run
+therefore re-exported those sources through the new schema, ran all bounded
+checks/replays and all 31 tests, rebuilt all eight JPGs and compiled the PDF.
+No original sweep was repeated. The five field checks and the mesher-bypass test
+verify the corrected portability contract; a second operating system was not run
+in this session and is not claimed.
 
-## Report and package
+All 53 preserved/re-exported NPZ files (586 arrays, including metadata/state
+arrays), source conversion results, 59 claim checks and bounded numerical checks
+agree with the clean run. Replay comparison uses 2e-5, analytic feedback reproduction
+uses 1e-6 relative tolerance; tiny numerical residuals are checked by absolute
+physical bounds rather than required to have identical roundoff digits. All eight
+JPGs happen to be byte-identical on this host; PDF text also matches exactly.
+This is not a demand for cross-platform remesher or raster byte identity.
+`clean_reproduction.json` and `clean_environment_tests.txt` contain actual results.
 
-The final English scientific PDF has eight pages: seven main pages and one
-appendix including references. All eight pages were rendered to JPG and visually
-inspected. An initially orphaned paragraph and an overlong figure axis label were
-corrected; the latest pages are readable without clipping or overlap. The
-serialized water field was independently checked against water storage and the
-maximum-temperature bound. Equations, legends, units and references are readable.
-The final LaTeX log has no overfull box, undefined reference or warning.
+All eight final PDF pages were rendered and visually inspected. Figure 04's full
+vertical label, equations, signs, units, legends, Appendix feedback formula and
+references are readable without clipping or overlap. The final LaTeX log has no
+warning, overfull box or undefined reference. The scientific PDF contains no Git
+SHA, Codex/Web instructions, internal correspondence or acceptance status.
 
-Eight figures are JPG only, 300 dpi, rebuilt from saved data. The numbered
-notebook has Markdown result text and embedded saved figures for GitHub reading.
-The scientific report contains no Git SHA, Codex/Web task instructions, internal
-chat references or stage-acceptance status. The source interface documents thermal
-memory, finite intervals, signed baseline/increment and frozen-radius admission.
+## Publication gate
 
-## Clean full recalculation
-
-A separate archive of the accepted base plus the MR6 sources was extracted without
-.git. A newly created Python 3.12.14 environment was installed from the full lock;
-its dependency check passed. All experiments, finite designs, event diagnostics,
-mesh/time/domain/analytic/isolated controls, gas-step refinement, figures and PDF
-were recomputed. Four additional full-field benchmarks were independently rebuilt
-in that same fresh environment. The final tests, including their field/storage
-checks, passed: 24 tests.
-
-All 21 CSV tables, all 538 arrays in 53 NPZ archives, all eight JPG files, five
-scientific JSON documents and extracted PDF text match exactly. The clean PDF
-rebuilt successfully. This is same-machine fresh-environment reproduction, not
-cross-platform byte identity or independent physical validation. `clean_reproduction.json`
-and `clean_environment_tests.txt` retain exact outcomes.
-
-## Final publication procedure
-
-The explicit FILE_LIST and SHA256SUMS include the full package and exclude caches,
-virtual environments and TeX intermediate files. A final staged Git archive is
-checked for file-list equality, all checksums and all 24 tests before publication.
-The accepted upstream fingerprints are rechecked, and staged paths must all lie
-inside MR6. The remote main is read again and the push does not use force.
-
-The publication dispatch records actual remote SHA, immutable artifact links,
-remote-file comparisons and delivery acknowledgment after they occur. The current
-Web destination was identified/read as Mini-Research 6 (Web); the actual proven
-mechanism is send_message_to_thread followed by destination readback. No previous
-stage's destination identity is reused. Publication does not close the stage or
-begin MR7.
+FILE_LIST and SHA256SUMS cover the final package, excluding environments, caches
+and intermediate TeX files. The staged Git archive is verified for manifest
+completeness, checksums and all tests before commit. Only MR6 paths may be staged.
+Remote main and immutable artifacts are checked after the non-force push. The
+publication dispatch supplies the actual new SHA, links, counts and delivery
+acknowledgment to the current Mini-Research 6 (Web) chat. MR6 is not declared
+closed, RoadMap is untouched, and MR7 is not begun.

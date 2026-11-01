@@ -1,9 +1,14 @@
 # Mini-Research 6: independent scientific review
 
 Please audit the mathematics, numerics, physical interpretation and reusable
-source interface of **Mini-Research 6: AuNP-Bubble Thermal Coupling**. Publication
+source interface of **Mini-Research 6: Frozen-Geometry AuNP-Bubble Thermal Coupling**. Publication
 does not constitute scientific acceptance or RoadMap closure. No MR7 calculation,
-global coupled optimization or reaction-rate calculation is included.
+global coupled optimization or reaction-rate calculation is included. The final agreed
+scope is stationary AuNP-to-liquid-to-bubble heat transfer. Moving boundaries,
+advection and self-consistent mechanical interaction are deferred to MR7.
+
+This correction follows independent review of the original MR6 snapshot
+`faa2828f554517a0e2e43d9ae42cff37d682fbd0`.
 
 The publication dispatch supplies the full remotely verified commit SHA and
 immutable commit/PDF/package links. This file belongs to that containing snapshot;
@@ -74,7 +79,7 @@ Reference: R=6 µm, a=20 nm, **surface gap d=100 nm**, local F=1 J/m², 532 nm,
   0.03110 W/m²: ratio about 5197. About 0.0481% of the sphere carries 90% of
   positive flux. Raw signed fields and nodal area weights permit independent checks.
 - The largest reference late-window fraction on the declared timing lattice is
-  about 0.01817% for [tc-10,tc+10] ns at laser-center offset -50 ns. This is
+  about 0.00817% for [tc-10,tc+10] ns at laser-center offset -50 ns. This is
   a fixed-geometry timing result, not a global physical optimum.
 
 The finite design has 216 geometry/duration/wavelength cases, continuously capped
@@ -138,8 +143,9 @@ observed-window diagnostics, never new five-cycle global temperatures.
 A common nonlinear baseline is integrated once. To avoid subtractive noise from
 tiny one-particle effects, the first-order sensitivity obeys
 `delta_Tdot=f_T(T_base)*delta_T+q_laser/C(T_base)` with analytic NASA C'. Separate
-incremental work/loss/source ledgers check its first law. A uses early diffusion
-(-2 µs), B near-collapse diffusion (-20 ns) and an after-collapse control (+200 ns).
+incremental work/loss/source ledgers check its first law. A is a **transient early-heating diagnostic**, with an early diffusion pulse
+(-2 µs); it does not construct a new equilibrium radius, vapor pressure or gas
+composition. B uses near-collapse diffusion (-20 ns) and an after-collapse control (+200 ns).
 C is a finite-normalized Gaussian centered -5 ns, sigma=2 ns on [-20,+10] ns;
 its energy is either computed B transfer over 5 µs or explicitly ideal 100% local
 absorption. No energy or Gaussian delay is fitted to a desired temperature.
@@ -161,7 +167,7 @@ represented as validated in this stage.
 
 ## 5. Verification and important quantitative limits
 
-- 24 automatic tests: geometry/contact, zero intensity/count/exchange, h=0,
+- **31 automatic tests pass** in production and the fresh locked environment: geometry/contact, zero intensity/count/exchange, h=0,
   strong-contact monotonicity, energy and serialized-field consistency, diffusive
   SI scaling, passive invariant versus particle ODE, finite Gaussian normalization,
   signs, optical energy, vapor normalization, NASA bounds, causality, finite-design
@@ -182,9 +188,20 @@ represented as validated in this stage.
 - Domain/boundary tests: 1->2 µm padding changes reference gas delivery about 0.2%;
   0.5 µm padding is insufficient for that comparison. Bath-versus-water storage
   partition is domain dependent even where gas delivery has stabilized.
-- Full fresh locked-environment recalculation and archive checks are documented
-  by `clean_reproduction.json`, `validation.md` and the exact final manifests.
-  Same-machine reproduction is not independent scientific acceptance.
+- The original same-machine full recalculation is retained as
+  `clean_reproduction_original.json`. It did not establish cross-platform remesher
+  determinism. The independent audit found 1405 stored versus 1404 regenerated
+  nodes in event_1.00. The fixed test now uses the saved nodes/triangles/edges as
+  numerical input and checks energy, flux and temperature invariants. No equality
+  between freshly generated meshes is required. Three saved-mesh replays use a
+  2e-5 max-norm observable tolerance (100 times the 2e-7 time-solver tolerance),
+  separately from the existing spatial convergence study.
+- `handoff_numeric_audit.csv` checks 59 rounded claims/bounds against original
+  CSV/NPZ/API values. `correction_input_manifest.json` checks 55 original numeric
+  files byte-for-byte and preserves all numerical arrays in 24 renamed sources.
+- Fresh-environment correction checks are in `clean_reproduction.json` and the
+  validation journal. They rerun tests, bounded saved-mesh controls, saved-data
+  audits and presentation/PDF construction; no large parameter sweep is repeated.
 
 Please review the actual `validation_summary.json`, convergence CSVs, gas increment
 residuals, optical contract and event statuses rather than relying only on rounded
@@ -193,15 +210,36 @@ identity after publication.
 
 ## 6. Interface readiness and questions requiring independent judgment
 
-`src/coupling.py` offers a stateful frozen-domain solver and precomputed
-`ThermalHistory`. `thermal_source(t_s,history,bubble_state=None)` returns total,
-baseline, laser increment and positive/negative signed parts in W. It rejects
-out-of-domain time and, when supplied, inconsistent R. Serialized sources preserve
-absolute time, tc, finite interval, units, geometry, pulse and formal validity status.
-They are not universal time-only sources for changed mechanics. General MR7 use
-requires evolving the liquid thermal state, advection/moving-boundary energy,
-appropriate gas response and particle capture/optics, rather than silently reusing
-the frozen trace.
+`src/coupling.py` offers a stationary-domain solver and precomputed
+`ThermalHistory`. The v2 source contract exports `q_wall_reference_baseline_W`,
+`q_wall_reference_sum_W` and `q_wall_laser_increment_W`; it does **not** export
+`q_wall_total_W`. The reference sum is the stored MR4 closure at explicitly
+archived reference R(t),T(t), plus the frozen laser increment. In the retained
+legacy diagnostics, reference T is the paired exported Tb+delta_T, not a future
+supplied gas state. The reference sum is never called the full physical heat flux
+for changed Tg. Use only `history.laser_increment_W(t)` in an ODE that already
+evaluates its own current-state MR4 loss. A regression test changes gas temperature
+and verifies that the stored baseline is not counted a second time. Legacy source
+fields load as reference diagnostics; new exports use only explicit v2 names.
+Time/geometry guards and formal applicability metadata remain in force.
+
+A bounded analytic estimate now evaluates omitted liquid heating by prescribed
+saved delta_Tg, without updating gas or mechanics. For an unobstructed stationary
+sphere in infinite water, the surface step response is
+
+`S(t) = h/(h+k/R) * [1-erfcx((1/R+h/k)*sqrt(alpha*t))]`.
+
+Convolution with the saved gas increment estimates the extra positive return
+`H*theta_surface`, H=4*pi*R²*h. The gas ODE already includes its own negative `-4*pi*k_g*R(t)*delta_Tg`
+loss derivative; no second direct loss is added in this estimate. For B, estimated integrated return/source energy is about 0.2323% at
+1.0 bar, 0.09284% at 1.15 bar and 0.000225% on the censored 1.3 bar interval.
+The first-order response is left unchanged. A maximum-principle bound based on
+`H*integral(max_so_far(delta_Tg))` is much looser: about 74.3%, 12.1%, 0.127%
+respectively. Thus the small analytic estimate is not a rigorous error bound for
+the original event geometry or a proof that feedback is universally negligible.
+Finite-Au obstruction, domain truncation, changing R/advection and post-censoring
+tails are excluded from this ideal control. `gas_feedback_estimate.csv` retains
+all nine A/B/ideal-C controls, the already counted gas-loss term and refinement.
 
 Please assess:
 

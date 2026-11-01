@@ -82,8 +82,9 @@ def test_gaussian_finite_interval_normalization():
 def test_signed_flux_not_clipped():
     history=ThermalHistory([0.,1.,2.],[0.,1.,0.],[-2.,-2.,1.])
     q=thermal_source(1.,history)
-    assert q['q_wall_total_W']==-1 and q['q_wall_negative_W']==-1
-    assert q['q_wall_positive_W']==0 and q['q_wall_laser_increment_W']==1
+    assert q['q_wall_reference_sum_W']==-1 and q['q_wall_reference_negative_W']==-1
+    assert q['q_wall_reference_positive_W']==0 and q['q_wall_laser_increment_W']==1
+    assert 'q_wall_total_W' not in q and not q['current_state_total_flux_available']
     parts=integrated_parts([0.,1.,2.],[-2.,-1.,1.])
     assert parts['negative_J']<0 and parts['positive_J']>0
     assert parts['signed_J']==pytest.approx(parts['positive_J']+parts['negative_J'])
@@ -95,6 +96,30 @@ def test_history_memory_serialization_and_domain(tmp_path):
     for t in [-1e-10,2.+1e-10]:
         with pytest.raises(ValueError): loaded.thermal_source(t)
     with pytest.raises(ValueError): loaded.thermal_source(1.,{'R_m':5e-6})
+
+def test_history_current_gas_loss_is_counted_once():
+    # Stored loss belongs to 400 K; an ODE at 600 K evaluates its own loss.
+    h=ThermalHistory([0.,1.,2.],[0.,1.,0.],[-2.,-2.,-2.],
+                     {'frozen_radius_m':6e-6},reference_temperature_K=[400.,400.,400.])
+    state={'R_m':6e-6,'T_g_K':600.};current_loss_W=7.
+    q=h.thermal_source(1.,state)
+    assert q['reference_gas_temperature_K']==400.
+    assert q['q_wall_reference_sum_W']==-1.
+    net_current_W=-current_loss_W+h.laser_increment_W(1.,state)
+    assert net_current_W==-6.  # Not -8 W: the stored -2 W is not added again.
+    assert 'q_wall_total_W' not in q and not q['current_state_total_flux_available']
+
+def test_legacy_source_fields_are_never_exported_as_current_total(tmp_path):
+    p=tmp_path/'legacy.npz'
+    np.savez(p,time_s=[0.,1.],q_wall_laser_increment_W=[1.,1.],
+             q_wall_baseline_W=[-2.,-2.],q_wall_total_W=[-1.,-1.],metadata_json=np.array('{}'))
+    h=ThermalHistory.load(p)
+    assert h.metadata['legacy_reference_fields_loaded']
+    assert h.laser_increment_W(.5)==1.
+    assert 'q_wall_total_W' not in h.thermal_source(.5)
+    h.save(tmp_path/'v2.npz')
+    with np.load(tmp_path/'v2.npz') as z:
+        assert 'q_wall_total_W' not in z and 'q_wall_reference_sum_W' in z
 
 def test_point_analytic_limits():
     R=6e-6;r=7e-6;alpha=.6/(1000*4187)
@@ -142,8 +167,8 @@ def test_late_pulse_causality():
 
 def test_saved_field_matches_energy_and_maximum_principle():
     # Check the serialized, rescaled physical field as well as the solver ledger.
-    z=np.load(ROOT/'results/reference.npz');m=FrozenHeatModel(Geometry(gap_m=100e-9))
-    assert np.array_equal(m.xy,z['xy_m'])
+    z=np.load(ROOT/'results/reference.npz')
+    m=FrozenHeatModel.from_saved_field(ROOT/'results/reference.npz',Geometry(gap_m=100e-9))
     energy=m.full_capacity[:-1]@z['water_rise_K']
     assert max(abs(energy-z['water_energy_J']))<z['absorbed_so_far_J'][-1]*1e-10
     assert max(z['nearest_water_rise_K'])<=max(z['gold_rise_K'])*(1+1e-5)
@@ -153,13 +178,61 @@ def test_saved_field_matches_energy_and_maximum_principle():
     assert len(paths)==4
     for path in paths:
         with np.load(path) as f:
-            meta=json.loads(str(f['metadata_json']));g=Geometry(**meta['geometry'])
-            model=FrozenHeatModel(g,h_W_m2K=meta['h_W_m2K'])
-            assert np.array_equal(model.xy,f['xy_m'])
+            model=FrozenHeatModel.from_saved_field(path)
             Ew=model.full_capacity[:-1]@f['water_rise_K'];E=f['absorbed_so_far_J'][-1]
             assert max(abs(Ew-f['water_energy_J']))<E*1e-10
             assert max(f['water_rise_K'].ravel())<=max(f['gold_rise_K'])*(1+1e-5)
             assert max(abs(f['balance_residual_J']))<E*1e-8
+
+def test_archived_mesh_does_not_call_platform_mesher(monkeypatch):
+    def fail(*args,**kwargs):raise AssertionError('Archived fields must not be remeshed')
+    monkeypatch.setattr('src.coupling._mesh',fail)
+    path=ROOT/'results/fields/event_1.00.npz'
+    model=FrozenHeatModel.from_saved_field(path)
+    with np.load(path) as z:
+        assert len(model.xy)==len(z['xy_m'])
+    # This equality describes an immutable input, not fresh mesher determinism.
+
+def test_archived_mesh_rejects_invalid_geometry():
+    with np.load(ROOT/'results/reference.npz') as z:
+        mesh=[z[k].copy() for k in ('xy_m','triangles','boundary_edges','boundary_markers')]
+    mesh[0][0,0]=np.nan
+    with pytest.raises(ValueError,match='Invalid archived'):
+        FrozenHeatModel(Geometry(gap_m=100e-9),mesh=mesh)
+
+def test_source_exports_have_explicit_reference_state():
+    paths=sorted((ROOT/'results/histories').glob('*_source.npz'))
+    assert len(paths)==24
+    for p in paths:
+        with np.load(p) as z:
+            assert 'q_wall_total_W' not in z and 'q_wall_baseline_W' not in z
+            T=z['reference_gas_temperature_K'];R=z['reference_bubble_radius_m']
+            expected=-4*np.pi*.0264*R*(T-293.15)
+            assert np.allclose(z['q_wall_reference_baseline_W'],expected,rtol=1e-12,atol=1e-20)
+            assert np.array_equal(z['q_wall_reference_sum_W'],z['q_wall_reference_baseline_W']+z['q_wall_laser_increment_W'])
+
+def test_uniform_stationary_gas_step_limits():
+    from src.final_corrections import gas_boundary_step
+    alpha=.6/(1000*4187);R=6e-6;h=.0264/R
+    t=np.array([0.,1e-9,1e-6,1e16]);s=gas_boundary_step(t,R,h,.6,alpha)
+    assert s[0]==0 and np.all(np.diff(s)>0)
+    assert s[-1]==pytest.approx(h/(h+.6/R),rel=1e-9)
+    assert np.array_equal(gas_boundary_step(t,R,0.,.6,alpha),np.zeros_like(t))
+
+def test_saved_correction_audits():
+    from src.final_corrections import check_original_inputs
+    assert check_original_inputs()==(55,24)
+    audit=pd.read_csv(ROOT/'results/handoff_numeric_audit.csv')
+    assert len(audit)==59 and audit.passed.all()
+    feedback=pd.read_csv(ROOT/'results/gas_feedback_estimate.csv')
+    assert len(feedback)==9
+    assert (feedback.estimated_omitted_liquid_return_J>=0).all()
+    assert (feedback.estimated_omitted_liquid_return_J<=feedback.conservative_prescribed_trace_return_bound_J).all()
+    assert feedback.refinement_relative_difference.max()<.005
+    replay=pd.read_csv(ROOT/'results/saved_mesh_replay.csv')
+    assert len(replay)==3
+    for col in replay.columns:
+        if col.endswith('_maxnorm_relative'):assert replay[col].max()<2e-5
 
 def test_finite_design_objectives_and_admission():
     tab=pd.read_csv(ROOT/'results/finite_design.csv');data=json.loads((ROOT/'results/design_extrema.json').read_text())

@@ -1,0 +1,50 @@
+{
+  "clean_repository": "/tmp/plasma-mr6-clean",
+  "fresh_locked_environment": true,
+  "exact_csv_count": 21,
+  "exact_csv_files": [
+    "analytic_point_controls.csv",
+    "domain_convergence.csv",
+    "event_snapshots.csv",
+    "finite_design.csv",
+    "formal_regimes.csv",
+    "gap_scan.csv",
+    "gap_timing_map.csv",
+    "gas_diagnostic.csv",
+    "gas_increment_convergence.csv",
+    "gaussian_normalization.csv",
+    "isolated_MR5.csv",
+    "kinematics.csv",
+    "mechanical_events.csv",
+    "mechanics_interpolation.csv",
+    "mesh_convergence.csv",
+    "multiparticle.csv",
+    "planar_spherical_comparison.csv",
+    "refined_gas_diagnostic.csv",
+    "time_method_convergence.csv",
+    "timing_scan.csv",
+    "transport_sensitivity.csv"
+  ],
+  "exact_NPZ_array_count": 538,
+  "exact_JPG_count": 8,
+  "exact_JPG_files": [
+    "01_geometry.jpg",
+    "02_local_temperature_flux.jpg",
+    "03_time_response.jpg",
+    "04_gap_transport.jpg",
+    "05_timing.jpg",
+    "06_kinematics.jpg",
+    "07_ABC_diagnostic.jpg",
+    "08_energy_partition.jpg"
+  ],
+  "scientific_json_matches": {
+    "parameters.json": true,
+    "design_extrema.json": true,
+    "validation_summary.json": true,
+    "optical_contract.json": true,
+    "local_flux_metrics.json": true
+  },
+  "extracted_PDF_text_exact": true,
+  "tests_output": "........................                                                 [100%]\n24 passed in 6.97s\n",
+  "scope": "same-machine fresh-environment full recomputation; not independent physical validation"
+}

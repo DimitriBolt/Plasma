@@ -20,6 +20,8 @@ requirements.txt
 results/analytic_point_controls.csv
 results/clean_environment_tests.txt
 results/clean_reproduction.json
+results/clean_reproduction_original.json
+results/correction_input_manifest.json
 results/data_schema.md
 results/design_extrema.json
 results/domain_convergence.csv
@@ -29,13 +31,16 @@ results/fields/event_1.00.npz
 results/fields/event_1.15.npz
 results/fields/far_particle.npz
 results/fields/near_contact.npz
+results/final_field_verification.csv
 results/finite_design.csv
 results/formal_regimes.csv
 results/gap_scan.csv
 results/gap_timing_map.csv
 results/gas_diagnostic.csv
+results/gas_feedback_estimate.csv
 results/gas_increment_convergence.csv
 results/gaussian_normalization.csv
+results/handoff_numeric_audit.csv
 results/histories/gas_1.00_A_preheat.npz
 results/histories/gas_1.00_A_preheat_source.npz
 results/histories/gas_1.00_B_after.npz
@@ -100,6 +105,7 @@ results/reference.npz
 results/refined_gas_diagnostic.csv
 results/report_values.tex
 results/review_handoff.md
+results/saved_mesh_replay.csv
 results/source_audit.md
 results/tests.txt
 results/time_method_convergence.csv
@@ -111,8 +117,10 @@ src/__init__.py
 src/clean_verify.py
 src/coupling.py
 src/experiments.py
+src/final_corrections.py
 src/package.py
 src/presentation.py
 src/upstream.py
 src/validate.py
+src/verify_final_reproduction.py
 tests/test_coupling.py

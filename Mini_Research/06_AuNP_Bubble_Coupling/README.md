@@ -1,4 +1,4 @@
-# Mini-Research 6: AuNP-Bubble Thermal Coupling
+# Mini-Research 6: Frozen-Geometry AuNP-Bubble Thermal Coupling
 
 **Dimitri Bolt**. Academic supervisor: **Prof. Dr. Ildar R. Gabitov**.
 
@@ -48,33 +48,57 @@ python -m pytest -q
 latexmk -pdf -interaction=nonstopmode -halt-on-error -cd report/06_AuNP_Bubble_Coupling.tex
 ```
 
-The full rebuild includes the 216-point finite design, gap/timing/transport maps,
-particle kinematics and event snapshots, bounded first-order gas diagnostics,
-mesh/domain/time/analytic/isolated controls and gas-step refinement. No previous
-mechanical sweep is rerun. The results notebook only reads saved data.
+The final scope is stationary AuNP-to-liquid-to-bubble coupling. The 0.3258%
+reference efficiency belongs only to the specified geometry and 2 microsecond
+window. Moving boundaries, advection and self-consistent mechanics are reserved
+for MR7. The retained event/A/B/C results are diagnostic context.
 
-Published bytes are checked before recalculation. NumPy archives and numeric
-tables reproduce in a clean locked environment; PDF timestamps and execution
-durations may differ. LaTeX/Poppler are system tools. Eight figures are JPG only.
-The [validation journal](results/validation.md) and
-[clean reproduction](results/clean_reproduction.json) retain actual evidence.
-`python -m src.package` regenerates the publication manifest after all final
-documents are in place; it is not needed for scientific recalculation.
+For the **bounded final-correction verification**, use the locked environment and
+saved data, without repeating the original sweeps:
+
+```bash
+python -m src.final_corrections --replay
+python -m src.presentation
+python -m pytest -q
+latexmk -pdf -interaction=nonstopmode -halt-on-error -cd report/06_AuNP_Bubble_Coupling.tex
+```
+
+This checks 59 numerical handoff claims, independently integrates energy/flux
+from the five archived spatial fields, evaluates the saved-trace analytic gas
+feedback estimate, and replays only three old thermal cases on saved meshes.
+A platform's remesher may choose different nodes; exact regenerated-mesh equality
+is not a test requirement. The 2e-5 replay tolerance is separate from the stored
+spatial-convergence evidence. `src.clean_verify` remains an optional historical
+same-machine exact full-recalculation comparator, not a cross-platform criterion.
+
+The original full design, trajectories and convergence data remain preserved.
+No new optimization or moving-boundary calculation is part of the correction.
+The corrected figure and scientific PDF are rebuilt from saved results. Eight
+figures are JPG only. `clean_reproduction_original.json` retains historical full
+recalculation evidence; the [current clean record](results/clean_reproduction.json)
+and [verification journal](results/validation.md) describe the bounded fresh run.
+Manifest checks apply to published bytes before regeneration.
 
 ## Source interface and scope
 
 [coupling.py](src/coupling.py) supplies a stateful `FrozenHeatModel` and a
 `ThermalHistory` with `thermal_source(t_s, history, bubble_state=None)`.
-The precomputed response stores its thermal memory and finite validity interval;
+The history explicitly labels the stored reference-state baseline/sum and the
+laser increment; no `q_wall_total_W` is exported. A gas ODE already computing its
+current-state heat loss adds **only** `history.laser_increment_W(t_s)`. The
+reference sum is not a physical total for another Tg. Mechanism A is a transient
+early-heating diagnostic without a new equilibrium radius, vapor pressure or
+composition. The precomputed response stores its thermal memory and finite validity interval;
 it rejects extrapolation and inconsistent supplied radius. Histories in
 `results/histories/` separate signed baseline and laser power and record absolute
 time, collapse time, units, geometry and applicability. They are **formal frozen
 event diagnostics**, not sources already validated for changed MR7 mechanics.
 
-The work begins at accepted MR5 snapshot
+The original work begins at accepted MR5 snapshot
 `0204ce7a8429406b7ec235b02cec8581274fc8c6` and fingerprints all 1083 tracked
 upstream inputs. No MR1-MR5 model/data/report, general plan or unrelated user
-file is changed. This package is submitted for independent review; publication
+file is changed. This separate correction follows the original MR6 snapshot
+`faa2828f554517a0e2e43d9ae42cff37d682fbd0`. It is submitted for independent review; publication
 does not close the stage, update RoadMap or begin MR7.
 
 [Independent review handoff](results/review_handoff.md) contains equations,
