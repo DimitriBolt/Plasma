@@ -1,0 +1,17 @@
+{
+  "spatial_cases": 15,
+  "time_method_cases": 3,
+  "domain_cases": 6,
+  "production_gas_energy_spatial_relative_max": 0.0019560976015584597,
+  "production_gold_spatial_relative_max": 0.012055061809743362,
+  "production_water_spatial_relative_max": 0.011919878233960235,
+  "isolated_gold_peak_finest_relative_max": 0.0008923868612441543,
+  "independent_Radau_gold_relative": 1.4113019339349606e-09,
+  "independent_Radau_gas_relative": -1.9053647548616937e-12,
+  "energy_balance_relative_max": 2.6574751744632832e-14,
+  "gaussian_normalization_relative_max": 2.220446049250313e-16,
+  "mechanics_input_radius_difference_over_R0_max": 6.251416331004588e-06,
+  "baseline_static_matching_error": 0.0421455938697318,
+  "numerical_scope": "empirical selected-case discrepancies, not rigorous error bounds",
+  "physical_validation": false
+}

@@ -1,0 +1,62 @@
+{
+  "model_id": "axisymmetric-P1-lumped-mass-frozen-spheres-v1",
+  "thermal_properties": {
+    "rho_gold_kg_m3": 19320.0,
+    "cp_gold_J_kgK": 129.0,
+    "k_gold_W_mK": 317.0,
+    "rho_water_kg_m3": 1000.0,
+    "cp_water_J_kgK": 4187.0,
+    "k_water_W_mK": 0.6,
+    "interface_W_m2K": 100000000.0,
+    "ambient_K": 293.15,
+    "electron_phonon_s": 1.7e-12
+  },
+  "geometry": {
+    "radius_m": 6e-06,
+    "particle_radius_m": 2e-08,
+    "gap_m": 1e-07,
+    "outer_padding_m": 1e-06
+  },
+  "reference_duration_s": 1e-08,
+  "reference_fluence_J_m2": 1.0,
+  "reference_wavelength_m": 5.32e-07,
+  "refinement": 1.0,
+  "rtol": 2e-07,
+  "reference_h_W_m2K": 4400.0,
+  "response_end_s": 2e-06,
+  "finite_design": {
+    "a_nm": [
+      20,
+      40,
+      80,
+      100
+    ],
+    "gap_over_a": [
+      1,
+      5,
+      20
+    ],
+    "duration_ns": [
+      1,
+      10,
+      100
+    ],
+    "wavelength_nm": [
+      450,
+      506,
+      526,
+      532,
+      600,
+      800
+    ],
+    "fluence_cap_J_m2": 1000.0,
+    "intensity_cap_W_m2": 10000000000.0,
+    "gold_rise_design_cap_K": 30.0,
+    "objective": "separate absorbed J, gas J at 2us, fraction"
+  },
+  "timing_window_relative_tc_s": [
+    -1e-08,
+    1e-08
+  ],
+  "baseline_matching_relative_difference": -0.0421455938697318
+}

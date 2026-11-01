@@ -1,0 +1,10 @@
+{
+  "time_s": 5.393501527829168e-08,
+  "max_local_flux_W_m2": 161.6398248378255,
+  "surface_mean_flux_W_m2": 0.031102051702036376,
+  "max_over_mean": 5197.079163341571,
+  "area90_m2": 2.1761777969149226e-13,
+  "area90_fraction": 0.00048104090753588977,
+  "signed_integral_W": 1.4070236707970986e-11,
+  "negative_tail_flux_integral_W": -6.917783206753762e-42
+}

@@ -1,0 +1,18 @@
+{
+  "reference_sigma_abs_m2": 3.4337324474063743e-15,
+  "reference_Eabs_J": 3.4337324474063743e-15,
+  "published_single_particle_row": {
+    "radius_m": 1e-07,
+    "wavelength_m": 5.06e-07,
+    "duration_s": 1e-07,
+    "fluence_J_m2": 60.72790766672862,
+    "peak_intensity_W_m2": 607279076.6672863,
+    "sigma_abs_m2": 5.2397905175221495e-14,
+    "sigma_sca_m2": 5.664046661729026e-14,
+    "energy_absorbed_J": 3.182015147410852e-12,
+    "gold_peak_rise_K": 30.0,
+    "liquid_fraction_100ns_after": 0.9859271203244816,
+    "energy_liquid_100ns_after_J": 3.137235031115662e-12,
+    "conservative_geometry": true
+  }
+}
