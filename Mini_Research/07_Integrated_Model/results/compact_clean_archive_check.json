@@ -1,0 +1,22 @@
+{
+  "scientific_snapshot_sha": "43542a8670d36ce7b9b260a96efbf1fbe76abbb4",
+  "profile": "compact-publication-v1",
+  "export": "complete tracked Git archive",
+  "tests_passed": 34,
+  "manifest_checks": 266,
+  "all_passed": true,
+  "full_local_snapshot_is_ancestor": false,
+  "fresh_numerical_replay": {
+    "completed": true,
+    "interval_s": [
+      0,
+      3.1666666666666666e-05
+    ],
+    "samples": 1001,
+    "R_max_difference_m": 3.0182665167188815e-13,
+    "Tg_max_difference_K": 1.5960019443284066e-05,
+    "water_max_difference_K": 1.030244703964064e-07,
+    "scope": "fresh one-cycle no-laser replay; not a rerun of all sweeps"
+  },
+  "scope": "Actual compact export, without omitted full raw files; all shipped data and dependencies available."
+}

@@ -27,6 +27,8 @@ results/applicability.csv
 results/archive_interpolation.csv
 results/clean_archive_check.json
 results/clean_archive_tests.txt
+results/compact_clean_archive_check.json
+results/compact_clean_archive_tests.txt
 results/compact_replay_check.json
 results/compact_verification.json
 results/constitutive_replay.csv
