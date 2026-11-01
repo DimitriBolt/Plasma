@@ -1,10 +1,14 @@
-not_delivered
+delivered_and_verified
 
 # Mini-Research 7 scientific review handoff
 
-The user directly authorized compact publication and sending this review, while explicitly rejecting publication of the roughly 1 GB full archive. Compact publication is being verified; delivery is not yet claimed. All large local files and the full scientific snapshot remain available locally. The published history starts at accepted MR6 and excludes the full local commits.
+Independent audit is requested in the existing chat Mini-Research 7 (Web). The human directly authorized compact publication and this message, while rejecting upload of the roughly 1 GB complete local archive.
 
-Accepted input and last verified remote base: `493dbdc213f3789b7195d93760bd5c0c867cb98c`.
+Compact scientific publication is independently verified on GitHub. The full submitted handoff was read back from the verified recipient chat, with an exact match after stripping only outer whitespace (2026-11-01T04:35:25.464877+00:00). The received message has 15,814 characters. `results/delivery_receipt.json` records the submitted-text hash and verification scope. Independent audit and RoadMap closure remain outstanding.
+
+Delivery marker: MR7-COMPACT-8547e28fd21042fd92d4907e2a1fc25e38988954
+
+Accepted MR6 input snapshot: `493dbdc213f3789b7195d93760bd5c0c867cb98c`.
 The local commit and final package inventory identify the reviewable artifact.
 Official stage closure and MR8 are outside this work.
 
@@ -176,3 +180,21 @@ Other high-dimensional sweep outputs and solver matrices remain local. The full 
 Current compact verification: 34 tests passed; four shipped accepted-state references replay their physical powers; eight shipped optical histories pass pulse-energy checks; the fresh one-cycle replay agrees with the preserved baseline. All 10 JPGs, report tables, PDF and TeX match the full original scientific package byte-for-byte. See `results/compact_verification.json`, `results/reference_checks.csv` and `results/tests.txt`.
 
 The actual compact Git archive `43542a8670d36ce7b9b260a96efbf1fbe76abbb4` independently passes all 34 tests, all 266 manifest checks and the fresh bounded replay, with no omitted raw archive available. This is separate from the older full local check. See `results/compact_clean_archive_check.json`. The compact scientific tree is 45,241,800 bytes; its largest file is 15,207,430 bytes. Its parent is accepted MR6, and c467678 is not an ancestor.
+
+## Verified compact scientific publication
+
+Remote main at scientific publication: `8547e28fd21042fd92d4907e2a1fc25e38988954`. Verified both by the connected GitHub account and by the complete recursive GitHub tree; all 269 MR7 blob identifiers match the local compact commit. Total scientific package: 45,247,697 bytes, largest file: 15,207,430 bytes. The complete local commits are not ancestors and were not uploaded.
+
+- [Immutable scientific commit](https://github.com/DimitriBolt/Plasma/commit/8547e28fd21042fd92d4907e2a1fc25e38988954)
+- [Scientific PDF](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/report/07_Integrated_Model.pdf)
+- [Exact file inventory](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/FILE_LIST.txt) and [SHA256 manifest](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/SHA256SUMS)
+- [Continuation references](https://github.com/DimitriBolt/Plasma/tree/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/references)
+- [Compact coverage and exclusions](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/publication_scope.json)
+- [Current compact tests](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/tests.txt) and [clean compact archive](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/compact_clean_archive_check.json)
+- [Convergence](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/convergence.csv) and [strong-collapse resolution](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/strong_collapse_resolution.csv)
+- [Applicability](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/applicability.csv)
+- [Model decisions](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/model_decisions.md) and [SI schema](https://github.com/DimitriBolt/Plasma/blob/8547e28fd21042fd92d4907e2a1fc25e38988954/Mini_Research/07_Integrated_Model/results/data_schema.md)
+
+Please independently audit the mathematics, energy conservation, numerical resolution, source contract and physical interpretation. If additional omitted fields are necessary for a particular check, identify the exact run and arrays; the complete source archive remains local. Do not infer that the compact subset supplies all original sweep fields.
+
+This receipt update changes publication/delivery metadata only. All scientific links pin the independently verified compact scientific snapshot 8547e28fd21042fd92d4907e2a1fc25e38988954; subsequent receipt commits do not alter its scientific arrays or report.

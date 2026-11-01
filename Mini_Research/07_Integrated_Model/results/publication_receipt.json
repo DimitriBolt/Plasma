@@ -1,0 +1,18 @@
+{
+  "status": "published_and_verified",
+  "scientific_sha": "8547e28fd21042fd92d4907e2a1fc25e38988954",
+  "remote_main_at_scientific_publication": "8547e28fd21042fd92d4907e2a1fc25e38988954",
+  "MR7_files_verified": 269,
+  "all_remote_blob_ids_match": true,
+  "recursive_tree_truncated": false,
+  "scientific_package_bytes": 45247697,
+  "largest_file_bytes": 15207430,
+  "full_local_snapshot_uploaded": false,
+  "full_local_snapshot_is_ancestor": false,
+  "verification_methods": [
+    "connected GitHub fetch_commit(main)",
+    "independent recursive GitHub Git tree"
+  ],
+  "verified_utc": "2026-11-01T04:33:01.886193+00:00",
+  "note": "Later receipt commits change verification metadata only; scientific links pin this immutable snapshot."
+}

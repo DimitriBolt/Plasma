@@ -35,6 +35,7 @@ results/constitutive_replay.csv
 results/convergence.csv
 results/convergence_run_log.txt
 results/data_schema.md
+results/delivery_receipt.json
 results/environment.json
 results/extra_controls.csv
 results/extra_controls_log.txt
@@ -188,6 +189,7 @@ results/physical_diagnostics.csv
 results/physical_scales_log.txt
 results/presentation_log.txt
 results/public_data_inventory.json
+results/publication_receipt.json
 results/publication_scope.json
 results/reference_checks.csv
 results/references/base_1.00.npz

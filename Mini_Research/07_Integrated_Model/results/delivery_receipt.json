@@ -1,0 +1,17 @@
+{
+  "status": "delivered_and_verified",
+  "recipient_title": "Mini-Research 7 (Web)",
+  "recipient_identity_verified_by": [
+    "exact existing chat title",
+    "matching original MR7 task attachment"
+  ],
+  "scientific_sha": "8547e28fd21042fd92d4907e2a1fc25e38988954",
+  "marker": "MR7-COMPACT-8547e28fd21042fd92d4907e2a1fc25e38988954",
+  "readback_exact_match": true,
+  "readback_normalization": "outer whitespace stripped only",
+  "readback_characters": 15814,
+  "submitted_text_sha256_trimmed": "36561fe4a757f45313714e95e83ee42a136c79d8ec2a46bd0b592a3f04f39cd6",
+  "verified_utc": "2026-11-01T04:35:25.464877+00:00",
+  "independent_audit_complete": false,
+  "official_stage_closed": false
+}
