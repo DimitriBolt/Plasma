@@ -41,9 +41,13 @@ results/extra_controls.csv
 results/extra_controls_log.txt
 results/feedback_decomposition.csv
 results/final_acceptance_check.py
+results/final_acceptance_delivery.json
+results/final_acceptance_documentation.diff
+results/final_acceptance_handoff.md
 results/final_acceptance_latex.txt
 results/final_acceptance_preservation.json
 results/final_acceptance_prompt.md
+results/final_acceptance_publication.json
 results/final_acceptance_replay.json
 results/final_acceptance_review.md
 results/final_acceptance_tests.txt

@@ -1,0 +1,14 @@
+{
+  "status": "delivered_and_verified",
+  "recipient": "Mini-Research 7 (Web)",
+  "correcting_sha": "b2c37a2467e863bbc444278c06b69b060a70762d",
+  "marker": "MR7-FINAL-ACCEPTANCE-b2c37a2467e863bbc444278c06b69b060a70762d",
+  "exact_readback_verified": true,
+  "normalization": "outer whitespace stripped only",
+  "readback_characters": 8526,
+  "submitted_text_sha256_trimmed": "5288d75d09306d86e7b5e9b388774774cf0ed02fdc714dc35f36c8a38d4bb276",
+  "verified_utc": "2026-11-01T05:21:59.470416+00:00",
+  "repeated_independent_audit_requested": true,
+  "independent_verdict_received": false,
+  "official_RoadMap_closure": false
+}

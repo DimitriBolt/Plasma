@@ -1,0 +1,18 @@
+{
+  "correcting_sha": "b2c37a2467e863bbc444278c06b69b060a70762d",
+  "baseline": "658908ddad0a2b12a922f6a51ce7a58259a9cccd",
+  "verified_remote_main_at_correction_publication": "b2c37a2467e863bbc444278c06b69b060a70762d",
+  "remote_files_verified": 278,
+  "all_remote_blob_ids_match": true,
+  "recursive_tree_truncated": false,
+  "compact_package_bytes": 45833286,
+  "full_local_archive_uploaded": false,
+  "full_local_archive_is_ancestor": false,
+  "verification_methods": [
+    "connected GitHub commit lookup",
+    "independent recursive GitHub tree"
+  ],
+  "verified_utc": "2026-11-01T05:19:37.294880+00:00",
+  "independent_reaudit_pending": true,
+  "official_stage_closed": false
+}
