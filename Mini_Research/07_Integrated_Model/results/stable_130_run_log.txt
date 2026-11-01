@@ -1,0 +1,2 @@
+stable_extra_high_1.30_BDF_base_F10_L3_q3 reference_censored_end: gas_coefficient_upper_boundary delta nan seconds 14.31028151512146
+stable_extra_high_1.30_BDF_base_F10_L2_q3 gas_coefficient_upper_boundary delta nan seconds 13.032916069030762

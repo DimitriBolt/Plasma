@@ -1,0 +1,8 @@
+extra_outer50_fixed_inner_base completed Tmax 553.0231715716303 steps 8616 seconds 53.92926216125488
+extra_strict_incident_scaled_base completed Tmax 553.0256698400443 steps 24849 seconds 149.0299367904663
+extra_strict_incident_scaled_laser completed Tmax 553.0256763933126 steps 25483 seconds 152.71497583389282
+extra_high_1.15_BDF_base completed Tmax 2798.2812624420303 steps 26980 seconds 182.69045066833496
+extra_high_1.15_Radau_base completed Tmax 2798.2652214960863 steps 29435 seconds 349.56053614616394
+extra_high_1.30_BDF_base gas_coefficient_upper_boundary Tmax 6000.000000001015 steps 705 seconds 5.3826000690460205
+extra_high_1.30_Radau_base gas_coefficient_upper_boundary Tmax 6000.000000004597 steps 953 seconds 10.308440923690796
+extra_high_1.30_mesh96_base gas_coefficient_upper_boundary Tmax 6000.00000000355 steps 643 seconds 6.223274230957031

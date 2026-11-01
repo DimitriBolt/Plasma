@@ -1,0 +1,3613 @@
+[
+  {
+    "run_id": "base_1.00",
+    "source_raw_sha256": "54a8236144350a8daf39166f3a54355752920884085fd43dd498bb46ae5d978e",
+    "role": "full accepted baseline states",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "6d758fbeec967c63c240f98c87a1504e6137b9352824bfd0c9fc01e1958cf23f",
+        "source_array_sha256": "6d758fbeec967c63c240f98c87a1504e6137b9352824bfd0c9fc01e1958cf23f",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "89b9a72c77bcdba3b9538e6a10aed99a714d6a906748a544b713bee5076f75f8",
+        "source_array_sha256": "89b9a72c77bcdba3b9538e6a10aed99a714d6a906748a544b713bee5076f75f8",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "898c4b6953a5059b3b1d9eb8daebf7fb5bdb8b40c000119058a9f73e0f1178f8",
+        "source_array_sha256": "898c4b6953a5059b3b1d9eb8daebf7fb5bdb8b40c000119058a9f73e0f1178f8",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "94a74b33931921050d75f0673b6a434b8bb59f7232c1254a6a90a23aa813379c",
+        "source_array_sha256": "94a74b33931921050d75f0673b6a434b8bb59f7232c1254a6a90a23aa813379c",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "833ddf5199839d6b6679cb814d92fec24b859cb5a6031f842ceefa65372b06c8",
+        "source_array_sha256": "833ddf5199839d6b6679cb814d92fec24b859cb5a6031f842ceefa65372b06c8",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "e5cb1e3943a5d65947a04ed41b83f5956a4e3c39dea1a5ae51081ab569b1fc6a",
+        "source_array_sha256": "e5cb1e3943a5d65947a04ed41b83f5956a4e3c39dea1a5ae51081ab569b1fc6a",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "ca355b0976da22f900f910802364e487219acb4edeb5f0a91158593eb2099c53",
+        "source_array_sha256": "ca355b0976da22f900f910802364e487219acb4edeb5f0a91158593eb2099c53",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "de48530aee684b0c20a017ff0e9ac0acad0ce9bdbf65acedf2e44508d5968660",
+        "source_array_sha256": "de48530aee684b0c20a017ff0e9ac0acad0ce9bdbf65acedf2e44508d5968660",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "49963f184bcd4fb36c80db57c81ea792c52b8f60b0d2e9a25fd8e26aded42d88",
+        "source_array_sha256": "49963f184bcd4fb36c80db57c81ea792c52b8f60b0d2e9a25fd8e26aded42d88",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "3d9d93cc5513b6c4793e14463dbd3e0c033a068ffa4553aa4f1b2ceb93a5b45b",
+        "source_array_sha256": "3d9d93cc5513b6c4793e14463dbd3e0c033a068ffa4553aa4f1b2ceb93a5b45b",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "17bd7dc9350686f567693dad8fa7bda9780b0095d9e46d62aa31f87060d75e1b",
+        "source_array_sha256": "17bd7dc9350686f567693dad8fa7bda9780b0095d9e46d62aa31f87060d75e1b",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "767dc8e2360a52a096f91103637a72b20b649f72eb7aeec81968acf38cbc0ed2",
+        "source_array_sha256": "767dc8e2360a52a096f91103637a72b20b649f72eb7aeec81968acf38cbc0ed2",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "38ce3a134263e87b3c1d3860f7794ec9a46a9b109b90d048c081a71f6ec96c2f",
+        "source_array_sha256": "38ce3a134263e87b3c1d3860f7794ec9a46a9b109b90d048c081a71f6ec96c2f",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "a24c2bbd1b56f6186b62dc7f7161531ae4f180fe50393702daa96973dc04a3c5",
+        "source_array_sha256": "a24c2bbd1b56f6186b62dc7f7161531ae4f180fe50393702daa96973dc04a3c5",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "094479f98ff20cf4c25cc9a8a1b962d67a7d916897a56323924e0cce0f2a60b4",
+        "source_array_sha256": "094479f98ff20cf4c25cc9a8a1b962d67a7d916897a56323924e0cce0f2a60b4",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "e14f8dacc38264e68e22d33c84e296e5ee33017ae29bd1ab02047ecac38a4f94",
+        "source_array_sha256": "e14f8dacc38264e68e22d33c84e296e5ee33017ae29bd1ab02047ecac38a4f94",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "c580357068dd2d8567845b5a27e44b799169d7d5a8085963e575b8f92e475dad",
+        "source_array_sha256": "c580357068dd2d8567845b5a27e44b799169d7d5a8085963e575b8f92e475dad",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "f91b1e4ab1b9dd608e14df11d4b7706b620ac4ae04b6aece96e01d31fd1cada8",
+        "source_array_sha256": "f91b1e4ab1b9dd608e14df11d4b7706b620ac4ae04b6aece96e01d31fd1cada8",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "07f5816918f1a6091b8318867625170fa5dbec8b9221fe54e96f244d31f1e0b1",
+        "source_array_sha256": "07f5816918f1a6091b8318867625170fa5dbec8b9221fe54e96f244d31f1e0b1",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "e1f371bb52f19b11fdce39fd8ee5cbf0f26bbca66e599df99aa06954ca4a5f53",
+        "source_array_sha256": "e1f371bb52f19b11fdce39fd8ee5cbf0f26bbca66e599df99aa06954ca4a5f53",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "60a78dafbd9380b765fc3e270bd64c433566f5b34d2a91efd02fbb653f56df3f",
+        "source_array_sha256": "60a78dafbd9380b765fc3e270bd64c433566f5b34d2a91efd02fbb653f56df3f",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "60a78dafbd9380b765fc3e270bd64c433566f5b34d2a91efd02fbb653f56df3f",
+        "source_array_sha256": "60a78dafbd9380b765fc3e270bd64c433566f5b34d2a91efd02fbb653f56df3f",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "02dd65a84e2617de019d67726d3225a17fe2c058cc05310bba91f19c738d2648",
+        "source_array_sha256": "02dd65a84e2617de019d67726d3225a17fe2c058cc05310bba91f19c738d2648",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "b8289c0838905b8d51d594a833a2a70d67734b95b5292ea57fc14cc56b46e73b",
+        "source_array_sha256": "b8289c0838905b8d51d594a833a2a70d67734b95b5292ea57fc14cc56b46e73b",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "fa26cb783cd00809d095cf4529d438de898f1ad660790c80201f9bbff42e3fc3",
+        "source_array_sha256": "fa26cb783cd00809d095cf4529d438de898f1ad660790c80201f9bbff42e3fc3",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          10354
+        ],
+        "dtype": "float64",
+        "sha256": "4f9e4e51244942e8c80c289b33fa0509003c83131f647ac1abc16b9b2147b313",
+        "source_array_sha256": "4f9e4e51244942e8c80c289b33fa0509003c83131f647ac1abc16b9b2147b313",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          8664
+        ],
+        "dtype": "float64",
+        "sha256": "0db1b61c7b4745226486cc4e32231b2fed2008fc90f6f052d9335d28c842fa3b",
+        "source_array_sha256": "0db1b61c7b4745226486cc4e32231b2fed2008fc90f6f052d9335d28c842fa3b",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          163
+        ],
+        "dtype": "float64",
+        "sha256": "73e50444e5a9dee5f1df1712cf71615f0205db7a8411fe3c317eb2b843692861",
+        "source_array_sha256": "73e50444e5a9dee5f1df1712cf71615f0205db7a8411fe3c317eb2b843692861",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          131
+        ],
+        "dtype": "float64",
+        "sha256": "a2acb40be2cfe591cbb4fe3cda565eaabf266536ab29baf6087505a18a66ea8e",
+        "source_array_sha256": "a2acb40be2cfe591cbb4fe3cda565eaabf266536ab29baf6087505a18a66ea8e",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          164
+        ],
+        "dtype": "float64",
+        "sha256": "2188208a8751db0c7932f177b171b7a8961f0b2245f85afa9fb36f1e7d640cb0",
+        "source_array_sha256": "2188208a8751db0c7932f177b171b7a8961f0b2245f85afa9fb36f1e7d640cb0",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          164
+        ],
+        "dtype": "float64",
+        "sha256": "b7de4c4ee42417c838aa6584af0ab5cfe3fe01e29f7980de39d119d1915688e7",
+        "source_array_sha256": "b7de4c4ee42417c838aa6584af0ab5cfe3fe01e29f7980de39d119d1915688e7",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          5944
+        ],
+        "dtype": "int64",
+        "sha256": "1faebe1aab94ac0cf202a488ac2c653c42de749579d0a1406f05048f166260a8",
+        "source_array_sha256": "1faebe1aab94ac0cf202a488ac2c653c42de749579d0a1406f05048f166260a8",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          5944
+        ],
+        "dtype": "float64",
+        "sha256": "e3a07eb2b52a3b2715201af72ed09364d52e79a27d6951b274086d7efd945c2d",
+        "source_array_sha256": "e3a07eb2b52a3b2715201af72ed09364d52e79a27d6951b274086d7efd945c2d",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "accepted_y",
+        "shape": [
+          58,
+          8664
+        ],
+        "dtype": "float64",
+        "sha256": "2271cbc94a3e9425d4426b27137f1103463146a189480d194f074ac719a70619",
+        "source_array_sha256": "2271cbc94a3e9425d4426b27137f1103463146a189480d194f074ac719a70619",
+        "selection": null
+      }
+    ],
+    "bytes": 5349643
+  },
+  {
+    "run_id": "base_1.15",
+    "source_raw_sha256": "d522c5db216cb01ae1ac93e6458674a7a75115a16bc449a8697eec2dd054e8c0",
+    "role": "full accepted baseline states",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "1410d9a1c31d63b40ebda86ef9d2da1659d58fa4a5519bb0742a876a74e0ffab",
+        "source_array_sha256": "1410d9a1c31d63b40ebda86ef9d2da1659d58fa4a5519bb0742a876a74e0ffab",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "d01c033921c3650540159383f68ca0161f21676b8e00c6239c480313d69c3b38",
+        "source_array_sha256": "d01c033921c3650540159383f68ca0161f21676b8e00c6239c480313d69c3b38",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "a02ffc7b669fe548e4a3588a9f95e4116cddceb9d67f5b40fdc4006f18a653c6",
+        "source_array_sha256": "a02ffc7b669fe548e4a3588a9f95e4116cddceb9d67f5b40fdc4006f18a653c6",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "f0cc5a9f2a6c8ca364d79c1cb13e94c06cc3e90175257bc5104475af52749fad",
+        "source_array_sha256": "f0cc5a9f2a6c8ca364d79c1cb13e94c06cc3e90175257bc5104475af52749fad",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "34f3f0c7e0feac1ff28988c3da510d3f1146d0f308f918be45769cb6e16af7fa",
+        "source_array_sha256": "34f3f0c7e0feac1ff28988c3da510d3f1146d0f308f918be45769cb6e16af7fa",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "b4fb444c5aed82acc7617b8a703fdcb95953dd9e458fdbbdbfec4d69558f683d",
+        "source_array_sha256": "b4fb444c5aed82acc7617b8a703fdcb95953dd9e458fdbbdbfec4d69558f683d",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "b312fd843cc27f605b298c2a8ee2b05ec280fc6f882b806b7d9a398ebf98eca0",
+        "source_array_sha256": "b312fd843cc27f605b298c2a8ee2b05ec280fc6f882b806b7d9a398ebf98eca0",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "d7ddf07890d9882d2e8c39cf2d11910b55bc9cfd01baf5571d0e9d4c3f5b0aa4",
+        "source_array_sha256": "d7ddf07890d9882d2e8c39cf2d11910b55bc9cfd01baf5571d0e9d4c3f5b0aa4",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "65168e47e0d018e34bd4c912660bc07103173de1951dccfffdd0ab6edd970383",
+        "source_array_sha256": "65168e47e0d018e34bd4c912660bc07103173de1951dccfffdd0ab6edd970383",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "a09e2ee660726c7d30a44c00ade92e585525408e06a6d10a2e5235429690b1e5",
+        "source_array_sha256": "a09e2ee660726c7d30a44c00ade92e585525408e06a6d10a2e5235429690b1e5",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "0fdd811d963fc3c02be18424b76a3c475ad97166365ed8fd1bd222dae6dd8a9e",
+        "source_array_sha256": "0fdd811d963fc3c02be18424b76a3c475ad97166365ed8fd1bd222dae6dd8a9e",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "27f1692538017042bfe93d6251c767481b1133bde3d5f9a208b7cad9500fd27c",
+        "source_array_sha256": "27f1692538017042bfe93d6251c767481b1133bde3d5f9a208b7cad9500fd27c",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "380fdd2bc3b337e7e521279b62cd848f54d76e243ab37df6350e9a376a1a9457",
+        "source_array_sha256": "380fdd2bc3b337e7e521279b62cd848f54d76e243ab37df6350e9a376a1a9457",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "67f7463f3686e4535cb2873838ebabfb81f23c830a556f559e974071340c7a78",
+        "source_array_sha256": "67f7463f3686e4535cb2873838ebabfb81f23c830a556f559e974071340c7a78",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "1317b713af9dcb5d2b0b098ec0016ed7ba070645eb783239c777f19374bc9476",
+        "source_array_sha256": "1317b713af9dcb5d2b0b098ec0016ed7ba070645eb783239c777f19374bc9476",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "8f68277b615f38493a3b544a984c430d88ab8be82f443aa85bd44877aa743f24",
+        "source_array_sha256": "8f68277b615f38493a3b544a984c430d88ab8be82f443aa85bd44877aa743f24",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "d60cb9e8d2ab1e1888e6c99933b65d97d567b98cba3a8655d6e4ef0dc1b70d2c",
+        "source_array_sha256": "d60cb9e8d2ab1e1888e6c99933b65d97d567b98cba3a8655d6e4ef0dc1b70d2c",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "0306224706fb458bdc26bf33af1062110bfdece1f1e664424c9ef1caa98cc8c9",
+        "source_array_sha256": "0306224706fb458bdc26bf33af1062110bfdece1f1e664424c9ef1caa98cc8c9",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "0578629acd79939232b506877fb234e971ecc190e553bb3c910f481a5997b8e9",
+        "source_array_sha256": "0578629acd79939232b506877fb234e971ecc190e553bb3c910f481a5997b8e9",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "af41c8a779fcb74c60b11d4c7136412b92d9de65b32188c312607a5433f02271",
+        "source_array_sha256": "af41c8a779fcb74c60b11d4c7136412b92d9de65b32188c312607a5433f02271",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "98169390285d5bf7e6f8252c3905d18efb35c5bba9a86a8bada97d3e4a295005",
+        "source_array_sha256": "98169390285d5bf7e6f8252c3905d18efb35c5bba9a86a8bada97d3e4a295005",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "98169390285d5bf7e6f8252c3905d18efb35c5bba9a86a8bada97d3e4a295005",
+        "source_array_sha256": "98169390285d5bf7e6f8252c3905d18efb35c5bba9a86a8bada97d3e4a295005",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "5f45b9210c4bef3b6888c08a22d781cbced2226a10aa3de84a6e20abd5378665",
+        "source_array_sha256": "5f45b9210c4bef3b6888c08a22d781cbced2226a10aa3de84a6e20abd5378665",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "c46cb2a7c302407ccbb222595836147ff7904f28191f996ebd2b535b30ceecb5",
+        "source_array_sha256": "c46cb2a7c302407ccbb222595836147ff7904f28191f996ebd2b535b30ceecb5",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "eb3bb8f6b4ee61cd7c477a53850ed23db83b36df2df128cb3a90460407402ea5",
+        "source_array_sha256": "eb3bb8f6b4ee61cd7c477a53850ed23db83b36df2df128cb3a90460407402ea5",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          28646
+        ],
+        "dtype": "float64",
+        "sha256": "41e658f1d72dc43529f89c5fb3d77a5ea6d3d28a722554ccfcf61cd642314679",
+        "source_array_sha256": "41e658f1d72dc43529f89c5fb3d77a5ea6d3d28a722554ccfcf61cd642314679",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          26980
+        ],
+        "dtype": "float64",
+        "sha256": "ce06ce1375bee7df6635f7fe156a9861d0e594334a55cc9796eba6e390a2b780",
+        "source_array_sha256": "ce06ce1375bee7df6635f7fe156a9861d0e594334a55cc9796eba6e390a2b780",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          140
+        ],
+        "dtype": "float64",
+        "sha256": "843b55e50615d9ad2451c59f2cc3b31d6baea1647cb8314625de103dcbec440e",
+        "source_array_sha256": "843b55e50615d9ad2451c59f2cc3b31d6baea1647cb8314625de103dcbec440e",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          130
+        ],
+        "dtype": "float64",
+        "sha256": "dd2e020c50b010e9ea95b4534e2baf55e0da3c0dffb0d1611192df600e9c29f5",
+        "source_array_sha256": "dd2e020c50b010e9ea95b4534e2baf55e0da3c0dffb0d1611192df600e9c29f5",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          141
+        ],
+        "dtype": "float64",
+        "sha256": "13c99a3e55a2679c8210a53248ebb0da9593a5a1e1f4922dc4aebba802ce0c2f",
+        "source_array_sha256": "13c99a3e55a2679c8210a53248ebb0da9593a5a1e1f4922dc4aebba802ce0c2f",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          141
+        ],
+        "dtype": "float64",
+        "sha256": "2b0067e2fec2ecc6c7a75c45e79b95962ad0b144bbf900025a55510f2ec78af7",
+        "source_array_sha256": "2b0067e2fec2ecc6c7a75c45e79b95962ad0b144bbf900025a55510f2ec78af7",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          6999
+        ],
+        "dtype": "int64",
+        "sha256": "41a209eb335ee9dd8d88e823ed568da36aa0f96b261ba2a222b3bf32d7b03a48",
+        "source_array_sha256": "41a209eb335ee9dd8d88e823ed568da36aa0f96b261ba2a222b3bf32d7b03a48",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          6999
+        ],
+        "dtype": "float64",
+        "sha256": "8763bb44d7c6cc0e7d67c09c1649706758dde4696dd7d70a5dec1c9822d3040d",
+        "source_array_sha256": "8763bb44d7c6cc0e7d67c09c1649706758dde4696dd7d70a5dec1c9822d3040d",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "accepted_y",
+        "shape": [
+          58,
+          26980
+        ],
+        "dtype": "float64",
+        "sha256": "c07825d36de204b90f95b9453b4e85f4685c94e07486f17df8a70fe33aa53bc4",
+        "source_array_sha256": "c07825d36de204b90f95b9453b4e85f4685c94e07486f17df8a70fe33aa53bc4",
+        "selection": null
+      }
+    ],
+    "bytes": 15207430
+  },
+  {
+    "run_id": "base_1.30",
+    "source_raw_sha256": "85f03ad331517c6ffc88bdd17127dde4e2ed07b97b032ff04f91cc4def1ef8c8",
+    "role": "full accepted baseline states",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "586babd46dcc3c7e89cfaf8f3ad48ef9e21fe4c462b8c0a3141049dfa3e560cb",
+        "source_array_sha256": "586babd46dcc3c7e89cfaf8f3ad48ef9e21fe4c462b8c0a3141049dfa3e560cb",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "1a5bf54136c519d8cf0585f426ffcb98ddc74e7b6e8db55871b912bb7079923b",
+        "source_array_sha256": "1a5bf54136c519d8cf0585f426ffcb98ddc74e7b6e8db55871b912bb7079923b",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "b6819578d3f0e68aa8e05563f7588ececb41a2b6c3fe57b961d8758c4f5effa6",
+        "source_array_sha256": "b6819578d3f0e68aa8e05563f7588ececb41a2b6c3fe57b961d8758c4f5effa6",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "9227e7d1eef3a3a2716052a578e31f261edefaaace308a784652dc90c8b7dd5b",
+        "source_array_sha256": "9227e7d1eef3a3a2716052a578e31f261edefaaace308a784652dc90c8b7dd5b",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "32db1235fbd53d254d8acddb0a3ccde0df1e3edc30984ecb381c30a69b271071",
+        "source_array_sha256": "32db1235fbd53d254d8acddb0a3ccde0df1e3edc30984ecb381c30a69b271071",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "fb85f803a71493743506f2899fa9902b195fb9f9eb6d3d2a1372c7cb71ecbe16",
+        "source_array_sha256": "fb85f803a71493743506f2899fa9902b195fb9f9eb6d3d2a1372c7cb71ecbe16",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "7c0840cc776b5c881d0c544bf80784b2fba439fff0aafa717533273fb83a1e17",
+        "source_array_sha256": "7c0840cc776b5c881d0c544bf80784b2fba439fff0aafa717533273fb83a1e17",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "fc8e559c686220704394c1146807252cd67301485164a9e58eef0d6ec63d29ee",
+        "source_array_sha256": "fc8e559c686220704394c1146807252cd67301485164a9e58eef0d6ec63d29ee",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "b1685dec081868e252efae9f880a46ffbbcc3d2c7f17c4442fcc44ce39156c19",
+        "source_array_sha256": "b1685dec081868e252efae9f880a46ffbbcc3d2c7f17c4442fcc44ce39156c19",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "ee2834807d645f3b2e08ef19c5b466ad0293ee767d27f1ac94e373fea342cd49",
+        "source_array_sha256": "ee2834807d645f3b2e08ef19c5b466ad0293ee767d27f1ac94e373fea342cd49",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "ad395ec367a232d917456263f3ac2f83c8c86a7c1cab9b9cbe75e1515f9a75c9",
+        "source_array_sha256": "ad395ec367a232d917456263f3ac2f83c8c86a7c1cab9b9cbe75e1515f9a75c9",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "188064383ed36b4092b1b54a00ecd5b686cfb02161f7953f81c052c9a6b2be2b",
+        "source_array_sha256": "188064383ed36b4092b1b54a00ecd5b686cfb02161f7953f81c052c9a6b2be2b",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "cd89e7725a19c5c0a39959305579438e371327b80f474c5b67fa65522736e330",
+        "source_array_sha256": "cd89e7725a19c5c0a39959305579438e371327b80f474c5b67fa65522736e330",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "bbe1da2761d8d08fd92777ac74ee48cd3e2af57608ebc82d0de73367da086735",
+        "source_array_sha256": "bbe1da2761d8d08fd92777ac74ee48cd3e2af57608ebc82d0de73367da086735",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "cda5b9c3bea2936f7380fbd8c2776a21630697e978bcce65d0d256af50439ffe",
+        "source_array_sha256": "cda5b9c3bea2936f7380fbd8c2776a21630697e978bcce65d0d256af50439ffe",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "891e681f4066f2c712e79f0034f3a79417010d3b2776534c081e59100208848e",
+        "source_array_sha256": "891e681f4066f2c712e79f0034f3a79417010d3b2776534c081e59100208848e",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "08cea2e2edc3b88cdb3fc25c8b60b68f8e98d781da274d77e3eef48a39187384",
+        "source_array_sha256": "08cea2e2edc3b88cdb3fc25c8b60b68f8e98d781da274d77e3eef48a39187384",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "fe3c0f5bcf23f41d3a064a2904632a8cadfbf97d88571f6f94bd9ac4da2124ef",
+        "source_array_sha256": "fe3c0f5bcf23f41d3a064a2904632a8cadfbf97d88571f6f94bd9ac4da2124ef",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "139403e7f3570ea8933808c4febe3ab1a13418e8f0fab6c8dc76e730051ba546",
+        "source_array_sha256": "139403e7f3570ea8933808c4febe3ab1a13418e8f0fab6c8dc76e730051ba546",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "99a2a167c7fc7f0b9fa141336306796c1ffff225b02872c151042a6d822ec175",
+        "source_array_sha256": "99a2a167c7fc7f0b9fa141336306796c1ffff225b02872c151042a6d822ec175",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "source_array_sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "source_array_sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "299daf997d917365b4b03e5d0cb45c980262bbd5c7d11d52cf4cfcf2f1ce17fb",
+        "source_array_sha256": "299daf997d917365b4b03e5d0cb45c980262bbd5c7d11d52cf4cfcf2f1ce17fb",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "4afce7f2d1708550cb85af35cb46be2d0719ee0dbd1ba405a9aeb4ecd82fc8b8",
+        "source_array_sha256": "4afce7f2d1708550cb85af35cb46be2d0719ee0dbd1ba405a9aeb4ecd82fc8b8",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "3c720ce0f27bf518291188eb1bf2117be4f48102cb6f8fc26d1cc30ab60889a9",
+        "source_array_sha256": "3c720ce0f27bf518291188eb1bf2117be4f48102cb6f8fc26d1cc30ab60889a9",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "0f160b980d862bacba3deb238df8a70971bc733d515e6b020792478857450be9",
+        "source_array_sha256": "0f160b980d862bacba3deb238df8a70971bc733d515e6b020792478857450be9",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          705
+        ],
+        "dtype": "float64",
+        "sha256": "d85686424ae8960d8b4f383147c66680a84b3366059e98bd4f344cc36bf22fa6",
+        "source_array_sha256": "d85686424ae8960d8b4f383147c66680a84b3366059e98bd4f344cc36bf22fa6",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          4
+        ],
+        "dtype": "float64",
+        "sha256": "8f90a3dfea1b8e86d6d865e59e17dc96c4bce54db1c7dba4bd9074d5acf76307",
+        "source_array_sha256": "8f90a3dfea1b8e86d6d865e59e17dc96c4bce54db1c7dba4bd9074d5acf76307",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "sha256": "db7e0dc933ff6ff9de5ee7083106edcc1ebeffd9c264bf6931ac693f0a7c345f",
+        "source_array_sha256": "db7e0dc933ff6ff9de5ee7083106edcc1ebeffd9c264bf6931ac693f0a7c345f",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "d983d58cbce7f9317106b1241c1fb2cd183d75e4e99740a8b9d50000392a8835",
+        "source_array_sha256": "d983d58cbce7f9317106b1241c1fb2cd183d75e4e99740a8b9d50000392a8835",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "e3bf59ef57094840bdb3bcfecd89287ecc4c67d478a4884ffa2541dd6ddfd6cd",
+        "source_array_sha256": "e3bf59ef57094840bdb3bcfecd89287ecc4c67d478a4884ffa2541dd6ddfd6cd",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          1602
+        ],
+        "dtype": "int64",
+        "sha256": "5c262315a4aa6c2ff6bb53f0a548077f7567a1223e554290220eafabfbf604c8",
+        "source_array_sha256": "5c262315a4aa6c2ff6bb53f0a548077f7567a1223e554290220eafabfbf604c8",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          1602
+        ],
+        "dtype": "float64",
+        "sha256": "8bd2639d0136c0629ed3694fbc1b9193fe84d8f1dfb499737e75ec64a506f5cf",
+        "source_array_sha256": "8bd2639d0136c0629ed3694fbc1b9193fe84d8f1dfb499737e75ec64a506f5cf",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "accepted_y",
+        "shape": [
+          58,
+          705
+        ],
+        "dtype": "float64",
+        "sha256": "fc4299cabf5b6599cb6832a62312d3ab17a1ed8a3ed5ea2a0c0632e6e1bbb5f2",
+        "source_array_sha256": "fc4299cabf5b6599cb6832a62312d3ab17a1ed8a3ed5ea2a0c0632e6e1bbb5f2",
+        "selection": null
+      }
+    ],
+    "bytes": 640327
+  },
+  {
+    "run_id": "extra_high_1.30_BDF_base",
+    "source_raw_sha256": "85f03ad331517c6ffc88bdd17127dde4e2ed07b97b032ff04f91cc4def1ef8c8",
+    "role": "full accepted baseline states",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "586babd46dcc3c7e89cfaf8f3ad48ef9e21fe4c462b8c0a3141049dfa3e560cb",
+        "source_array_sha256": "586babd46dcc3c7e89cfaf8f3ad48ef9e21fe4c462b8c0a3141049dfa3e560cb",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "1a5bf54136c519d8cf0585f426ffcb98ddc74e7b6e8db55871b912bb7079923b",
+        "source_array_sha256": "1a5bf54136c519d8cf0585f426ffcb98ddc74e7b6e8db55871b912bb7079923b",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "b6819578d3f0e68aa8e05563f7588ececb41a2b6c3fe57b961d8758c4f5effa6",
+        "source_array_sha256": "b6819578d3f0e68aa8e05563f7588ececb41a2b6c3fe57b961d8758c4f5effa6",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "9227e7d1eef3a3a2716052a578e31f261edefaaace308a784652dc90c8b7dd5b",
+        "source_array_sha256": "9227e7d1eef3a3a2716052a578e31f261edefaaace308a784652dc90c8b7dd5b",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "32db1235fbd53d254d8acddb0a3ccde0df1e3edc30984ecb381c30a69b271071",
+        "source_array_sha256": "32db1235fbd53d254d8acddb0a3ccde0df1e3edc30984ecb381c30a69b271071",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "fb85f803a71493743506f2899fa9902b195fb9f9eb6d3d2a1372c7cb71ecbe16",
+        "source_array_sha256": "fb85f803a71493743506f2899fa9902b195fb9f9eb6d3d2a1372c7cb71ecbe16",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "7c0840cc776b5c881d0c544bf80784b2fba439fff0aafa717533273fb83a1e17",
+        "source_array_sha256": "7c0840cc776b5c881d0c544bf80784b2fba439fff0aafa717533273fb83a1e17",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "fc8e559c686220704394c1146807252cd67301485164a9e58eef0d6ec63d29ee",
+        "source_array_sha256": "fc8e559c686220704394c1146807252cd67301485164a9e58eef0d6ec63d29ee",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "b1685dec081868e252efae9f880a46ffbbcc3d2c7f17c4442fcc44ce39156c19",
+        "source_array_sha256": "b1685dec081868e252efae9f880a46ffbbcc3d2c7f17c4442fcc44ce39156c19",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "ee2834807d645f3b2e08ef19c5b466ad0293ee767d27f1ac94e373fea342cd49",
+        "source_array_sha256": "ee2834807d645f3b2e08ef19c5b466ad0293ee767d27f1ac94e373fea342cd49",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "ad395ec367a232d917456263f3ac2f83c8c86a7c1cab9b9cbe75e1515f9a75c9",
+        "source_array_sha256": "ad395ec367a232d917456263f3ac2f83c8c86a7c1cab9b9cbe75e1515f9a75c9",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "188064383ed36b4092b1b54a00ecd5b686cfb02161f7953f81c052c9a6b2be2b",
+        "source_array_sha256": "188064383ed36b4092b1b54a00ecd5b686cfb02161f7953f81c052c9a6b2be2b",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "cd89e7725a19c5c0a39959305579438e371327b80f474c5b67fa65522736e330",
+        "source_array_sha256": "cd89e7725a19c5c0a39959305579438e371327b80f474c5b67fa65522736e330",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "bbe1da2761d8d08fd92777ac74ee48cd3e2af57608ebc82d0de73367da086735",
+        "source_array_sha256": "bbe1da2761d8d08fd92777ac74ee48cd3e2af57608ebc82d0de73367da086735",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "cda5b9c3bea2936f7380fbd8c2776a21630697e978bcce65d0d256af50439ffe",
+        "source_array_sha256": "cda5b9c3bea2936f7380fbd8c2776a21630697e978bcce65d0d256af50439ffe",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "891e681f4066f2c712e79f0034f3a79417010d3b2776534c081e59100208848e",
+        "source_array_sha256": "891e681f4066f2c712e79f0034f3a79417010d3b2776534c081e59100208848e",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "08cea2e2edc3b88cdb3fc25c8b60b68f8e98d781da274d77e3eef48a39187384",
+        "source_array_sha256": "08cea2e2edc3b88cdb3fc25c8b60b68f8e98d781da274d77e3eef48a39187384",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "fe3c0f5bcf23f41d3a064a2904632a8cadfbf97d88571f6f94bd9ac4da2124ef",
+        "source_array_sha256": "fe3c0f5bcf23f41d3a064a2904632a8cadfbf97d88571f6f94bd9ac4da2124ef",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "139403e7f3570ea8933808c4febe3ab1a13418e8f0fab6c8dc76e730051ba546",
+        "source_array_sha256": "139403e7f3570ea8933808c4febe3ab1a13418e8f0fab6c8dc76e730051ba546",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "99a2a167c7fc7f0b9fa141336306796c1ffff225b02872c151042a6d822ec175",
+        "source_array_sha256": "99a2a167c7fc7f0b9fa141336306796c1ffff225b02872c151042a6d822ec175",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "source_array_sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "source_array_sha256": "55ccae769ef9b019b6b2455c106b22437ddf7058a52de291b0f767e597912d36",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "299daf997d917365b4b03e5d0cb45c980262bbd5c7d11d52cf4cfcf2f1ce17fb",
+        "source_array_sha256": "299daf997d917365b4b03e5d0cb45c980262bbd5c7d11d52cf4cfcf2f1ce17fb",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "4afce7f2d1708550cb85af35cb46be2d0719ee0dbd1ba405a9aeb4ecd82fc8b8",
+        "source_array_sha256": "4afce7f2d1708550cb85af35cb46be2d0719ee0dbd1ba405a9aeb4ecd82fc8b8",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "3c720ce0f27bf518291188eb1bf2117be4f48102cb6f8fc26d1cc30ab60889a9",
+        "source_array_sha256": "3c720ce0f27bf518291188eb1bf2117be4f48102cb6f8fc26d1cc30ab60889a9",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          2107
+        ],
+        "dtype": "float64",
+        "sha256": "0f160b980d862bacba3deb238df8a70971bc733d515e6b020792478857450be9",
+        "source_array_sha256": "0f160b980d862bacba3deb238df8a70971bc733d515e6b020792478857450be9",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          705
+        ],
+        "dtype": "float64",
+        "sha256": "d85686424ae8960d8b4f383147c66680a84b3366059e98bd4f344cc36bf22fa6",
+        "source_array_sha256": "d85686424ae8960d8b4f383147c66680a84b3366059e98bd4f344cc36bf22fa6",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          4
+        ],
+        "dtype": "float64",
+        "sha256": "8f90a3dfea1b8e86d6d865e59e17dc96c4bce54db1c7dba4bd9074d5acf76307",
+        "source_array_sha256": "8f90a3dfea1b8e86d6d865e59e17dc96c4bce54db1c7dba4bd9074d5acf76307",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "sha256": "db7e0dc933ff6ff9de5ee7083106edcc1ebeffd9c264bf6931ac693f0a7c345f",
+        "source_array_sha256": "db7e0dc933ff6ff9de5ee7083106edcc1ebeffd9c264bf6931ac693f0a7c345f",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "d983d58cbce7f9317106b1241c1fb2cd183d75e4e99740a8b9d50000392a8835",
+        "source_array_sha256": "d983d58cbce7f9317106b1241c1fb2cd183d75e4e99740a8b9d50000392a8835",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "e3bf59ef57094840bdb3bcfecd89287ecc4c67d478a4884ffa2541dd6ddfd6cd",
+        "source_array_sha256": "e3bf59ef57094840bdb3bcfecd89287ecc4c67d478a4884ffa2541dd6ddfd6cd",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          1602
+        ],
+        "dtype": "int64",
+        "sha256": "5c262315a4aa6c2ff6bb53f0a548077f7567a1223e554290220eafabfbf604c8",
+        "source_array_sha256": "5c262315a4aa6c2ff6bb53f0a548077f7567a1223e554290220eafabfbf604c8",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          1602
+        ],
+        "dtype": "float64",
+        "sha256": "8bd2639d0136c0629ed3694fbc1b9193fe84d8f1dfb499737e75ec64a506f5cf",
+        "source_array_sha256": "8bd2639d0136c0629ed3694fbc1b9193fe84d8f1dfb499737e75ec64a506f5cf",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "accepted_y",
+        "shape": [
+          58,
+          705
+        ],
+        "dtype": "float64",
+        "sha256": "fc4299cabf5b6599cb6832a62312d3ab17a1ed8a3ed5ea2a0c0632e6e1bbb5f2",
+        "source_array_sha256": "fc4299cabf5b6599cb6832a62312d3ab17a1ed8a3ed5ea2a0c0632e6e1bbb5f2",
+        "selection": null
+      }
+    ],
+    "bytes": 640327
+  },
+  {
+    "run_id": "stable_base_1.00_F10_L3_q3",
+    "source_raw_sha256": "ee122900745a7e24dc73bf37826a27332c7bbaf42ced7e45869662f705cbc8b8",
+    "role": "primary nonlinear scalar response",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "ea50258d0df5552be77097827df275d7e82cce23220c4890390754aeb79539f6",
+        "source_array_sha256": "ea50258d0df5552be77097827df275d7e82cce23220c4890390754aeb79539f6",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "6c74b85d4757fb0b8ea25681874faa9f0830a4b023d6881d1fbee9ef0c63da4e",
+        "source_array_sha256": "6c74b85d4757fb0b8ea25681874faa9f0830a4b023d6881d1fbee9ef0c63da4e",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "f8f85f4a4618c10115ca8ac50cd58787d7d18bb6a5b3d89b36385021dc41115b",
+        "source_array_sha256": "f8f85f4a4618c10115ca8ac50cd58787d7d18bb6a5b3d89b36385021dc41115b",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "b955ab196cf2a22db842cfead40b10a5fd782b774d1a5d2310239d0e8da0613b",
+        "source_array_sha256": "b955ab196cf2a22db842cfead40b10a5fd782b774d1a5d2310239d0e8da0613b",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "28f6301ca7c56f08fcd67b5ec83a2091549925742b08266408c2f1afdd222d65",
+        "source_array_sha256": "28f6301ca7c56f08fcd67b5ec83a2091549925742b08266408c2f1afdd222d65",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "fcf4d45ab57330ce1f07d1e0c9edaa133f20203f5144d52530fe59730b27d2cd",
+        "source_array_sha256": "fcf4d45ab57330ce1f07d1e0c9edaa133f20203f5144d52530fe59730b27d2cd",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "9271069349ed5cc6c54bfa3a1d8f417a03dfd11c76f24e4d312a7cd63654ccf7",
+        "source_array_sha256": "9271069349ed5cc6c54bfa3a1d8f417a03dfd11c76f24e4d312a7cd63654ccf7",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "f1e62eaa0e643feefdff1dac773e8d35a3cab9640fb271891f4b720561aa773f",
+        "source_array_sha256": "f1e62eaa0e643feefdff1dac773e8d35a3cab9640fb271891f4b720561aa773f",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "370f8adb818c4129e0e3ad3d383b8d0ffd6bf466ad423e8894b338813fe182d5",
+        "source_array_sha256": "370f8adb818c4129e0e3ad3d383b8d0ffd6bf466ad423e8894b338813fe182d5",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "44ad75c32e8d28bb411d46d1688fc3b29605a7660031e71d1613c4a2910ba0d8",
+        "source_array_sha256": "44ad75c32e8d28bb411d46d1688fc3b29605a7660031e71d1613c4a2910ba0d8",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "ee33357ce6c19a45655a3b4034f063dcd38ab6c406748a99d8e0924facb31cb5",
+        "source_array_sha256": "ee33357ce6c19a45655a3b4034f063dcd38ab6c406748a99d8e0924facb31cb5",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "0fb303bc5b909e3ff336b6be06ac500fb2e79a377fa1a80bd2d75137e637dbf3",
+        "source_array_sha256": "0fb303bc5b909e3ff336b6be06ac500fb2e79a377fa1a80bd2d75137e637dbf3",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "84fd58b294f9bf42244347d869bc4ca95558826c27eee53424e8c4e06e4b663c",
+        "source_array_sha256": "84fd58b294f9bf42244347d869bc4ca95558826c27eee53424e8c4e06e4b663c",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "967716df38d7486caa686da57d5012794d143cfd9080f5ef358a4717aedf7de0",
+        "source_array_sha256": "967716df38d7486caa686da57d5012794d143cfd9080f5ef358a4717aedf7de0",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "deeb324c311873638ebc16072f02386184a986053f61291646002574fd3b53e6",
+        "source_array_sha256": "deeb324c311873638ebc16072f02386184a986053f61291646002574fd3b53e6",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "aa15810e6537d8c4146a9e618c6d20cbd3eca1acf98ad9ba425ba411cf2cfdaa",
+        "source_array_sha256": "aa15810e6537d8c4146a9e618c6d20cbd3eca1acf98ad9ba425ba411cf2cfdaa",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "0b497126cd1b031a6f8625b3da860fc0bc9d1dd5a4afb1b628ff32b9adbd208d",
+        "source_array_sha256": "0b497126cd1b031a6f8625b3da860fc0bc9d1dd5a4afb1b628ff32b9adbd208d",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "ad76c275245653fb3ccfe888ca9d5216f600411e0faf127e228e7c71a3072eed",
+        "source_array_sha256": "ad76c275245653fb3ccfe888ca9d5216f600411e0faf127e228e7c71a3072eed",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "c800854ad652c439e1a0884b5e99811c7060dc35c73278a35cec478cef6d28ea",
+        "source_array_sha256": "c800854ad652c439e1a0884b5e99811c7060dc35c73278a35cec478cef6d28ea",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "df694716fc7616c6c67977a9372e1a68593769432ccb64bea8e58c3e19c9e719",
+        "source_array_sha256": "df694716fc7616c6c67977a9372e1a68593769432ccb64bea8e58c3e19c9e719",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "51033560280b86ada7b225d3e653d4fa2692791f0598dbe071ad015d920af3e1",
+        "source_array_sha256": "51033560280b86ada7b225d3e653d4fa2692791f0598dbe071ad015d920af3e1",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "e8d4b027cf2dc998bbd3e853faf15cb9382ebead89b26a77abb4e4f2b1d987c3",
+        "source_array_sha256": "e8d4b027cf2dc998bbd3e853faf15cb9382ebead89b26a77abb4e4f2b1d987c3",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "a68702c62f23e003d6e24b006b9f34d2ceef22744bc3f7c4e0f15ee8341f75fe",
+        "source_array_sha256": "a68702c62f23e003d6e24b006b9f34d2ceef22744bc3f7c4e0f15ee8341f75fe",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "7a79d9c7f84b506ca1f967468463af1c30c538fb60945bbf8a484d6f42f67964",
+        "source_array_sha256": "7a79d9c7f84b506ca1f967468463af1c30c538fb60945bbf8a484d6f42f67964",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "4277483eafe43fd4cc77df3c2c53aa88d8e0779d75a8fecc3c2923b393937073",
+        "source_array_sha256": "4277483eafe43fd4cc77df3c2c53aa88d8e0779d75a8fecc3c2923b393937073",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "c7e7b0f2e517cbdd4e7230825c68603192064113449a986ec9e821687dc372a3",
+        "source_array_sha256": "c7e7b0f2e517cbdd4e7230825c68603192064113449a986ec9e821687dc372a3",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          13995
+        ],
+        "dtype": "float64",
+        "sha256": "388e31bc4851b87d07961e7703276b96f54d18e45adbbf63404317a2b27aff83",
+        "source_array_sha256": "388e31bc4851b87d07961e7703276b96f54d18e45adbbf63404317a2b27aff83",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          163
+        ],
+        "dtype": "float64",
+        "sha256": "13f9e97a07c6fbe66e9fcd5473926c2d84d2c01a03a1a6c2a4bb0dffcd183bf0",
+        "source_array_sha256": "13f9e97a07c6fbe66e9fcd5473926c2d84d2c01a03a1a6c2a4bb0dffcd183bf0",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          131
+        ],
+        "dtype": "float64",
+        "sha256": "ab567181b15956cdb1fd9e52473f606a591036758433a09b70f1dd0e001ec5e6",
+        "source_array_sha256": "ab567181b15956cdb1fd9e52473f606a591036758433a09b70f1dd0e001ec5e6",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          164
+        ],
+        "dtype": "float64",
+        "sha256": "63974286050e7ed9b0187970fb4e6915974438abe30f5c9d42a6cf1073b436e9",
+        "source_array_sha256": "63974286050e7ed9b0187970fb4e6915974438abe30f5c9d42a6cf1073b436e9",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          164
+        ],
+        "dtype": "float64",
+        "sha256": "6941d0ce939f9d109af1f6bc4f1e8147ed02778eb449b518a85018a146c891db",
+        "source_array_sha256": "6941d0ce939f9d109af1f6bc4f1e8147ed02778eb449b518a85018a146c891db",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_T_K",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "37bbfe3ce22d3d25f4feae9e722b63f99c5bb88c65f8814f159d09401c7df481",
+        "source_array_sha256": "37bbfe3ce22d3d25f4feae9e722b63f99c5bb88c65f8814f159d09401c7df481",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_R_m",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "8d5eb6d7b10ec0a18bfd7f710bbb44d23cdb6f904965cfb4351cbb581f2d3903",
+        "source_array_sha256": "8d5eb6d7b10ec0a18bfd7f710bbb44d23cdb6f904965cfb4351cbb581f2d3903",
+        "selection": null
+      },
+      {
+        "key": "paired_gas_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "5487a600bf5e8f62026a985f75b18108eb533503dbc50c6bf2d319622abd73e8",
+        "source_array_sha256": "5487a600bf5e8f62026a985f75b18108eb533503dbc50c6bf2d319622abd73e8",
+        "selection": null
+      },
+      {
+        "key": "paired_water_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "b0ef0e52921af87229b3e9a89aea6192db83739aabb2e4b0eafa2a4d2876b56d",
+        "source_array_sha256": "b0ef0e52921af87229b3e9a89aea6192db83739aabb2e4b0eafa2a4d2876b56d",
+        "selection": null
+      },
+      {
+        "key": "paired_Au_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "559d8bf6c34cf810844bb72cee87180844f68c68d3beee63572675d9218bb1bc",
+        "source_array_sha256": "559d8bf6c34cf810844bb72cee87180844f68c68d3beee63572675d9218bb1bc",
+        "selection": null
+      },
+      {
+        "key": "paired_total_residual_J",
+        "shape": [
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "3162eda1bf189b5e5123bd46f72f7ca2eb5c55826f3f2d6bbedfb0f7c66e6983",
+        "source_array_sha256": "3162eda1bf189b5e5123bd46f72f7ca2eb5c55826f3f2d6bbedfb0f7c66e6983",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          6855
+        ],
+        "dtype": "int64",
+        "sha256": "d1fc4479d64dd255ca1c4b454d044f2fa9088e5aa5a9b7fdd697b1c30d107f9a",
+        "source_array_sha256": "d1fc4479d64dd255ca1c4b454d044f2fa9088e5aa5a9b7fdd697b1c30d107f9a",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          6855
+        ],
+        "dtype": "float64",
+        "sha256": "9158aa57318d40ea8c1c6d3b54eeff048d692996a655ecfb37bbabee2a6fd5f9",
+        "source_array_sha256": "9158aa57318d40ea8c1c6d3b54eeff048d692996a655ecfb37bbabee2a6fd5f9",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_ledgers_J",
+        "shape": [
+          6,
+          15685
+        ],
+        "dtype": "float64",
+        "sha256": "b6fc09cadf163dc665ecdfe6dca9ea3cacc3305799d4984bd35b1f738987da1d",
+        "source_array_sha256": "b6fc09cadf163dc665ecdfe6dca9ea3cacc3305799d4984bd35b1f738987da1d",
+        "selection": null
+      }
+    ],
+    "bytes": 3395736
+  },
+  {
+    "run_id": "stable_base_1.15_F10_L3_q3",
+    "source_raw_sha256": "ff8279ab5b0f8943a61813d38b0788dcd545cc05a586a1f087a11ee9ab76cbd3",
+    "role": "primary nonlinear scalar response",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "bc99a4fb7d9ec25796dd84539ec39e61bb63a801bba7eee46edada7779ebe79e",
+        "source_array_sha256": "bc99a4fb7d9ec25796dd84539ec39e61bb63a801bba7eee46edada7779ebe79e",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "35487b2c659afd3166a0bd502efb331521235db3bf19950580c878f5c80fd792",
+        "source_array_sha256": "35487b2c659afd3166a0bd502efb331521235db3bf19950580c878f5c80fd792",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "dd8b343230febd23e3c3a60c617150d10996bc6e281e755d18b3cdc97d37bc38",
+        "source_array_sha256": "dd8b343230febd23e3c3a60c617150d10996bc6e281e755d18b3cdc97d37bc38",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "af988c4e650c55a4ef4396f04e4e2f854c0121a9782eac6d4246d03a48a260f0",
+        "source_array_sha256": "af988c4e650c55a4ef4396f04e4e2f854c0121a9782eac6d4246d03a48a260f0",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "7a15d194f8444b43cb2c12a9001cdd2a6817048c149140c5ba64928452adcaa6",
+        "source_array_sha256": "7a15d194f8444b43cb2c12a9001cdd2a6817048c149140c5ba64928452adcaa6",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "a2864ce24a42206b52ddf0f9da6134de8d554eec0d92bfd804e64c65a0e5bad8",
+        "source_array_sha256": "a2864ce24a42206b52ddf0f9da6134de8d554eec0d92bfd804e64c65a0e5bad8",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "39863938bc013d98d120829a8d787834f08de5acb8ee1c9832afa02db3d2e0d7",
+        "source_array_sha256": "39863938bc013d98d120829a8d787834f08de5acb8ee1c9832afa02db3d2e0d7",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "1e82344b3754a6eedf130b3fe4dd50e33a62d3fc88ea8a0d00b49a43574e28f6",
+        "source_array_sha256": "1e82344b3754a6eedf130b3fe4dd50e33a62d3fc88ea8a0d00b49a43574e28f6",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "a2078161cb3217842e51f480c30c064668ed6a0940a678f4b6acce6f371a8be7",
+        "source_array_sha256": "a2078161cb3217842e51f480c30c064668ed6a0940a678f4b6acce6f371a8be7",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "d815c78780f192dbef779d95ff5d3c2182440964bf7511c005719854386e5c83",
+        "source_array_sha256": "d815c78780f192dbef779d95ff5d3c2182440964bf7511c005719854386e5c83",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "3cc667b0d53f57f68c7fc6d09fd360510c79d7dc7c8b1da030eb43bb42e848d5",
+        "source_array_sha256": "3cc667b0d53f57f68c7fc6d09fd360510c79d7dc7c8b1da030eb43bb42e848d5",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "ec404278e2b209dde7c87aa142d172a2329e9d8881f3dbceb18383c092494fc0",
+        "source_array_sha256": "ec404278e2b209dde7c87aa142d172a2329e9d8881f3dbceb18383c092494fc0",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "58932a6e5335ac2350afffe25df873bb8b27fd12184d24c50c53c7817f74a8e6",
+        "source_array_sha256": "58932a6e5335ac2350afffe25df873bb8b27fd12184d24c50c53c7817f74a8e6",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "62788545ea0b6754f12f53d57cf65bbc7a2d89ca1a94bfe5110418fb82e4d3a0",
+        "source_array_sha256": "62788545ea0b6754f12f53d57cf65bbc7a2d89ca1a94bfe5110418fb82e4d3a0",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "3d06c425a05d719a825686ae511cd4575f690c34a39f4f1ae14d4ba47404f922",
+        "source_array_sha256": "3d06c425a05d719a825686ae511cd4575f690c34a39f4f1ae14d4ba47404f922",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "5402dad96622098449c89d8e1ec7848d5531e363a1052f5b62ae72fde0f8af8a",
+        "source_array_sha256": "5402dad96622098449c89d8e1ec7848d5531e363a1052f5b62ae72fde0f8af8a",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "33ae1cdb5d722986bfc2c4bc405ba71778cff5ab3bf9e115b04571d2f73fc203",
+        "source_array_sha256": "33ae1cdb5d722986bfc2c4bc405ba71778cff5ab3bf9e115b04571d2f73fc203",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "c792fba4dcc1737e6f5e7cdcb3f97e56bd2249120b711717df259104e6ce0ea4",
+        "source_array_sha256": "c792fba4dcc1737e6f5e7cdcb3f97e56bd2249120b711717df259104e6ce0ea4",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "c371fe28d095f6738b56de363d5a3a64a16eb3a485ac5ac637051aa4da707aac",
+        "source_array_sha256": "c371fe28d095f6738b56de363d5a3a64a16eb3a485ac5ac637051aa4da707aac",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "0a5dbbc70c12b43725f2ab75d845005fe5b7ef30626706f202dc3ce4c2c9e03c",
+        "source_array_sha256": "0a5dbbc70c12b43725f2ab75d845005fe5b7ef30626706f202dc3ce4c2c9e03c",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "3f89fcc3231393df6169a188c33648c1834c93324862f57f18e7707d7190aa4c",
+        "source_array_sha256": "3f89fcc3231393df6169a188c33648c1834c93324862f57f18e7707d7190aa4c",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "43a6813aa66a80c8bcd579dc10b483b74a103e9e049e21e059c6e21474d74a60",
+        "source_array_sha256": "43a6813aa66a80c8bcd579dc10b483b74a103e9e049e21e059c6e21474d74a60",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "f91fc7a0100c06ec78e83db0bb10b5546e35af689c036b36e41c1591de41495b",
+        "source_array_sha256": "f91fc7a0100c06ec78e83db0bb10b5546e35af689c036b36e41c1591de41495b",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "51eb727b568a9a3fc25bf3d54b9ff285a1e11bf99550b3b78747a93c761fa7f7",
+        "source_array_sha256": "51eb727b568a9a3fc25bf3d54b9ff285a1e11bf99550b3b78747a93c761fa7f7",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "b98107ec88d179861fe1152d7ceca978112842914374e84370777b1c37f75112",
+        "source_array_sha256": "b98107ec88d179861fe1152d7ceca978112842914374e84370777b1c37f75112",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "33a58c4b7cb434ee9d5eca1a582f5f28a2c890da394228c9b0a90a1185fe23c2",
+        "source_array_sha256": "33a58c4b7cb434ee9d5eca1a582f5f28a2c890da394228c9b0a90a1185fe23c2",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          38847
+        ],
+        "dtype": "float64",
+        "sha256": "c038515293f3eca7ce5b29a1e4c89fc83481d21a92defa45858ef5e6a7a03f82",
+        "source_array_sha256": "c038515293f3eca7ce5b29a1e4c89fc83481d21a92defa45858ef5e6a7a03f82",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          140
+        ],
+        "dtype": "float64",
+        "sha256": "cfe57bc19ff308d33c2ac6a293bb0c6d0a51fa10be4c0428b17dcebe47f16a80",
+        "source_array_sha256": "cfe57bc19ff308d33c2ac6a293bb0c6d0a51fa10be4c0428b17dcebe47f16a80",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          130
+        ],
+        "dtype": "float64",
+        "sha256": "3b8eb11a68a37df6c492b32a76aa4a747d3f9100d066e023cadf00e743869463",
+        "source_array_sha256": "3b8eb11a68a37df6c492b32a76aa4a747d3f9100d066e023cadf00e743869463",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          141
+        ],
+        "dtype": "float64",
+        "sha256": "a8ce49992ad9c9754a1d9ba18ed613a44b6078308f0e6efcd41d2cda2f260133",
+        "source_array_sha256": "a8ce49992ad9c9754a1d9ba18ed613a44b6078308f0e6efcd41d2cda2f260133",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          141
+        ],
+        "dtype": "float64",
+        "sha256": "c44a107d250482430c5395b633088cb9d7deb755afa2309df9720ee41578e7e6",
+        "source_array_sha256": "c44a107d250482430c5395b633088cb9d7deb755afa2309df9720ee41578e7e6",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_T_K",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "d2b182b8263f9a188aeb4b6b0daa2b18a5e4e71b067c06898f65fd1bf50f28c9",
+        "source_array_sha256": "d2b182b8263f9a188aeb4b6b0daa2b18a5e4e71b067c06898f65fd1bf50f28c9",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_R_m",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "c3ac31977ad149752ef87fce0591925b4a57b1be049926ace818b2563049ba60",
+        "source_array_sha256": "c3ac31977ad149752ef87fce0591925b4a57b1be049926ace818b2563049ba60",
+        "selection": null
+      },
+      {
+        "key": "paired_gas_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "41b3d5129b8471b210e518fe9113c4cffd299be9db80c700514ea49f783cda42",
+        "source_array_sha256": "41b3d5129b8471b210e518fe9113c4cffd299be9db80c700514ea49f783cda42",
+        "selection": null
+      },
+      {
+        "key": "paired_water_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "8ca48876aa7e1b652686f4d504a27277c78e3986e8842fefb4ea594522d4c0d9",
+        "source_array_sha256": "8ca48876aa7e1b652686f4d504a27277c78e3986e8842fefb4ea594522d4c0d9",
+        "selection": null
+      },
+      {
+        "key": "paired_Au_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "5e876079397bfb6fc8278b9212b11e96959aaf756a7c000633bcb80bd5326223",
+        "source_array_sha256": "5e876079397bfb6fc8278b9212b11e96959aaf756a7c000633bcb80bd5326223",
+        "selection": null
+      },
+      {
+        "key": "paired_total_residual_J",
+        "shape": [
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "88a6e661b0fae4f267d279cb5d8f99901d64b3e65ca8fa7c3a4fd5da38a20e79",
+        "source_array_sha256": "88a6e661b0fae4f267d279cb5d8f99901d64b3e65ca8fa7c3a4fd5da38a20e79",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          7722
+        ],
+        "dtype": "int64",
+        "sha256": "4ad910a564c898210bbe43faed328a57237c8c8557a30ce025a6db896e38a048",
+        "source_array_sha256": "4ad910a564c898210bbe43faed328a57237c8c8557a30ce025a6db896e38a048",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          7722
+        ],
+        "dtype": "float64",
+        "sha256": "94833b00986c07eb86b5ada689b705e0d6295f653f7f17d83666a7976fd011d4",
+        "source_array_sha256": "94833b00986c07eb86b5ada689b705e0d6295f653f7f17d83666a7976fd011d4",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_ledgers_J",
+        "shape": [
+          6,
+          40513
+        ],
+        "dtype": "float64",
+        "sha256": "a1617c478027944d98c764fa698a89f2ee7bbf8c9155b429633c5baabdfe5442",
+        "source_array_sha256": "a1617c478027944d98c764fa698a89f2ee7bbf8c9155b429633c5baabdfe5442",
+        "selection": null
+      }
+    ],
+    "bytes": 8556786
+  },
+  {
+    "run_id": "stable_extra_high_1.30_BDF_base_F10_L3_q3",
+    "source_raw_sha256": "cdc92078278bcf83f9b29067060329472752094da6e7dde15f976f3841d3311e",
+    "role": "primary nonlinear scalar response",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "9666e0dd58435011692aebd68de1d21827da973a9af96b2f6afe1b78a3560041",
+        "source_array_sha256": "9666e0dd58435011692aebd68de1d21827da973a9af96b2f6afe1b78a3560041",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "febe1588be6811e42c5112a6f50c1319e59a2a913a6911773ace76548c857798",
+        "source_array_sha256": "febe1588be6811e42c5112a6f50c1319e59a2a913a6911773ace76548c857798",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "576ca9224c7cc459f13cb372cfd9027f2ef4503e0594797817845c535b284229",
+        "source_array_sha256": "576ca9224c7cc459f13cb372cfd9027f2ef4503e0594797817845c535b284229",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "4d9109644674b1094e4d254fba2fa4414388d1ad0c95965618d17b84b40b8c9a",
+        "source_array_sha256": "4d9109644674b1094e4d254fba2fa4414388d1ad0c95965618d17b84b40b8c9a",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "0af44ebeedcf8ccb91baabeb648e57f2f21c2f490fdfd682a9e7484d7f669484",
+        "source_array_sha256": "0af44ebeedcf8ccb91baabeb648e57f2f21c2f490fdfd682a9e7484d7f669484",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "99d705ae381273550ad8ac71e8079bab39b86250df394988d2f5d15c552fe36a",
+        "source_array_sha256": "99d705ae381273550ad8ac71e8079bab39b86250df394988d2f5d15c552fe36a",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "16f163858f450d253df15cf847c0d92e30fbc78d0dcb5bb40eeaf4f533866db5",
+        "source_array_sha256": "16f163858f450d253df15cf847c0d92e30fbc78d0dcb5bb40eeaf4f533866db5",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "62385aab0449b3ec3ef5b0eb64b12e2855619526f26c5039920af691b61cd9ef",
+        "source_array_sha256": "62385aab0449b3ec3ef5b0eb64b12e2855619526f26c5039920af691b61cd9ef",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "dbbf0fdff8bc4fc85b708b3d1610f0a44327eeb8ea363adf547ebaa43a4b3960",
+        "source_array_sha256": "dbbf0fdff8bc4fc85b708b3d1610f0a44327eeb8ea363adf547ebaa43a4b3960",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "130b059a4868bd7ed52fbf836fa1c7b07ecc8e54932fef8c71d66c46622749e0",
+        "source_array_sha256": "130b059a4868bd7ed52fbf836fa1c7b07ecc8e54932fef8c71d66c46622749e0",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "bc3c0027ebc628784976aab70860bc9f59a8122e8533406310cb88a63cdc461e",
+        "source_array_sha256": "bc3c0027ebc628784976aab70860bc9f59a8122e8533406310cb88a63cdc461e",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "8fadf5866f83b2f33cb20e0111eb78a42db4368abdc346e15148bb9b4e9c2e88",
+        "source_array_sha256": "8fadf5866f83b2f33cb20e0111eb78a42db4368abdc346e15148bb9b4e9c2e88",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "a570137f50d93be2a666d1d95f3b74becc3ed077da7c4583df54cca4e2b35a9f",
+        "source_array_sha256": "a570137f50d93be2a666d1d95f3b74becc3ed077da7c4583df54cca4e2b35a9f",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "f7c75aa75a60e1ac3e260651f7f358c31c2cb645362351ceab69a90b24e76b7e",
+        "source_array_sha256": "f7c75aa75a60e1ac3e260651f7f358c31c2cb645362351ceab69a90b24e76b7e",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "a030b7bfc763e5db9e0c0e9d66fed47a2409c41bf35d838cde22ddc966718168",
+        "source_array_sha256": "a030b7bfc763e5db9e0c0e9d66fed47a2409c41bf35d838cde22ddc966718168",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "4b805caaf473d353aeb56f3364dcd9465446419dd814ef14a4a80f6f3cba0df6",
+        "source_array_sha256": "4b805caaf473d353aeb56f3364dcd9465446419dd814ef14a4a80f6f3cba0df6",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "5177f64be1edc67143b65586465e1650e78e35581f9a066f16ce64b7881aa26c",
+        "source_array_sha256": "5177f64be1edc67143b65586465e1650e78e35581f9a066f16ce64b7881aa26c",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "c1d6019011c4a84d637b56e3461222799b97c4a9f01e775a530714f63185aaf2",
+        "source_array_sha256": "c1d6019011c4a84d637b56e3461222799b97c4a9f01e775a530714f63185aaf2",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "954e73900579d5793042ebeb83fa5b78d324446a7592a1977c9a1b781fd2fc69",
+        "source_array_sha256": "954e73900579d5793042ebeb83fa5b78d324446a7592a1977c9a1b781fd2fc69",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "6e434950f8a31e2f0e261829b7074f7c295d4ee8255a4c451cd0dd26d219c537",
+        "source_array_sha256": "6e434950f8a31e2f0e261829b7074f7c295d4ee8255a4c451cd0dd26d219c537",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "8e2fc3ee382a7b228b538b6b5ba94a5615c842e2839d26d316df2a3571da2fe7",
+        "source_array_sha256": "8e2fc3ee382a7b228b538b6b5ba94a5615c842e2839d26d316df2a3571da2fe7",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "64f1b9555329ac53a3bc67feba34f915abf49c4828b99cf0d9bb247bfdcb45e5",
+        "source_array_sha256": "64f1b9555329ac53a3bc67feba34f915abf49c4828b99cf0d9bb247bfdcb45e5",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "d0670b403f5d8d4295c545ccd6b88b7facb08e8aa68caab1ac1c0a1a766c2459",
+        "source_array_sha256": "d0670b403f5d8d4295c545ccd6b88b7facb08e8aa68caab1ac1c0a1a766c2459",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "13c67b77a07f7341e5cd9ddacbca9b1999a6377ac3191913d4340095d9a7d9c5",
+        "source_array_sha256": "13c67b77a07f7341e5cd9ddacbca9b1999a6377ac3191913d4340095d9a7d9c5",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "6ad109c6751aacd78fc43e1c7a8c771707ec3408bdf1ef2d3f57f63367eb662a",
+        "source_array_sha256": "6ad109c6751aacd78fc43e1c7a8c771707ec3408bdf1ef2d3f57f63367eb662a",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "b201267ef14969288bd9b0ab9c195378b53274a3d05a44c6415614190f39983f",
+        "source_array_sha256": "b201267ef14969288bd9b0ab9c195378b53274a3d05a44c6415614190f39983f",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          1374
+        ],
+        "dtype": "float64",
+        "sha256": "9708f85e02cc99c65dd464f3b4015478b1994b93a8432984a49583b3aad8d8e3",
+        "source_array_sha256": "9708f85e02cc99c65dd464f3b4015478b1994b93a8432984a49583b3aad8d8e3",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          4
+        ],
+        "dtype": "float64",
+        "sha256": "f5bba3a48030901b25d69cbe74a93f8f9e5b16b9dfb0484dabeb24ad38a6d908",
+        "source_array_sha256": "f5bba3a48030901b25d69cbe74a93f8f9e5b16b9dfb0484dabeb24ad38a6d908",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "sha256": "bb0f927033ff3d8b89430fb61891a811e86ff72491ec7f95c3badf783abda868",
+        "source_array_sha256": "bb0f927033ff3d8b89430fb61891a811e86ff72491ec7f95c3badf783abda868",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "0faa3e57f345bf27e7a7b6447ba551140c6229a34cc9f1b96a2778f5d8d1da5f",
+        "source_array_sha256": "0faa3e57f345bf27e7a7b6447ba551140c6229a34cc9f1b96a2778f5d8d1da5f",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "1d4a636b871f369fca2184785756200479693b74bc4dc522b4705cbf4092bb5c",
+        "source_array_sha256": "1d4a636b871f369fca2184785756200479693b74bc4dc522b4705cbf4092bb5c",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_T_K",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "82cf3184753f080852c4517f3180199691d824f5e62b60c5c025c58be78f0453",
+        "source_array_sha256": "82cf3184753f080852c4517f3180199691d824f5e62b60c5c025c58be78f0453",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_R_m",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "80842c4eaccf7c85015dfb13cc5856b19f1e71c5c3bf294d04695e0b6b4d15a3",
+        "source_array_sha256": "80842c4eaccf7c85015dfb13cc5856b19f1e71c5c3bf294d04695e0b6b4d15a3",
+        "selection": null
+      },
+      {
+        "key": "paired_gas_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "f2b15de4aba562bd1885d6de113dcb10c86bb69764e436d754955616cb5c2b23",
+        "source_array_sha256": "f2b15de4aba562bd1885d6de113dcb10c86bb69764e436d754955616cb5c2b23",
+        "selection": null
+      },
+      {
+        "key": "paired_water_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "ff57ada7afb71696cbb2cd72d20e48fe48533b59aaea118c4af0bb8d22aea324",
+        "source_array_sha256": "ff57ada7afb71696cbb2cd72d20e48fe48533b59aaea118c4af0bb8d22aea324",
+        "selection": null
+      },
+      {
+        "key": "paired_Au_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "7e4b41611cd5c031682342e50f1f4bd70b58f662b9c39fbcc78210a44f679e17",
+        "source_array_sha256": "7e4b41611cd5c031682342e50f1f4bd70b58f662b9c39fbcc78210a44f679e17",
+        "selection": null
+      },
+      {
+        "key": "paired_total_residual_J",
+        "shape": [
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "902dc14caa23c9ecc30d9e51207a9260fd381363cbc811049c5ee71b5271645e",
+        "source_array_sha256": "902dc14caa23c9ecc30d9e51207a9260fd381363cbc811049c5ee71b5271645e",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          1775
+        ],
+        "dtype": "int64",
+        "sha256": "029af79ec76f9c269623111ef09946fbe48b9e4a68d3596c1e53ad4f3253208c",
+        "source_array_sha256": "029af79ec76f9c269623111ef09946fbe48b9e4a68d3596c1e53ad4f3253208c",
+        "selection": null
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          1775
+        ],
+        "dtype": "float64",
+        "sha256": "0fa1abac93fa6488b9d3f55bb44297cccc876f98d14e315d8e7ef41e27401a25",
+        "source_array_sha256": "0fa1abac93fa6488b9d3f55bb44297cccc876f98d14e315d8e7ef41e27401a25",
+        "selection": null
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "paired_delta_ledgers_J",
+        "shape": [
+          6,
+          2776
+        ],
+        "dtype": "float64",
+        "sha256": "aa3c1000abd39faf32411d42465de1c11007911318268fd8f0c58d9e16790241",
+        "source_array_sha256": "aa3c1000abd39faf32411d42465de1c11007911318268fd8f0c58d9e16790241",
+        "selection": null
+      }
+    ],
+    "bytes": 539826
+  },
+  {
+    "run_id": "sens_passive_near_base",
+    "source_raw_sha256": "fed323508d1fbe7b3f0e7a391e1e22d5d89808858d3fdc454c936fc0164afa25",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          8615
+        ],
+        "dtype": "float64",
+        "sha256": "c7847ce0a473cd7a03a019a03280e8300eee5212043e5c4286bc63f073950085",
+        "source_array_sha256": "c7847ce0a473cd7a03a019a03280e8300eee5212043e5c4286bc63f073950085",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          8615
+        ],
+        "dtype": "float64",
+        "sha256": "01d82e834ae0b3deb479c48b71fecb0f1786223f93bd142283aa15a81d040fc8",
+        "source_array_sha256": "01d82e834ae0b3deb479c48b71fecb0f1786223f93bd142283aa15a81d040fc8",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          8615
+        ],
+        "dtype": "float64",
+        "sha256": "10153bb43c314663227407826ce02854b8565362214471385509488f809b6b6d",
+        "source_array_sha256": "10153bb43c314663227407826ce02854b8565362214471385509488f809b6b6d",
+        "selection": null
+      }
+    ],
+    "bytes": 183346
+  },
+  {
+    "run_id": "sens_passive_far_base",
+    "source_raw_sha256": "2695a5c56aea2744f084c797080d6218a26d87e9611c5a63960dd1c910f3f7b3",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          8603
+        ],
+        "dtype": "float64",
+        "sha256": "00486b95e031a9654eb4cfd2d439c4041f32a91bfc85ab5dbd8284e60cfb7d3a",
+        "source_array_sha256": "00486b95e031a9654eb4cfd2d439c4041f32a91bfc85ab5dbd8284e60cfb7d3a",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          8603
+        ],
+        "dtype": "float64",
+        "sha256": "e961a0ad598e7584760175ac333752a178696f8419ebb830f7f7748f425fc535",
+        "source_array_sha256": "e961a0ad598e7584760175ac333752a178696f8419ebb830f7f7748f425fc535",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          8603
+        ],
+        "dtype": "float64",
+        "sha256": "ba58455987c61580b37102f9ff5fa01f96dcd35ad72f496669b53b5a4ce11bd4",
+        "source_array_sha256": "ba58455987c61580b37102f9ff5fa01f96dcd35ad72f496669b53b5a4ce11bd4",
+        "selection": null
+      }
+    ],
+    "bytes": 186160
+  },
+  {
+    "run_id": "sens_fixed_base",
+    "source_raw_sha256": "2feefb37144f430485fad7de1b58cb045453c1cecb4e23e9607d0c4fc2a2070f",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          1453
+        ],
+        "dtype": "float64",
+        "sha256": "8ad84a76e94c4a60a0ef32800d3d4b7cbecc933feae24653164bab78810c860e",
+        "source_array_sha256": "8ad84a76e94c4a60a0ef32800d3d4b7cbecc933feae24653164bab78810c860e",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          1453
+        ],
+        "dtype": "float64",
+        "sha256": "fe4b0662530da2576106912b1919c90d33b055cb37c94824999914c48446aedb",
+        "source_array_sha256": "fe4b0662530da2576106912b1919c90d33b055cb37c94824999914c48446aedb",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          1453
+        ],
+        "dtype": "float64",
+        "sha256": "ec043c3c3623f3d0560811271d18612d749fb6b1e70eee88ff98fa174de16926",
+        "source_array_sha256": "ec043c3c3623f3d0560811271d18612d749fb6b1e70eee88ff98fa174de16926",
+        "selection": null
+      }
+    ],
+    "bytes": 17664
+  },
+  {
+    "run_id": "dry_air_base",
+    "source_raw_sha256": "494fb022b922a0e772d6d83965c0627dacf04b844e67573d0640e2f6d0630224",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          29270
+        ],
+        "dtype": "float64",
+        "sha256": "08030096d296cb84d971edbe56bce31bc7d5a82f340bdfdb4d69b1bb4f8ab221",
+        "source_array_sha256": "08030096d296cb84d971edbe56bce31bc7d5a82f340bdfdb4d69b1bb4f8ab221",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          29270
+        ],
+        "dtype": "float64",
+        "sha256": "2c83c4e4763744df9bad985c6b93d1e7c5fef66e7d5535108c4e41ec42acf524",
+        "source_array_sha256": "2c83c4e4763744df9bad985c6b93d1e7c5fef66e7d5535108c4e41ec42acf524",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          29270
+        ],
+        "dtype": "float64",
+        "sha256": "b5b65c89afd261141052a7843ea9f47d8452069fec0ffa896c5ec3e5d8a3ed8d",
+        "source_array_sha256": "b5b65c89afd261141052a7843ea9f47d8452069fec0ffa896c5ec3e5d8a3ed8d",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          29270
+        ],
+        "dtype": "float64",
+        "sha256": "8600fbf7687a9b67ff5cac8bcbbf394398ed2679606dc26974e7d5d43d78f65b",
+        "source_array_sha256": "8600fbf7687a9b67ff5cac8bcbbf394398ed2679606dc26974e7d5d43d78f65b",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          29270
+        ],
+        "dtype": "float64",
+        "sha256": "554dc6cded12c27cb2606d9034cf18488e597197437029ea7199143c407f212f",
+        "source_array_sha256": "554dc6cded12c27cb2606d9034cf18488e597197437029ea7199143c407f212f",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          131
+        ],
+        "dtype": "float64",
+        "sha256": "4d18cc959432abacb3fb8e8be45650bef09d6b7c41084deab9da6d1a9b804203",
+        "source_array_sha256": "4d18cc959432abacb3fb8e8be45650bef09d6b7c41084deab9da6d1a9b804203",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          131
+        ],
+        "dtype": "float64",
+        "sha256": "54e6579f6df17e7cd962037188b737917b62b7f76c013bb1758ae4e6151e1654",
+        "source_array_sha256": "54e6579f6df17e7cd962037188b737917b62b7f76c013bb1758ae4e6151e1654",
+        "selection": null
+      }
+    ],
+    "bytes": 1075160
+  },
+  {
+    "run_id": "dry_argon_base",
+    "source_raw_sha256": "320255a94f30f1deff61747ccf347415d922a6b764dd3cf75e7501b79fc3fdfc",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          27720
+        ],
+        "dtype": "float64",
+        "sha256": "91dcfbe71fbf87473bba10646c987cae1bf4512de161c791969c40e9ba66ae67",
+        "source_array_sha256": "91dcfbe71fbf87473bba10646c987cae1bf4512de161c791969c40e9ba66ae67",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          27720
+        ],
+        "dtype": "float64",
+        "sha256": "c7288ad0086ece487f36784c70d475d178f97556bc85852458fe0c33d395cb13",
+        "source_array_sha256": "c7288ad0086ece487f36784c70d475d178f97556bc85852458fe0c33d395cb13",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          27720
+        ],
+        "dtype": "float64",
+        "sha256": "2f6f7b59906f6cb4a2ed6977e640cdf77ab2b1fe127648721568d362ee10a851",
+        "source_array_sha256": "2f6f7b59906f6cb4a2ed6977e640cdf77ab2b1fe127648721568d362ee10a851",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          27720
+        ],
+        "dtype": "float64",
+        "sha256": "6269d761d5ad9428e514dcac69a38a074c4bc31b64401b816e805e84696a7f34",
+        "source_array_sha256": "6269d761d5ad9428e514dcac69a38a074c4bc31b64401b816e805e84696a7f34",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          27720
+        ],
+        "dtype": "float64",
+        "sha256": "4742c6bb8daea8431a6f75f5b9223d9f598620e9ca42a303540256425d47bcfd",
+        "source_array_sha256": "4742c6bb8daea8431a6f75f5b9223d9f598620e9ca42a303540256425d47bcfd",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          121
+        ],
+        "dtype": "float64",
+        "sha256": "1634141c53ab717885a5892dcfb667abb1cf4a0a8e66204c41272cb7d93a92d1",
+        "source_array_sha256": "1634141c53ab717885a5892dcfb667abb1cf4a0a8e66204c41272cb7d93a92d1",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          121
+        ],
+        "dtype": "float64",
+        "sha256": "ba2814abf57315384a6fe3e3d957c64d691ceedcc37e44f5384ccb44924f4a1c",
+        "source_array_sha256": "ba2814abf57315384a6fe3e3d957c64d691ceedcc37e44f5384ccb44924f4a1c",
+        "selection": null
+      }
+    ],
+    "bytes": 1019735
+  },
+  {
+    "run_id": "laser_F10_1.00",
+    "source_raw_sha256": "a09e16bc213e878708800ca3d42d5b73245e0c9b2aeee2dff1afa0b4343aa444",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "t_s",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "c442834eb6d8d6c85280b13bf1904d90f5f12dbd3190638f26bbdbebd1faf48f",
+        "source_array_sha256": "c442834eb6d8d6c85280b13bf1904d90f5f12dbd3190638f26bbdbebd1faf48f",
+        "selection": null
+      },
+      {
+        "key": "R_m",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "88710268c253d508212cc86df37188edd358cff53fe693be2034a862de4fbc21",
+        "source_array_sha256": "88710268c253d508212cc86df37188edd358cff53fe693be2034a862de4fbc21",
+        "selection": null
+      },
+      {
+        "key": "U_m_s",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "490ec6f83403718b7564e88d680cfadf86c6dcc7a4015844f6a3d37d2d681b7d",
+        "source_array_sha256": "490ec6f83403718b7564e88d680cfadf86c6dcc7a4015844f6a3d37d2d681b7d",
+        "selection": null
+      },
+      {
+        "key": "T_g_K",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "d763ca29fb413804f0b576a1dc09012a6aab714a1a1b2049437503e3b363ef00",
+        "source_array_sha256": "d763ca29fb413804f0b576a1dc09012a6aab714a1a1b2049437503e3b363ef00",
+        "selection": null
+      },
+      {
+        "key": "T_Au_rise_K",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "19139d694af22c128b41bcf447720b21a4712288cde464cefd723b7edbd1e6de",
+        "source_array_sha256": "19139d694af22c128b41bcf447720b21a4712288cde464cefd723b7edbd1e6de",
+        "selection": null
+      },
+      {
+        "key": "p_g_Pa",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "6a1bb0570de4874dfd5c54e3864e3508391ab34cf5d5502aa61a5464686c2a05",
+        "source_array_sha256": "6a1bb0570de4874dfd5c54e3864e3508391ab34cf5d5502aa61a5464686c2a05",
+        "selection": null
+      },
+      {
+        "key": "T_wall_K",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "480a163736067d6c569201d7dde3904aea2f51124e5e7cf25d7bcb3b50bb43e0",
+        "source_array_sha256": "480a163736067d6c569201d7dde3904aea2f51124e5e7cf25d7bcb3b50bb43e0",
+        "selection": null
+      },
+      {
+        "key": "r_np_m",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "6a7b9dc61b8d57931b0566c1f489459835d30bf75547551d8850770d7121c1e2",
+        "source_array_sha256": "6a7b9dc61b8d57931b0566c1f489459835d30bf75547551d8850770d7121c1e2",
+        "selection": null
+      },
+      {
+        "key": "gap_m",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "7ed1c9eacc3e41c401c76171e9cf434aeca7dd6c54ccb78c460ab058fd20fcf2",
+        "source_array_sha256": "7ed1c9eacc3e41c401c76171e9cf434aeca7dd6c54ccb78c460ab058fd20fcf2",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_W",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "9ebd249bacc6cfca8bbd8d39584b463e484374c5cdf7b1a66c3a91cebe896532",
+        "source_array_sha256": "9ebd249bacc6cfca8bbd8d39584b463e484374c5cdf7b1a66c3a91cebe896532",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_W",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "8799cc37526438c95cdeb2a93802494f2918120458969d3e8c650e63e675155b",
+        "source_array_sha256": "8799cc37526438c95cdeb2a93802494f2918120458969d3e8c650e63e675155b",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_W",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "54de44c6e92a964f4b39881a46004b92ea51f2520991004dea4cfeb7b8dd7997",
+        "source_array_sha256": "54de44c6e92a964f4b39881a46004b92ea51f2520991004dea4cfeb7b8dd7997",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_W",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "dcc6757117503bd30e1828f717ef651daaf117b39d1ca20e4c59f1de8206d333",
+        "source_array_sha256": "dcc6757117503bd30e1828f717ef651daaf117b39d1ca20e4c59f1de8206d333",
+        "selection": null
+      },
+      {
+        "key": "U_gas_change_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "f07472e6c8be26436923b783a10ce6a5f63da89b9fc686fce3d83164565f695c",
+        "source_array_sha256": "f07472e6c8be26436923b783a10ce6a5f63da89b9fc686fce3d83164565f695c",
+        "selection": null
+      },
+      {
+        "key": "E_water_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "6f8230a8072941107e83d5b71b3c55e4ccd602aa31467d3909b45850bedac071",
+        "source_array_sha256": "6f8230a8072941107e83d5b71b3c55e4ccd602aa31467d3909b45850bedac071",
+        "selection": null
+      },
+      {
+        "key": "E_Au_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "6c2ae4c5971149ff2d6d0c93d1e98957d0e4ac7ac636939133267e58e7caf851",
+        "source_array_sha256": "6c2ae4c5971149ff2d6d0c93d1e98957d0e4ac7ac636939133267e58e7caf851",
+        "selection": null
+      },
+      {
+        "key": "work_by_gas_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "3fb8f1b344f5562f41dde8dfb66f4eed0f170fca19c7679f18e941757a482d2d",
+        "source_array_sha256": "3fb8f1b344f5562f41dde8dfb66f4eed0f170fca19c7679f18e941757a482d2d",
+        "selection": null
+      },
+      {
+        "key": "Q_l_to_g_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "207f500f86e94c52fd63db1db48aa3087236dfdc68c03ff85e8e91c6b13d219b",
+        "source_array_sha256": "207f500f86e94c52fd63db1db48aa3087236dfdc68c03ff85e8e91c6b13d219b",
+        "selection": null
+      },
+      {
+        "key": "Q_Au_to_l_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "115f8248405a8d480b62ec88547e27d9be21a627b4d1e6ef0108d60f369ac38a",
+        "source_array_sha256": "115f8248405a8d480b62ec88547e27d9be21a627b4d1e6ef0108d60f369ac38a",
+        "selection": null
+      },
+      {
+        "key": "Q_bath_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "a929ba6a2fd8de30ed44b6bbf0f871ef32ac161b133b908d1f69669695d62565",
+        "source_array_sha256": "a929ba6a2fd8de30ed44b6bbf0f871ef32ac161b133b908d1f69669695d62565",
+        "selection": null
+      },
+      {
+        "key": "E_absorbed_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "af96f21153d0a141ba068c4861d47b8b0c96410931c1a961931dff25fe02a7cb",
+        "source_array_sha256": "af96f21153d0a141ba068c4861d47b8b0c96410931c1a961931dff25fe02a7cb",
+        "selection": null
+      },
+      {
+        "key": "E_incident_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "3619532c29f28f1f7a2ffc035bc54d19eb8f3aae11d9444c974234127640d0b5",
+        "source_array_sha256": "3619532c29f28f1f7a2ffc035bc54d19eb8f3aae11d9444c974234127640d0b5",
+        "selection": null
+      },
+      {
+        "key": "gas_residual_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "1b67c44211f99183318283fa3b257aefffa355602f0e5af80be11e9cb4039391",
+        "source_array_sha256": "1b67c44211f99183318283fa3b257aefffa355602f0e5af80be11e9cb4039391",
+        "selection": null
+      },
+      {
+        "key": "water_residual_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "6cec03cc6cd2793673d6c07980033eecb24dbf5b4b3b71b4201865ce5254f636",
+        "source_array_sha256": "6cec03cc6cd2793673d6c07980033eecb24dbf5b4b3b71b4201865ce5254f636",
+        "selection": null
+      },
+      {
+        "key": "Au_residual_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "cb7da690f4d4243d1da930b687d7937d44cc152148b699e171a1bd92215fa931",
+        "source_array_sha256": "cb7da690f4d4243d1da930b687d7937d44cc152148b699e171a1bd92215fa931",
+        "selection": null
+      },
+      {
+        "key": "total_residual_J",
+        "shape": [
+          10584
+        ],
+        "dtype": "float64",
+        "sha256": "2df84b919c81e5079f852198b789b53df2d137345f4f07fb557304ea2db16549",
+        "source_array_sha256": "2df84b919c81e5079f852198b789b53df2d137345f4f07fb557304ea2db16549",
+        "selection": null
+      },
+      {
+        "key": "xi_faces_m3",
+        "shape": [
+          49
+        ],
+        "dtype": "float64",
+        "sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "source_array_sha256": "e52cc36effbfa1f53d4a667d9a7c12f6b553a4b5569bf2eaa2a65c4ac7f94e17",
+        "selection": null
+      },
+      {
+        "key": "xi_centers_m3",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "source_array_sha256": "cde0f52384c4207be4822cb9d593aae745bbb9ba9a03b99cf743e3207a09feb5",
+        "selection": null
+      },
+      {
+        "key": "capacity_water_J_K",
+        "shape": [
+          48
+        ],
+        "dtype": "float64",
+        "sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "source_array_sha256": "f004d57c0821749804ff27080f9ce2d87152988a33c3fc4de4239a77d713a927",
+        "selection": null
+      },
+      {
+        "key": "accepted_t_s",
+        "shape": [
+          8894
+        ],
+        "dtype": "float64",
+        "sha256": "ecb47fd29f5dd24e1362b6e0cdc5dc932f85bd82cd97162a39bd84956f1109d6",
+        "source_array_sha256": "ecb47fd29f5dd24e1362b6e0cdc5dc932f85bd82cd97162a39bd84956f1109d6",
+        "selection": null
+      },
+      {
+        "key": "temperature_stationary_times_s",
+        "shape": [
+          163
+        ],
+        "dtype": "float64",
+        "sha256": "b0cfb03f109cdf714957f72b748914f24fee4e4b4f7c575fee370ab770009a9e",
+        "source_array_sha256": "b0cfb03f109cdf714957f72b748914f24fee4e4b4f7c575fee370ab770009a9e",
+        "selection": null
+      },
+      {
+        "key": "radius_stationary_times_s",
+        "shape": [
+          131
+        ],
+        "dtype": "float64",
+        "sha256": "bfc790ac65921f6340d5b8091646ba3169b17a925cb1999a352a2c005b599dca",
+        "source_array_sha256": "bfc790ac65921f6340d5b8091646ba3169b17a925cb1999a352a2c005b599dca",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_s",
+        "shape": [
+          164
+        ],
+        "dtype": "float64",
+        "sha256": "9da2179904a1d60c3dcb4019e18044c6db4dc7b64a9ff9c3e8c270169b1649f5",
+        "source_array_sha256": "9da2179904a1d60c3dcb4019e18044c6db4dc7b64a9ff9c3e8c270169b1649f5",
+        "selection": null
+      },
+      {
+        "key": "peak_candidates_K",
+        "shape": [
+          164
+        ],
+        "dtype": "float64",
+        "sha256": "94d5dd02469aa7f385d7d6dbb8adfd07979bc942f32c808dcd0c50cddebcac05",
+        "source_array_sha256": "94d5dd02469aa7f385d7d6dbb8adfd07979bc942f32c808dcd0c50cddebcac05",
+        "selection": null
+      },
+      {
+        "key": "field_indices",
+        "shape": [
+          5
+        ],
+        "dtype": "int64",
+        "sha256": "f40935cb8840b492f7cecfecc79f732e078570df4c664a0814b391bafa88dfec",
+        "source_array_sha256": "8f3a2b5f2532c886d7db3b80f376a13a11f93ca50f3c13a00bdd80f14f65d7fb",
+        "selection": {
+          "axis": 0,
+          "positions": [
+            180,
+            353,
+            420,
+            527,
+            1290
+          ]
+        }
+      },
+      {
+        "key": "field_t_s",
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "1eb6ec52448c92dbbc6aa4ea9c243900cebedcae75db71f761b538995dd13e68",
+        "source_array_sha256": "92a1c298384d0d6169f4ebf73831d978705b0bd12ee5a427be61389a32d64c0c",
+        "selection": {
+          "axis": 0,
+          "positions": [
+            180,
+            353,
+            420,
+            527,
+            1290
+          ]
+        }
+      },
+      {
+        "key": "storage_version",
+        "shape": [],
+        "dtype": "int64",
+        "sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "source_array_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4",
+        "selection": null
+      },
+      {
+        "key": "T_l_rise_K",
+        "shape": [
+          48,
+          5
+        ],
+        "dtype": "float64",
+        "sha256": "989659a45a6871c35891e2d69e671556be4b4690c96c0c474610717d5c3c51ee",
+        "source_array_sha256": "b8880bded959d87757660a58fd7371803d154acb95471c735ee147694ecd2581",
+        "selection": {
+          "axis": 1,
+          "positions": [
+            180,
+            353,
+            420,
+            527,
+            1290
+          ]
+        }
+      }
+    ],
+    "bytes": 1695261
+  },
+  {
+    "run_id": "static_reference_320",
+    "source_raw_sha256": "4c4c37fbfcdad0b78e58cc5aec4e226f1109fff936a81fd9bc61671e8860c899",
+    "role": "figure or formal-extreme trace",
+    "arrays": [
+      {
+        "key": "time_s",
+        "shape": [
+          802
+        ],
+        "dtype": "float64",
+        "sha256": "e3d1fb2b1daca63e588fedacbb6087d0b818b4b507c04a937d08887ff49ed870",
+        "source_array_sha256": "e3d1fb2b1daca63e588fedacbb6087d0b818b4b507c04a937d08887ff49ed870",
+        "selection": null
+      },
+      {
+        "key": "gas_energy_J",
+        "shape": [
+          802
+        ],
+        "dtype": "float64",
+        "sha256": "ca801aa88437b3bc56e75cc49db362480d47113d7864de3dcf8d43bca5b49e85",
+        "source_array_sha256": "ca801aa88437b3bc56e75cc49db362480d47113d7864de3dcf8d43bca5b49e85",
+        "selection": null
+      },
+      {
+        "key": "gold_rise_K",
+        "shape": [
+          802
+        ],
+        "dtype": "float64",
+        "sha256": "0f7a474f1a17c91a32996a2bdf34869d344d62eb2bb49222c42f45302bd90d21",
+        "source_array_sha256": "0f7a474f1a17c91a32996a2bdf34869d344d62eb2bb49222c42f45302bd90d21",
+        "selection": null
+      }
+    ],
+    "bytes": 19145
+  }
+]

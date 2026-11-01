@@ -1,0 +1,1152 @@
+[
+  {
+    "file": "N0_1.00.npz",
+    "original_times": 8598,
+    "stored_field_times": 5852,
+    "before_bytes": 7013603,
+    "after_bytes": 6098131,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "N0_1.15.npz",
+    "original_times": 16102,
+    "stored_field_times": 6708,
+    "before_bytes": 13250550,
+    "after_bytes": 10156749,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "N0_1.30.npz",
+    "original_times": 1864,
+    "stored_field_times": 1550,
+    "before_bytes": 1108319,
+    "after_bytes": 991788,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "base_1.00.npz",
+    "original_times": 10354,
+    "stored_field_times": 5944,
+    "before_bytes": 8996435,
+    "after_bytes": 7500591,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "base_1.15.npz",
+    "original_times": 28646,
+    "stored_field_times": 6999,
+    "before_bytes": 24740633,
+    "after_bytes": 17704710,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "base_1.30.npz",
+    "original_times": 2107,
+    "stored_field_times": 1602,
+    "before_bytes": 1387388,
+    "after_bytes": 1209075,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "contact_fixed_1.15.npz",
+    "original_times": 1455,
+    "stored_field_times": 1430,
+    "before_bytes": 784702,
+    "after_bytes": 766457,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "contact_passive_1.15.npz",
+    "original_times": 1556,
+    "stored_field_times": 1485,
+    "before_bytes": 889620,
+    "after_bytes": 810545,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_Radau_base.npz",
+    "original_times": 13575,
+    "stored_field_times": 6990,
+    "before_bytes": 11921899,
+    "after_bytes": 9674599,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_Radau_laser.npz",
+    "original_times": 13908,
+    "stored_field_times": 7021,
+    "before_bytes": 12133644,
+    "after_bytes": 4746683,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_Radau_tangent.npz",
+    "original_times": 19962,
+    "stored_field_times": 7663,
+    "before_bytes": 31396195,
+    "after_bytes": 9516069,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_coarse_base.npz",
+    "original_times": 10414,
+    "stored_field_times": 5969,
+    "before_bytes": 5618493,
+    "after_bytes": 4893425,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_coarse_tangent.npz",
+    "original_times": 15847,
+    "stored_field_times": 6889,
+    "before_bytes": 14944883,
+    "after_bytes": 5829867,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_fine_base.npz",
+    "original_times": 9442,
+    "stored_field_times": 5864,
+    "before_bytes": 14339422,
+    "after_bytes": 11865846,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_fine_tangent.npz",
+    "original_times": 14474,
+    "stored_field_times": 6825,
+    "before_bytes": 40872921,
+    "after_bytes": 12490341,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_outer50_base.npz",
+    "original_times": 10316,
+    "stored_field_times": 5970,
+    "before_bytes": 9003016,
+    "after_bytes": 7537837,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_outer50_tangent.npz",
+    "original_times": 15546,
+    "stored_field_times": 6850,
+    "before_bytes": 24561622,
+    "after_bytes": 8187640,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_production_base.npz",
+    "original_times": 10354,
+    "stored_field_times": 5944,
+    "before_bytes": 8996435,
+    "after_bytes": 7500591,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_production_laser.npz",
+    "original_times": 10621,
+    "stored_field_times": 5994,
+    "before_bytes": 9183532,
+    "after_bytes": 3915007,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_production_tangent.npz",
+    "original_times": 15602,
+    "stored_field_times": 6851,
+    "before_bytes": 24511814,
+    "after_bytes": 8110447,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_step_half_base.npz",
+    "original_times": 10880,
+    "stored_field_times": 6081,
+    "before_bytes": 9506628,
+    "after_bytes": 7867845,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_step_half_tangent.npz",
+    "original_times": 16789,
+    "stored_field_times": 6933,
+    "before_bytes": 26415288,
+    "after_bytes": 8400575,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_strict_base.npz",
+    "original_times": 26539,
+    "stored_field_times": 7947,
+    "before_bytes": 23596853,
+    "after_bytes": 17269076,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "conv_strict_laser.npz",
+    "original_times": 1855,
+    "stored_field_times": 1630,
+    "before_bytes": 1161609,
+    "after_bytes": 897058,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "conv_strict_tangent.npz",
+    "original_times": 37872,
+    "stored_field_times": 8727,
+    "before_bytes": 59532362,
+    "after_bytes": 13974995,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "dry_air_base.npz",
+    "original_times": 29270,
+    "stored_field_times": 6754,
+    "before_bytes": 25060228,
+    "after_bytes": 17804708,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "dry_air_laser.npz",
+    "original_times": 29802,
+    "stored_field_times": 6773,
+    "before_bytes": 25416857,
+    "after_bytes": 7074950,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "dry_argon_base.npz",
+    "original_times": 27720,
+    "stored_field_times": 6381,
+    "before_bytes": 23723246,
+    "after_bytes": 16743751,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "dry_argon_laser.npz",
+    "original_times": 27987,
+    "stored_field_times": 6438,
+    "before_bytes": 23862622,
+    "after_bytes": 6505226,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "extra_high_1.15_BDF_base.npz",
+    "original_times": 28646,
+    "stored_field_times": 6999,
+    "before_bytes": 24740633,
+    "after_bytes": 17704710,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_high_1.15_Radau_base.npz",
+    "original_times": 31101,
+    "stored_field_times": 7722,
+    "before_bytes": 26814132,
+    "after_bytes": 19195909,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_high_1.30_BDF_base.npz",
+    "original_times": 2107,
+    "stored_field_times": 1602,
+    "before_bytes": 1387388,
+    "after_bytes": 1209075,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_high_1.30_Radau_base.npz",
+    "original_times": 2355,
+    "stored_field_times": 1661,
+    "before_bytes": 1611912,
+    "after_bytes": 1368881,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_high_1.30_mesh96_base.npz",
+    "original_times": 2045,
+    "stored_field_times": 1563,
+    "before_bytes": 2296234,
+    "after_bytes": 1930611,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_outer50_fixed_inner_base.npz",
+    "original_times": 10306,
+    "stored_field_times": 5927,
+    "before_bytes": 9559749,
+    "after_bytes": 7953886,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_outer50_fixed_inner_tangent.npz",
+    "original_times": 15509,
+    "stored_field_times": 6890,
+    "before_bytes": 26151453,
+    "after_bytes": 8602458,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "extra_strict_incident_scaled_base.npz",
+    "original_times": 26539,
+    "stored_field_times": 7947,
+    "before_bytes": 23596853,
+    "after_bytes": 17269076,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "extra_strict_incident_scaled_laser.npz",
+    "original_times": 27173,
+    "stored_field_times": 8003,
+    "before_bytes": 23999894,
+    "after_bytes": 7159860,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "extra_strict_incident_scaled_tangent.npz",
+    "original_times": 37872,
+    "stored_field_times": 8727,
+    "before_bytes": 59532362,
+    "after_bytes": 13974995,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "high_Radau_1.15_tangent.npz",
+    "original_times": 46617,
+    "stored_field_times": 8323,
+    "before_bytes": 72220663,
+    "after_bytes": 15436584,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "high_mesh96_1.15_-100ns.npz",
+    "original_times": 36528,
+    "stored_field_times": 7834,
+    "before_bytes": 103030647,
+    "after_bytes": 18457629,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "high_mesh96_1.15_-5000ns.npz",
+    "original_times": 36065,
+    "stored_field_times": 7751,
+    "before_bytes": 101097269,
+    "after_bytes": 18235414,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "high_mesh96_1.15_0ns.npz",
+    "original_times": 36766,
+    "stored_field_times": 7906,
+    "before_bytes": 103641554,
+    "after_bytes": 18580476,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "high_mesh96_1.15_base.npz",
+    "original_times": 25378,
+    "stored_field_times": 6971,
+    "before_bytes": 38504584,
+    "after_bytes": 26426069,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "independent_Radau_base.npz",
+    "original_times": 39071,
+    "stored_field_times": 9547,
+    "before_bytes": 34684252,
+    "after_bytes": 24652152,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "independent_Radau_laser.npz",
+    "original_times": 39988,
+    "stored_field_times": 9564,
+    "before_bytes": 35234013,
+    "after_bytes": 9518971,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "independent_Radau_tangent.npz",
+    "original_times": 57165,
+    "stored_field_times": 10101,
+    "before_bytes": 89157167,
+    "after_bytes": 18626240,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "laser_F100_1.00.npz",
+    "original_times": 10684,
+    "stored_field_times": 5988,
+    "before_bytes": 9231378,
+    "after_bytes": 3916460,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "laser_F100_1.15.npz",
+    "original_times": 28844,
+    "stored_field_times": 7044,
+    "before_bytes": 24784519,
+    "after_bytes": 7076305,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "laser_F100_1.30.npz",
+    "original_times": 2389,
+    "stored_field_times": 1653,
+    "before_bytes": 1613140,
+    "after_bytes": 975357,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "laser_F10_1.00.npz",
+    "original_times": 10584,
+    "stored_field_times": 5996,
+    "before_bytes": 9155039,
+    "after_bytes": 3911637,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "laser_F10_1.15.npz",
+    "original_times": 28956,
+    "stored_field_times": 7053,
+    "before_bytes": 24919294,
+    "after_bytes": 7117012,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "laser_F10_1.30.npz",
+    "original_times": 2354,
+    "stored_field_times": 1636,
+    "before_bytes": 1584969,
+    "after_bytes": 965338,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "material_guard_1.30.npz",
+    "original_times": 2107,
+    "stored_field_times": 1602,
+    "before_bytes": 1387388,
+    "after_bytes": 920999,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "oneway_base_1.00.npz",
+    "original_times": 9667,
+    "stored_field_times": 5669,
+    "before_bytes": 8246690,
+    "after_bytes": 3671602,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "oneway_base_1.15.npz",
+    "original_times": 27951,
+    "stored_field_times": 6738,
+    "before_bytes": 23750883,
+    "after_bytes": 6899338,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "oneway_laser_1.00.npz",
+    "original_times": 1620,
+    "stored_field_times": 1497,
+    "before_bytes": 933972,
+    "after_bytes": 813680,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "oneway_laser_1.15.npz",
+    "original_times": 1621,
+    "stored_field_times": 1499,
+    "before_bytes": 935545,
+    "after_bytes": 813315,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "oneway_tangent_1.00.npz",
+    "original_times": 12874,
+    "stored_field_times": 6245,
+    "before_bytes": 19470048,
+    "after_bytes": 6889347,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "oneway_tangent_1.15.npz",
+    "original_times": 33414,
+    "stored_field_times": 7214,
+    "before_bytes": 49232495,
+    "after_bytes": 11452523,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_G50_base.npz",
+    "original_times": 10228,
+    "stored_field_times": 5937,
+    "before_bytes": 8881861,
+    "after_bytes": 7427165,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_G50_tangent.npz",
+    "original_times": 15458,
+    "stored_field_times": 6878,
+    "before_bytes": 24291817,
+    "after_bytes": 8101856,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_N8_base.npz",
+    "original_times": 10333,
+    "stored_field_times": 5948,
+    "before_bytes": 8980430,
+    "after_bytes": 7492234,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_N8_laser.npz",
+    "original_times": 10566,
+    "stored_field_times": 5971,
+    "before_bytes": 9137718,
+    "after_bytes": 3898016,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_N8_tangent.npz",
+    "original_times": 17063,
+    "stored_field_times": 7135,
+    "before_bytes": 26854989,
+    "after_bytes": 8614753,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_a40_base.npz",
+    "original_times": 11025,
+    "stored_field_times": 6010,
+    "before_bytes": 9612285,
+    "after_bytes": 7906479,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_a40_fixed_gap_base.npz",
+    "original_times": 10009,
+    "stored_field_times": 5989,
+    "before_bytes": 8682775,
+    "after_bytes": 7322578,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_a40_fixed_gap_tangent.npz",
+    "original_times": 16417,
+    "stored_field_times": 7068,
+    "before_bytes": 25788593,
+    "after_bytes": 8424189,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_a40_tangent.npz",
+    "original_times": 17428,
+    "stored_field_times": 7096,
+    "before_bytes": 27384057,
+    "after_bytes": 8655689,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_dryargon_base.npz",
+    "original_times": 8025,
+    "stored_field_times": 5152,
+    "before_bytes": 6809284,
+    "after_bytes": 5835417,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_dryargon_tangent.npz",
+    "original_times": 12301,
+    "stored_field_times": 6022,
+    "before_bytes": 18470734,
+    "after_bytes": 6534659,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_duration100_base.npz",
+    "original_times": 10354,
+    "stored_field_times": 5944,
+    "before_bytes": 8996435,
+    "after_bytes": 7500591,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_duration100_laser.npz",
+    "original_times": 10569,
+    "stored_field_times": 5953,
+    "before_bytes": 9148026,
+    "after_bytes": 3895710,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_duration100_tangent.npz",
+    "original_times": 15562,
+    "stored_field_times": 6797,
+    "before_bytes": 24426679,
+    "after_bytes": 8063017,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_eta_half_base.npz",
+    "original_times": 11389,
+    "stored_field_times": 6488,
+    "before_bytes": 9931072,
+    "after_bytes": 8278464,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_eta_half_tangent.npz",
+    "original_times": 17790,
+    "stored_field_times": 7555,
+    "before_bytes": 27825069,
+    "after_bytes": 9038562,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_fixed_base.npz",
+    "original_times": 1453,
+    "stored_field_times": 1429,
+    "before_bytes": 782436,
+    "after_bytes": 788942,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_gap500_base.npz",
+    "original_times": 14523,
+    "stored_field_times": 6217,
+    "before_bytes": 12795237,
+    "after_bytes": 9953399,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_gap500_tangent.npz",
+    "original_times": 19648,
+    "stored_field_times": 7030,
+    "before_bytes": 30888055,
+    "after_bytes": 9068730,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_k_half_base.npz",
+    "original_times": 11060,
+    "stored_field_times": 5989,
+    "before_bytes": 9638633,
+    "after_bytes": 7931545,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_k_half_tangent.npz",
+    "original_times": 16634,
+    "stored_field_times": 6960,
+    "before_bytes": 26172625,
+    "after_bytes": 8457372,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_lambda600_base.npz",
+    "original_times": 10354,
+    "stored_field_times": 5944,
+    "before_bytes": 8996435,
+    "after_bytes": 7500591,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_lambda600_tangent.npz",
+    "original_times": 14255,
+    "stored_field_times": 6600,
+    "before_bytes": 22347211,
+    "after_bytes": 7653867,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_passive_far_base.npz",
+    "original_times": 8603,
+    "stored_field_times": 5846,
+    "before_bytes": 7440761,
+    "after_bytes": 6521166,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_passive_far_laser.npz",
+    "original_times": 8843,
+    "stored_field_times": 5894,
+    "before_bytes": 7603321,
+    "after_bytes": 3652295,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_passive_far_tangent.npz",
+    "original_times": 13808,
+    "stored_field_times": 6744,
+    "before_bytes": 21661840,
+    "after_bytes": 7727682,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_passive_near_base.npz",
+    "original_times": 8615,
+    "stored_field_times": 5853,
+    "before_bytes": 7458320,
+    "after_bytes": 6537954,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_passive_near_tangent.npz",
+    "original_times": 13875,
+    "stored_field_times": 6800,
+    "before_bytes": 21834166,
+    "after_bytes": 7798173,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_vapor5_base.npz",
+    "original_times": 10417,
+    "stored_field_times": 5957,
+    "before_bytes": 9055618,
+    "after_bytes": 7542279,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_vapor5_tangent.npz",
+    "original_times": 15700,
+    "stored_field_times": 6875,
+    "before_bytes": 24664237,
+    "after_bytes": 8150052,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "sens_wetargon_base.npz",
+    "original_times": 8122,
+    "stored_field_times": 5180,
+    "before_bytes": 6938208,
+    "after_bytes": 5940112,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": true
+  },
+  {
+    "file": "sens_wetargon_tangent.npz",
+    "original_times": 12455,
+    "stored_field_times": 6053,
+    "before_bytes": 18766929,
+    "after_bytes": 6662204,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_base_1.00_F100_L3_q3.npz",
+    "original_times": 15685,
+    "stored_field_times": 6859,
+    "before_bytes": 19429814,
+    "after_bytes": 8050061,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_base_1.00_F10_L2_q3.npz",
+    "original_times": 13611,
+    "stored_field_times": 6531,
+    "before_bytes": 16697148,
+    "after_bytes": 7264054,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_base_1.00_F10_L3_q3.npz",
+    "original_times": 15685,
+    "stored_field_times": 6855,
+    "before_bytes": 19454644,
+    "after_bytes": 8063625,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_base_1.00_F10_L3_q5.npz",
+    "original_times": 15685,
+    "stored_field_times": 6855,
+    "before_bytes": 19454486,
+    "after_bytes": 8063703,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_base_1.15_F10_L2_q3.npz",
+    "original_times": 34154,
+    "stored_field_times": 7437,
+    "before_bytes": 40539854,
+    "after_bytes": 11841732,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_base_1.15_F10_L3_q3.npz",
+    "original_times": 40513,
+    "stored_field_times": 7722,
+    "before_bytes": 49104948,
+    "after_bytes": 13742604,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_extra_high_1.30_BDF_base_F10_L2_q3.npz",
+    "original_times": 2699,
+    "stored_field_times": 1773,
+    "before_bytes": 2404319,
+    "after_bytes": 1317594,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "stable_extra_high_1.30_BDF_base_F10_L3_q3.npz",
+    "original_times": 2776,
+    "stored_field_times": 1775,
+    "before_bytes": 2499794,
+    "after_bytes": 1345845,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.00_-1000ns.npz",
+    "original_times": 15611,
+    "stored_field_times": 6814,
+    "before_bytes": 24315821,
+    "after_bytes": 8024695,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.00_-100ns.npz",
+    "original_times": 15671,
+    "stored_field_times": 6929,
+    "before_bytes": 24364798,
+    "after_bytes": 8111588,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.00_-5000ns.npz",
+    "original_times": 15602,
+    "stored_field_times": 6851,
+    "before_bytes": 24511814,
+    "after_bytes": 8110447,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.00_0ns.npz",
+    "original_times": 15672,
+    "stored_field_times": 6925,
+    "before_bytes": 24320400,
+    "after_bytes": 8099640,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.00_1000ns.npz",
+    "original_times": 15550,
+    "stored_field_times": 6856,
+    "before_bytes": 23993915,
+    "after_bytes": 7992090,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.00_100ns.npz",
+    "original_times": 15654,
+    "stored_field_times": 6881,
+    "before_bytes": 24280053,
+    "after_bytes": 8058160,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.15_-1000ns.npz",
+    "original_times": 40305,
+    "stored_field_times": 7807,
+    "before_bytes": 63159258,
+    "after_bytes": 13965397,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.15_-100ns.npz",
+    "original_times": 40317,
+    "stored_field_times": 7815,
+    "before_bytes": 63242117,
+    "after_bytes": 13972953,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.15_-5000ns.npz",
+    "original_times": 39846,
+    "stored_field_times": 7753,
+    "before_bytes": 62119522,
+    "after_bytes": 13826044,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.15_0ns.npz",
+    "original_times": 40470,
+    "stored_field_times": 7854,
+    "before_bytes": 63361359,
+    "after_bytes": 14003108,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.15_1000ns.npz",
+    "original_times": 39961,
+    "stored_field_times": 7778,
+    "before_bytes": 61893489,
+    "after_bytes": 13784817,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.15_100ns.npz",
+    "original_times": 40098,
+    "stored_field_times": 7818,
+    "before_bytes": 62327675,
+    "after_bytes": 13875571,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.30_-1000ns.npz",
+    "original_times": 2727,
+    "stored_field_times": 1773,
+    "before_bytes": 2652748,
+    "after_bytes": 1207427,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.30_-100ns.npz",
+    "original_times": 2661,
+    "stored_field_times": 1765,
+    "before_bytes": 2471197,
+    "after_bytes": 1149353,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  },
+  {
+    "file": "tangent_1.30_-5000ns.npz",
+    "original_times": 2742,
+    "stored_field_times": 1754,
+    "before_bytes": 2822440,
+    "after_bytes": 1322617,
+    "scalar_arrays_unchanged": true,
+    "retained_field_values": "exact subset, float64",
+    "accepted_state_kept": false
+  }
+]

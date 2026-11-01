@@ -1,0 +1,2 @@
+sens_a40_fixed_gap_base completed Tmax 553.0244462408931 steps 8319 seconds 31.148953199386597
+sens_wetargon_base completed Tmax 661.5161854924772 steps 6462 seconds 22.542736530303955

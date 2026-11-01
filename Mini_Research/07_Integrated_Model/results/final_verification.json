@@ -1,0 +1,21 @@
+{
+  "pdf_pages": 13,
+  "main_pages": 11,
+  "appendix_pages": 2,
+  "pdf_sha256": "ce8563a32a9fba225cd0aa5c4504946eafbf23ea50e1c381572b01de4f211f13",
+  "tests": 34,
+  "historical_full_archive_constitutive_replays": 115,
+  "unchanged_upstream_files": 1209,
+  "figures_JPG": 10,
+  "report_value_assertions_passed": true,
+  "fonts_embedded": true,
+  "final_latex_undefined_references": false,
+  "overfull_boxes": false,
+  "visual_review": "all 13 pages reviewed; changed pages rechecked after final presentation edits",
+  "physical_validation": "not established; reduced-model and formal results only",
+  "clean_archive_snapshot": "a809c8240328460d69c5415b042ca705a0846f40",
+  "clean_archive_all_checks_passed": true,
+  "profile": "compact-publication-v1",
+  "current_shipped_baseline_replays": 4,
+  "historical_clean_archive_record_scope": "full local snapshot; not the current compact export"
+}

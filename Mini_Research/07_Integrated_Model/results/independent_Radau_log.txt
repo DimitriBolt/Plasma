@@ -1,0 +1,2 @@
+independent_Radau_base completed Tmax 553.0257147779403 steps 37381 seconds 241.31103682518005
+independent_Radau_laser completed Tmax 553.0257161852147 steps 38298 seconds 254.07594442367554

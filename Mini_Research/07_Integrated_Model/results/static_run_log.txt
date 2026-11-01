@@ -1,0 +1,10 @@
+        case  cells  relative_integrated_transfer_difference  radial_gold_peak_K  MR6_gold_peak_K
+   reference     80                                 0.005124            0.683138         2.306634
+   reference    160                                 0.004399            0.683138         2.306634
+   reference    320                                 0.004218            0.683138         2.306634
+far_particle     80                                 0.002520            0.683133         2.306604
+far_particle    160                                 0.000889            0.683135         2.306604
+far_particle    320                                 0.000425            0.683135         2.306604
+near_contact     80                                 0.017295            0.405960         1.899374
+near_contact    160                                 0.016866            0.405961         1.899374
+near_contact    320                                 0.016759            0.405961         1.899374

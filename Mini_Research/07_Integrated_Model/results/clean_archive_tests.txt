@@ -1,0 +1,36 @@
+test_all_admitted_fields_replay_current_physical_powers (test_artifacts.ArtifactTests.test_all_admitted_fields_replay_current_physical_powers) ... ok
+test_archived_optical_energies_follow_the_actual_pulse (test_artifacts.ArtifactTests.test_archived_optical_energies_follow_the_actual_pulse) ... ok
+test_censoring_never_receives_a_global_temperature (test_artifacts.ArtifactTests.test_censoring_never_receives_a_global_temperature) ... ok
+test_clamped_MR4_and_transient_conduction_controls (test_artifacts.ArtifactTests.test_clamped_MR4_and_transient_conduction_controls) ... ok
+test_complete_native_weak_pair_agrees_with_stable_formulation (test_artifacts.ArtifactTests.test_complete_native_weak_pair_agrees_with_stable_formulation) ... ok
+test_incremental_energy_is_resolved_on_the_absorbed_scale (test_artifacts.ArtifactTests.test_incremental_energy_is_resolved_on_the_absorbed_scale) ... ok
+test_local_Au_error_is_retained (test_artifacts.ArtifactTests.test_local_Au_error_is_retained) ... ok
+test_no_source_precedes_its_pulse (test_artifacts.ArtifactTests.test_no_source_precedes_its_pulse) ... ok
+test_nonlinear_increment_and_quadrature_control (test_artifacts.ArtifactTests.test_nonlinear_increment_and_quadrature_control) ... ok
+test_photon_allowance_and_signed_channel_accounting (test_artifacts.ArtifactTests.test_photon_allowance_and_signed_channel_accounting) ... ok
+test_weak_early_sign_and_unresolved_late_tail_are_distinct (test_artifacts.ArtifactTests.test_weak_early_sign_and_unresolved_late_tail_are_distinct) ... ok
+test_actual_gas_boundary_censors (test_physics.PhysicsTests.test_actual_gas_boundary_censors) ... ok
+test_adiabatic_argon_invariant_with_zero_gas_heat (test_physics.PhysicsTests.test_adiabatic_argon_invariant_with_zero_gas_heat) ... ok
+test_clamped_MR4_equation_regression (test_physics.PhysicsTests.test_clamped_MR4_equation_regression) ... ok
+test_coefficients_are_not_extrapolated (test_physics.PhysicsTests.test_coefficients_are_not_extrapolated) ... ok
+test_complex_direction_against_independent_finite_difference (test_physics.PhysicsTests.test_complex_direction_against_independent_finite_difference) ... ok
+test_contact_terminates_before_intersection (test_physics.PhysicsTests.test_contact_terminates_before_intersection) ... ok
+test_exact_spherical_steady_flux (test_physics.PhysicsTests.test_exact_spherical_steady_flux) ... ok
+test_flux_sign_and_interface_reconstruction (test_physics.PhysicsTests.test_flux_sign_and_interface_reconstruction) ... ok
+test_full_source_inventory_preserved (test_physics.PhysicsTests.test_full_source_inventory_preserved) ... ok
+test_insulated_liquid_wall_temperature_limit (test_physics.PhysicsTests.test_insulated_liquid_wall_temperature_limit) ... ok
+test_liquid_internal_flux_cancellation (test_physics.PhysicsTests.test_liquid_internal_flux_cancellation) ... ok
+test_material_cell_capacities_do_not_move (test_physics.PhysicsTests.test_material_cell_capacities_do_not_move) ... ok
+test_material_invariant_against_particle_ode (test_physics.PhysicsTests.test_material_invariant_against_particle_ode) ... ok
+test_no_geometric_heat_creation (test_physics.PhysicsTests.test_no_geometric_heat_creation) ... ok
+test_photon_budget_and_units (test_physics.PhysicsTests.test_photon_budget_and_units) ... ok
+test_quiescent_equilibrium_without_drive (test_physics.PhysicsTests.test_quiescent_equilibrium_without_drive) ... ok
+test_source_weights_exact_normalization_and_motion (test_physics.PhysicsTests.test_source_weights_exact_normalization_and_motion) ... ok
+test_static_conservation_independent_energy (test_physics.PhysicsTests.test_static_conservation_independent_energy) ... ok
+test_zero_G_retains_energy_in_Au (test_physics.PhysicsTests.test_zero_G_retains_energy_in_Au) ... ok
+test_zero_N_and_zero_absorption_exact_source (test_physics.PhysicsTests.test_zero_N_and_zero_absorption_exact_source) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 4.586s
+
+OK

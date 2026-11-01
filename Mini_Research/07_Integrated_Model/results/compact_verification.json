@@ -1,0 +1,24 @@
+{
+  "profile": "compact-publication-v1",
+  "tests_passed": 34,
+  "shipped_baseline_constitutive_replays": 4,
+  "shipped_optical_histories_checked": 8,
+  "scientific_PDF_TeX_JPG_tables_unchanged": true,
+  "unchanged_artifact_count": 17,
+  "fresh_bounded_replay": {
+    "completed": true,
+    "interval_s": [
+      0,
+      3.1666666666666666e-05
+    ],
+    "samples": 1001,
+    "R_max_difference_m": 3.0182665167188815e-13,
+    "Tg_max_difference_K": 1.5960019443284066e-05,
+    "water_max_difference_K": 1.030244703964064e-07,
+    "scope": "fresh one-cycle no-laser replay; not a rerun of all sweeps"
+  },
+  "omitted_full_raw_files_remain_local": true,
+  "full_local_branch": "codex/mr7-full-local",
+  "full_local_snapshot": "c467678d2f48db51ceafe09ea4cb5040b6ecc293",
+  "history_policy": "Public commit starts at accepted MR6 and must not include full local snapshots as ancestors"
+}

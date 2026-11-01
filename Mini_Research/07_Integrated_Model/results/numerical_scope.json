@@ -1,0 +1,8 @@
+{
+  "one_bar_mesh48_to96_relative_change": 0.0029688560582643575,
+  "one_bar_independent_finite_Radau_relative_difference": 0.0010944087751538767,
+  "one_bar_full_baseline_temperature_spread_K": 0.002857462295537516,
+  "bar115_Radau_directional_relative_difference": 0.0020830794278490217,
+  "late_centered_pulse": "unresolved: large 48-to-96-cell variation, values retained",
+  "physical_validation": "not established; local Au field, force, chemistry, EOS and high-Mach limits remain"
+}

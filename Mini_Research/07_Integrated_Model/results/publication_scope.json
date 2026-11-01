@@ -1,0 +1,35 @@
+{
+  "profile": "compact-publication-v1",
+  "local_full_snapshot": "c467678d2f48db51ceafe09ea4cb5040b6ecc293",
+  "local_full_snapshot_is_not_published": true,
+  "metadata_runs": 115,
+  "selected_runs": [
+    "base_1.00",
+    "base_1.15",
+    "base_1.30",
+    "extra_high_1.30_BDF_base",
+    "stable_base_1.00_F10_L3_q3",
+    "stable_base_1.15_F10_L3_q3",
+    "stable_extra_high_1.30_BDF_base_F10_L3_q3",
+    "sens_passive_near_base",
+    "sens_passive_far_base",
+    "sens_fixed_base",
+    "dry_air_base",
+    "dry_argon_base",
+    "laser_F10_1.00",
+    "static_reference_320"
+  ],
+  "full_accepted_state_runs": [
+    "base_1.00",
+    "base_1.15",
+    "base_1.30",
+    "extra_high_1.30_BDF_base"
+  ],
+  "reference_bytes": 38526546,
+  "exact_values": true,
+  "interpolation_or_rounding": false,
+  "public_scope": "Scientific and verification source, report, figures, parameter/summary/convergence/applicability tables, all metadata, four accepted baseline states at three amplitudes and selected exact scalar/profiling traces.",
+  "omitted": "All other per-sweep NPZ fields, nonessential solver matrices, and local prototype/production raw files. Full raw archives remain local; expensive scripts can regenerate them.",
+  "verification_scope": "Historical full-archive validation is retained separately. Compact tests and reference checks explicitly cover only shipped arrays.",
+  "local_full_branch": "codex/mr7-full-local"
+}

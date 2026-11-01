@@ -1,0 +1,1 @@
+Saved reference energy demands and independent EOS/time-scale diagnostics.

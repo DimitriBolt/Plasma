@@ -1,0 +1,8 @@
+{
+  "reference_temperature_K": 298.15,
+  "Hf_H2O_liquid_J_mol": -285830.0,
+  "Hf_H2O_gas_J_mol": -241826.0,
+  "liquid_source": "https://janaf.nist.gov/tables/H-063.html",
+  "gas_source": "https://webbook.nist.gov/cgi/cbook.cgi?Name=water&cTG=on",
+  "interpretation": "Standard reference demands, not high-pressure latent heat or a reaction extent. No temperature recomputed."
+}

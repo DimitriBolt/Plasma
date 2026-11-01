@@ -1,0 +1,2 @@
+stable_base_1.15_F10_L3_q3 completed delta 2.1848791220691055e-06 seconds 450.45384073257446
+stable_base_1.15_F10_L2_q3 completed delta 5.656306711898651e-06 seconds 348.2639060020447

@@ -1,0 +1,193 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=.78in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,graphicx,float,caption,microtype,xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black}
+\hypersetup{pdftitle={Mini-Research 7: Integrated Laser-AuNP-Bubble Model},pdfauthor={Dimitri Bolt}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\captionsetup{font=small,labelfont=bf}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{../figures/#1.jpg}\caption{#3}\end{figure}}
+\newcommand{\Tzero}{293.15\,\mathrm{K}}
+\newcommand{\dd}{\mathrm{d}}
+\title{\textbf{Mini-Research 7}\\Integrated Laser--AuNP--Bubble Model:\\Self-Consistent Dynamics and Peak Gas Temperature}
+\author{Dimitri Bolt\\\small Academic supervisor: Prof. Dr. Ildar R. Gabitov}
+\date{31 October 2026}
+\begin{document}
+\maketitle\vspace{-1em}
+\begin{abstract}
+I couple a closed, fixed-composition gas and Keller--Miksis mechanics to conservative radial heat transport in material water volumes and dynamic gold nanoparticle storage. One signed current-state gas--liquid flux closes both energy equations; no precomputed transfer efficiency enters. A 10 ns, 10 J/m$^2$ pulse absorbed by one 20 nm-radius Au particle under prescribed near-wall confinement raises the five-cycle maximum by about 1.41 and 2.18 microkelvin at acoustic amplitudes of 1.0 and 1.15 bar. Feedback respectively increases and reduces the one-way effect. The wet 1.3 bar trajectory is censored at its coefficient boundary; dry formal variants retain much higher temperatures. Spherical source averaging gives good selected integrated static transfers but substantially underpredicts local Au heating. These conditional reduced-model increments do not establish a realizable nanoparticle environment or a fusion condition.
+\end{abstract}
+\section{Question and model hierarchy}
+The question is whether laser energy absorbed in a small local number of gold nanoparticles reaches an acoustically compressed gas early enough to change its maximum temperature. Delayed heat may miss the thermal maximum, while an earlier pulse can change subsequent pressure and compression work. I do not select parameters to obtain a desired peak.
+
+The inherited state is $R_0=6\,\mu$m, $T_0=\Tzero$, $f=30$ kHz and $p_0=101325$ Pa. I request five periods, $I=[0,166.667]\,\mu$s. Acoustic amplitudes are 1.0, 1.15 and 1.3 bar. Level 0 recovers the previous clamped-water gas closure. Level 1 denotes the preceding frozen-geometry diagnostic, retained solely as context. Level 2 evolves gas, water and gold on prescribed no-laser mechanics. Level 3 evolves the full reduced state together and supplies the principal paired comparison.
+\fig{01_system}{.84}{Energy directions and state coupling. A radial shell source represents an angular average; it is not a resolved local Au temperature field.}
+\clearpage
+\section{Moving liquid in a material coordinate}
+The first-order incompressible radial field is
+\begin{equation}u_\ell(r,t)=R^2U/r^2,\qquad U=\dot R,\quad r\ge R.\end{equation}
+Define $\xi=(r^3-R^3)/3$, so $r(\xi,t)=(R^3+3\xi)^{1/3}$. Along a liquid particle,
+\begin{equation}\frac{\dd\xi}{\dd t}=r^2u_\ell-R^2U=0,\qquad
+\left.\frac{\partial r}{\partial t}\right|_\xi=\frac{R^2U}{r^2}.
+\end{equation}
+Thus the Eulerian material derivative becomes $\partial_t|_\xi$. Since $\partial_r=r^2\partial_\xi$, the constant-property energy equation transforms as
+\begin{align}
+\rho_\ell c_\ell (\partial_tT_\ell+u_\ell\partial_rT_\ell)
+ &=\frac{1}{r^2}\partial_r(k_\ell r^2\partial_rT_\ell)+q_{Au},\\
+\rho_\ell c_\ell\left.\partial_tT_\ell\right|_\xi
+ &=\partial_\xi(k_\ell r^4\partial_\xi T_\ell)+q_{Au}.
+\end{align}
+Here $[\xi]=\mathrm{m^3}$, $[k_\ell r^4\partial_\xi T]=\mathrm W$ and the divergence has units $\mathrm{W/m^3}$. The volume element is $\dd V_\ell=4\pi\dd\xi$. A fixed material cell therefore has constant positive capacity
+\begin{equation}C_i=4\pi\rho_\ell c_\ell(\xi_{i+1/2}-\xi_{i-1/2}).\end{equation}
+Geometric motion changes thermal resistance, not cell mass or capacity.
+
+For neighboring centers at their \emph{current} radii, exact spherical steady resistance gives
+\begin{equation}
+K_{i,i+1}=\frac{4\pi k_\ell}{1/r_i-1/r_{i+1}},\qquad
+J_{i+1/2}=K_{i,i+1}(T_i-T_{i+1}).
+\end{equation}
+$J$ is positive outward. The semidiscrete equation is
+\begin{equation}C_i\dot T_i=J_{i-1/2}-J_{i+1/2}+\sum_jw_{ij}Q_{Au_j\to\ell},\end{equation}
+with $J_{1/2}=-Q_{\ell\to g}$ and $J_{n+1/2}=Q_{bath}$. Every interior transfer cancels exactly when cells are summed. At the outer material face, a separately evaluated half-cell resistance connects the last cell to a bath at $T_0$. The external radius moves with the liquid. Doubling its initial padding tests finite-domain influence.
+
+The constants are $\rho_\ell c_\ell=1000\times4187$ J/(m$^3$ K) and $k_\ell=0.6$ W/(m K), following the optical thermal study \cite{baffou}. Mechanical water constants retain their earlier values, including $\rho=998.2$ kg/m$^3$ and $c=1482$ m/s. This small reference-property distinction is explicit. Incompressible transport is conditional at high Mach number; coordinate conservation does not repair its physical approximation.
+
+For an unobstructed spherical liquid domain, radial velocity and a prescribed source, angular averaging removes the angular Laplacian because its integral over the closed sphere is zero. The radial equation then describes the exact monopole of that prescribed-source problem. The approximation here enters through finite-Au exclusion, its nonuniform surface heat release and the replacement of local Au-adjacent water by a spherical mean. Agreement of an integrated gas flux cannot validate those local quantities.
+\clearpage
+\section{One signed interface, gas energy and mechanical feedback}
+The effective gas conductance is $H_g=4\pi R^2h_g$ with $h_g=\eta k_g/R$, $\eta=1$ nominal. This is a reduced gas transport parameter, not a measured molecular interface conductance. A half-cell liquid resistance $K_w^{-1}$ reconstructs the wall temperature:
+\begin{equation}
+Q_{\ell\to g}=\frac{T_1-T_g}{H_g^{-1}+K_w^{-1}},\qquad
+T_{\ell,w}=T_g+Q_{\ell\to g}/H_g .
+\end{equation}
+Positive $Q_{\ell\to g}$ heats the gas; negative flux heats water. The identical power enters the water equation with opposite sign. In the zero-$h_g$ limit it vanishes. In the separately imposed limit $T_{\ell,w}=T_0$, it becomes $-4\pi\eta k_gR(T_g-T_0)$, exactly the previous closure. That old heat loss is \emph{replaced}, not added. Neither the frozen reference baseline nor the frozen reference sum is added.
+
+The gas keeps the accepted fixed inventory and NASA9 caloric law \cite{nasa}:
+\begin{align}
+V&=4\pi R^3/3,&p_g&=nR_uT_g/V,\\
+C_V^{tot}(T_g)\dot T_g&=-p_g\dot V+Q_{\ell\to g},&
+\Delta U_g&=n\int_{T_0}^{T_g}c_V(T)\,\dd T.
+\end{align}
+Initial total pressure is $p_0+2\sigma/R_0$. H$_2$O is already part of the inventory; no additional fixed vapor pressure appears. Air-like dry fractions are 79/21 N$_2$/O$_2$; the initial vapor mole fraction follows the inherited saturated-pressure ratio. Nominal $k_g$ is 0.0264 W/(m K), or 0.0177 for argon, held fixed as a model sensitivity.
+
+Differentiating $\ln p_g=\ln(nR_u)+\ln T_g-\ln V$ at constant composition gives
+\begin{equation}\dot p_g=p_g(\dot T_g/T_g-3U/R).\end{equation}
+With $p_\infty=p_0-P_a\sin\omega t$, $\omega=2\pi f$, the inherited full viscous Keller--Miksis form \cite{km} is
+\begin{align}
+D\dot U&=(1+U/c)\Delta p/\rho+RB/(\rho c)-\tfrac32(1-U/(3c))U^2,\\
+\Delta p&=p_g-p_\infty-2\sigma/R-4\mu U/R,\\
+B&=\dot p_g+2\sigma U/R^2+P_a\omega\cos\omega t+4\mu U^2/R^2,\\
+D&=R(1-U/c)+4\mu/(\rho c).
+\end{align}
+The viscous acceleration derivative belongs in $D$. Substituting a polytropic $p_g(R)$ would break the present energy feedback. Level 2 keeps prescribed baseline $R,U$; Level 3 updates them with the heated gas pressure. Their difference measures feedback within this model, subject to numerical and reduction uncertainty.
+\clearpage
+\section{Gold, optical energy and particle motion}
+Each particle absorbs local power $P_{abs}=\sigma_{abs}(a,\lambda,n_m)I_{local}$. The accepted Mie implementation uses the unchanged Johnson--Christy table \cite{jc} and a real water host $n_m=1.33$. Local fluence already includes optical delivery; attenuation is not applied twice. The nominal $a=20$ nm, $\lambda=532$ nm cross section is $3.43373245\times10^{-15}$ m$^2$. A 10 ns top hat at $F=10$ J/m$^2$ absorbs $34.3373$ fJ per particle.
+\begin{equation}
+C_{Au}\dot T_{Au}=P_{abs}-Q_{Au\to\ell},\quad
+C_{Au}=\tfrac43\pi a^3\rho_{Au}c_{Au},\quad
+Q_{Au\to\ell}=4\pi a^2G(T_{Au}-\overline T_\ell).
+\end{equation}
+Nominal $G=10^8$ W/(m$^2$ K), $\rho_{Au}=19320$ kg/m$^3$ and $c_{Au}=129$ J/(kg K). I evolve this capacity rather than inject all absorbed energy instantaneously into gas or water. Electron--phonon relaxation and Au internal diffusion require an adequately long pulse \cite{baffou}; hotter or ultrashort cases need additional physics.
+
+For a finite Au surface at center radius $r_{np}$, angular averaging gives radial probability density $r/(2r_{np}a)$ on $[r_{np}-a,r_{np}+a]$. I integrate it against piecewise linear water reconstruction functions, obtaining positive weights $w_i$ with $\sum_iw_i=1$. Then $\overline T_\ell=\sum_iw_iT_i$ and the same adjoint weights deposit $w_iQ_{Au\to\ell}$. This counts energy exactly once, but spreads the particle's source around the bubble and omits its excluded water volume and local angular spreading resistance. It cannot certify a local water maximum or nanoparticle material screen.
+
+Passive motion satisfies $r_{np}^3-R^3=\mathrm{const}$. Fixed laboratory centers and prescribed confinement $r_{np}=R+a+d_0$ are distinct controls. The latter has no derived retaining force. The surface gap is always $d=r_{np}-R-a$; contact terminates a branch before source continuation into gas. Multiple particles occupy an angularly separated ring normal to a broad local beam. Their count is not a number density. Projected separation and $N\sigma_{ext}/A_{beam}$ screen overlap and photon allowance; near-wall optical changes remain unresolved.
+\fig{03_particle}{.88}{Particle positions and surface gaps for passive, fixed and prescribed confinement. A stopped curve marks contact, not a continued liquid-only solution.}
+\clearpage
+\section{Observation intervals and event timing}
+I distinguish the first strong local radius minimum ($R<R_0/2$), first-cycle deepest minimum, global radius minimum and gas-temperature maximum. In the absence of a strong minimum, the first-cycle deepest minimum defines $t_c^{(0)}$. Refined derivative roots on dense solutions locate extrema; plotted samples do not define them.
+If censoring precedes every accepted local minimum, an explicitly labeled observed-endpoint timing reference is used for a bounded diagnostic. It is not an unobserved collapse event or a completed-cycle minimum.
+
+Pulse time means its center. The offset is $\Delta t=t_{laser}-t_c^{(0)}$. Every paired run uses that same absolute pulse time. A heated event can shift; the source is never silently recentered on it. Timing scans cover several early, near-event and late centers. At weak heating, source sensitivity is evaluated at the independently selected baseline thermal maximum, so a pulse after that maximum can have exactly zero first-order effect on the global maximum even while it subsequently heats the gas.
+\begin{equation}
+\Delta T_{max}=\max_{t\in I}T_g^{laser}(t)-\max_{t\in I}T_g^{(0)}(t),\qquad
+\delta_{rel}=\Delta T_{max}/T_{max}^{(0)}.
+\end{equation}
+This is a within-Level-3 comparison. A previous clamped-water baseline paired with a newly dynamic heated run would confound water feedback and laser heating. If either member stops, the five-cycle difference is undefined. A separate diagnostic may compare maxima on $[0,\min(t_{end}^{(0)},t_{end}^{laser})]$, with an unknown tail. No censored tail is extrapolated.
+\fig{02_dynamics}{.96}{Radius, wall speed, gas temperature and total mixture pressure with and without a pulse. Temperature and radius extrema are calculated separately from the dense solution. The two trajectories nearly overlap at this scale.}
+\clearpage
+\section{Stationary benchmark and the cost of source averaging}
+The moving model has a stationary limit with fixed gas temperature. I match the preceding axisymmetric finite-Au reference at $R=6\,\mu$m, $a=20$ nm, $d=100$ nm, $h=4400$ W/(m$^2$ K), $G=10^8$ W/(m$^2$ K), 10 ns, 532 nm and $F=1$ J/m$^2$. Additional references use a 500 nm gap and near contact ($a=100$ nm, $d=1$ nm, $h=10^6$). Each comparison uses its actual archived absorbed energy and a 2 $\mu$s window.
+\input{../results/table_static.tex}
+Agreement of total gas energy does not imply agreement of local fields. The angular average reproduces integrated transport well for a point source toward a uniform spherical absorber, but a finite Au surface exchanges heat with a locally nonuniform liquid. The radial reduction removes this local resistance. A similar final gas fraction can coexist with a badly biased Au temperature or early flux. No weight or conductance is fitted to make the references agree. The external domains also differ: spherical material bath versus finite axisymmetric cylinder.
+At 320 radial cells the integrated delivery discrepancy spans 0.04--1.68\%, whereas radial Au peak rises are only 21--30\% of the finite-Au reference. Matching the nearest Au-to-bath clearance separately gives gas-delivery differences from $-0.031$ to $1.51$\%; the bath shapes still differ. These are observable-specific comparisons, not a universal moving-geometry error bound. An exact transient Robin point-source control has at most 0.326\% relative discrepancy at the sampled positive times on the finest grid.
+\fig{04_static}{.96}{Matched static radial and axisymmetric controls. Integrated delivery and gold temperature are separate observables. Spherical averaging cannot resolve the local Au-adjacent hot spot.}
+\clearpage
+\section{Paired temperatures and timing sensitivity}
+\input{../results/table_main.tex}
+\input{../results/narrative_primary.tex}
+
+The infinitesimal source response solves the directional variational system along the no-laser dense trajectory. A complex-step directional derivative includes geometry, two-way heat flow, caloric response and pressure feedback. It avoids subtracting nearly equal large temperatures. Finite positive fluences provide independent nonlinear checks. A derivative at a censored endpoint is an observed diagnostic, not the derivative of an unknown global peak. Near-tied maxima can make the maximizing time less stable than the peak value itself.
+
+The nonlinear paired increment additionally evaluates
+\begin{equation}f(b+\delta)-f(b)=\int_0^1 Df(b+s\delta)\,\delta\,\dd s\end{equation}
+by directional differentiation and three-point Gauss quadrature. Five points check the quadrature. Both members share a checked C1 reconstruction of the numerical no-laser reference. Its absolute interpolation and integration errors remain explicit; cancellation control does not confer microkelvin accuracy on the absolute baseline. Independent full nonlinear Radau pairs check the small increment without this reconstruction.
+\fig{05_timing}{.95}{Unit-fluence derivative of the gas-temperature maximum versus pulse-center offset from the no-laser radius event. Global and first-cycle peaks differ. Only complete trajectories enter these curves; censored derivatives are retained separately. This is not a finite-fluence optimum.}
+\clearpage
+\section{Moving sources, local sensitivity and feedback}
+\input{../results/narrative_feedback.tex}
+
+The passive particle can move away from a collapsing wall while approaching it during expansion. A finite particle can consequently contact an expanding wall even when its point-center invariant holds. Prescribed confinement retains heat close to the interface but requires an unmodeled force. Fixed centers can be intercepted before the intended pulse. These geometric distinctions precede any interpretation of a temperature benefit.
+
+The compact one-at-a-time design changes radius, initial gap, count, wavelength, fluence, duration, Au conductance, gas conductance, water conductivity, composition, trapped vapor and pulse center. It is neither a global optimizer nor a proof that these parameters are identifiable. Multiple-particle source averaging additionally omits mutual local thermal fields and optical interactions.
+
+The early 1.15 bar sensitivity changes by about 0.6\% under 48-to-96-cell refinement and 0.21\% with an independent Radau tangent calculation. The extremely small response to a pulse centered on the selected radius event changes by nearly an order of magnitude under that mesh refinement. Its sign and size are unresolved; it is not evidence of a positive late-pulse benefit. At 1.0 bar the first thermal peak precedes the selected radius minimum by about 2.54 microseconds, so even a nominally pre-collapse pulse can miss it.
+\fig{06_feedback}{.96}{One-way versus coupled sensitivity and the declared motion/parameter controls. Temperature changes are conditional on the specified geometry and source reduction.}
+
+\clearpage
+\section{Thermal conservation and numerical verification}
+The integrated physical balances are
+\begin{align}
+\dot U_g&=-p_g\dot V+Q_{\ell\to g},\\
+\dot E_\ell&=\sum_jQ_{Au_j\to\ell}-Q_{\ell\to g}-Q_{bath},\\
+\dot E_{Au}&=\sum_jP_{abs,j}-\sum_jQ_{Au_j\to\ell},\\
+\Delta(U_g+E_\ell+E_{Au})+W_{by\ gas}+E_{bath}&=E_{abs}.
+\end{align}
+Water and Au storage come directly from temperatures and capacities. Work, both exchange powers, bath removal, optical absorption and local incident energy are independently accumulated. Eight-point Gauss integration on accepted intervals checks the ledgers. Positive and negative parts are retained. A returning water flux is not clipped and a bath flux is not defined as a balancing residual.
+
+This is the \emph{thermal subsystem} with mechanical work, not total energy conservation of an acoustically driven fluid. Liquid kinetic energy, imposed acoustic power, viscous dissipation and possible retaining-force work are outside this budget. The laser-induced change in gas energy need not equal the laser energy because compression work also changes.
+\input{../results/narrative_validation.tex}
+\fig{07_energy}{.93}{Signed thermal energy channels and residuals. Small residuals verify bookkeeping for the stated equations; they do not validate omitted flow, phase or chemical physics.}
+\clearpage
+\section{Coefficient domains, formal extrema and physical interpretation}
+Wet mixtures stop at 6000 K because that is the archived H$_2$O coefficient boundary, not a physical temperature ceiling. Dry N$_2$/O$_2$ coefficients extend to 20000 K. Ground-state ideal Ar has constant heat capacity and no finite polynomial ceiling, but this does not suppress excitation, ionization or nonideal effects in real argon. Accepted paths do not switch composition or extrapolate coefficients.
+\input{../results/table_extremes.tex}
+
+The 1.3 bar cases are always formal. A small or moderate maximum wall Mach alone would not establish first-order KM accuracy. Negative far-field absolute pressure, strong compressibility, shocks and nonsphericity can require a different flow model. Fixed high-temperature composition, constant gas conductivity, omitted evaporation/condensation and latent heat further limit the temperatures.
+
+Local material safety cannot be inferred from a smeared source. Bulk gold melting and water boiling temperatures are references, not universal nanoparticle damage or nucleation thresholds. A primary experiment on 90 nm-diameter Au with 5 ns pulses found a 532 nm vapor-bubble threshold near $600\pm50$ J/m$^2$ \cite{kitz}. Its size, support, pulse and observable differ from this study. It motivates phase-change caution, not a calibrated cutoff for the present acoustic bubble.
+\fig{08_applicability}{.92}{Separate numerical completion, coefficient domain, geometry and physical-model screens. Formal and censored values remain visible.}
+\clearpage
+\section{What this calculation establishes}
+\input{../results/narrative_conclusion.tex}
+
+Heat must first leave gold, diffuse through moving water and cross the signed gas boundary. The source has memory, so absorbed energy is neither instantaneous gas heat nor a geometry-independent transfer fraction. Pressure feedback can amplify or reduce the one-way response by altering the compression path; it must be measured from matched models rather than assumed beneficial.
+\input{../results/narrative_transport.tex}
+\fig{10_transport}{.96}{Finite paired increments for the nominal pulse: Au storage, net gas-boundary power and gas temperature. Transient temperature differences can exceed the difference of separately maximized temperatures when the compression path shifts. The power increment includes feedback; it is not a tagged photon-delivery fraction.}
+
+The strongest remaining uncertainty is physical reduction. A local finite particle has an angularly concentrated thermal environment, whereas the present source fills a spherical shell. The static comparisons quantify selected observable discrepancies, not a universal bound on moving near-contact error. A resolved moving axisymmetric calculation with finite Au surfaces, consistent compressible flow where needed, and explicit contact/phase treatment is the next targeted test. A reacting gas would require species balances, a consistent EOS derivative and formation/ionization energy on the same timescale; adding high-temperature coefficients alone is insufficient.
+
+These results form a reproducible reduced-model study. They do not establish a realizable maximum gas temperature, plasma state or thermonuclear yield.
+\clearpage
+\appendix
+\section{Numerical controls and reproducibility}
+The state uses scaled radius, speed, temperatures and thermal ledgers. BDF is the production stiff solver; representative Radau runs provide an independent method. Pulse edges split integration intervals exactly. Source weights and geometric conductances are updated at every evaluation. A finite beam allowance is applied to the local particle count, with no repeated layer absorption. The liquid field is represented in fixed material cells; all plotted radial profiles explicitly mean spherical averages.
+\input{../results/table_convergence.tex}
+\fig{09_profiles}{.92}{Radial material-water temperatures at selected times, expressed at their current physical radii. Each curve is a spherical average; no local two-dimensional Au field is implied.}
+\section{Physical scales omitted by the frozen mixture}
+\input{../results/table_physical.tex}
+The ideal-EOS peak pressure reaches about 2 GPa and gas density exceeds 1000 kg/m$^3$ before wet 1.3 bar censoring. The gas sound-crossing estimate being shorter than a reconstructed thermal width is only a timescale screen; it cannot establish a uniform, nonreacting, ideal gas at such states. The censored wet peak has no complete width.
+
+Separate standard-state reference demands use inherited formation/ionization data and water phase enthalpies \cite{nist}. For the wet 1.3 bar inventory, full water dissociation to $2$H+O has an energy scale of $8.01\times10^{-10}$ J, about 10.4\% of its observed frozen-gas sensible increment; O$_2$ dissociation has a scale of 62.2\%. At 1.15 bar the corresponding ratios are 26.0\% and 154\%. The dry-Ar first-ionization threshold for the entire inventory is about 5.41 times its frozen peak sensible increment. These overlapping reference processes are not added together, are not inferred reaction fractions and do not recompute temperatures. High-pressure phase enthalpy, equilibrium or kinetic extents and consistent EOS derivatives require a separate reacting/phase model.
+\section{Sources and independent limits}
+The optical and gas inputs are those of the accepted earlier studies; no new free parameter is calibrated against a peak temperature. The experimental reference \cite{kitz} concerns laser-induced vapor bubbles around nanoparticles, not thermometry of the present acoustically driven gas. No matched experimental trajectory with all acoustic, composition, optical and particle-placement parameters is available here.
+\begin{thebibliography}{9}
+\bibitem{km} J. B. Keller and M. Miksis, Bubble oscillations of large amplitude, \emph{J. Acoust. Soc. Am.} \textbf{68}, 628--633 (1980). \href{https://doi.org/10.1121/1.384720}{doi:10.1121/1.384720}.
+\bibitem{nasa} B. J. McBride, M. J. Zehe and S. Gordon, \emph{NASA Glenn Coefficients for Calculating Thermodynamic Properties of Individual Species}, NASA/TP-2002-211556 (2002). \url{https://ntrs.nasa.gov/citations/20020085330}.
+\bibitem{jc} P. B. Johnson and R. W. Christy, Optical constants of the noble metals, \emph{Phys. Rev. B} \textbf{6}, 4370--4379 (1972). \href{https://doi.org/10.1103/PhysRevB.6.4370}{doi:10.1103/PhysRevB.6.4370}.
+\bibitem{baffou} G. Baffou and H. Rigneault, Femtosecond-pulsed optical heating of gold nanoparticles, \emph{Phys. Rev. B} \textbf{84}, 035415 (2011). \href{https://doi.org/10.1103/PhysRevB.84.035415}{doi:10.1103/PhysRevB.84.035415}.
+\bibitem{kitz} M. Kitz et al., Vapor bubble generation around gold nano-particles and its application to damaging of cells, \emph{Biomed. Opt. Express} \textbf{2}, 291--304 (2011). \href{https://doi.org/10.1364/BOE.2.000291}{doi:10.1364/BOE.2.000291}.
+\bibitem{nist} NIST--JANAF, Water (liquid), standard formation enthalpy at 298.15 K, \url{https://janaf.nist.gov/tables/H-063.html}; NIST Chemistry WebBook, water gas-phase thermochemistry, \url{https://webbook.nist.gov/cgi/cbook.cgi?Name=water\&cTG=on}.
+\end{thebibliography}
+\end{document}

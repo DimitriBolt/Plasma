@@ -1,0 +1,4 @@
+stable_base_1.00_F10_L3_q3 completed delta 1.4088162743064458e-06 seconds 200.40754914283752
+stable_base_1.00_F100_L3_q3 completed delta 1.4088162970438134e-05 seconds 204.67344045639038
+stable_base_1.00_F10_L2_q3 completed delta 8.577875405535451e-07 seconds 173.42942881584167
+stable_base_1.00_F10_L3_q5 completed delta 1.4088162743064458e-06 seconds 205.88232326507568

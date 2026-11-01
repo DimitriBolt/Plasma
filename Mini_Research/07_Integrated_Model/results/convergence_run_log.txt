@@ -1,0 +1,10 @@
+conv_coarse_base completed Tmax 553.0254613679502 steps 8724 seconds 38.98114490509033
+conv_production_base completed Tmax 553.0230447676503 steps 8664 seconds 46.8598906993866
+conv_production_laser completed Tmax 553.023978667096 steps 8931 seconds 47.574180126190186
+conv_fine_base completed Tmax 553.0243029745434 steps 7752 seconds 56.94288873672485
+conv_outer50_base completed Tmax 553.0228573428795 steps 8626 seconds 48.105164527893066
+conv_strict_base completed Tmax 553.0256698400443 steps 24849 seconds 126.66076445579529
+conv_strict_laser Required step size is less than spacing between numbers. Tmax 294.49138217364566 steps 453 seconds 2.512526273727417
+conv_Radau_base completed Tmax 553.0257148051751 steps 11885 seconds 135.3499734401703
+conv_Radau_laser completed Tmax 553.0257189435881 steps 12218 seconds 125.91539764404297
+conv_step_half_base completed Tmax 553.0234374256598 steps 9190 seconds 46.872697591781616

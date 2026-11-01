@@ -1,0 +1,1 @@
+Independent 1.15 bar Radau derivative 2.1896808640625127e-07

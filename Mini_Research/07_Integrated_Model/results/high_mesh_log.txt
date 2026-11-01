@@ -1,0 +1,4 @@
+high_mesh96_1.15_base completed Tmax 2798.279956519239 steps 23712 seconds 180.7663962841034
+{'Pa_bar': 1.15, 'cells': 96, 'offset_s': -5e-06, 'dTmax_dF_K_m2_J': 2.1723821707373403e-07, 'T_baseline_K': 2798.279956519239, 't_baseline_peak_s': 1.623773740129848e-05, 'incremental_balance_over_unit_absorbed': 7.233164930637695e-08}
+{'Pa_bar': 1.15, 'cells': 96, 'offset_s': -1e-07, 'dTmax_dF_K_m2_J': 6.24905726413052e-07, 'T_baseline_K': 2798.279956519239, 't_baseline_peak_s': 1.623773740129848e-05, 'incremental_balance_over_unit_absorbed': 3.1331162700962516e-08}
+{'Pa_bar': 1.15, 'cells': 96, 'offset_s': 0.0, 'dTmax_dF_K_m2_J': 3.742850815546929e-12, 'T_baseline_K': 2798.279956519239, 't_baseline_peak_s': 1.623773740129848e-05, 'incremental_balance_over_unit_absorbed': 6.083341989646945e-08}
