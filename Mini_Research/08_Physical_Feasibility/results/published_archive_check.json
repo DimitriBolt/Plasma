@@ -1,0 +1,10 @@
+{
+  "scientific_sha": "083fc4a4fc635d0191b4c78b6b96a7ecf1e6b4f2",
+  "exact_git_archive": true,
+  "tests_passed": 12,
+  "MR8_manifest_entries_passed": 64,
+  "Final_manifest_entries_passed": 18,
+  "accepted_preexisting_files_unchanged": 1491,
+  "scientific_files_changed_after_initial_clean_tree": false,
+  "difference_from_initial_clean_tree": "Adds clean_archive_check.json, clean_archive_tests.txt and corresponding manifest updates only."
+}

@@ -17,6 +17,7 @@ results/clean_archive_tests.txt
 results/computation.log
 results/convergence.csv
 results/data_schema.md
+results/delivery_receipt.json
 results/development_note.md
 results/document_environment.json
 results/energy_audit.csv
@@ -41,6 +42,10 @@ results/pdf_fonts_technical.txt
 results/pdf_qa.json
 results/preflight.json
 results/preservation.json
+results/publication_verification.json
+results/published_archive_check.json
+results/published_archive_tests.txt
+results/review_handoff.md
 results/scales.json
 results/scenarios.csv
 results/source_audit.md

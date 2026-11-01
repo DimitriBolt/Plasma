@@ -1,0 +1,16 @@
+[
+  {
+    "path": "Final_Report/Consolidated_Final_Scientific_Report.pdf",
+    "bytes": 2685509,
+    "sha256": "a5de295e58788cb344aff05ad03349f9dcf50245a5997586b186a7d1919cd965",
+    "remote_bytes_match": true,
+    "scientific_sha": "083fc4a4fc635d0191b4c78b6b96a7ecf1e6b4f2"
+  },
+  {
+    "path": "Mini_Research/08_Physical_Feasibility/report/08_Physical_Feasibility.pdf",
+    "bytes": 1507114,
+    "sha256": "2d35d0d10895271a0a5f408f5d52fc2fb37e2d642e490c11475fd9559e0be44e",
+    "remote_bytes_match": true,
+    "scientific_sha": "083fc4a4fc635d0191b4c78b6b96a7ecf1e6b4f2"
+  }
+]

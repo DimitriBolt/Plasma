@@ -1,0 +1,13 @@
+{
+  "status": "delivered_and_verified",
+  "recipient_title": "Mini-Research 8 (Web)",
+  "scientific_sha": "083fc4a4fc635d0191b4c78b6b96a7ecf1e6b4f2",
+  "readback_exact_match": true,
+  "normalization": "Outer whitespace stripped only",
+  "readback_characters": 7564,
+  "mechanism": "Codex app send_message_to_thread; complete received user message read back with read_thread",
+  "independent_review_complete": false,
+  "official_program_closed": false,
+  "submitted_text_sha256_trimmed": "7bf899d1630f7d7df85d0f97de844ae5883aa8d0416dd9c0497724d289fa7ddc",
+  "verified_utc": "2026-11-01T06:54:46.301994+00:00"
+}
