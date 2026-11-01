@@ -1,0 +1,4 @@
+run_id,max_required_slip_m_s,max_particle_Re,Stokes_relaxation_reference_s,meaning
+base_1.00,0.42083691729260736,0.016769637159340548,1.7139055222887561e-09,Required slip for prescribed confinement relative to accepted incompressible flow; no retaining force derived.
+base_1.15,24.43696210448357,0.97377147994792401,1.7139055222887561e-09,Required slip for prescribed confinement relative to accepted incompressible flow; no retaining force derived.
+base_1.30,220.64197569388207,8.7922083887278681,1.7139055222887561e-09,Required slip for prescribed confinement relative to accepted incompressible flow; no retaining force derived.

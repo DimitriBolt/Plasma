@@ -1,0 +1,6 @@
+{
+  "pypdf": "6.9.2",
+  "renderer": "Poppler pdftoppm -jpeg, 110 dpi; corrected pages 120 dpi",
+  "image_policy": "JPG only; no new PNG/SVG companions",
+  "visual_review": "All 24 final and 9 technical page contents inspected; revised TOC and scenario page re-rendered and inspected."
+}

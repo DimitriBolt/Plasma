@@ -1,0 +1,39 @@
+[
+  {
+    "name": "keller.pdf",
+    "url": "https://archive.org/download/DTIC_ADA095754/DTIC_ADA095754.pdf",
+    "sha256": "11f8440f2535cc7b72dd2ffc0df8231a751ab704d6ee3e285a8215b1045cad22",
+    "bytes": 418380
+  },
+  {
+    "name": "denner.pdf",
+    "url": "https://arxiv.org/pdf/2008.04332v2",
+    "sha256": "5a891583c9ec489d9c7d7ca1e019acb34b5739c60ce631f9e36d78d80dea9e17",
+    "bytes": 1390783
+  },
+  {
+    "name": "nasa.pdf",
+    "url": "https://ntrs.nasa.gov/api/citations/20020085330/downloads/20020085330.pdf",
+    "sha256": "0ab4154b0fdeac29581f8d047a4cb6836c138c0b41da8f28990ef7d3e2756765",
+    "bytes": 1619440
+  },
+  {
+    "name": "baffou.pdf",
+    "url": "https://guillaume.baffou.com/publications/015-Baffou-PRB84_035415.pdf",
+    "sha256": "319af6bfff1558ca3119cab1b982a6da203de32a9d92cb1c9355d074cb4f8489",
+    "bytes": 566448
+  },
+  {
+    "name": "kitz.html",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3038445/",
+    "sha256": "602838addc763928e8a46386c8037cb9776a9b9af0688fa50b1bebeaa318b2b6",
+    "bytes": 178974
+  },
+  {
+    "name": "Toegel2000does.pdf",
+    "url": "https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.85.3165",
+    "sha256": "360552a06e46bde49d259bae8fd60745fc0dd8b382fb9f46e62c300557e1c332",
+    "bytes": 118680,
+    "access": "Complete readable exact preserved local cache; live download 403"
+  }
+]

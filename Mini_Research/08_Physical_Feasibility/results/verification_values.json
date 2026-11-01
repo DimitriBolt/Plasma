@@ -1,0 +1,8 @@
+{
+  "max_Rmin_discrepancy": 4.2663961252742405e-10,
+  "max_speed_discrepancy": 3.6937244374257716e-09,
+  "max_absolute_event_difference_s": 1.4667900141013268e-16,
+  "max_thermal_scaled_residual": 1.3480583465016277e-06,
+  "max_paired_gas_residual_over_absorption": 4.607237132533098e-08,
+  "max_stored_paired_residual_over_absorption": 4.712552848626001e-08
+}

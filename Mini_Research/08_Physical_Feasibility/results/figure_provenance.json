@@ -1,0 +1,20 @@
+[
+  {
+    "source": "Mini_Research/05_Plasmonic_Heating/figures/02_optical_spectra.jpg",
+    "destination": "Final_Report/figures/05_optical_spectra.jpg",
+    "sha256": "849afdeb1154a14993dcd05f8cb48571ed9f140c0fa7085d18b58393e41910c1",
+    "modification": "Unmodified copy"
+  },
+  {
+    "source": "Mini_Research/06_AuNP_Bubble_Coupling/figures/02_local_temperature_flux.jpg",
+    "destination": "Final_Report/figures/06_local_temperature_flux.jpg",
+    "sha256": "e0b9b9dc5f26d49cdffcc616037da99d20e67ec890cb59aacfa3a23f94b7476d",
+    "modification": "Unmodified copy"
+  },
+  {
+    "source": "Mini_Research/07_Integrated_Model/figures/10_transport.jpg",
+    "destination": "Final_Report/figures/07_integrated_transport.jpg",
+    "sha256": "15fcf629d0d41961f86e75e1c505780d3e4fd22b8267bdc29acdae10cba23f16",
+    "modification": "Unmodified copy"
+  }
+]

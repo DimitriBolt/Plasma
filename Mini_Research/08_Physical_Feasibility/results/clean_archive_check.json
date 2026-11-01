@@ -1,0 +1,37 @@
+{
+  "archived_tree": "ae0292c1c21ce237ef8acb60c71aeb4451a339cb",
+  "scope": "Complete tracked repository plus the 82 selected new files, no untracked user files or full MR7 archive",
+  "tests_passed": 12,
+  "MR8_manifest_entries_passed": 62,
+  "Final_manifest_entries_passed": 18,
+  "fresh_Gilmore_replay": {
+    "relative_Rmin": 4.266396125274241e-10,
+    "relative_speed": 3.6937244374257716e-09,
+    "completed": true,
+    "fresh": true,
+    "interval_s": 3.3333333333333335e-05
+  },
+  "both_latex_builds_passed": true,
+  "both_rebuilt_pdf_texts_match": true,
+  "regenerated_figures_and_tables": {
+    "Mini_Research/08_Physical_Feasibility/figures/02_mechanics.jpg": true,
+    "Mini_Research/08_Physical_Feasibility/figures/04_caloric_comparison.jpg": true,
+    "Mini_Research/08_Physical_Feasibility/figures/03_timescales.jpg": true,
+    "Mini_Research/08_Physical_Feasibility/figures/01_framework.jpg": true,
+    "Final_Report/figures/02_mechanics.jpg": true,
+    "Final_Report/figures/06_local_temperature_flux.jpg": true,
+    "Final_Report/figures/05_optical_spectra.jpg": true,
+    "Final_Report/figures/04_caloric_comparison.jpg": true,
+    "Final_Report/figures/07_integrated_transport.jpg": true,
+    "Final_Report/figures/03_timescales.jpg": true,
+    "Final_Report/figures/01_framework.jpg": true,
+    "Final_Report/tables/table_mechanics.tex": true,
+    "Final_Report/tables/table_ideal.tex": true,
+    "Final_Report/tables/table_energy.tex": true,
+    "Final_Report/tables/table_retention.tex": true
+  },
+  "scientific_pdf_page_counts": {
+    "technical": 9,
+    "final": 24
+  }
+}

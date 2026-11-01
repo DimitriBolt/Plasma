@@ -1,0 +1,412 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,longtable,graphicx,float,caption,microtype,xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black,pdftitle={Plasmonic-Enhanced Laser-Induced Sonofusion: Overcoming the Temperature Barrier via Resonant Nanoparticle Heating},pdfauthor={Dimitri Bolt}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}\lhead{\small Consolidated Scientific Report}\rhead{\small Dimitri Bolt}\cfoot{\thepage}
+\captionsetup{font=small,labelfont=bf}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{figures/#1.jpg}\caption{#3}\end{figure}}
+\setcounter{tocdepth}{1}
+\input{support_links}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Plasmonic-Enhanced Laser-Induced Sonofusion:\\[5pt] Overcoming the Temperature Barrier via Resonant Nanoparticle Heating}\par
+\vspace{13pt}{\Large Consolidated Final Scientific Report}\par
+\vspace{7pt}{\large Dimitri Bolt}\par
+Academic supervisor: Prof. Dr. Ildar R. Gabitov\par
+\vspace{5pt}Mini-Research 1--8\quad |\quad 31 October 2026\par
+\vspace{5pt}\textit{For preliminary scientific discussion}
+\end{center}
+\begin{abstract}
+This report develops a complete account of a reduced mathematical study of acoustic bubble compression and an additional laser energy channel mediated by gold nanoparticles. The three objectives are to construct a baseline bubble model, extend it by a physically ordered laser--gold--liquid--gas pathway, and determine whether ordinary or physically admissible extreme conditions support temperatures relevant to thermonuclear reactions. Rayleigh--Plesset and Keller--Miksis mechanics are combined progressively with gas energy, temperature-dependent heat capacity, a fixed water-vapor inventory, Mie absorption, resolved stationary heat transfer and a moving radial thermal model.
+
+For a 6 $\mu$m initial bubble in water at 30 kHz, one 20 nm-radius gold particle prescribed to remain 100 nm from the wall, and a 532 nm, 10 ns, 10 J/m$^2$ pulse, the dynamically coupled model predicts global peak increments of 1.408816 and 2.184879 $\mu$K at acoustic amplitudes 1.00 and 1.15 bar. The first is conditional on the reduced geometry and transport; the second is a numerically complete but physically formal fixed-composition scenario. Wet 1.30 bar trajectories stop at the 6000 K water-coefficient boundary, so their global peak increment is undefined. Dry formal continuations reach approximately 6264 K for air and 22809 K for ground-state argon. Much larger historical RP estimates are retained as diagnostics of invalid extrapolation.
+
+New bounded Gilmore--Tait calculations resolve liquid-model sensitivity without importing temperatures from another trajectory. New caloric and energy audits distinguish absorption, storage, signed gas heat and compression work. The specified single-particle pathway produces a very small peak effect, but this is not a universal efficiency or temperature limit. The program establishes neither a physically reliable maximum temperature nor thermonuclear feasibility. A local hot region, ion/electron temperatures, fuel inventory and reaction yield remain undetermined. The project title states the research hypothesis; overcoming the barrier has not been demonstrated.
+\end{abstract}
+\clearpage
+\tableofcontents
+\vfill
+\textbf{How to read this report.} The model, reference parameters, principal results and limitations are stated here. Footnotes identify exact supporting reports and verified section titles; they are routes to derivation and numerical evidence, not prerequisites for understanding the conclusions. Literature references are listed separately. Unless indicated otherwise, temperature means the spatially uniform gas temperature of a specified model. A completed calculation is not an experimental validation.
+\clearpage
+\section{Introduction, motivation and research objectives}
+Acoustic rarefaction expands a gas bubble and subsequent compression can concentrate mechanical energy into a short interval. The scientific question is whether additional optical absorption by gold nanoparticles can deliver useful energy to the gas before its temperature maximum, and whether the resulting conditions have any defensible connection to thermonuclear reactions. These questions require energy accounting and model applicability as well as a large computed temperature.
+
+The program has three objectives:
+\begin{enumerate}
+\item \textbf{Baseline mathematical model of sonofusion-related bubble dynamics.} Determine radius, wall speed, pressure and gas temperature under acoustic excitation without laser heating or nanoparticles.
+\item \textbf{Laser-enhanced model with gold nanoparticles.} Add the ordered pathway Laser $\to$ Au absorption $\to$ metal heating $\to$ surrounding liquid $\to$ bubble boundary $\to$ gas energy and mechanical response; quantify the change in the gas-temperature maximum.
+\item \textbf{Feasibility of extreme temperatures relevant to thermonuclear reactions.} Examine ordinary and rare extreme configurations without assuming a favorable or unfavorable result in advance, and distinguish model temperature from the state required to calculate nuclear reactions.
+\end{enumerate}
+
+The first objective is achieved as a hierarchy of deterministic spherical models. The second is achieved within a conservative moving radial reduction with prescribed particle placement. The third has a bounded, unresolved outcome: the available models expose limiting mechanisms and invalid extrapolations but do not establish a physically attainable upper temperature, plasma hot-region state or nuclear yield.
+
+The sequence has a specific logic. Mini-Research 1 supplies incompressible radius dynamics; Mini-Research 2 adds first-order liquid compressibility. Mini-Research 3 distinguishes adiabatic reconstruction, one-way thermal post-processing and coupled gas mechanics. Mini-Research 4 introduces variable species heat capacities and a consistent fixed vapor inventory, while assessing missing chemistry. Mini-Research 5 determines optical absorption and heat release by isolated gold spheres. Mini-Research 6 resolves a finite particle and stationary bubble, then tests the applicability of that frozen geometry. Mini-Research 7 couples mechanics, gas, moving water and gold storage. Mini-Research 8 evaluates the physical meaning and remaining uncertainty of the whole chain.
+
+Sonoluminescence observations motivate this work, but their thermometry and host liquids must be identified. Flannigan and Suslick observed emission consistent with plasma formation in concentrated aqueous sulfuric acid \cite{flannigan}. This does not calibrate a uniform water-bubble temperature, identify its ion temperature or demonstrate fusion. The deuterated-acetone calculations of Sadighi-Bonabi and Gheshlaghi \cite{sadighi} use substantially different inventories, conditions and closures. Neither source supplies a matched experimental validation of the present water/AuNP model.
+\clearpage
+\section{Overview of the mathematical modeling framework}
+\fig{01_framework}{1}{The acoustic and optical branches meet in the gas-energy equation. Gas pressure feeds back on radius dynamics. The laser is not represented as direct gas heating. The gold source in the moving model is a spherical average of a finite, localized particle.}
+The reference bubble starts at rest in unbounded water. The applied pressure is specified locally in time,
+\begin{equation}p_\infty(t)=p_0-P_a\sin(2\pi ft),\quad R(0)=R_0,\quad U(0)=0,\quad T_g(0)=T_0.\end{equation}
+The first quarter-cycle is rarefaction; $P_a$ is peak acoustic amplitude, not absolute pressure. The usual requested observation interval is five periods, $I=[0,5/f]$; the new mechanical comparison uses one complete period.
+\begin{center}\small
+\begin{tabular}{llll}\toprule
+Quantity & Value & Quantity & Value\\\midrule
+$R_0$ & 6 $\mu$m & $f$ & 30 kHz\\
+$T_0$ & 293.15 K & $p_0$ & 101325 Pa\\
+Mechanical $\rho_0$ & 998.2 kg/m$^3$ & $c_0$ & 1482 m/s\\
+$\mu$ & 0.001002 Pa s & $\sigma$ & 0.07274 N/m\\
+Initial $p_v$ & 2339 Pa & $5/f$ & 166.667 $\mu$s\\
+Thermal $\rho_\ell c_\ell$ & $4.187\times10^6$ J/(m$^3$ K) & $k_\ell$ & 0.6 W/(m K)\\
+Air reference $k_g$ & 0.0264 W/(m K) & Ar reference $k_g$ & 0.0177 W/(m K)\\\bottomrule
+\end{tabular}
+\end{center}
+The mechanical water properties are rounded near-ambient references; thermal water properties follow the separate photothermal parameter set. Keeping that small distinction explicit avoids interpreting numerical consistency as a new property measurement. Gas conductivities are held at their reference values and are not high-temperature mixture transport laws.
+
+The state and energy conventions change between early exploratory models and the final coupled model. The final wet gas is a single fixed mixture with initial total pressure $p_0+2\sigma/R_0$. Water vapor is included in its moles, pressure and energy. There is no additional constant vapor-pressure term in that formulation. Earlier models with a separately added $p_v$ are identified as such below.
+\clearpage
+\section{Acoustic bubble dynamics and compressibility}
+\subsection{Rayleigh--Plesset baseline}
+For an incompressible Newtonian liquid, spherical momentum balance gives
+\begin{equation}
+\rho_0(R\dot U+\tfrac32U^2)=p_d(R)+p_v-p_\infty-2\sigma/R-4\mu U/R,
+\quad U=\dot R.
+\end{equation}
+The initial exploratory closure is $p_d=p_{d0}(R_0/R)^{3\kappa}$, with $\kappa=1.4$ and $p_{d0}=p_0+2\sigma/R_0-p_v$. Here $p_d$ is dry-gas partial pressure. Static balance fixes the normalization, rather than an arbitrary maximum-to-minimum volume ratio. This is the Mini-Research 1 baseline.\MRone{Mathematical model}
+
+At 1.0 bar its five-cycle radius range is approximately 4.12--11.34 $\mu$m and its largest wall speed is about 7.74 m/s. At 1.3 bar the same equation permits extreme supersonic wall speeds, exposing failure of the incompressible approximation. Numerical convergence of that ODE does not restore its physical assumptions. Five cycles also do not establish a stable attractor or shape stability.
+\subsection{Keller--Miksis equation and pressure feedback}
+The first-order compressibility convention used throughout the program is
+\begin{equation}\label{eq:km}
+(1-U/c_0)R\dot U+\tfrac32(1-U/(3c_0))U^2
+=\frac{1+U/c_0}{\rho_0}\Delta p+\frac{R}{\rho_0c_0}\dot{\Delta p},
+\end{equation}
+where $\Delta p=p_g+p_c-p_\infty-2\sigma/R-4\mu U/R$. The final mixture uses $p_c=0$; the early dry-gas closure uses $p_c=p_v$. Differentiating the viscous term contributes $-4\mu\dot U/R$ and gives the explicit denominator
+\begin{equation}
+D=R(1-U/c_0)+4\mu/(\rho_0c_0).
+\end{equation}
+For the polytrope $\dot p_g=-3\kappa p_gU/R$. For the energy-coupled fixed mixture, $\dot p_g=p_g(\dot T_g/T_g-3U/R)$. The latter must be used when gas heating feeds back mechanically.\MRtwo{Keller--Miksis convention and explicit acceleration}
+
+The original Keller--Miksis incident field includes radial propagation \cite{km}. Equation~\eqref{eq:km} fixes the adopted local forcing convention explicitly; it is not asserted to reproduce every original forcing convention. The pressure prefactor differs from the one printed in Eq.~(1) of Ref.~\cite{sadighi}, so equations from those sources have not been combined selectively. In the $c_0\to\infty$ limit the adopted equation reduces to RP. An inward speed $U=-c_0$ does not make $D$ zero; denominator regularity is not a physical validity criterion.
+\clearpage
+\subsection{What strong collapse requires from the liquid model}
+Useful diagnostics are $M_0=\max|U|/c_0$ and
+\begin{equation}\chi=\max\frac{|p_L-p_0|}{\rho_0c_0^2},\quad p_L=p_g+p_c-2\sigma/R-4\mu U/R.\end{equation}
+For the strongest five-cycle MR2 polytropic KM case, $R_{\min}=0.550809\,\mu$m, peak inward speed is 1072.98 m/s, $M_0=0.7240$ and $\chi=1.276$. These are converged equation outputs at 1.3 bar, with strong liquid-compressibility warnings.\MRtwo{Extreme-collapse analysis and event correspondence}
+
+KM does not evolve a shock profile, its steepening or reflected-wave interaction. Large $\chi$ calls for variable density and sound speed; it is not itself a calculated density change. Spherical symmetry suppresses shape modes and jets. Their stability requires perturbation amplitudes, geometry and a suitable flow model. No probability of rare collapse configurations follows from a deterministic radius sweep.\MRtwo{Physical applicability and unresolved mechanisms}
+
+For 1.15 and 1.30 bar, minimum prescribed far-field absolute pressures are $-13675$ and $-28675$ Pa. Negative liquid pressure can represent metastable tension; it is distinct from gas pressure. Sustaining that drive depends on nucleation sites, purity, geometry and exposure history. These inputs are missing. Negative pressure is neither proof of impossibility nor evidence of achievable isolated-bubble operation.
+\subsection{New bounded Gilmore--Tait comparison}
+Mini-Research 8 compares KM and Gilmore over $[0,1/f]$ at 1.00, 1.15 and 1.30 bar, with identical initial conditions and the same MR2 polytropic gas and constant $p_v$. This isolates the liquid-model change. It is not a replacement of the gas-energy trajectories in MR7.
+
+For a barotropic Tait liquid,
+\begin{equation}
+\rho(p)=\rho_0\left(\frac{p+B}{p_0+B}\right)^{1/n},\quad
+C_L^2=\frac{n(p_L+B)}{\rho_L},\quad
+H=\frac{n}{n-1}\left[\frac{p_L+B}{\rho_L}-\frac{p_\infty+B}{\rho_\infty}\right].
+\end{equation}
+The exponent $n=7.15$ follows the water reference in Ref.~\cite{denner}. To match the existing ambient sound speed exactly, $B=\rho_0c_0^2/n-p_0=3.06523\times10^8$ Pa; it is derived, not fitted to collapse. The positive-density branch $p+B>0$ is checked. The pressure-density relation is used for mechanics only; it does not validate liquid thermometry, tensile stability or high-pressure phase behavior.
+\clearpage
+The Gilmore equation used for the new comparison is
+\begin{equation}
+(1-U/C_L)R\dot U+\tfrac32(1-U/(3C_L))U^2
+=(1+U/C_L)H+(1-U/C_L)\frac{R}{C_L}\dot H,
+\end{equation}
+where $\dot H=\dot p_L/\rho_L-\dot p_\infty/\rho_\infty$ and the full viscous derivative is included. With $\dot p_L=b_w-4\mu\dot U/R$, the acceleration denominator is $(1-U/C_L)[R+4\mu/(C_L\rho_L)]$. Units are consistent: $H$ has units m$^2$/s$^2$ and $\dot H$ has units m$^2$/s$^3$. Equilibrium, the enthalpy integral, the implicit equation and the incompressible limit are independently checked.
+\begin{table}[H]\centering\scriptsize
+\caption{New one-cycle mechanical extrema. Temperature is not calculated on these trajectories. $M_0$ uses the common ambient sound speed, and $\chi$ the common ambient bulk-modulus scale.}
+\input{tables/table_mechanics.tex}
+\end{table}
+\fig{02_mechanics}{.96}{New mechanical comparison. Top: common absolute time axes. Bottom: each curve is centered on its own first-cycle deepest minimum; centering does not erase the difference in absolute event times. The 1.0 bar panel has a wider zoom.}
+At 1.30 bar Gilmore reduces $R_{\min}$ by about 6.80\% and peak inward speed by about 3.89\% relative to KM. Its peak wall pressure is about 3.76 GPa and maximum Tait density ratio is 1.436; maximum local wall Mach is 0.504. These diagnostics show material liquid-model sensitivity. They do not establish that Gilmore supplies a physically correct extreme state, and no gas temperature is transferred between the trajectories.
+
+DOP853 refinement and independent Radau give maximum relative differences of $4.27\times10^{-10}$ in minimum radius and $3.70\times10^{-9}$ in peak speed. These numerical differences are much smaller than the model difference. They are observed checks, not rigorous global error bounds. A fully coupled reacting-gas/compressible-liquid comparison would be a different calculation.
+\clearpage
+\section{Gas thermodynamics and the temperature barrier}
+\subsection{Compression, signed heat and mechanical feedback}
+For a closed gas with no reaction or mass exchange,
+\begin{equation}\label{eq:gasenergy}
+\dot U_g=-p_g\dot V+Q_{\ell\to g},\quad V=4\pi R^3/3,\quad
+\Delta U_g=-\int p_g\,\dd V+\int Q_{\ell\to g}\,\dd t.
+\end{equation}
+With constant molar $c_V$ and no heat transfer, integration gives
+\begin{equation}T_g=T_0(R_0/R)^{3(\gamma-1)},\quad \gamma=1+R_u/c_V.\end{equation}
+The normalization uses the initial state. Replacing $R_0$ by an expansion maximum without changing the thermodynamic reference would be incorrect.
+
+Mini-Research 3 evaluates this adiabatic law, a one-way thermal solve on prescribed mechanics, and a coupled temperature--KM solve. Its early gas is the noncondensable subsystem with a separately prescribed mechanical vapor pressure. Thus its checked gas-energy balance is not a complete vapor/liquid energy budget.\MRthree{Gas energy, signed heat transfer and vapor accounting}
+The initial thermal closure is $Q_{\ell\to g}=4\pi\eta k_gR(T_0-T_g)$. It heats an expanded cold gas and cools a hot one. The nominal $\eta=1$ is a model parameter. One-way and coupled results differ because pressure and compression work change when heat exchange changes the trajectory.\MRthree{One-way and fully coupled formulations}
+\begin{center}\small
+\begin{tabular}{rrrr}\toprule
+$P_a$ (bar)&Adiabatic KM (K)&One-way thermal (K)&Coupled thermal (K)\\\midrule
+1.00&426.14&441.26&707.13\\
+1.15&1966.82&3898.73&4423.44\\
+1.30&5148.38&15174.00&10555.02\\\bottomrule
+\end{tabular}
+\end{center}
+These MR3 air-like values use constant $\gamma=1.4$ and the stated early vapor convention. They are not laser effects and are not interchangeable with the later mixture results. Their precision indicates numerical reporting, not physical thermometry.
+
+Temperature extrema are located independently of radius extrema. At a smooth radius minimum, $U=0$; if $T_g>T_\ell$ and the gas loses heat, Eq.~\eqref{eq:gasenergy} gives $\dot T_g<0$. The nearby temperature maximum generally occurs earlier. Distinct global peaks can also belong to different cycles. Comparing independently selected global event times does not define a physical delay between corresponding collapses.
+\clearpage
+\subsection{Variable heat capacity and the fixed vapor inventory}
+The later closed mixture has fixed species amounts $n_i$, $n=\sum_i n_i$, and
+\begin{align}
+p_g&=nR_uT_g/V,& C_V(T_g)&=\sum_i n_i[c_{P,i}(T_g)-R_u],\\
+\Delta U_g(T_g)&=\sum_i n_i\int_{T_0}^{T_g}[c_{P,i}(T)-R_u]\,\dd T,&
+\dot T_g&=\frac{-p_g\dot V+Q_{\ell\to g}}{C_V(T_g)}.
+\end{align}
+NASA9 coefficients express $c_{P,i}/R_u$ as a seven-term polynomial including $T^{-2}$ and $T^{-1}$ terms \cite{nasa}. Integrating on each validity interval with continuous energy joins ensures consistency. Inserting a diagnostic $\gamma(T)$ into $pV^{\gamma(T)}=\text{constant}$ would not solve this energy equation.\MRfour{Thermodynamically consistent formulation}
+
+Initially $n_v=p_vV_0/(R_uT_0)$ and $n_d=(p_0+2\sigma/R_0-p_v)V_0/(R_uT_0)$. The vapor mole fraction is about 1.86\%. The dry component is a 79/21 N$_2$/O$_2$ idealization or ground-state Ar. In this formulation the full mixture supplies both pressure and heat capacity, with no second $p_v$. Changing vapor inventory while holding initial total pressure fixed also changes dry-gas moles; such contrasts are not exclusively heat-capacity effects.
+
+For air-like coupled trajectories, the fixed saturated mixture in MR4 predicts about 552.9 K at 1.00 bar and 2798.4 K at 1.15 bar, compared with the early constant-capacity values of 707.1 and 4423.4 K. These differences combine revised vapor accounting and caloric response. The 1.30 bar wet trajectory stops at its first coefficient boundary, so there is no complete global wet maximum to subtract from another model.
+
+Rotational and vibrational species contributions represented in $c_P(T)$ are distinct from changing composition. Trapped water molecules can absorb sensible energy, while evaporation/condensation changes mass and carries enthalpy. Dissociation changes species numbers and chemical storage; ionization adds charges and electron energy. None of those effects is determined by a frozen water heat capacity. The water-vapor mechanism is supported by the literature \cite{toegel}, but its quantitative realization here requires an actual mass-transfer and chemistry model.
+
+The archived H$_2$O coefficients cover 200--6000 K; N$_2$/O$_2$ cover 200--20000 K. Domain termination prevents unlicensed extrapolation. It does not set a physical temperature ceiling. Ground-state monatomic Ar has no polynomial ceiling, but real argon excitation and ionization remain missing.
+\clearpage
+\subsection{High-temperature interpretation and retained formal extrema}
+Above 6000 K a wet trajectory cannot be continued with the archived water coefficients alone. Adding higher-temperature neutral coefficients would still leave the composition frozen. At high density, ideal-gas thermochemistry, nonideal pressure, finite molecular volume and relaxation times require separate scrutiny. A polynomial's mathematical evaluability is not evidence of physical applicability.
+
+For a reacting closed mixture one can write
+\begin{equation}
+U_g=\sum_i n_i u_i(T),\qquad
+C_V\dot T=-p_g\dot V+Q_{\ell\to g}-\sum_i u_i(T)\dot n_i,
+\end{equation}
+with formation energies and consistent species balances. With mass exchange, interface enthalpy and species fluxes must also enter the energy and mass balances. For a consistent equilibrium closure $U(T,V)$, the corresponding equation is
+\begin{equation}
+\dot T=\frac{-[p+U_V]\dot V+Q_{\ell\to g}}{U_T},\qquad
+\dot p=p_T\dot T+p_V\dot V.
+\end{equation}
+An ionizing nonequilibrium gas additionally needs electron and ion energy balances. A Saha estimate requires evidence of local thermodynamic equilibrium, nuclei conservation, charge neutrality and adequate partition data. The existing homogeneous temperature supplies none of those conditions.
+
+Mini-Research 4 compares NIST-based dissociation and ionization reference energies with the frozen sensible/work budgets. These are competing energy scales, not computed conversion fractions.\MRfour{Dissociation and ionization: quantitative assessment}
+For example, the isolated ground-state first-ionization energy of Ar is 15.759610 eV \cite{nistgas}. Dividing it by $k_B$ does not identify an onset temperature or an ionized fraction. Recombination, density, entropy and the available time matter.
+
+The historical largest complete adiabatic RP value in the saved MR3 amplitude scan is approximately $1.13046\times10^6$ K at 1.295 bar. The largest observed censored RP diagnostic is $1.16720\times10^6$ K at 1.185 bar, at its technical radius boundary; its global peak is undefined. These are incompressible formal extrapolations with grossly invalid wall-speed and gas-state assumptions. A separate one-way argon thermal diagnostic on KM mechanics reaches about 213182 K at 1.30 bar; it lacks self-consistent argon mechanical feedback.\MRthree{Applicability of extreme scenarios}
+The later integrated dry-Ar value, 22808.7 K, is much lower but still formal. None of these distinct mathematical extrema demonstrates a physical hot-region temperature, and their retention must not be confused with experimental evidence.
+\clearpage
+\section{Plasmonic absorption and gold nanoparticle heating}
+\subsection{Optical input and the finite photon budget}
+For a local incident intensity $I(t)$, a sphere absorbs $P_{\rm abs}=\sigma_{\rm abs}I(t)$ and $E_{\rm abs}=\sigma_{\rm abs}F$, with fluence $F=\int I(t)\,\dd t$. Scattering removes energy from the incident beam without directly heating the metal. Mie theory is used for quantitative cross sections, with room-temperature Johnson--Christy Au data and homogeneous real host index $n_m=1.33$ \cite{jc}.\MRfive{Optical theorem, Mie theory and spectral results}
+
+The small-sphere limit has normalized polarizability
+\begin{equation}
+\alpha_0=4\pi a^3\frac{\varepsilon_{\rm Au}-\varepsilon_m}{\varepsilon_{\rm Au}+2\varepsilon_m},\quad
+\alpha=\frac{\alpha_0}{1-i k_m^3\alpha_0/(6\pi)},\quad k_m=2\pi n_m/\lambda_0.
+\end{equation}
+For the $e^{-i\omega t}$ convention and passive $n+i\kappa$, $\sigma_{\rm ext}=k_m\operatorname{Im}\alpha$, $\sigma_{\rm sca}=k_m^4|\alpha|^2/(6\pi)$ and $\sigma_{\rm abs}=\sigma_{\rm ext}-\sigma_{\rm sca}\ge0$. Radiation correction enforces the dipole optical theorem but does not restore higher multipoles. The full Mie series sums their contributions; its convergence and an independent implementation were checked.
+\fig{05_optical_spectra}{.90}{Unmodified MR5 figure. Absorption and scattering vary differently with particle radius. Discrete spectral maxima are properties of the declared cold-material optical model.}
+At $a=20$ nm and 532 nm, $\sigma_{\rm abs}=3.43373245\times10^{-15}$ m$^2$. Thus $F=10$ J/m$^2$ supplies only 34.3373 fJ to one particle. A 100 $\mu$m-radius local flat beam with the same fluence contains 314.159 nJ. Its much larger incident energy has no automatic path into this one particle or bubble. An absorption cross section can exceed the particle's geometric area without violating the finite-beam energy allowance.
+\clearpage
+\subsection{Thermal storage, transfer and material feasibility}
+For a uniform metal lattice at adequately long times,
+\begin{equation}
+C_{\rm Au}\dot T_{\rm Au}=P_{\rm abs}-Q_{{\rm Au}\to\ell},\qquad
+C_{\rm Au}=\tfrac43\pi a^3\rho_{\rm Au}c_{\rm Au},\qquad
+Q_{{\rm Au}\to\ell}=\int_{S_{\rm Au}}G(T_{\rm Au}-T_\ell)\,\dd A.
+\end{equation}
+The reference coefficients are $\rho_{\rm Au}=19320$ kg/m$^3$, $c_{\rm Au}=129$ J/(kg K), $k_{\rm Au}=317$ W/(m K), and nominal $G=10^8$ W/(m$^2$ K), following the photothermal parameter set \cite{baffou}. For $a=20$ nm, $C_{\rm Au}=8.352\times10^{-17}$ J/K. The 10 ns pulse is long relative to the 1.7 ps electron--phonon reference and 3.15 ps internal diffusion scale. These are useful equilibrium screens, not proof of temperature-independent optics.
+
+The resolved isolated-sphere MR5 control at $F=1$ J/m$^2$ gives a gold rise of 2.319 K and a liquid-surface rise of 1.641 K. Its linear $F=10$ continuation gives 23.19 and 16.41 K. By contrast, the moving radial MR7 source gives a nominal gold rise near 6.81 K for that pulse. The comparison is not a calibrated error factor for the moving problem. It shows why local material safety cannot be certified by the spherical source average.\MRfive{Continuous and pulsed heat transfer}
+
+Within MR5's bounded moderate-heating design, a 100 nm-radius particle at 506 nm and 100 ns absorbs about 3.182 pJ under a chosen 30 K gold-rise screen. A dilute 10 mm illuminated layer can absorb 235.051 $\mu$J from a 0.785398 mJ pulse. These are different geometries and energy objectives: no mechanism concentrates that macroscopic layer energy into one bubble. The 30 K screen is a conservative design choice, not a universal heating limit.\MRfive{Extreme regimes, admissible candidates and formal continuation}
+
+Bulk Au melting at 1337.33 K is a diagnostic reference, while nanoscale melting, reshaping and coatings can change the response \cite{nistau}. The reference sensible energy to that bulk point is about 87.2 fJ for a 20 nm particle, before latent heat and losses. Comparing it with 34.3 fJ absorption does not certify a hot moving particle's stability. At high fluence, temperature-dependent dielectric response, lattice phase change, vaporization and altered geometry invalidate the cold-sphere continuation.
+
+Water at an Au surface may superheat and nucleate a new cavity, changing both optics and heat transfer. Kitz et al. studied 90 nm-diameter particles with 5 ns pulses and found a 532 nm single-particle vapor-bubble threshold near 600 J/m$^2$ \cite{kitz}. That support, size and nucleation experiment do not supply a threshold for a 40 nm-diameter particle beside an acoustically collapsing interface. Atmospheric boiling and bulk melting lines cannot serve as universal nanoscale damage cutoffs.
+\clearpage
+\section{AuNP--bubble energy transfer}
+\subsection{Resolved frozen geometry: what it measures}
+Mini-Research 6 resolves a finite Au sphere, liquid diffusion and a stationary spherical gas boundary in an axisymmetric meridian. Its reference has bubble radius 6 $\mu$m, $a=20$ nm, surface gap $d=100$ nm, 532 nm, 10 ns and $F=1$ J/m$^2$. The tagged laser perturbation starts at zero; the gas reference temperature is held fixed.\MRsix{Resolved thermal problem and the signed interface}
+
+The physical gas-boundary law is $q_{\ell g}=h_g(T_{\ell,w}-T_g)$, positive into gas. For the stationary laser perturbation, $\delta q_{\ell g}=h_g\theta_{\ell,w}$ because the reference gas perturbation is zero. Summing the discretized heat equations yields
+\begin{equation}E_{\rm abs}=E_{\rm Au}+E_\ell+Q_g+Q_{\rm bath}.
+\end{equation}
+Each internal interface flux enters the two adjacent subsystems with opposite signs. The bath flux is independently integrated, rather than defined as a residual.
+\fig{06_local_temperature_flux}{.92}{Unmodified MR6 figure. The finite-particle temperature and facing bubble-wall heat flux are strongly localized. These local fields are absent from an angularly smeared source.}
+Only 0.3258\% of the reference absorption crosses the gas boundary within 2 $\mu$s: approximately 11.1865 aJ out of 3.43373 fJ. Gas power peaks about 53.94 ns after pulse start, later than the Au temperature maximum. The maximum wall flux is about 5197 times the surface mean and 90\% of positive flux lies on about 0.0481\% of the surface at that instant. These are stationary-geometry observables, not an efficiency for a moving collapse.
+
+For an ideal instantaneous point source at distance $r$ from the center in infinite liquid and a perfectly absorbing sphere, the cumulative fraction is $(R/r)\operatorname{erfc}[(r-R)/\sqrt{4\alpha_\ell t}]$. This is a useful limit, but it misses the nearest surface of a finite particle near contact. Assigning it to a moving interface or replacing it with an arbitrary delay would omit the actual transport problem.
+\clearpage
+\subsection{Particle motion and the limits of freezing the geometry}
+In the incompressible radial field $u_\ell(r)=R^2U/r^2$, a passive point center satisfies
+\begin{equation}r_{\rm np}^3-R^3=\text{constant},\qquad d=r_{\rm np}-R-a.
+\end{equation}
+Consequently $\dot d=[(R/r_{\rm np})^2-1]U$: the passive particle moves away from the wall during collapse and may be intercepted during expansion. A fixed laboratory center and a prescribed constant gap $r_{\rm np}=R+a+d$ are different hypotheses. A retaining force, adhesion or trapping mechanism has not been derived.\MRsix{Kinematics, event resolution and applicability}
+
+MR8 evaluates the slip required by the prescribed constant-gap law relative to the MR7 incompressible liquid velocity at the particle center:
+\begin{equation}v_{\rm slip}=U\left[1-(R/(R+a+d))^2\right],\quad
+\mathrm{Re}_{\rm np}=2a\rho_0|v_{\rm slip}|/\mu.
+\end{equation}
+\begin{center}\small\input{tables/table_retention.tex}\end{center}
+The largest required slip is about 24.4 m/s at 1.15 bar and 221 m/s before wet 1.30 bar censoring. These are kinematic requirements of the assumed flow, not predicted particle velocities. The low-Re Stokes relaxation reference is 1.714 ns, but the strong case reaches particle Reynolds number about 8.79; a creeping-flow drag law cannot be promoted into a credible retaining force there. Strong liquid compressibility further limits the background velocity field.
+
+Freezing the geometry also requires small motion during the entire thermal response, not just $U=0$ at one radius minimum. Useful screens are a source-scale Peclet number $|U|L/\alpha_\ell$ and fractional changes in radius and gap during diffusion. MR6's late strong-collapse applications fail its specified motion/displacement screens; numerical convergence of the frozen heat problem cannot fix that failure.
+
+Multiple independent particles require spatial separation, available photons and nonoverlapping thermal/optical interactions. Local particle count is not a bulk number density, and local fluence already includes delivery losses. A dense macroscopic layer and a small prescribed ring near one bubble cannot be substituted for one another. Near-contact optics also differ from homogeneous-host Mie theory.\MRsix{Local energy, multiple particles and the reusable channel}
+\clearpage
+\section{Integrated laser--AuNP--bubble model}
+\subsection{Moving water and one signed gas interface}
+Mini-Research 7 evolves $R,U,T_g$, temperatures in material water cells, Au storage and energy ledgers. Its moving coordinate is
+\begin{equation}
+\xi=(r^3-R^3)/3,\qquad r=(R^3+3\xi)^{1/3},\qquad \dd V_\ell=4\pi\dd\xi.
+\end{equation}
+Because $\dd\xi/\dd t=r^2u_\ell-R^2U=0$, advection becomes a time derivative at fixed material coordinate. The constant-property liquid equation is
+\begin{equation}
+\rho_\ell c_\ell\partial_t T_\ell|_\xi
+=\partial_\xi(k_\ell r^4\partial_\xi T_\ell)+q_{\rm Au}.
+\end{equation}
+Cell capacities $C_i=4\pi\rho_\ell c_\ell\Delta\xi_i$ are positive and constant. Current spherical thermal resistances determine face conductances. This is conservative for the stated incompressible transport approximation; it does not turn that approximation into compressible high-Mach transport.
+
+The gas conductance is $H_g=4\pi\eta k_gR$ with nominal $\eta=1$. Including liquid half-cell resistance $K_w^{-1}$ gives
+\begin{equation}
+Q_{\ell\to g}=\frac{T_1-T_g}{H_g^{-1}+K_w^{-1}},\qquad
+T_{\ell,w}=T_g+Q_{\ell\to g}/H_g.
+\end{equation}
+This current-state power enters gas and liquid with opposite signs. It replaces the earlier clamped-water heat loss; the old loss and a frozen MR6 flux are not added again. Gas energy, NASA heat capacity and its pressure derivative close the KM dynamics.\MRseven{One signed interface, gas energy and mechanical feedback}
+
+The finite Au source is angularly averaged onto a radial shell. Positive weights $w_i$ sum to one, sample $\overline T_\ell=\sum_iw_iT_i$ and deposit the identical Au heat into water. This ensures bookkeeping but omits finite-Au excluded water volume and the local angular spreading resistance. In matched stationary controls, integrated delivery agrees with the resolved finite-Au problem to roughly 0.04--1.68\%, while radial Au peak rises are only 21--30\% of those finite-Au values. Observable-specific agreement does not validate local temperatures or a moving near-contact error bound.
+
+The local particle absorbs the inherited Mie power and evolves $C_{\rm Au}\dot T_{\rm Au}=P_{\rm abs}-Q_{{\rm Au}\to\ell}$. A prescribed 100 nm gap retains the source near the wall but has no independent dynamical trapping model. The resulting gas-temperature increment is therefore a conditional reduced-model prediction, with stronger formal qualifications for severe collapse.
+\clearpage
+\subsection{Quantitative effect of the nominal laser pulse}
+The principal comparison uses the same moving thermal model with and without a laser:
+\begin{equation}\label{eq:pair}
+\Delta T_{\max}=\max_{t\in I}T_g^L(t)-\max_{t\in I}T_g^0(t).
+\end{equation}
+Pairing a clamped-water baseline with a moving-water heated run would confound the laser effect with a model change. A paired global difference is undefined if either trajectory is censored. The source remains at the same absolute pulse time for both members; it is not recentered after the heated event shifts.\MRseven{Paired temperatures and timing sensitivity}
+\begin{table}[H]\centering\small
+\caption{Nominal integrated comparison: $a=20$ nm, prescribed $d=100$ nm, 532 nm, 10 ns, $F=10$ J/m$^2$; pulse center 5 $\mu$s before its selected no-laser radius reference. Global baseline temperatures are rounded; increments use cancellation-controlled pairs.}
+\begin{tabular}{r r r p{6.0cm}}\toprule
+$P_a$ (bar)&$T^0_{\max}$ (K)&$\Delta T_{\max}$ ($\mu$K)&Scientific interpretation\\\midrule
+1.00&553.023&1.408816&Complete five cycles; conditional reduced model and unverified confinement\\
+1.15&2798.281&2.184879&Complete five cycles; physically formal fixed composition and strong-collapse assumptions\\
+1.30&undefined&undefined&Wet gas reaches its 6000 K coefficient boundary; only a bounded observed interval exists\\\bottomrule
+\end{tabular}
+\end{table}
+The very small peak changes require cancellation control: subtracting two independently solved large temperatures can reverse the sign through numerical error. MR7 uses variational equations and nonlinear difference evolution with independently checked baselines; full Radau pairs provide a separate check. This resolution of an increment does not imply microkelvin accuracy of the absolute temperature or its physical model.
+\fig{07_integrated_transport}{.92}{Unmodified MR7 figure. The paired source has a transport history and mechanical feedback. A transient temperature difference can exceed the difference of separately maximized temperatures when the trajectories shift.}
+At 1.00 bar mechanical feedback increases the one-way peak effect from about 0.858 to 1.409 $\mu$K. At 1.15 bar it decreases it from about 5.656 to 2.185 $\mu$K. Thus feedback has no universally favorable sign. Neither result is a universal limit on laser heating at other sizes, fluences, placements or gas states.
+\clearpage
+\section{Timing and useful energy delivery}
+The relevant question is how much energy reaches the gas while it can still influence the maximum. A large eventual transfer is insufficient if it arrives after that maximum; an earlier pulse can also act indirectly by changing pressure and compression work. Pulse duration, Au relaxation, water diffusion, interface transfer and hot-state lifetime must therefore be separated.
+\fig{03_timescales}{.96}{Reference scales from MR8 and inherited thermal widths from MR7. The width is the interval between half-height crossings relative to ambient temperature, not an emission lifetime, reaction-confinement time or universal collapse duration.}
+For the 100 nm surface gap, $d^2/\alpha_\ell=69.8$ ns with $\alpha_\ell=1.433\times10^{-7}$ m$^2$/s. A center-source distance $a+d=120$ nm gives 100.5 ns. These are diffusion scales, not hard arrival times: the continuum heat equation has a small early tail. A 500 nm gap gives 1.745 $\mu$s, while a 1 nm gap formally gives 6.98 ps but raises continuum, interface and optical problems. Finite-particle surface geometry matters especially for such short distances.
+
+For the nominal early MR7 pulse, the net gas-boundary power increment peaks about 38.6 ns after the pulse center at 1.00 bar and 34.9 ns at 1.15 bar within the declared 2 $\mu$s source window. The first-cycle thermal peaks occur about 2.459 and 5.000 $\mu$s after those centers. The net flux increment includes gas cooling and mechanics; it is not a pure tagged fraction of photons delivered to gas.
+
+Inherited thermal half-height widths are about 406 ns at 1.00 bar, 17.86 ns at 1.15 bar, 3.232 ns for formal dry air at 1.30 bar and 7.030 ns for formal dry Ar. The censored wet 1.30 bar state has no complete width. Such reconstructed widths test temporal concentration, but do not measure chemical equilibration or establish the lifetime of an ion population.
+
+The early 1.15 bar sensitivity is relatively stable under grid refinement. The event-centered late response changes by 89.6\% between 48 and 96 liquid cells and remains unresolved. That late result cannot support a positive-pulse benefit or an optimum. The global nominal early-pulse result and the poorly resolved late timing response must remain distinct.
+\clearpage
+\section{Energy analysis and idealized concentration}
+\subsection{Conservation and the role of mechanical work}
+With signed gas power and an explicit bath, the thermal-subsystem equations are
+\begin{align}
+\dot U_g&=-p_g\dot V+Q_{\ell\to g},\\
+\dot E_\ell&=Q_{{\rm Au}\to\ell}-Q_{\ell\to g}-Q_{\rm bath},\\
+\dot E_{\rm Au}&=P_{\rm abs}-Q_{{\rm Au}\to\ell},\\
+\Delta(U_g+E_\ell+E_{\rm Au})+W_{\rm by}+Q_{\rm bath}&=E_{\rm abs},\quad
+W_{\rm by}=\int p_g\dot V\,\dd t.
+\end{align}
+Positive $W_{\rm by}$ means work by the gas; compression contributes negative work. Heat exchange changes sign and is never clipped. The identity covers the modeled thermal subsystem with mechanical work. It excludes liquid kinetic/acoustic energy, viscous heating and any work needed to retain a particle. It is not a total conservation statement for the externally driven apparatus.
+\begin{table}[H]\centering\scriptsize
+\caption{Inherited thermal energies independently reassembled in MR8, in pJ, at each run's endpoint. These include the acoustic background; they are not all laser-tagged energies. The 1.30* endpoint is censored at 18.5453 $\mu$s, whereas the other endpoints are 166.667 $\mu$s.}
+\input{tables/table_energy.tex}
+\end{table}
+In all three cases the nominal local incident beam contains 314.159 nJ and a single particle absorbs 0.0343373 pJ. Au and liquid storage, gas internal-energy change, work, gas heat and bath escape are distinct. For the nominal complete 1.00 bar pair, final gas-energy change between members is about $4.50\times10^{-19}$ J, net gas-heat change about $-7.34\times10^{-18}$ J and work-by-gas change about $-7.79\times10^{-18}$ J. Their relation is $\delta U_g=-\delta W_{\rm by}+\delta Q_{\ell g}$. The small negative heat increment does not contradict a positive peak-temperature change at an earlier time.
+
+MR8 recomputes the saved gas/liquid/Au identities and independently integrates the nonlinear caloric gas increment from the saved paired temperatures. Maximum total residual normalized by the run's thermal scale is $1.35\times10^{-6}$. The independent paired gas residual is below $4.61\times10^{-8}$ of absorption. Those checks verify the stated bookkeeping; they do not validate missing physical channels or infer a photon-delivery efficiency from net gas heat.
+\clearpage
+\subsection{A favorable caloric allowance is not a universal bound}
+To isolate energy availability from transport, MR8 defines a deliberately idealized operation: deposit all of one particle's absorbed energy instantaneously into a fixed-composition, fixed-volume gas at its baseline peak, without losses or later work. The resulting temperature $T_*$ solves
+\begin{equation}\label{eq:caloric}
+\int_{T_b}^{T_*}C_V(T)\,\dd T=E_{\rm abs}.
+\end{equation}
+The NASA integral is inverted only within the existing species domains. This is an upper allowance for that specified direct caloric operation, not an upper bound on a mechanically changing bubble or a local region of unknown mass.
+\begin{center}\small\input{tables/table_ideal.tex}\end{center}
+All rows use one 20 nm-radius particle at 532 nm and $F=10$ J/m$^2$. Dry rows retain their already formal frozen gas assumptions. No wet 6000 K row is extended beyond its coefficient boundary. Actual Au storage, water diffusion and timing are intentionally absent from Eq.~\eqref{eq:caloric}, while they remain present in MR7.
+\fig{04_caloric_comparison}{.94}{The ideal all-absorption caloric increments and the modeled coupled peak differences answer different questions. The large gap between them exposes the importance of transport, timing and changing compression; it is not a universal transfer-efficiency ratio.}
+The wet 1.00 and 1.15 bar allowances are about 0.03347 and 0.02499 K. They are much larger than the nominal microkelvin global changes, yet small compared with the corresponding baseline gas temperatures. Merely increasing a fluence in a cold linear optical model does not establish that the particle, liquid contact or gas composition remains intact.
+
+No physically reliable upper $T_{\max}$ follows from this analysis. In the dynamic model the laser can change acoustic work; an energy-to-constant-capacity ratio ignores that feedback. In a local hot region the energy also depends on its unknown mass, geometry, composition and losses. The program supplies neither those data nor a probability model for rare energy-concentration events.
+\clearpage
+\section{Representative extreme scenarios and scientific status}
+The categories used here have distinct meanings: \textbf{V}, validated within the declared mathematical model (equations and numerical checks); \textbf{C}, physically grounded conditional prediction; \textbf{F}, numerically formal extrapolation or extremum; and \textbf{U}, unresolved physical scenario. V does not mean experimentally validated. A scenario may have numerical status V and physical status F simultaneously.
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{5.0cm}}\toprule
+Scenario and model&Temperature/result&Numerical status&Physical interpretation and missing evidence\\\midrule
+Water, wet air, 1.00 bar, MR7 nominal pulse&$T_b\simeq553.023$ K; $+1.408816\,\mu$K&V; five cycles complete&C; fixed gas, unverified retention, local Au field and gas conductance need assessment\\[4pt]
+Water, wet air, 1.15 bar, same pulse&$T_b\simeq2798.281$ K; $+2.184879\,\mu$K&V; five cycles complete&F; tensile drive, 130 MPa gas pressure, chemistry/nonideal EOS and local material state unresolved\\[4pt]
+Water, wet air, 1.30 bar, MR7&Observed 6000 K boundary; global $T$ and $\Delta T$ undefined&Censored interval; no completed peak&F/U; gas coefficients end; pressure about 2 GPa and density about 1157 kg/m$^3$ challenge ideal-gas/flow closures\\[4pt]
+Water, dry air, 1.30 bar, MR7 no laser&6263.58 K&V; complete&F; variable molecular capacity but fixed chemistry, density about 1261 kg/m$^3$; reacting nonideal gas needed\\[4pt]
+Water, dry ground-state Ar, 1.30 bar, MR7 no laser&22808.7 K&V; complete&F; missing excitation/ionization, nonideal gas and suitable transport\\[4pt]
+MR3 adiabatic RP, 1.295 bar&$1.13046\times10^6$ K&Complete saved interval&F; incompressibility and gas closure grossly fail; not evidence of a realizable hot state\\[4pt]
+MR3 adiabatic RP, 1.185 bar&Observed $1.16720\times10^6$ K; global undefined&Censored at technical boundary&F; observed diagnostic only, no physical temperature cap or completed maximum\\[4pt]
+MR8 KM/Gilmore, 1.30 bar, common polytrope&$R_{\min}$: 0.550809 and 0.513361 $\mu$m; no $T$&V; one-cycle comparison&F; liquid-model sensitivity isolated; coupled thermodynamics and stability still required\\[4pt]
+Rare localized hot region; thermonuclear fuel&$T_i,T_e,n_D$, $V_{\rm hot},\tau$ unknown&No computed state&U; spatial reacting flow, fuel inventory and independently resolved diagnostics required\\\bottomrule
+\end{tabular}
+\end{center}
+The initial radius, drive frequency and liquid are common where stated; the temperature rows retain their different gas and energy closures. The table is a finite representative selection, not a probability distribution or a ranking of all attainable conditions. High formal temperatures are preserved without being promoted into physical predictions or silently excluded.
+\clearpage
+\section{Implications for thermonuclear reactions}
+\subsection{What a temperature statement would have to specify}
+The uniform model temperature $T_g$ summarizes a caloric state of a fixed mixture. It is not a prediction of the maximum in a spatial hot region. If the gas becomes a nonequilibrium plasma, ion and electron temperatures may differ; neither is determined by assigning the scalar $T_g$ to a separate subsystem. Spectroscopic excitation, vibrational and continuum-fit temperatures are also distinct observables.
+
+For identical D nuclei with a suitable local velocity distribution, the expected D--D reaction count would require
+\begin{equation}
+N_{\rm DD}=\int\frac12 n_D(\mathbf x,t)^2\langle\sigma v\rangle_{\rm DD}(\mathbf x,t)\,\dd V\,\dd t.
+\end{equation}
+The factor $1/2$ avoids double counting. For a Maxwellian ion population, the reactivity is a function of ion temperature obtained from the physical nuclear cross section and relative-velocity distribution. Standard branch-specific parametrizations exist \cite{reactivity}; they cannot be applied with arbitrary density, temperature or duration. A hot volume must have a defined composition, density field and lifetime; a threshold temperature alone supplies no count or energy gain.
+
+The present program specifies ordinary water and idealized air/Ar gas, not a deuterium-enriched fuel inventory. It supplies no isotope-resolved $n_D$, ion velocity distribution, $T_i$, $T_e$, spatial hot volume or reacting lifetime. A natural isotope abundance is not an adequate substitute for vapor capture, chemical composition and reacting-ion density during collapse. Therefore $N_{\rm DD}$ is undetermined; it is not assigned zero and is not estimated by inventing these missing quantities.
+
+The very high formal RP temperatures cannot repair those omissions. Their underlying flow and EOS assumptions have already failed. Conversely, the modest or coefficient-censored temperatures in the current reduced model cannot prove all rare physical hot regions impossible. A universal negative conclusion would require a justified bound over the admissible physical configurations, which has not been obtained.
+\subsection{Water, acid experiments and deuterated acetone}
+Sadighi-Bonabi and Gheshlaghi's hydrochemical Table III lists $1.6\times10^6$ K for deuterated acetone at $-28.5\,^{\circ}$C with $R_0=8\,\mu$m, 38 kHz and 14.4 bar; their laser Table IV lists $1.9\times10^6$ K with $R_0=4.5\,\mu$m, 30 kHz and 1.5 bar \cite{sadighi}. Those entries change initial and driving conditions as well as model. Their plasma-core discussion invokes a hotter central region; it is not a measured core temperature in this water/AuNP system. They do not model the same nanoparticle-mediated transfer channel. No direct causal enhancement or nuclear yield is imported from that comparison.
+
+Flannigan and Suslick's sulfuric-acid observations support a plasma interpretation through emission features; their paper distinguishes emission thermometry from a possible hotter core \cite{flannigan}. Xu and Suslick's phosphoric-acid molecular measurements concern another host and observable \cite{xu}. These studies establish motivation for spatial diagnostics, not a calibration of $T_i$ or proof of thermonuclear reactions in the present bubble.
+\clearpage
+\section{Discussion and conclusions}
+\subsection{Answers to the scientific questions}
+The model constructed is a hierarchy of spherical acoustic mechanics, fixed-inventory gas energy and temperature-dependent caloric closure, coupled to Mie Au absorption, metal storage and moving radial liquid heat transport. Its baseline predicts strong sensitivity of compression and temperature to compressibility, gas capacity, vapor accounting and pressure feedback. The optical extension adds energy through water and the signed gas boundary, rather than depositing all absorption directly into gas.
+
+Under the stated nominal single-particle conditions, the integrated global peak increments are 1.408816 and 2.184879 $\mu$K at 1.00 and 1.15 bar. The former is conditional; the latter is physically formal despite complete integration. The wet 1.30 bar global temperature and increment are undefined after coefficient-domain termination. Dry formal peaks and much larger invalid RP estimates remain explicitly reported. Their existence describes the behavior of different mathematical closures, not an experimentally ordered sequence toward fusion.
+
+The new Gilmore comparison demonstrates that strong-collapse mechanics is sensitive to the liquid EOS even after numerical convergence. The new caloric comparison shows how absorption differs from useful dynamic gas heating. The new energy audit preserves signed exchange and mechanical work. These results constrain the interpretation of the program; they do not validate omitted phase transitions, particle capture, reacting composition or plasma temperatures.
+
+\textbf{No physically reliable universal upper temperature has been established. No justified claim of thermonuclear feasibility follows, including for rare extreme configurations; those configurations remain unresolved where the model lacks the necessary physics.} This is an uncertainty-limited conclusion, not a proof that all such states are impossible. Temperature alone is insufficient, and no numerical reaction yield or fusion energy gain has been calculated.
+\subsection{Minimum evidence needed to resolve the uncertainty}
+The next discriminating work should be targeted rather than an unrestricted temperature search:
+\begin{enumerate}
+\item A measured radius/drive history with composition, liquid state and nucleation environment, plus a compressible liquid EOS and a matching coupled gas calculation. Resolve shocks or nonspherical modes where the spherical approximation fails.
+\item Species and energy balances for vapor exchange, finite-rate dissociation/ionization, nonideal pressure and appropriate transport. Compare relaxation times with the resolved hot interval before imposing equilibrium.
+\item Finite-Au moving geometry with a realizable placement/retaining mechanism, temperature-dependent optics, phase-change enthalpy and local cavity formation. Independently test local Au temperature and gas-delivered heat, not only total absorption.
+\item For any nuclear assessment, an isotope-resolved fuel inventory, spatial ion/electron states and density--volume--time history, followed by a justified reactivity calculation and independent reaction diagnostics with backgrounds.
+\end{enumerate}
+These are the specific missing tests needed for stronger physical conclusions, not additional results claimed by this report. The present consolidated account is suitable for preliminary scientific evaluation with those limits visible.
+\clearpage
+\phantomsection\addcontentsline{toc}{section}{References}
+\input{references}
+\clearpage
+\section*{Guide to the Supporting Mini-Research Reports}
+\addcontentsline{toc}{section}{Guide to the Supporting Mini-Research Reports}
+\small
+\begin{longtable}{p{.65cm}>{\raggedright\arraybackslash}p{6.9cm}>{\raggedright\arraybackslash}p{6.7cm}}\toprule
+No.&Scientific report and exact PDF&Content and useful sections\\\midrule\endhead
+1&Mathematical Modeling of Single-Bubble Dynamics under Acoustic Excitation. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/01_Bubble_Dynamics/report/mini_research_01.pdf}{\nolinkurl{mini_research_01.pdf}}&RP derivation, equilibrium, linear limit, radius/speed extrema. ``Mathematical model''; ``Collapse timing and numerical verification''; ``Convergence and validity diagnostics.''\\[7pt]
+2&Compressible Bubble Dynamics and Extreme Collapse Conditions. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/02_Compressible_Bubble_Dynamics/report/main.pdf}{\nolinkurl{main.pdf}}&Full viscous KM convention, event correspondence, RP comparison and extreme applicability. ``Keller--Miksis convention and explicit acceleration''; ``Extreme-collapse analysis and event correspondence.''\\[7pt]
+3&In-Bubble Thermodynamics: Compression Heating, Energy Balance, and Extreme Temperature Estimates. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/03_In_Bubble_Thermodynamics/report/03_In_Bubble_Thermodynamics.pdf}{\nolinkurl{03_In_Bubble_Thermodynamics.pdf}}&Adiabatic, one-way and coupled gas energy. ``Gas energy, signed heat transfer and vapor accounting''; ``One-way and fully coupled formulations''; ``Applicability of extreme scenarios.''\\[7pt]
+4&Temperature-Barrier Physics: Vapor, Heat Capacity, and Ionization. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/04_Temperature_Barrier/report/04_Temperature_Barrier.pdf}{\nolinkurl{04_Temperature_Barrier.pdf}}&NASA caloric law, fixed vapor inventory, coefficient domains and chemical energy scales. ``Thermodynamically consistent formulation''; ``Dissociation and ionization: quantitative assessment.''\\[7pt]
+5&Plasmonic Absorption and Photothermal Heating of Gold Nanoparticles. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/05_Plasmonic_Heating/report/05_Plasmonic_Heating.pdf}{\nolinkurl{05_Plasmonic_Heating.pdf}}&Mie/dipole optics, finite-beam photon budget, transient Au/water heat. ``Optical theorem, Mie theory and spectral results''; ``Extreme regimes, admissible candidates and formal continuation.''\\[7pt]
+6&Frozen Geometry AuNP--Bubble Thermal Coupling. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/06_AuNP_Bubble_Coupling/report/06_AuNP_Bubble_Coupling.pdf}{\nolinkurl{06_AuNP_Bubble_Coupling.pdf}}&Finite-Au stationary axisymmetric transport and its applicability limits. ``Resolved thermal problem and the signed interface''; ``Kinematics, event resolution and applicability''; ``Local energy, multiple particles and the reusable channel.''\\[7pt]
+7&Integrated Laser--AuNP--Bubble Model: Self-Consistent Dynamics and Peak Gas Temperature. \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/07_Integrated_Model/report/07_Integrated_Model.pdf}{\nolinkurl{07_Integrated_Model.pdf}}&Moving conservative water, paired laser peaks, feedback and formal extrema. ``One signed interface, gas energy and mechanical feedback''; ``Paired temperatures and timing sensitivity''; ``Coefficient domains, formal extrema and physical interpretation.''\\\bottomrule
+\end{longtable}
+\normalsize
+The separate \href{https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/08_Physical_Feasibility/report/08_Physical_Feasibility.pdf}{Mini-Research 8 Technical Report} gives the bounded new comparison, caloric operations and energy audits underlying this synthesis. Its numerical package contains data, model code and reproducible checks. No supporting report is needed to identify the principal assumptions and scientific conclusion stated above.
+\end{document}

@@ -1,0 +1,77 @@
+[
+  {
+    "path": "Final_Report/Consolidated_Final_Scientific_Report.pdf",
+    "pages": 24,
+    "sha256": "a5de295e58788cb344aff05ad03349f9dcf50245a5997586b186a7d1919cd965",
+    "page_text_characters": [
+      2428,
+      1178,
+      3072,
+      1771,
+      2269,
+      2336,
+      2034,
+      2279,
+      2405,
+      2754,
+      1665,
+      2835,
+      2009,
+      2427,
+      2261,
+      2324,
+      2239,
+      2194,
+      2103,
+      2572,
+      3103,
+      3416,
+      2745,
+      2579
+    ],
+    "external_link_annotations": 51,
+    "supporting_pdf_urls": [
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/01_Bubble_Dynamics/report/mini_research_01.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/02_Compressible_Bubble_Dynamics/report/main.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/03_In_Bubble_Thermodynamics/report/03_In_Bubble_Thermodynamics.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/04_Temperature_Barrier/report/04_Temperature_Barrier.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/05_Plasmonic_Heating/report/05_Plasmonic_Heating.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/06_AuNP_Bubble_Coupling/report/06_AuNP_Bubble_Coupling.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/07_Integrated_Model/report/07_Integrated_Model.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/08_Physical_Feasibility/report/08_Physical_Feasibility.pdf"
+    ],
+    "no_out_of_page_words": true,
+    "no_overfull_or_undefined_references": true,
+    "fonts_checked_separately": true,
+    "visual_review": "Every rendered page inspected; final changes rechecked."
+  },
+  {
+    "path": "Mini_Research/08_Physical_Feasibility/report/08_Physical_Feasibility.pdf",
+    "pages": 9,
+    "sha256": "2d35d0d10895271a0a5f408f5d52fc2fb37e2d642e490c11475fd9559e0be44e",
+    "page_text_characters": [
+      2980,
+      2026,
+      1993,
+      3251,
+      3132,
+      2131,
+      2671,
+      3418,
+      2700
+    ],
+    "external_link_annotations": 32,
+    "supporting_pdf_urls": [
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/02_Compressible_Bubble_Dynamics/report/main.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/03_In_Bubble_Thermodynamics/report/03_In_Bubble_Thermodynamics.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/04_Temperature_Barrier/report/04_Temperature_Barrier.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/05_Plasmonic_Heating/report/05_Plasmonic_Heating.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/06_AuNP_Bubble_Coupling/report/06_AuNP_Bubble_Coupling.pdf",
+      "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/07_Integrated_Model/report/07_Integrated_Model.pdf"
+    ],
+    "no_out_of_page_words": true,
+    "no_overfull_or_undefined_references": true,
+    "fonts_checked_separately": true,
+    "visual_review": "Every rendered page inspected; final changes rechecked."
+  }
+]

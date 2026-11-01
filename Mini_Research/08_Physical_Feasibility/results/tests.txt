@@ -1,0 +1,17 @@
+test_enthalpy_integral_and_derivative (test_mr8.MathematicalChecks.test_enthalpy_integral_and_derivative) ... ok
+test_full_viscous_implicit_equation (test_mr8.MathematicalChecks.test_full_viscous_implicit_equation) ... ok
+test_incompressible_limit (test_mr8.MathematicalChecks.test_incompressible_limit) ... ok
+test_outside_tait_branch_rejected (test_mr8.MathematicalChecks.test_outside_tait_branch_rejected) ... ok
+test_reference_liquid (test_mr8.MathematicalChecks.test_reference_liquid) ... ok
+test_temperature_domain_and_caloric_identity (test_mr8.MathematicalChecks.test_temperature_domain_and_caloric_identity) ... ok
+test_unforced_stationary_state (test_mr8.MathematicalChecks.test_unforced_stationary_state) ... ok
+test_common_KM_event_matches_accepted_data (test_mr8.SavedEvidenceChecks.test_common_KM_event_matches_accepted_data) ... ok
+test_energy_identities_and_signed_flux (test_mr8.SavedEvidenceChecks.test_energy_identities_and_signed_flux) ... ok
+test_fixed_volume_energy_not_constant_capacity_bound (test_mr8.SavedEvidenceChecks.test_fixed_volume_energy_not_constant_capacity_bound) ... ok
+test_mechanical_convergence (test_mr8.SavedEvidenceChecks.test_mechanical_convergence) ... ok
+test_preserve_all_preexisting_tracked_files (test_mr8.SavedEvidenceChecks.test_preserve_all_preexisting_tracked_files) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.663s
+
+OK

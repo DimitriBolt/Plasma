@@ -1,0 +1,58 @@
+[
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/01_Bubble_Dynamics/report/mini_research_01.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  },
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/02_Compressible_Bubble_Dynamics/report/main.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  },
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/03_In_Bubble_Thermodynamics/report/03_In_Bubble_Thermodynamics.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  },
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/04_Temperature_Barrier/report/04_Temperature_Barrier.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  },
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/05_Plasmonic_Heating/report/05_Plasmonic_Heating.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  },
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/06_AuNP_Bubble_Coupling/report/06_AuNP_Bubble_Coupling.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  },
+  {
+    "url": "https://github.com/DimitriBolt/Plasma/blob/main/Mini_Research/07_Integrated_Model/report/07_Integrated_Model.pdf",
+    "basis": "Exact tracked PDF exists on independently verified base main; HTTP verification follows separately.",
+    "github_http_status": 200,
+    "raw_http_status": 206,
+    "pdf_header": "%PDF-1.7",
+    "verified": true
+  }
+]
